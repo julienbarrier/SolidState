@@ -1,0 +1,425 @@
+\chapter{Quantification : les phonons}
+
+L'énergie des vibrations de réseau peut être quantifiée. La quantité d'énergie
+est appelée \emph{phonon}, par analogie avec le photon d'une onde
+électromagnétique. L'énergie d'un mode élastique de fréquence angulaire $\omega$
+est :
+\begin{equation}
+\mathcal{E} = \left( n + \frac{1}{2} \right) \hbar \omega
+\end{equation}
+Dans cette expression, le mode est excité au nombre quantique n. C'est le cas
+lorsque le mode est occupé par $n$ photons. Le terme $\frac{1}{2}\hbar\omega$
+correspond au niveau d'énergie fondamental. Il existe à la fois pour les photons
+et les phonons en conséquence de leur équivalence à un oscillateur harmonique quantique de pulsation $\omega$, pour lequel les valeurs prpores de
+l'énergie sont également $(n+\frac{1}{2})\hbar\omega$. On peut quantifier le
+carré moyen de l'amplitude pour le mode stationnaire :
+\begin{equation}
+u = u_0 \cos kx \cos \omega t
+\end{equation}
+
+Où u est le déplacement d'un élément de volume de sa position d'équilibre à x
+dans le cristal. L'énergie du mode, comme dans un oscillateur harmonique, est
+composée pour moitié d'énergie cinétique, et pour moitié d'énergie potentielle
+lorsque moyenné sur le temps. La densité d'énergie cinétique est :
+\begin{equation}
+\frac{1}{2}\rho \left( \frac{\partial u}{\partial t} \right)^2
+\end{equation}
+
+où $\rho$ est la densité de masse.
+
+Dans un cristal de volume V, l'intégrale volumique de l'énergie cinétique
+peut s'écrire :
+\begin{equation}
+\frac{1}{4}\rho V \omega^2 u_0^2 \sin^2 \omega t
+\end{equation}
+a moyenne au cours du temps s'écrit : 
+\begin{equation}
+    \frac{1}{8} \rho V \omega^2 u_0^2 = \frac{1}{2} \left( n+\frac{1}{2} \right) \hbar \omega
+\end{equation}
+Le carré de l'amplitude du mode s'écrit :
+\begin{equation}
+u_0^2 = \frac{4\left( n+\frac{1}{2} \right) \hbar}{\rho V \omega}
+\end{equation}
+
+Cela décrit le déplacement de l'occupation n d'un phonon dans un mode donné.
+
+La question à se poser est sur le signe de $\omega$. L'énergie d'un phonon doit
+être, en principe, positive. Par conséquent, $\omega > 0$. Si la structure
+critalline est instable, en revanche, $\omega^2 < 0$ et alors $\omega \in i\mathcal{R}$.
+
+Un phonon de vecteur d'onde $k$ peut interagir avec des particules comme des
+photons, des neutrons et des électrons, comme s'il avait une quantité de
+mouvement $\hbar k$. Cependant, un phonon ne transporte physiquement pas 
+d'impulsion.
+
+La raison pour laquelle un phonon dans unréseau n'a pas de quantité de mouvement
+est que a coordonnée d'un phonon (sauf pour $k=0$) implique le problème soit
+traité à partir des coordonnées relatives des atomes. Par conséquent, dans une
+olécule comme \ch{H2}, la vibration internucléaire $\mathbf{r_1}-\mathbf{r_2}$
+est en coordonnées relative et n'a pas d'impulsion linéaire . Le centre de masse
+$\frac{1}{2}(\mathbf{r_1}-\mathbf{r_2}$ correspond au mode $k=0$ et peut avoir
+une quantité de mouvement linéaire.
+
+Dans les cristaux, il existe des règles de sélection des vecteurs d'ondes pour
+les transitions autorisées (entre les états quantifiés).
+Par exemple, pour la diffusion élastique en diffraction par les rayons X, la
+règle de sélection est : 
+\begin{equation}
+\mathbf{k'} = \mathbf{k} + \mathbf{G}
+\end{equation}
+
+
+
+
+\section{Dynamique, modes normaux, propriétés}
+
+\section{Capacité calorifique des phonons}
+
+La capacité calorifique à volume constant peut s'écrire
+$C_v = \left( \frac{\partial U}{\partial T}\right)_V$. La contribution des
+phonons à la capacité calorifique est appelée chaleur latente du réseau et est
+notée $C_{res}$.
+
+L'énergie totale des phonons dans un cristal peut s'écrire comme la somme des
+énergies sur tous les modes de phonons, ici indexés par le vecteur d'onde
+$k$ et l'indice de polarisation $p$.
+
+\begin{equation}
+    U_{res} = \sum_k \sum_p U_{k,p} = \sum_k \sum_p <n_{k,p}> \hbar \omega_{k,p}
+    \label{Ures}
+\end{equation}
+Dans cette formule, $<n_{k,p}>$ représente l'occuption des phonons de vecteur
+d'onde $k$ et de polarisation $p$ à l'équilibre thermique. Il est donné par la
+distribution de Planck :
+
+\begin{equation}
+    <n> = \frac{1}{\exp \left( \frac{\hbar \omega}{\tau} \right) - 1}
+    \label{distrplanck}
+\end{equation}
+
+L'énergie d'un assemblage d'osscillateurs harmoniques de fréquence
+$\omega_{k,p}$ à l'équilibre thermique est donné par l'équation \ref{Ures}.
+
+Généralement, on préfère assimiler la somme sur $k$ à une intégrale. Pour cela,
+supposons que le cristal a $D_p(\omega) d\omega$ modes d'une polarisation $p$
+pour les fréquences comprises entre $\omega$ et $\omega + d\omega$.
+
+On obtient alors :
+
+\begin{equation}
+    U = \sum_p \int d\omega D_p(\omega) \frac{\hbar \omega}{\exp \left( \frac{\hbar\omega}{\tau} \right) -1}
+    \label{Uresint}
+\end{equation}
+
+La capacité calorifique du réseau est trouvée par différentiation de la fonction
+de température $x = \frac{\hbar \omega}{\tau} = \frac{\hbar\omega}{k_B T}$ :
+
+\begin{equation}
+    C_{res} = k_B \sum_p \int d\omega D_p(\omega) \frac{x^2 \exp x}{(\exp x -1)^2}
+    \label{Cres}
+\end{equation}
+
+À ce stade, tout le problème réside dans cette fonction $D(\omega)$ : le nombre
+de modes pour une fréqence donnée. Cette fonction est appelée densité de modes,
+ou plus généralement densité d'états.
+
+\section{Densité d'états à une dimension}
+
+Considérons le problème de vibrations unidimensionnelle : sur un segment de
+longueur L, on transporte N+1 particules, chacune d'entre elles étant espacée
+d'une distance a.
+
+Supposons que les particules indexées par $s=0$ et $s=N$ sont fixées.
+Chaque mode de vibration de polarisation p a la forme d'une onde stationnaire,
+où $u_s$ est le déplacement de la particule $s$.
+
+\begin{equation}
+    u_s = u(0) \exp (-i \omega_{k,p} t) \sim (ska)
+\end{equation}
+
+Dans cette formule, $\omega_{k,p}$ est relié à $k$ par la relation de dispersion
+appropriée.
+
+Le vecteur d'onde $k$ est lui même restreint par les conditions limites :
+$k = \frac{\pi}{L} ; \frac{2 \pi}{L} ; \frac{3\pi}{L} ; \cdots ; \frac{(N-1)\pi}{L} $.
+
+La solution pour $k=\frac{\pi}{L}$ admet comme solution $u_s \propto \sin \left(\frac{s\pi a}{L} \right)$, et s'annule pour $s=0$ ou $s=N$.
+
+La solution pour $k=\frac{N\pi}{L} = \frac{\pi}{a} = k_{frontière}$ est
+$u_s \propto \sin (s\pi)$. Cela ne permet pas aux atomes de se déplacer car
+$\sin s\pi$ est nul à chaque atome. Par conséquent, il y a $(N-1)$ valeurs de k
+indépendantes autorisées. Ce nombre est égal au nobmre de particules qui peuvent
+se mouvoir. Chaque valeur de $k$ est asociée à une onde stationnaire. Pour le
+problème à une dimension, il y a un mode pour chaque intervalle
+$\Delta k = \frac{\pi}{L}$, de sorte à ce que le nombre de modes par échelle
+d'unité $k$ est $\frac{L}{\pi}$ pour $k \in ]-\frac{\pi}{a} ; \frac{\pi}{a} ]$.
+
+Il y a trois polarisations $p$ possibles pour chaque $k$ :
+
+À une dimension, deux d'entre elles sont transverses et une longitudinale.
+À trois dimensions, la polarisation n'est simple que pour des vecteurs d'onde
+dans les directions caractéristiques du crital. On peut utiliser les conditions
+de Born von Karman : on considère le milieu infini, mais en supposant que les
+solutions sont périodiques sur une distance $L$ grande, de sorte que
+$u(sa) = u(sa + L)$.
+
+\begin{marginfigure}
+    \TODO
+    \caption{BVK}
+\end{marginfigure}
+
+Considérons N particules contraintes sur un anneau circulaire. Les particules euvent oscillées si elles sont connectées par des ressorts.
+
+Les modes normaux correspondent à des déplacements $u_s$ d'un atome $s$ de la
+forme $\sin ska$ ou $\cos ska$ : ce sont des modes indépendants. La périodicité
+impose les conditions aux limites : $u_{N+s} = u_s,\quad \forall s$. Par
+conséquent, $Nka$ est un entier multiple de $2\pi$.
+
+Pour une solution sous forme d'onde propagative, $u_s = u_0 \exp i (ska - \omega_k t)$, et donc les valeurs possibles pour k sont :
+
+\begin{equation}
+    k\in \{ 0,\pm\frac{2\pi}{L}, \pm\frac{4\pi}{L},\cdots, \frac{N\pi}{L} \} 
+\end{equation}
+
+Cette méthode de dénombrement donne le même nombre de modes (1 par atome mobile)
+, mais on a maintenant des valeurs positives et négatives pour $k$, avec un
+intervalle $\Delta k$ entre deux valeurs successives de $k$ égal à
+$\frac{2\pi}{L}$. Pour des conditions limites périodiques (Born von Karman), le
+nombre de modes par échelle de $k$ est $\frac{L}{2\pi}$ pour
+$k \in ]\frac{-\pi}{a},\frac{\pi}{a} ]$ et 0 ailleurs.
+
+Alors, on a besoin de connaître le nombre $D(\omega)$ de modes par unité de
+fréquence pour une polarisation donnée. Le nombre de modes $D(\omega)d\omega$
+entre $\omega$ et $\omega + d\omega$ est donné à une dimension par :
+
+\begin{equation}
+    D_1(\omega) d\omega = \frac{L}{\pi} \frac{dk}{d\omega} d\omega = \frac{L}{\pi} \cdot \frac{d\omega}{\frac{d\omega}{dk}}
+\end{equation}
+
+On peut obtenir la vitesse de groupe $\frac{d\omega}{dk}$ à partir de la
+relation de dispersion $\omega = f(k)$.
+
+Il y a une singularité dans $D_1(\omega)$ dès que $\omega(k)$ est horizontale,
+c'est à dire lorsque la vitesse de groupe est nulle.
+
+
+\section{Densité d'états à trois dimensions}
+
+On applique les conditions périodiques sur $N^3$ mailles primitives. Dans un
+cube de côté L, de sorte que $k$ soit déterminé par la condition :
+
+\begin{equation}
+    \exp \left[ i(k_x x + k_y y + k_z z) \right] = \exp i \left[ k_x (x+L) + k_y (y+L) + k_z (z+L) \right]
+\end{equation}
+Avec :
+
+\begin{equation}
+    k_x,k_y,k_z \in \left\{ 0, \pm\frac{2\pi}{L}, \pm \frac{4\pi}{L}, \cdots,\frac{N\pi}{L} \right\}
+\end{equation}
+
+Par conséquent, il n'y a qu'une valeur de $\mathbf{k}$ permise par volume de
+$\left( \frac{2\pi}{L} \right)^3$ dans l'espace réciproque, c'est à dire
+$\left( \frac{L}{2\pi} \right)^3 = \frac{V}{8\pi^3}$ valeurs de $\mathbf{k}$
+permises par unité de volume dans l'espace réciproque, pour chaque branche ou
+chaque polarisation. Le volume de l'échantillon est $V = L^3$.
+
+Le nombre total des modes avec un vecteur d'onde plus petit que $k$ est le
+produit du volume d'une sphère de rayon k par $\left( \frac{L}{2\pi} \right)^3$
+
+Ainsi, pour chaque type de polarisation,
+
+\begin{equation}
+    N = \left( \frac{L}{2\pi} \right)^3 \left( \frac{4\pi k^3}{3} \right)
+\end{equation}
+
+La densité d'états de chaque polarisation est :
+
+\begin{equation}
+    D(\omega) = \frac{dN}{d\omega} = \left( \frac{Vk^2}{2\pi^2} \right) \frac{dk}{d\omega}
+\end{equation}
+
+\subsection{Modèle de Debye pour la densité d'états}
+
+L'approximation de Debye consiste à dire que la vitess du son est constante pour
+chaque type de polarisation, comme c'est le cas dans un milieu élastique continu
+. La relation de dispersion s'écrit :
+
+\begin{equation}
+    \omega = v k
+\end{equation}
+
+Avec $v$ est la vitesse du son, qui est prise constante. Dans ce cas, la densité
+d'états s'écrit :
+
+\begin{equation}
+    D(\omega) = \frac{V\omega^2}{2\pi^2v^3}
+\end{equation}
+
+Il y a N mailles primitives dans l'échantillon. Par conséquent, le nombre total 
+de modes acoustiques de phonons est N.
+
+La fréquence de coupure est $\omega_D$.
+On peut écrire :
+
+\begin{equation}
+    \omega_D^3 = \frac{6\pi^2v^3 N}{V}
+\end{equation}
+
+À cette fréquence, on associe un vecteur d'onde de coupure dans l'espace
+réciproque :
+
+\begin{equation}
+    k_D = \frac{\omega_D}{v} = \left( \frac{6\pi^2N}{V} \right)^{\frac{1}{3}}
+\end{equation}
+
+Le modèle de Debye n'autorise pas les modes de vecteurs d'ondes plus grands que
+$k_D$. Le nombre de modes $k\leq k_D$ réduit le nombre de degrés de liberté
+pour un réseau monoatomique.
+L'énergie thermique est, pour chaque type de polarisation :
+
+\begin{eqnarray}
+U & = & \int d\omega D\omega <n(\omega)> \hbar \omega \\
+ & = & \int_0^{\omega_D} d\omega \left( \frac{V\omega^2}{2\pi^2v^3} \right) \left( \frac{\hbar \omega}{e^{\frac{\hbar \omega}{\tau}} - 1} \right)
+\end{eqnarray}
+
+On admet que la vitesse des phonons est indépendante de la polarisation, donc on
+obtient :
+
+\begin{eqnarray}
+    U &= & \frac{3V\hbar}{2\pi^2v^3} \int_0^{\omega_D} d\omega \frac{\omega^3}{\exp ( \frac{\hbar\omega}{\tau}) -1}\\
+    \label{energieU}
+    & = & \frac{3Vk_B^4 T^4}{2\pi^2v^3\hbar^3} \int_0^{x_D} dx \frac{x^3}{e^x -1}
+\end{eqnarray}
+Où on a effectué le changement de variables $x=\frac{\hbar\omega}{\tau}$. Posons
+également la tepérature de Debye $\theta$, définie par la relation :
+\begin{equation}
+    x_D = \frac{\hbar \omega_D}{k_B T} = \frac{\theta}{T}
+\end{equation}
+Que l'on peut développer :
+
+\begin{equation}
+    \theta = \frac{\hbar v}{k_B} \left( \frac{6\pi^2 N}{V} \right)^3
+\end{equation}
+
+L'énergie totale de phonons est alors :
+
+\begin{equation}
+    U = 9 N k_B T \left( \frac{T}{\theta} \right)^3 \int_0^{x_D} dx \frac{x^3}{e^x -1}
+\end{equation}
+
+La capacité calorifique est trouvée facilement en différentiant l'expression
+\ref{energieU}. Alors :
+
+\begin{eqnarray}
+    C_v &=& \frac{3V\hbar^2}{2\pi^2v^2k_B T^2} \int_0^{\omega_D} d\omega \frac{\omega^4 e^{\frac{\hbar \omega}{\tau}}}{\left(
+        e^{\frac{\hbar\omega}{\tau}} -1 \right)^2}\\
+        & = & 9 N k_B \left( \frac{T}{\theta} \right)^3 \int_0^{x_D} dx \frac{x^4 e^x}{(e^x -1)^2}
+\end{eqnarray}
+
+La capacité calorifique de Debye peut être alors tracée :
+
+\begin{figure}
+    \TODO
+    \label{debye}
+    \caption{capacité calorifique selon le modèle de Debye}
+\end{figure}
+
+Pour $T>>\theta$, la chaleur latente est approximativement celle obtenue par la
+valeur classique de $3Nk_B$
+
+
+
+\subsection{Einstein}
+
+Prenons N oscillateurs de même fréquence $\omega_0$ et un à une dimension.
+La densité d'état dans le modèle de Einstein est
+$D(\omega) = N \delta(\omega - \omega_0)$. L'énergie thermique du système est:
+
+\begin{equation}
+    U = N <x> \hbar \omega = \frac{N \hbar \omega}{e^{\frac{\hbar \omega}{\tau}}-1}
+\end{equation}
+
+(Pour simplifier, j'écris $\omega$ à la place de $\omega_0$. On peut dériver
+cette expression pour trouver la capacité calorifique :
+
+\begin{equation}
+    C_v = N k_B \left(\frac{\hbar \omega}{\tau} \right)^2 
+    \frac{e^{\frac{\hbar\omega}{\tau}}}{(e^{\frac{\hbar \omega}{\tau}} - 1)^2}
+\end{equation}
+
+Le résultat pour la contribution de N oscillateurs identiques à la capacité
+calorifique d'un solide. À 3 dimensions, N devient 3N.
+La limite haute température de $C_v$ devient $3Nk_B$, ce qui correspond à la
+valeur de Dulong et Petit.
+
+À basse température, $C_v$ décroit de façon exponentielle :
+$\exp \left( - \frac{\hbar\omega}{\tau} \right)$, alors qu'expérimenalement, 
+c'est plus une décroissance en $T^3$ avec le modèle de Debye.
+
+En revanche, le modèle d'Einstein est plus utilisé pour approximer la partie
+phonon optique du spectre de phonons.
+
+\subsection{haute température}
+
+\subsection{$T^3$}
+
+Pour $T<<\theta$, on a $x_D \rightarrow \infty$.
+
+\begin{eqnarray}
+    \int_0^\infty dx \frac{x^3}{e^x-1} & = & \int_0^\infty dx x^3 \sum_{s=1}^{\infty} \exp -sx\\
+    & = & 6 \sum_1^\infty \frac{1}{s^4}\\
+    & = & \frac{\pi^4}{15}
+\end{eqnarray}
+
+Par conséquent, pour $T<<\theta$,
+
+\begin{equation}
+    U ~= \frac{3 \pi^4 N k_B T^4}{5 \theta^3}
+\end{equation}
+
+Ainsi, on peut écrire la capacité calorifique :
+\begin{eqnarray}
+    C_v & = & \frac{12\pi^4}{5} N k_B \left( \frac{T}{\theta}\right)^3 \\
+    & = & 234 N k_B \left( \frac{T}{\theta} \right) ^3
+\end{eqnarray}
+
+Pour de faibles températures, cette approximation est pas mauvaise. En fait,
+ceci est valable lorsque seulement les modes acoustiques des grandes longueurs
+d'onde sont excités therimquement. Ce sont juste les modes qui peuvent être
+traités en tant que milieu élastique continu avec les constantes élastiques
+macroscopiques.
+
+Seuls les modes pour lesquels $\hbar \omega < k_B T$ seront excités de façon
+suffisante à faible température. L'excitation de ces modes sera à peu près
+classique, chacun d'entre eux avec une énergie $k_BT$.
+
+Dans le volume autorisé dans l'espace réciproque, la fraction occupée par les
+modes excités est de l'ordre de
+$\left( \frac{\omega_T}{\omega_D} \right)^3$, soit
+$\left( \frac{k_T}{k_D} \right)^3$ où $k_T$ est la longueur d'onde thermique,
+définie par $\hbar v k_T = k_B T$ et $k_D$ est la longueur d'onde de coupure
+du modèle de Debye.
+La fraction occupée du volume total dans l'espace réciproque est
+$\left( \frac{T}{\theta} \right)^3$. En outre, il y a de l'ordre de
+$3N \left( \frac{T}{\theta} \right)^3$ modes excités, qui ont chacun une énergie
+$k_B T$. L'énergie est approximativement
+$3Nk_B T \left( \frac{T}{\theta} \right)^3$ et la capacité calorifique
+$12Nk_B \left( \frac{T}{\theta} \right)^3$.
+
+\begin{marginfigure}
+    \TODO
+    \caption{représentation des modes excités sur l'enseble des modes}
+\end{marginfigure}
+
+En pratique, pour que l'approximation soit correcte, il faut
+$T=\frac{\theta}{50}$. Par exemple, pour le sicilium,
+$\theta = \SI{645}{\kelvin}$ ; pour le germanium,
+$\theta = \SI{374}{\kelvin}$, donc il faudrait travailler à des températures de 
+l'ordre du kelvin pour que l'approximation soit correcte.
+
+On peut noter que plus un atome est lourd, plus $\theta$ est petit. En fait,
+la vitesse du son diminue lorsque la densité augmente, c'est ce qui provoque
+cette variation en terme de vecteurs d'onde.
+
+\section{Corps noir}
+ppp

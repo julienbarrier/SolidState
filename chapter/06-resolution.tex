@@ -1,0 +1,628 @@
+\chapter{Résolution de structure}
+
+Dans les solides, les distances typiques entre atomes sont de l'ordre de 
+l'angstrom (\SI{e-10}{\metre}). Une sonde électromagnétique de la structure
+microscopique d'un solide doit par conséquent avoir une longueur d'onde au
+moins aussi petite, ce qui correspond à une énergie de l'ordre de :
+
+\begin{equation}
+\hbar \omega \sim \frac{hc}{\lambda} = \frac{\SI{e-34}{}\SI{e8}{}}{\SI{e-10}{}} = \SI{e-16}{\joule} = \SI{e3}{\electronvolt}
+\end{equation}
+
+Les énergies de cet ordre de grandeur sont caractéristiques des rayons X. Pour 
+cette raison, on va étudier l'influence des rayons X sur les structures
+cristallines, pour permettre de sonder la matière à l'échelle de l'atome.
+
+
+\section{Diffusion des rayons X}
+
+Les rayons X ont été découverts par Röntgen en 1895. Leur nature ondulatoire a
+été mise en valeur en 1913 avec la réalisation des premières expériences de
+diffraction suggérées par von Laue. Plus tard, Barkla a montré le caractère
+transversal de ces ondes, établissant ainsi qu'il s'agissait d'ondes
+électromagnétiques.
+
+Le domaine de longueur d'onde des rayons X va de 0.1 (limite des rayons
+$\gamma$) à \SI{100}{\angstrom} (limite de l'UV lointain). En terme d'énergies,
+cela correspond à la gamme 0.1 à \SI{100}{\kilo\electronvolt}. En
+cristallographie, on utilise généralement des rayons X dont la longueur d'onde 
+varie entre 0.5 et \SI{2.5}{\angstrom}.
+
+Dans les solides, ce sont les électrons, plus que les particules du noyau, qui
+interagissent avec les radiations électromagnétique. L'amplitude de diffusion
+$\epsilon(\mathbf{q})$ d'une densité de charge distribuée $\rho(\mathbf{r})$ peut
+s'écrire :
+
+\begin{equation}
+    \epsilon(\mathbf{q}) = \frac{E_0 r_e}{R} \exp [i(\omega t - k R)] f(\mathbf{q})
+\end{equation}
+où $f$ est le facteurs de diffusion et représente l'intensité de la diffusion,
+relativement à un électron libre. Le facteur de diffusion d'un atome est défini
+par :
+\begin{equation}
+    f(\mathbf{q}) = \int e^{i\mathbf{q}\cdot\mathbf{r}} \rho(\mathbf{r}) dV
+\end{equation}
+où $\mathbf{q = k' - k}$ est le vecteur d'onde de l'espace réciproque entre
+l'onde diffusée et l'onde incidente. Il s'agit simplement de la transformée de
+Fourier de la densité de distribution électronique $\rho(\mathbf{r})$.
+
+\subsection{Diffusion d'un groupe d'atomes}
+
+\TODO f s'appelle le facteur de forme atomique. traduire mieux.
+
+
+On peut considérer à présent la diffusion à partir d'un arrangement périodique
+d'atomes. On montrera par là que cela mène à la diffraction, qui est, dans
+certaines conditions, de la diffusion d'atomes qui s'ajoutent de façon cohérente
+pour produire des pics indenses de la radiation diffusée.
+Historiquement, la diffarction des rayons X par les cristaux a été la première
+confiration de deux concepts importants en physique : le fait que les rayons X
+peuvent être décrits comme des ondes, et que beaucoup de solides sont constitués
+d'arrangements périodiques d'atomes. La diffraction des rayons X est encore
+aujourd'hui très largement utilisée dans de très larges domaines en
+physico-chimie, pour de l'identification de phase, de la détermination de
+structure, des mesures de contraintes, pour la détermination de la concentration
+en défauts, pour des transformations ordre-désordre et pour la détermination de
+paramètres structuraux de super-réseaux. Récemment, la diffraction des rayons X
+en incidence rasante (grazing incidence XRD) a été utilisée pour mesurer avec
+précision les constantes de réseaux de couches monoatomiques.
+
+À partir de ce point, il y a deux chemins équivalents que nous pouvons suivre
+pour dédiuire la diffusion d'un arrangement d'atomes. Le premier serait de
+représenter l'arangement des atomes par une distribution de densité électronique
+$\rho_c(\mathbf{r})$ pour l'arrangement complet. Par conséquent,
+$\rho_c(\mathbf{r})$ représente la densité totale électronique de tous les
+électrons de tous les atomes du cristal. L'amplitude diffusée est simplement la
+transformée de Fourier de cette distribution de densité électronique :
+\begin{equation}
+    \epsilon(\mathbf{q}) = \frac{E_0 r_e}{R} \exp [i(\omega t - k R)] \int e^{i \mathbf{q \cdot r}} \rho_c (\mathbf{r}) dV
+    \label{fftdistrelec}
+\end{equation}
+Un moyen équivalent et totalement différent de trouver l'amplitude diffusée est
+d'assigner chacun des électrons du solide à un atome. On calcule ensuite la
+distribution de densité électronique pour chaque type d'atome. Par exemple, les
+électrons assignés au p\ieme type d'atome seraient représentés par
+$\rho_p(\mathbf{r})$ où $\mathbf{r}$ est la position relative au centre atomique.
+On peut ainsi écrire la densité électronique du cristal comme :
+\begin{equation}
+    \rho_c(\mathbf{r}) = \sum_p \rho_p(\mathbf{r - R_p})
+    \label{densiteelectroniquecristal}
+\end{equation}
+
+où la somme sur $p$ est effectuée sur tous les atomes du cristal. L'équation
+\ref{densiteelectroniquecristal} place un atome $p$ en un site du cristal, au
+bout du vecteur $\mathbf{R_p}$. Replacer cela dans l'équation \ref{fftdistrelec}
+et échanger l'ondre de l'intégration et de la somme nous ramène à :
+
+\begin{equation}
+   \epsilon(\mathbf{q}) = \frac{E_0 r_e}{R} \exp [i(\omega t - k R)] 
+   \sum_p \int e^{i \mathbf{q \cdot r}} \rho_p (\mathbf{r - R_p}) dV
+    \label{fftdistrelecsum}
+\end{equation}
+
+En posant le changement de variables $\mathbf{r' = r - R_p}$, on se ramène alors
+à :
+
+\begin{equation}
+    \epsilon(\mathbf{q}) = \frac{E_0 r_e}{R} \exp [i(\omega t - k R)] 
+    \sum_p e^{i\mathbf{q \cdot R_p}} \int  \rho_p (\mathbf{r'}) dV'
+    \label{fftdistrelecsumred}
+\end{equation}
+
+L'intégrale de l'équation \ref{fftdistrelecsumred} corresponsd au facteur de
+diffusion $f$ de l'atome $p$ dans le solide. On obtient alors :
+
+
+\begin{equation}
+   \epsilon(\mathbf{q}) = \frac{E_0 r_e}{R} \exp [i(\omega t - k R)] \sum_p  f_p e^{i \mathbf{q \cdot R_p}}
+    \label{fftdistrelecsumf}
+\end{equation}
+
+Dans cette équation, $f_p$ est le facteur de diffusion de l'atome $p$ ; $\mathbf{R_p}$ est la position relative à une position de référence dans le
+cristal, et la somme sur $p$ est effectuée sur toutes les positions atomiques du 
+cristal. Avec ce formalisme, on simplifie la tâche -- ardue -- de construire une
+fonction de densité électronique pour le cristal, le calcul de $f_p$ pour chaque type d'atome jouant ce rôle de simplification.
+Comme seuls les électrons périphériques entrent en jeu dans la cohésion d'un
+cristal, $f$ ne dépend que faiblement de l'environnement dans lequel l'atome est
+placé, et en pratique, les facteurs de diffusions des atomes libres sont
+couremment utilisés \footnote{À l'exception des solides où les laisons ont un
+    large caractère ionique, comme NaCl, où ce sont les facteurs de diffusion
+des ions qui seront privilégiés}.
+
+\subsection{Diffusion à partir d'un arrangement périodique d'atomes}
+
+Pour les solides cristallins, on peut simplifier l'équation
+\ref{fftdistrelecsumf} en écrivant les positions atomiques comme la somme des
+positions $\mathbf{R}_m$ de la maille primitive dans laquelle l'atome est fixé
+et d'une position $\mathbf{r}_n$ de l'atome dans la maille. Cela correspond à
+écrire :
+\begin{equation}
+    \mathbf{R}_p = \mathbf{R}_m^n = \mathbf{R}_m + \mathbf{r}_n =
+    \sum_{j=1}^3 m_j \mathbf{a}_j + \mathbf{r}_n
+\end{equation}
+
+La somme sur tous les atomes du solide se réduit ainsi à une somme sur tous
+les atomes de la maille primitive et à la somme sur toutes les mailles primitives
+du cristal :
+
+\begin{eqnarray}
+    \sum_p f_p e^{i\mathbf{q \cdot R_p}} & = & \sum_m^{N_c} \sum_n^{N_b}
+    f_n e^{i\mathbf{q\cdot(R_m + r_n)}}\\
+    & = & \left( \sum_m^{N_c} e^{i\mathbf{q\cdot R_m}} \right)
+    \left( \sum_n^{N_b} f_n e^{i\mathbf{q\cdot r_n}} \right)
+\end{eqnarray}
+
+où $N_c$ est le nombre de mailles primitives dans le cristal et $N_b$ le nombre
+d'atomes ans la maille primitive.
+
+On définit le facteur de structure $F(\mathbf{q})$ comme la somme sur tous les
+atomes de la maille :
+
+\begin{equation}
+    F(\mathbf{q}) = \sum_n^{N_b} f_n e^{i \mathbf{q \cdot r_n}}
+\end{equation}
+
+Ce facteur de structure contient toute l'information sur les positions atomiques
+de la maille, et s'affranchit de toutes les complications liées à la distribution
+élecrtonique des atomes, cachée dans les facteurs de diffusions.
+
+En combinant toutes ces équations, on se ramène à l'amplitude diffractée par le
+cristal :
+
+\begin{equation}
+    \epsilon = \frac{E_0 r_e}{R} \exp[i(\omega t - k R)] F(\mathbf{q}) \sum_m^{N_c} e^{i\mathbf{q\cdot R_m}}
+    \label{ampdiffract}
+\end{equation}
+
+\section{Diffraction des rayons X}
+
+\subsection{Réseau réciproque}
+
+L'équation \ref{ampdiffract} donne le formalisme pour calculer l'amplitude de
+diffusion élastique pour un arrangement périodique d'atomes. Concentrons-nous,
+dans un premier temps, sur la somme sur une maille primitive:
+
+\begin{equation}
+    \sum_m^{N_c} e^{i\mathbf{q\cdot R}_m}
+\end{equation}
+
+On considère un cristal avec les vecterus de translation de réseau $\mathbf{a}_1$
+, $\mathbf{a}_2$ et $\mathbf{a}_3$, de telle sorte que les positions atomiques
+dans la maille primitive soient données par :
+\begin{equation}
+    \mathbf{R}_m = m_1 \mathbf{a}_1 + m_2 \mathbf{a}_2 + m_3 \mathbf{a}_3
+\end{equation}
+où $m_1$, $m_2$ et $m_3$ sont des entiers. Le produit scalaire 
+$\mathbf{q\cdot R}_m$ devient alors :
+
+\begin{equation}
+    \mathbf{q\cdot R}_m = m_1 \mathbf{q \cdot a}_1 + m_2 \mathbf{q \cdot a}_2 + m_3 \mathbf{q \cdot a}_3
+\end{equation}
+
+En outre, si l'on considère un cristal qui est un parallélépipède avec $N_1$
+mailles selon la direction $\mathbf{a}_1$, $N_2$ selon la direction $\mathbf{a}_2$
+et $N_3$ selon $\mathbf{a}_3$, alors la somme sur toutes les mailles du cristal
+devient :
+
+\begin{eqnarray}
+    \sum_m^{N_c} e^{i \mathbf{q\cdot R_m}} & = &
+        \sum_{m_1 = 0}^{N_1 - 1} \sum_{m_2 = 0}^{N_2 - 1} \sum_{m_3 = 0}^{N_3 - 1}
+        \exp [i(m_1 \mathbf{q \cdot a}_1 + m_2 \mathbf{q \cdot a}_2 + m_3 \mathbf{q \cdot a}_3)]\\
+        & = & \left( \sum_{m_1 = 0}^{N_1 - 1} e^{i m_1 \mathbf{q\cdot a}_1} \right) 
+        \left( \sum_{m_2 = 0}^{N_2-1} e^{i m_2 \mathbf{q\cdot a}_2} \right)
+        \left( \sum_{m_3 = 0}^{N_3-1} e^{i m_3 \mathbf{q\cdot a}_3} \right)\\
+        & = & \prod_{j=1}^3 \left( \sum_{m_j = 0}^{N_j -1} e^{i m_j \mathbf{q\cdot a}_j} \right)
+    \end{eqnarray}
+
+Il s'agit d'une série géométrique de raison $e^{i \mathbf{q\cdot a}_j}$, d'où :
+\begin{eqnarray}
+    \sum_{m_j = 0}^{N_j - 1} e^{i m_j \mathbf{q\cdot a}_j} & = &
+    \frac{1 - e^{i N_j \mathbf{q\cdot a}_j}}{1 - e^{i \mathbf{q \cdot a}_j}} \\
+    & = & e^{i \phi_j} \frac{\sin \left( N_j \frac{\mathbf{q\cdot a}_j}{2} \right) }{\sin \left( \frac{\mathbf{q\cdot a}_j}{2} \right)}
+\end{eqnarray}
+où le terme de phase $\phi_j$ est donné par : $\frac{\mathbf{q\cdot a}_j}{2} (N_j
+-1)$. Cela donne la somme sur toutes les mailles du cristal :
+
+\begin{equation}
+    \sum_m^{N_c} e^{i\mathbf{q\cdot R}_m} = \prod_{j=1}^3 \left\{ e^{i\phi_j} \left[ \frac{\sin \left(N_j \frac{\mathbf{q\cdot a}_j}{2}
+    \right)}{\sin \left(\frac{\mathbf{q\cdot a}_j}{2} \right)} \right] \right\}
+    \label{sommecristal}
+\end{equation}
+
+Ce résultat peut être injecté dans l'équation \ref{ampdiffract}, pour trouver
+l'amplitude diffusée pur un cristal. Lorsque l'on effectue de la diffraction, on
+mesure l'intensité, qui est en fait le carré du module de l'amplitude
+$\epsilon \cdot \epsilon^* = |\epsilon|^2$, multipliée par la constante
+$c\epsilon_0$. En prenant le carré complexe, le terme de phase disparaît et l'on
+obtient alors :
+
+\begin{equation}
+    I = c\epsilon_0 \left( \frac{E_0 r_e}{R} \right)^2 |F(\mathbf{q})|^2
+    \prod_{j=1}^3 \left[ \frac{\sin \left(N_j \frac{\mathbf{q\cdot a}_j}{2} \right)}{\sin \left( \frac{\mathbf{q\cdot a}_j}{2}\right)} \right]^2
+\end{equation}
+
+L'intensité diffractée contient le facteur de diffraction de Lorentz:
+
+\begin{equation}
+    \left[ \frac{\sin \left(N_j \frac{\mathbf{q\cdot a}_j}{2} \right)}{\sin \left( \frac{\mathbf{q\cdot a}_j}{2}\right)} \right]^2
+\end{equation}
+
+\TODO: cf ouvrage diffraction.
+
+Ce facteur de Lorentz présente des pics lorsque :
+\begin{equation}
+    \frac{\mathbf{q \cdot a}_j}{2} = n \pi
+\end{equation}
+
+où n est un entier. Pour observer un pic d'intensité diffractée, il faut donc
+que cela soit vrai dans chacune des trois directions, c'est à dire pour
+$j = 1,2,3$. Le vecteur de diffusion $\mathbf{q}_B$ qui satisfait cette condition
+est défini par :
+
+\begin{eqnarray}
+    \frac{\mathbf{q}_B \cdot \mathbf{a}_1}{2} & = & h \pi \\
+    \frac{\mathbf{q}_B \cdot \mathbf{a}_2}{2} & = & k \pi \\
+    \frac{\mathbf{q}_B \cdot \mathbf{a}_3}{2} & = & l \pi
+\end{eqnarray}
+où $h,k,l$ sont des entiers ; ce sont les indices de Miller définis précedemment.
+Cette condition est appelée condition de Laue. Cela revient à écrire :
+
+\begin{eqnarray}
+    \mathbf{G}_{hkl} \cdot \mathbf{a}_1 = h \\
+    \mathbf{G}_{hkl} \cdot \mathbf{a}_2 = k \\
+    \mathbf{G}_{hkl} \cdot \mathbf{a}_3 = l
+\end{eqnarray}
+De telle sorte que les conditions de Laue soient satisfaites si :
+
+\begin{equation}
+    \mathbf{q}_B = 2\pi \mathbf{G}_{hkl}
+\end{equation}
+
+Cette équation représente le fait que pour un pic du spectre de diffraction d'un
+cristal, le vecteur de diffusion est $2 \pi$ fois le vecteur du réseau réciproque
+. Cela est la relation la plus importante à retenir dans ce chapitre. On peut
+immédiatement voir que pour un pic, le vecteur de diffusion est perpendiculaire
+aux plans de diffraction. En comparant les amplitudes des vecteurs, on peut aussi
+remarquer que :
+
+\begin{equation}
+    q_B = \frac{4\pi}{\lambda} \sin \theta_B = 2\pi |\mathbf{G}_{hkl} | = \frac{2\pi}{d_{hkl}}
+\end{equation}
+
+Ce qui nous amène à :
+\begin{equation}
+    \lambda = 2 d_{hkl} \sin \theta_B
+\end{equation}
+
+et
+\begin{equation}
+    q_B = \frac{2\pi}{d_{hkl}}
+\end{equation}
+Ces deux dernières équations sont des formulations équivalentes de ce qui est
+connu sous le nom de loi de Bragg.
+
+\TODO: on dit von laue, pas laue.
+
+\subsection{Loi de Bragg}
+
+La diffraction est un concept très très important en physique du solide et en
+science des matériaux, non seulement poru les techniques d'analyses qui en sont
+rendues possibles, mais aussi pour la théorie des bandes d'énergie dans les
+cristaux. Le phénomène de diffraction apparaît dans de nombreuses situations dans
+les solides cristallins, et les chercheurs de différents domaines ont pu
+construire différents moyens de représenter la diffraction. Nous nous intéressons
+nous à certaines représentations graphiques de différents aspects de la
+condition de la diffraction.
+
+Nous avons vu précedemment qu'un moyen d'établir la condition de diffraction pour
+trouver un maximum de difraction d'un ensemble de plans espacés d'une distance
+$d$, illuminés par des rayons X de longueur d'onde $\lambda$ est :
+\begin{equation}
+    n \lambda = 2d \sin \theta_B
+\end{equation}
+
+Cette expression a été formulée pour la première fois par Bragg et est connue
+sous le nom de loi de Bragg. Cette relation peut être déduite en considérent la
+différence de phase entre les rayons X diffusés et les plans adjacents. Comme
+présenté sur la figure \TODO, la différence de chemin entre les rayons X diffusés
+à partir d'un plan et ceux qui sont diffusés par le plan prédédent est 
+$2d sin \theta$, ce qui nous ramène à une différence de phase de
+$\frac{2\pi}{\lambda} 2d \sin \theta$. Si cette différence de phase est égale à
+un entier $n$ fois $2\pi$, alors les ondes diffusées à partir de plans succesifs
+seront en phase et interféreront de façon constructive.
+
+En appliquant cette condition, on voit :
+\begin{equation}
+    n 2 \pi = \frac{2 \pi}{\lambda} 2d\sin \theta_B \rightarrow
+    n\lambda = 2d \sin \theta_B
+\end{equation}
+
+\TODO: construction de Bragg
+
+Cette construction peut être utilisée pour visualiser l'expérience de diffraction
+commune, où l'angle $\theta$ peut être varié en tournant le cristal sous un
+faisceau de rayons X monochromatiques. Un détecteur est tourné à une fréquence
+angulaire deux fois plus importante, suivant le meme axe, de sorte à maintenir la
+symmétrie entre les rayons X incidents et diffusés, relativement aux plans
+cristallins. En même temps que l'angle $\theta$ varie, dès que la condition de
+Bragg est atteinte, un pic d'intensité apparaît. Cela est montré schématiquement
+sur la figure \TODO.
+
+La géométrie symmétrique entre $\mathbf{k}$ et $\mathbf{k'}$ relativement aux
+plans de diffraction, maintient la condition que le vecteur de diffusion est
+perpendiculaire aux plans, à la condition de Bragg. Dans de nombreux cas, la
+géométrie symmétrique est également maintenue, relativement à la surface de
+l'échantillon, de telle sorte à ce que les plans étudiés soient parallèles à la
+surface de l'échantillon. Cependant, ce n'est pas toujours le cas ; nous verrons
+plusieurs géométries de diffraction plus tard.
+
+\subsection{Sphère d'Ewald}
+
+La loi de Bragg est un postulat de la condition de la diffraction correct, mais
+incomplet, du fait qu'il ne containet qu'une information scalaire, et ne
+représente pas les aspects plus généraux, directionnels ou vectoriels, que nous
+avons vu comme :
+\begin{equation}
+    (\mathbf{k'-k})_B = \mathbf{q}_B = 2\pi \mathbf{G}_{hkl}
+\end{equation}
+
+où $\mathbf{G}_{hk}$ est un vecteur de l'espace réciproque.
+
+Un moyen facile de voir cette relation est sa représentation dans l'espace
+réciproque, aussi connue sous le nom de sphère d'Ewald. On construit d'abord le
+réseau réciproque pour le cristal qui nous intéresse. Ensuite, on place
+l'extrémité du vecteur $\frac{\mathbf{k}}{2\pi}$ sur un site du réseau réciproque
+. Ensuite, une sphère de rayon $\frac{k}{2\pi} = \frac{1}{\lambda}$ est tracé,
+ave son centre à l'origine de $\frac{\mathbf{k}}{2\pi}$
+\footnote{On peut noter que l'origine du vecteur $\frac{\mathbf{k}}{2\pi}$ n'est
+pas nécessairement sur un nœud du réseau réciproque.}
+Comme deux nœuds du réseau réciproque peuvent être connectés entre eux par un
+vecteur du réseau réciproque $\mathbf{G}_{hkl}$, tout nœud du réseau réciproque
+qui apparaît sur cette pshère (autre que celui tracé au début, qui termine à
+$\frac{\mathbf{k}}{2\pi}$) sera à l'extrémité d'un vecteur
+$\frac{\mathbf{k'}}{2\pi}$, qui satisfait la condition de la diffraction :
+
+\begin{equation}
+    \frac{1}{2\pi} (\mathbf{k'-k})_B = \mathbf{G}_{hkl} \rightarrow
+    (\mathbf{k'-k})_B = \mathbf{q}_B = 2 \pi \mathbf{G}_{hkl}
+\end{equation}
+
+Ce qui peut être illustré sur la figure \TODO.
+
+Sur les représentations dans l'espace réciproque, les expériences de diffraction 
+sont des observations de l'intensité diffractée en fonction de l'orientation
+ou de la longueur du vecteur de diffusion $\mathbf{q}$. Si l'expérience est faite
+à une énergie constante (faisceau monochromatique), alors le diamètre de la
+sphère d'Ewald est onstant, et son orientation est changée pendant l'expérience,
+ce qui apporte un autre set de points du réseau réciporque en contact avec la
+sphère d'Ewald.
+
+La technique de la diffraction des électrons dans un microscope électronique à
+transmission (TEM) utilise la nature ondulatoir edes électrons pour faire de la
+diffraction à partir de cristaux. La longueur d'onde des électrons à hautes
+énergies (\SI{100}{\kilo\volt} à \SI{1}{\mega\electronvolt}) utilisés est bien
+plus courte que celle des rayons X typiques, ramenant la sphère d'Ewald à un
+rayon très large, de telle sorte à ce que sa surface soit quasi planne.
+En outre, l'échantillon cristallin est fin (nécessaire pour assurer la
+transparence électronique), ce qui résulte en une élongation de la région de
+diffraction dans la direction parallèle à $\mathbf{k}$.
+Par conséquent, même s'il y a quelques courbures de la sphère d'Ewald, les nœuds
+du réseau réciproque intersectent toujours la sphère d'Ewald. Cela signifie que
+l'alignement d'une zone de l'axe avec le vecteur d'onde de l'électron
+incident donnera des spots de diffraction pour quasiment tous les plans dans la
+zone. Cela est présenté schématiquement sur la figure \TODO.
+
+
+
+\section{Zones de Brillouin et condition de diffraction}
+
+Les zones de Brillouin forment l'énoncé de la condition de diffraction la plus
+utilisée en physique du solide : elle permet de retrouver la théorie des bandes
+d'énergie électronique.
+
+Nous avons vu précédement que la 1\iere zone de Brillouin comme la cellule de
+Wigner-Seitz dans le réseau réciproque. Cela permet de former une interprétation
+géométrique de la condition de la diffraction :
+\begin{equation}
+    2\mathbf{k} \cdot \mathbf{G} = G^2
+\end{equation}
+Que l'on peut aussi écrire :
+\begin{equation}
+    \mathbf{k} \cdot \left( \frac{1}{2} \mathbf{G} \right) = \left( \frac{1}{2} G \right)^2
+\end{equation}
+
+En travaillant dans l'espace réciproque, $\mathbf{k},\mathbf{G})$, on choisit un
+vecteur $\mathbf{G}$ à l'origine d'un point du réseau réciproque. Le plan normal
+à ce vecteur $\mathbf{G}$, au milieu du vecteur. Ce plan forme une partie de la
+frontière de la zone de Brillouin.
+
+Si une onde, de vecteur d'onde $\mathbf{k}$, est diffractée sur le réseau, le
+faisceau diffracté aura la direction $\mathbf{k}-\mathbf{G}$, soit $\Delta\mathbf{k} = \Delta\mathbf{k} = -\mathbf{G}$.
+La construction de Brillouin présente tous les vecteurs d'onde $\mathbf{k}$
+réfléchis par le cristal en suivant la loi de Bragg.
+
+Les plans qui sont les bissectrices des vecteurs du réseau réciproque sont d'une
+grande importance en ce qui'il s'agit de la propagation d'ondes dans les
+cristaux : une onde dont le vecteur d'onde tracé de l'origine termine sur un 
+de ces plans respectera la condition de diffraction. Ces plans divisent l'espace
+de Fourier du cristal en fragments. Le fragment central est la cellule de
+Wigner-Seitz du réseau réciproque.
+
+On peut former une définition plus précise des zones de Brillouin : \emph{
+    La première zone de Brillouin est le plus petit volume entièrement entouré
+    par les plans qui sont les bissectrices des vecteurs du réseau réciproque
+tracés depuis l'origine.}
+
+
+
+
+L'étude de réseau dans l'espace réel (K), généralement il est pratique et
+intéressant de considérer un polyhèdre connu sous le nom de cellule de 
+Wigner-Seitz, décrite précedement.
+
+L'analogie entre la construction dans l'espace réciproque résulte en ce qui est
+connu en tant que zore de Brillouin. Rappelons que la première zone de Brillouin 
+est la cellule de Wigner-Seitz du réseau réciproque.
+
+Généralement ,la construction de la zone de Brillouin est utiisée poru décrire
+les électrons dans un solide périodique ; les plans bisecteurs et les
+zones ont une signification pour la diffraction. Cela peut être remarqué en 
+(ré)écrivant les conditions e la diffraction :
+\begin{equation}
+    \mathbf{q}_B = (\mathbf{k'-k})_B = 2\pi\mathbf{G} \rightarrow \mathbf{k} + 2\pi \mathbf{G} = \mathbf{k'}
+\end{equation}
+
+Lorsque $k=k'$, on peut écrire :
+\begin{equation}
+    (\mathbf{k} + 2\pi \mathbf{G})^2 = k^2
+\end{equation}
+
+mais :
+\begin{equation}
+    2 \mathbf{k\cdot G} = 2\pi G^2
+\end{equation}
+
+Soit le résultat :
+\begin{equation}
+    \mathbf{k}\cdot\frac{\mathbf{G}}{G} = 2\pi \left( \frac{G}{2} \right)
+\end{equation}
+
+où on a utiisé le fait que $-\mathbf{G}$ esta ussi un vecteur du réseau
+réciproque.
+
+Cette dernière équation pose le fait que l acondition de la diffraction est
+satisfaite lorsque la composante de $\mathbf{k}$ selon $\mathbf{G}$ est égale à
+$2\pi$ fois la demin longueur de $\mathbf{G}$. En fait, cette condition est
+vérifiée pour tous les vecteurs $\frac{\mathbf{k}}{2\pi}$ qui ont leur origine
+en un nœud du réseau réciproque, et terminent sur les plans bissecteurs
+perpendiculaires au vecteur entre l'origine et un autre nœud du réseau réciproque. \TODO figure.
+
+
+ 
+\subsection{Conclusions sur les conditions de la diffraction}
+
+Les conditions de Laue, la realtion de Bragg et la construction d'Ewald sont des
+représentations équivalentes du même phénomène : les directions de diffraction 
+d'un réseau sont déterminées par son réseau réciproque.
+
+La nature du motif influe uniquement sur l'intensité diffractée et pas sur les
+directions de diffraction. La mesure des angles de diffraction des rayons X par
+un cristal donne seulement des informations sur le réseau translatoire du cristal
+. Pour obtenir la position des atomes dans la maille, il faut aussi utiliser les
+intensités des figures de diffraction. Suivant la nature du problème étudié et
+les techniques de diffraction employées, on utilisera poru déterminer les
+directions de diffraction, l'une de ces trois méthodes.
+
+ 
+\section{Méthodes expérimentales}
+\subsection{Méthode de Laue}
+monocristal fixe, rayons X polychromatiques
+\subsection{Méthode du cristal mobile}
+monocristal mobile, rayons X monochromatiques
+\subsection{Méthode des poudres}
+polycristaux, rayons X monochromatiques
+
+\section{Exemples}
+
+\subsection{Facteur de structure}
+
+Aussi importante qu'elle puisse être, la somme de l'équation \ref{sommecristal}
+ne donne pas une idée générale. Le facteur de structure $F(\mathbf{q})$ donne une
+échelle de l'amplitude diffractée, et l'intensité diffractée est contrôlée
+par le carré du facteur de structure. Comme le facteur de structure est une
+fonction variant lentement par rapport au vecteur de diffusion, il est commun de
+considérer sa valeur à la condition de Bragg exacte. On définit :
+
+\begin{equation}
+    F_{hkl} = F(\mathbf{q}_B) = \sum_n^{N_B} f_n e^{i2\pi \mathbf{G}_{hkl}\cdot\mathbf{r}_n}
+\end{equation}
+
+Ce facteur de structure reflète l'information de la distribution électronique
+dans la maille. On verra q'il implique d'éliminer certains pics de diffraction
+dus aux interférences entre les radiations diffusée des différents atomes dans
+la maille.
+Regardons plus en détail certaines structures caractéristiques.
+
+\subsection{Structure cubique simple}
+
+Dans un réseau cubique simple,
+
+\begin{eqnarray}
+    \mathbf{a}_1 & = & a \mathbf{\hat x} \\
+    \mathbf{a}_2 & = & a \mathbf{\hat y} \\
+    \mathbf{a}_3 & = & a \mathbf{\hat z}
+\end{eqnarray}
+
+Les vecteurs du réseau réciproque sont :
+
+\begin{eqnarray}
+    \mathbf{b}_1 & = & \frac{1}{a} \mathbf{\hat x} \\
+    \mathbf{b}_2 & = & \frac{1}{a} \mathbf{\hat y} \\
+    \mathbf{b}_3 & = & \frac{1}{a} \mathbf{\hat z}
+\end{eqnarray}
+
+Il y a un atome par maille primitive et il est situé sur la coordonnée (0,0,0).
+Par conséquent, on trouve :
+
+\begin{equation}
+    F_{hkl} = \sum_n f(2\pi \mathbf{G}_{hkl}) e^{i 2\pi \mathbf{G}_{hkl}\cdot\mathbf{r}_n } = f(2\pi\mathbf{G}_{hkl})
+\end{equation}
+L'intensité diffusée présentera des pcis à chaque vecteur du réseau réciproque,
+et ils seront pondérés par $|f(\mathbf{q})|^2$ évalué en $\mathbf{q = q}_B$. On a
+vu préceddement que $f(\mathbf{q})$ est une fonction monotone décroissante,
+de telle sorte à ce que les pics correspondant à de plus grands vecteur du
+réseau réciproque, qui provionnent de plans espacés d'une distance $d$ plus
+courte, auront une intensité décroissante.
+\subsection{Structure cubique centré}
+
+À des fins illustratives, calculons le facteur de structure en utilisant la
+maille conventionnelle (et non pas la maille primitive). On a les mêmes vecteurs
+du réseau direct et du réseau réciproque que dans le système cubique simple, mais
+maintenant il y a un atome positionné à $(0,0,0)$ et un autre en
+$\frac{a}{2}(1,1,1)$. On trouve par conséquent :
+
+\begin{eqnarray}
+    F_{hkl} & = & \sum_n f(2\pi\mathbf{G}_{hkl}) e^{i 2\pi \mathbf{G}_{hkl}\cdot\mathbf{r}_n} \\
+    & = & f(2\pi \mathbf{G}_{hkl}) [1 + e^{i\pi(h+k+l)}] \\
+    & = & f(2\pi \mathbf{G}_{hkl}) \times \begin{cases} 2 \text{ si } h+k+l \text{ est pair}\\ 0 \text{ si } h+k+l \text{ est impair}\end{cases}
+\end{eqnarray}
+
+Par conséquent, pour une structure cubique centrée dans l'espace réel, le réseau 
+réciproque du cubique simple a une intensité nulle pour les points pour lesquels
+$h + k + l$ est impair. Les pics avec un facteur de structure nul sont dits
+interdits, alors que ceux qui ont un facteur de structure autorisé sont dits
+autorisés (ou permis). Par exemple, les quatre premiers pis permis sont :
+$(110)$,$(200)$,$(211)$ et $(220)$. Les indices $(100)$,$(111)$ et $(211)$ ont un
+facteur de structure nul, qui correspond à des pics interdits. Si l'on consiidère
+les pics autorisés pour un réseau cubique centré, et qu'on associe chacun d'entre
+eux aux vecteurs du réseau réciproque corrrespondant, les points constitués par
+les terminaisons de ces veucteurs produisent un réseau cubique faces-centrées,
+avec des côtés de longueur $\frac{2}{a}$. Par conséquent, un réseau BCC dans
+l'espace réel est considéré comme ayant une réseau réciproque FCC. 
+
+\subsection{Cubique face centrée}
+
+Ici, nous utilisons encore une fois la maille conventionnelle, mais cette fois-ci
+nous avons un atome principal aux positions $(0,0,0)$,$\frac{a}{2}(1,1,0)$,
+$\frac{a}{2}(1,0,1)$ et $\frac{a}{2}(0,1,1)$. On trouve, par conséquent un
+facteur de structure:
+
+\begin{eqnarray}
+    F_{hkl} & = & f(2\pi \mathbf{G}_{hkl}) [ 1 + e^{i\pi(h+l)} + e^{i\pi(k+l)} + e^{i\pi(h+k)}]\\
+    & = & f(2\pi\mathbf{G}_{hkl}) \times \begin{cases} 4 \text{ si } h,k,l \text{ sont de même parités}\\
+    0\text{ sinon.} \end{cases}
+\end{eqnarray}
+
+Par conséquent, pour un réseau FCC dans l'espace réel, le réseau cubique simple a
+des points manquants lorsque les indices $(hkl)$ ne sont pas de même parité. Les
+quatre premiers pics autorisés sont $(111)$, $(200)$, $(220)$ et $(311)$. Les
+pics correspondants aux plans $(100)$, $(110)$, $(210)$ et $(310)$ sont interdits
+. Si encore une fois, on associe chaque pic avec un vecteur du réseau réciproque,
+on produit un réseau FCC dans le réseau réciproque, avec un côté de longueur
+$\frac{2}{a}$. Par conséquent, un réseau FCC dans l'espace réel donne un réseau
+BCC dans l'espace réciproque.
+
+
+
+\subsection{Structure diamant}
+\subsection{NaCl}

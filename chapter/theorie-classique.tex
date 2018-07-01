@@ -1,0 +1,446 @@
+\chapter{Théorie classique des vibrations harmoniques dans un cristal}
+
+\section{Gaz d'excitations}
+
+On a pu étudier dans la première partie la structure d'un réseau
+cristallin à l'état de repos. Cette image ne permet pas de décrire les
+phénomènes de transport qui peuvent exister dans les matériaux. En particulier,
+on peut décrire le phénomène de conduction de la chaleur en imaginant les atomes
+vibrant autour de leur position d'équilibre, en poussant occasionnelelement
+leurs voisins.
+Si ces mécanismes sont corrects, on se heurte très rapidement à des calculs très
+compliqués si l'on souhaite étudier le réseau dans son ensemble. Il devient
+nécessaire de substituer, à l'étude de particules individuelles, un modèle
+collectif.
+
+Nous allons aborder dans cette partie la théorie de la chaleur spécifique à
+travers le modèle d'Einstein, qui a mené au modèle de Debye, dans lequel
+l'énergie thermique d'un solide est distribuée selon les modes de vibration du 
+cristal dans son ensemble. Chaque mode normal, que l'on peut représenter par une
+onde stationnaire, peut être analysé comme la somme de deux ondes propagatives
+se propageant dans deux directions différentes. Ces ondes sont polarisées
+longitudinalement : ce sont des ondes sonores.
+
+Par analogie avec les photons des ondes électromagnétiques, les quanta du
+champ vibrationnel du réseau sont appelés phonons.
+
+Dans cette image, on considère le réseau comme un volume composé uniquement d'un
+\emph{gaz} de phonons, dont le comportement peut être décrit par analogie avec
+un corps noir.
+
+Ces ondes de réseau peuvent transporter de grandes quantités d'énergie, avec
+des vitesses de l'ordre de la vitesse du son. La difficulté maintenant est de
+trouver un mécanisme pour interpréter le transport de la chaleur, qui correspond
+à des mécanismes de diffusion plus qu'à des phénomènes radiatifs. L'idée d'un
+gaz implique qu'il y a des \emph{collisions} entre des \emph{particules}, qui
+contribuent à la résistance. Cela semble contradictoire avec l'hypothèse que les
+états de phonons sont des modes normaux, qui, par définition, sont
+indépendants et incapables d'interagir. Il est à noter que lorsque l'on
+démontrera les équations du mouvement, on fera une approximation :
+l'énergie potentielle est traitée comme si seuls les termes quadratiques
+du déplacement par rapport aux positions d'équilibre, ont une influence.
+Cette approximation (dite harmonique) n'est pas réelle et néglige, en grande
+partie, les interactions phonons-phonons ainsi que la diffusion résultant
+des imperfections du réseau.
+
+En parallèle, on représentera la conduction électronique par un modèle collectif
+basé sur la mécanique ondulatoire. Un électron ne sera plus simplement représenté
+comme une particule simple tentant de pénétrer un réseau d'atomes.
+On pourra construire dans les solides des ondes, qui peuvent se regrouper en
+paquet d'ondes et être guidés dans le cristal, comme si les ions
+n'existaient pas. Les vibrations thermiques et les interactions ondes-électrons
+perturbent la régularité du réseau ; cela sera étudié dans une partie
+ultérieure.
+
+Ces modèles collectifs ont l'avantage d'être facile à modéliser : les
+excitations se comportent comme des particules dans un gaz : on peut facilement 
+transposer les concepts de distribution des viteses, de libre parcours moyens, 
+etc. familiers dans la théorie cinétique classique.
+
+
+\section{Approximation harmonique}
+
+Supposons qu'une paire d'atomes d'un cristal, séparée d'une distance
+$\mathbf{r}$, contribue d'une quantité $\phi(\mathbf{r})$ à l'énergie
+potentielle du cristal. $\phi$ est par exemple le potentiel de Lennard-Jones.
+Si le modèle du réseau statique est correct, chaque atome reste fixé sur
+sa position du réseau de Bravais. Par conséquent, l'énergie potientelle du
+cristal peut s'écrire comme la somme des contributions de toutes les paires
+distinctes :
+
+\begin{equation}
+    U = \half \sum_{\mathbf{R,R'}} \phi(\mathbf{R-R'}) = \frac{N}{2} \sum_{R\neq0} \phi(\mathbf{R})
+    \label{potentiela} 
+\end{equation}
+
+Si, dans le modèle, on permet aux atomes, dont la position d'équilibre est
+$\mathbf{R}$, de se trouver à une position $\mathbf{r(R)} \neq \mathbf{R}$,
+alors, on peut remplacer l'équation \ref{potentiela} par :
+
+\begin{equation}
+    U = \half \sum_{\mathbf{R,R'}} \phi(\mathbf{r(R) - r(R')})
+    = \half \sum_{\mathbf{R,R'}} \phi(\mathbf{R - R' + u(R) - u(R')})
+    \label{potentielu}
+\end{equation}
+
+Ici, l'énergie potentel dépend de la variable $\mathbf{u(R)}$, qui est la
+distance qui sépare deux atomes.
+
+Pour simplifier le problème, on est obligés d'utiliser l'approximation dite
+\emph{harmonique}. Dans celle-ci, les atomes ne sont pas beaucoup déviés de leur
+position d'équilibre. Si tous les $\mathbf{u(R)}$. sont petits, alors on peut
+développer l'énergie potentiel $U$ autour de sa position d'équilibre, avec
+un développement de Taylor à trois dimensions :
+
+\begin{equation}
+    f(\mathbf{r+a}) = f(\mathbf{r}) + \mathbf{a \cdot \nabla}f(\mathbf{r}) + \half (\mathbf{a\cdot\nabla})^2 f(\mathbf{r}) + \frac{1}{3!}
+    (\mathbf{a \cdot \nabla})^3 f(\mathbf{r}) + \cdots
+    \label{taylor}
+\end{equation}
+
+Ce qui donne, appliqué à $\mathbf{r=R-R'}$ et $\mathbf{a = u(R) - u(R')}$, on a :
+
+\begin{equation}
+    U = \frac{N}{2} \sum \phi(\mathbf{R}) + \half \sum_{\mathbf{R,R'}} (\mathbf{u(R) - u(R')}) \cdot \mathbf{\nabla} \phi(\mathbf{R-R'}) +
+    \frac{1}{4} \sum_{\mathbf{R,R'}} [(\mathbf{u(R)-u(R'))\cdot\nabla}]^2 \phi(\mathbf{R-R'}) + O(u^3)
+    \label{taylorpot}
+\end{equation}
+
+Le coefficient $\mathbf{u(R)}$ dans le terme d'ordre 1 est simplement :
+
+\begin{equation}
+    \sum_{\mathbf{R'}} \nabla \phi(\mathbf{R-R'})
+    \label{coeflineaireapproxharmh}
+ \end{equation}
+
+C'est simplement le minimum de la force éxercé sur l'atome en position
+$\mathbf{R}$  par tous les autres atomes, lorsque chacun d'entre eux est placé
+à sa position d'équilibre. À l'équilibre, le bilan des forces sur les atomes
+est nul. Par conséquent, ce terme d'ordre 1 est nul.
+
+Ainsi, le premier terme non nul du potentiel est le terme quadratique.
+L'approximation harmonique consiste à ne retenir que ce terme. On écrit ainsi
+l'énergie potentielle comme :
+
+\begin{equation}
+    U = U^{eq} + U^{harm}
+    \label{approxharm}
+\end{equation}
+ 
+Dans cette approximation, $U^{eq}$ est l'énergie potentielle à l'équilibre, et
+en outre,
+
+\begin{eqnarray}
+    U^{harm} &  = &  \frac{1}{4} \sum_{\mathbf{R,R'}} [u_\mu(\mathbf{R}) - u_\mu(\mathbf{R'})] \phi_{\mu\nu}(\mathbf{R-R'})[u_\nu(\mathbf{R}) -
+    u_\nu(\mathbf{R'})] \\
+    \phi_{\mu\nu}(\mathbf{r}) & = & \frac{\partial^2 \phi(\mathbf{r})}{\partial r_\mu \partial r_\nu}
+    \label{uharm}
+\end{eqnarray}
+
+Comme $U^{eq}$ est constante, on peut l'ignorer dans un grand nombre de
+problèmes dynamiques, et se restreindre à $U^{harm}$
+
+L'approximation harmonique est généralement le point de départ de toutes les
+théories de dynamique du réseau. D'autres corrections sur $U$, en particulier
+sur les termes du troisième et du quatrième ordre, permettent de comprendre
+plus en profondeur certains phénomènes physiques.
+
+Le potentiel harmonique est souvent écrit dans la forme donnée par \ref{uharm},
+mais une forme plus générale est plutôt :
+
+\begin{equation}
+    U^{harm} = \half \sum_{\mathbf{R,R'}} u_\mu(\mathbf{R}) D_{\mu\nu} (\mathbf{R-R'})u_\nu(\mathbf{R'})
+\end{equation}
+
+Pour le cas décrit ici, $D_{\mu\nu}$ a la forme :
+
+\begin{equation}
+    D_{\mu\nu}(\mathbf{R-R'}) = \delta_{R,R'} \sum_{\mathbf{R''}} \phi_{\mu\nu}(\mathbf{R-R''}) - \phi_{\mu\nu} (\mathbf{R-R''})
+\end{equation}
+
+\section{Chaîne 1D à 1 atome par maille}
+
+Considérons à présent les vibrations élastiques d'un cristal composé d'un atome
+par maille primitive. On cherche la fréquene d'une onde élastique en fonction du
+vecteur d'onde qui décrit l'onde avec les constantes élastiques.
+Le modèle présenté ici consiste en fait à prendre un cristal tri-dimensionnel et
+à réduire, à partir des symmétries, l'étude aux directions de propagation $[100]$, $[110]$ ou $[111]$ pour un cristal cubique par exemple.
+
+Deux cas de figure peuvent se présenter : lorsqu'une onde se propage le long d'
+une de ces directions, des plans d'atomes bougent en phase, soit parallèlement
+au vecteur d'onde, soit perpendiculairement.
+
+Posons $u_s$ le déplacement du plan d'atomes $s$ (on se restreint alors à un
+problème à une dimension).
+Pour chaque vecteur d'onde, il y a trois modes solutions : un de polarisation
+longitudinale et deux de polarisations transverse.
+
+Appliquons l'approximation harmonique au problème. On considère également que
+seules les interacitons entre plus proches voisins ($p=\pm 1$) sont
+significatives. La force totale induite par les plans $s\pm 1$ sur les plans $s$
+s'écrit :
+
+\begin{equation}
+F_s = C(u_{s+1} - u_s) + C (u_{s-1} - u_s)
+\end{equation}
+
+Par conséquent, l'équation du mouvement peut s'écrire :
+\begin{equation}
+M \frac{du_s^2}{dt^2} = C (u_{s+1} -u_{s-1} - 2 u_s)
+\end{equation}
+où M est la masse d'un atome.
+
+Considérons à présent les solutions sous formes d'ondes propagatives, c'est à
+dire qui s'exprimenent en $exp(-i\omega t)$. On obtient alors :
+\begin{equation}
+-M\omega^2 u_s = C (u_{s+1} + u_{s-1} - 2u_s )
+\label{eq:mvtreduite}
+\end{equation}
+Soit le résultat :
+\begin{equation}
+u_{s\pm 1} = u \exp(is\mathbf{k}\cdot\mathbf{a}) \exp \pm (i\mathbf{k}\cdot
+\mathbf{a})
+\label{eq:redmvt}
+\end{equation}
+
+où $\mathbf{a}$ correspond au vecteur séparant chacun des plans, et $\mathbf{k}$
+est le vecteur d'onde de l'onde propagative.
+
+En injectant \ref{eq:redmvt} dans \ref{eq:mvtreduite} et après calculs, on
+retrouve la relation de dispersion :
+\begin{equation}
+    \omega^2 = \frac{2C}{M}\left(1-\cos \mathbf{k}\cdot\mathbf{a}\right)
+    \label{eq:reldispphonon1D}
+\end{equation}
+
+La limite de la première zone de Brillouin se situe pour 
+$\mathbf{k} = \pm \frac{\pi}{a}$. On peut montrer à partir de la relation de
+dispersion \ref{eq:reldispphonon1D} que la pente de $\omega$ en fonction de
+$\mathbf{k}$ est 0 en bord de zone :
+
+\begin{equation}
+\frac{d\omega^2}{d\mathbf{k}} = \frac{2Ca}{M} \sin \mathbf{k}\cdot\mathbf{a} = 0
+\end{equation}
+
+\begin{marginfigure}
+\TODO
+\caption{Fréquence $\omega$ tracée en fonction du vecteur d'onde $\mathbf{k}$.}
+\label{fig:reldispphonon1D}
+\end{marginfigure}
+
+On peut alors tracer $\omega$ en fonction de $\mathbf{k}$, comme cela est reporté
+sur la figure \ref{fig:reldispphonon1D} :
+\begin{equation}
+\omega = \sqrt{\frac{4C}{M}} \left| \sin \frac{1}{2} ka \right|
+\end{equation}
+
+\section{Chaîne 1D à deux atomes par maille primitive}
+
+La relation de dispersion des phonons présente des caractéristiques différentes 
+si l'on considère des cristaux comportant deux atomes ou plus par maille
+primitive. Par exemple, la structure NaCl ou la structure diamant comportent
+toutes deux deux atomes dans leur maille primitive. Pour chaque mode de
+polarisation dans une direction de propagation donnée, la relation de
+dispersion $\omega(\mathbf{k})$ présente deux branches : une branche acoustique
+et une branche optique. Chacune de ces deux branches présentent des
+modes longitudinaux et transverse.
+
+Dans le cas général, si la maille primitive contient $p$ atomes, on se
+retrouve avec $3p$ branches dans la relation de dispersion : 3 branches
+acoustiques et $3p-3$ branches optiques. Par exemple, KBr ou le germanium
+cristallisent avec 3 atomes par maille et disposent de 6 branches :
+1 longitudinale acoustique, 2 transversale acoustique, 1 longitudinale optique
+et 2 transverse optique.
+
+Considérons, pour démontrer ceci, un cristal cubique composé d'atomes de masse
+$M_1$ et d'atomes de masse $M_2$. En fait, il n'est pas nécessaire d'avoir des
+masses différentes, mais il faut soit que la force séparant deux atomes dans des
+sites non équivalents varie (dans ce cas, comme dans le cadre du cours de 
+Pr Dimitri Roditchev, on définit deux constantes de raideur entre les atomes),
+ou que le paramètre de maille $\mathbf{a}$ soit différents pour deux atomes dans
+des sites non équivalents.
+
+Appelons $u_s$ le déplacement de l'atome de masse $M_1$ dans la diade $s$ et
+$v_s$ le déplacement de l'atome de masse $M_2$ dans la diade $s$. Considérons
+une onde qui se propage dans la direction $\mathbf{a}$ (dans cette direction, un
+plan ne contient qu'un type d'ion).
+
+Écrivons à présent les équations du mouvement sous l'hypothèse que chaque plan
+n'intergit qu'avec ses plus proches voisins :
+
+\begin{eqnarray}
+M_1 \frac{d^2u_s}{dt^2} & = & C (v_s + v_{s+1} - 2u_s)\\
+M_2 \frac{d^2v_s}{dt^2} & = & C (u_{s+1} + u_s - 1v_s)
+\label{eq:mvtdeuxatomes}
+\end{eqnarray}
+
+On cherche une solution sous la forme d'ondes propagatives, à savoir :
+\begin{eqnarray}
+u_s & = &  u \exp (iska) \exp (-i\omega t) \\
+v_s & = & v \exp (iska) \exp (-i\omega t)
+\label{eq:deuxatomessolexp}
+\end{eqnarray}
+
+En injectant \ref{eq:deuxatomessoleexp} dans \label{eq:mvtdeuxatomes}, on
+retrouve :
+
+\begin{eqnarray}
+-\omega^2 M_1 u & = & C v [ 1 + \exp -ika ] - 2Cu\\
+-\omega^2 M_2 v & = & C u [ 1 + \exp ika ] - 2Cv
+\end{eqnarray}
+
+On peut résoudre ce système d'équations seulement si le déterminant du système
+est nul, ce qui revient à écrire :
+
+\begin{equation}
+M_1M_2\omega^4 - 2C(M_1 + M_2) \omega^2 + 2C^2 (1-\cos ka) = 0
+\end{equation}
+
+Si l'on prend $ka << 1$, alors 
+$\omega^2 \approx 2C \left(\frac{1}{M_1} + \frac{1}{M_2} \right)$, 
+ce qui correspond à la branche optique, ou alors
+$\omega^2 \approx \frac{\frac{1}{2}C}{M_1+M_2} k^2 a^2$,
+ce qui correspond à la branche accoustique.
+
+Pour $k=\pm \frac{\pi}{a}$, on a donc $\omega^2 = \frac{2C}{M_1}$ ou
+$\omega^2 = \frac{2C}{M_2}$.
+
+Les déplacements de la particules dans les modes transverses acoustiques et
+transverse optique sont :
+
+\TODO figure
+
+Pour la branche optique, à $k=0$, $\frac{u}{v} = - \frac{M_2}{M_1}$ : les atomes
+vibrent en opposition de phase, avec un centre de masse fixe.
+
+Si les deux atomes ont des charges différentes, on peut exciter un momouvement
+de ce type avec le champ électrique d'une onde lumineuse. C'est pour cette
+raison que l'on parle de branche optique.
+
+Pour un $k$ quelconque, le rapport $\frac{u}{v}$ est complexe. Une autre 
+solution pour le ratio d'amplitude aux petits $k$ est $u=v$, obtenu pour
+$k=0$. Les atomes bougent en phase, comme pour des vibrations acoustiques de
+grandes longueurs d'ondes.
+
+Des solutions sous forme d'onde n'existent pas pour toutes les fréquences,
+comme c'est par exemple le cas entre $\sqrt{\frac{2C}{M_1}}$ et
+$\sqrt{\frac{2C}{M_2}}$. C'est une caractéristique des ondes élastiques dans les
+réseaux polyatomiques : il y a une bande de fréquences enterdites au bord de la
+première zone de Brillouin.
+
+\section{Chaîne 3D}
+
+\section{Loi de Dulong et Petit}
+
+Le potentiel d'énergie dépend de la variable dynamique $\mathbf{u(R)}$ et peut
+être abordée à partir du problème gouverné par l'hamiltonien :
+
+\begin{equation}
+    \mathcal{H} = \sum_{\mathbf{R}} \frac{\mathbf{P(R)}^2}{2M} + U
+\end{equation}
+où $\mathbf{P(R)}$ est la quantité de mouvement de l'atome dont la position
+d'équilibre est $\mathbf{R}$.
+
+La densité d'énergie thermique d'un cristal est donnée par :
+
+\begin{equation}
+    u = \frac{1}{V} \frac{\int d\Gamma e^{-\beta H} H}{\int d\Gamma e^{-\beta H}}
+\end{equation}
+
+Ici, $\beta = \frac{1}{k_B T}$ et $d\Gamma$ est l'élément de volume dans
+l'espace des phases du cristal :
+
+\begin{eqnarray}
+    d\Gamma & = & \prod_{\mathbf{R}} d\mathbf{u(R)} d\mathbf{P(R)}\\
+     & = & \prod_{\mathbf{R},\mu} du_\mu (\mathbf{R}) dp_\mu (\mathbf{R})
+\end{eqnarray}
+
+Cette formule est obtenue en moyennant les états selon toutes les configurations
+ioniques possibles, en pondérant chaque état par le facteur $e^{-\frac{E}{k_BT}}$,
+où $E$ est l'énergie de la configuration.
+
+On peut écrire la densité d'énergie thermique dans une forme plus générale :
+
+\begin{equation}
+    u = - \frac{1}{V} \frac{\partial}{\partial \beta} \left( \ln \int d\Gamma e^{-\beta H} \right)
+    \label{densiteenergiethermique}
+\end{equation}
+
+Dans l'approximation harmonique, la dépendance en température de l'intégrale
+apparaissant dans \ref{densiteenergiethermique} peut être extraite à partir d'un
+changement de variables :
+
+\begin{align}
+    \mathbf{\overline{u}(R)} & = & \sqrt{\beta} \mathbf{u(R)} & \qquad &
+    d\mathbf{\overline{u}(R)} & = & \beta^{\frac{3}{2}} d\mathbf{u(R)} \\
+    \mathbf{\overline{P}(R)} & = & \sqrt{\beta} \mathbf{u(R)} & \qquad &
+    d\mathbf{\overline{P}(R)} & = & \beta^{\frac{3}{2}} d\mathbf{u(R)}
+\end{align}
+
+On obtient alors :
+
+\begin{eqnarray}
+    \int d\Gamma e^{-\beta H} & = & \int d\Gamma \exp \left[ -\beta \left( \sum
+    \frac{\mathbf{P(R)}^2}{2M} + U^{eq} + U^{harm} \right) \right] \\
+    & = & e^{-\beta U^{eq}} \beta^{-3N} \cdot I 
+    \label{injected}
+\end{eqnarray}
+
+Où $I$ est une intégrale indépendante de la température. Par conséquent, elle ne
+contribue pas dans la dérivée en fonction de $\beta$ quand on injecte
+\ref{injected} dans \ref{densiteenergiethermique}. On peut alors réduire
+la densité d'énergie thermique en :
+
+\begin{eqnarray}
+    u &= & -\frac{1}{V} \frac{\partial}{\partial \beta} \ln \left( e^{-\beta U^{eq}} \beta^{-3N} \cdot cst \right) \\
+    & = & \frac{U^{eq}}{V} + \frac{3N}{V}k_BT\\
+    & = & u^{eq} + 3nk_BT
+\end{eqnarray}
+
+\begin{itemize}
+    \item À $T=0$, $u=u^{eq}$, ce qui correspond à la théorie du réseau statique;
+    \item Pour $T\neq0$, on corrige $u^{eq}$ de la quantité $3nk_BT$
+\end{itemize}
+
+L'énergie $k_BT$ est de l'ordre du centième d'électron-volt ; par conséquent,
+la correction est assez faible. Généralement, on considère plutôt la chaleur
+spécifique :
+
+\begin{eqnarray}
+    c_v & =&  \frac{\partial u}{\partial T} \\
+    & = & 3nk_BT
+\end{eqnarray}
+
+Ainsi, la chaleur spécifique due aux vibrations de résaeu n'est que de $3k_B$
+par ion. Ce résultat constitue la loi de Dulong et Petit. Dans un solide
+monoatomique, il y a \SI{6.022e23}{\per\mol} ions. Ainsi, la capacité molaire
+est :
+
+\begin{equation}
+    c_v^{molaire} = \SI{5.96}{\calorie\per\mol\per\kelvin} = \SI{25}{\kilo\joule\per\mol\per\kelvin}
+\end{equation}
+
+En pratique, la variation est légèrement différente, comme présentée sur la
+figure \ref{fig:capacitecalorifique}
+
+\begin{marginfigure}
+    \TODO
+    \caption{Évolution de la capacité calorifique molaire de l'argon en fonction de la température, comparaison avec la loi de Dulong et Petit}
+    \label{fig:capacitecalorifique}
+\end{marginfigure}
+
+On peut constater expérimentalement que :
+\begin{enumerate}
+    \item À faible température, la chaleur spécifique est bien plus faible que l valeur donnée par la loi de Dulong et Petit, elle est
+        pratiquement nulle à température nulle ;
+    \item À plus haute température, la valeur donnée par la loi de Dulong et Petit n'est pas atteinte expérimentallement.
+\end{enumerate}
+
+Le point 2 peut être expliqué par les défauts de l'approximation harmonique :
+cette hypothèse est trop restrictive lorsque les atomes s'éloignent trop de leur
+position d'équilibre.
+
+Le point 1 ne peut pas être expliqué de façon classique. Pour cette raison, nous
+allons introduire une quantification des vibrations du réseau.
+
+

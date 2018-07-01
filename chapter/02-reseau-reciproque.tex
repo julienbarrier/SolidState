@@ -1,0 +1,243 @@
+\chapter{Réseau réciproque}
+\label{ch:reseaurec}
+
+
+Il est assez facile de s'imaginer le réseau direct présenté dans la section \ref{ch:reseaucrist} pour un cristal classique, car il correspond à l'agencement des atomes dans celui-ci. En revanche, dès que l'on souhaite pousser un peu l'étude de structures périodiques, on a besoin d'une autre représentation du cristal : dans l'\emph{espace réciproque}. Ce \emph{réseau réciproque} va jouer un rôle fondamental dans les études analytiques, que ce soit pour la structure électronique ou pour la résolution d'une structure par diffraction des rayons X.
+
+L'objectif de cette section est donc de décrire la géométrie de l'espace réciproque et de présenter quelques implications élémentaires liées à cette définition. Il n'est pas question ici de donner une vision exhaustive de ce qu'est l'espace réciproque, mais plutôt d'introduire les concepts qui permettent de mieux comprendre la diffraction des rayons X ou l'étude des structures électroniques des cristaux.
+
+\section{Définition du réseau réciproque}
+
+\subsection{Définition}
+
+Soit un réseau de Bravais constitué d'un ensemble de points $\mathbf{R}$, et une
+onde plane $e^{i\mathbf{k}\cdot\mathbf{r}}$. Dans le cas général ($\mathbf{k}$ quelconque), l'onde plane que nous venons de définir n'a pas la périodicité du réseau de Bravais. Il existe cependant un choix de $\mathbf{k}$ qui aura cette périodicité : celui-ci définit le réseau réciproque :
+
+\begin{description}
+\item[Définition] L'ensemble des vecteurs d'ondes $\mathbf{K}$ qui résultent en une onde plane avec la périodicité d'un réseau de Bravais donné est appelé réseau réciproque.
+\end{description}
+
+Cette définition est équivalente à la propriété suivante : $\mathbf{K}$ appartient au réseau réciproque d'un réseau
+de Bravais de points $\mathbf{R}$ si et seulement si :
+
+\begin{equation}
+\exp(i \mathbf{K}\cdot \mathbf{R}) = 1
+\label{eq:defresreciproque}
+\end{equation}
+
+Il vient alors que :
+
+\begin{equation}
+    \mathbf{K} \cdot \mathbf{R} = 2 \pi n
+    \label{eq:fondreseaurec}
+\end{equation}
+
+Cette relation est fondamentale. On peut alors donner les descriptions suivantes, basées sur le volume de la
+maille :
+
+\begin{equation}
+\mathbf{b}_1 = 2\pi \frac{\mathbf{a}_2 \times \mathbf{a}_3}{V},\quad
+\mathbf{b}_2 = 2\pi \frac{\mathbf{a}_3 \times \mathbf{a}_1}{V},\quad
+\mathbf{b}_3 = 2\pi \frac{\mathbf{a}_1 \times \mathbf{a}_2}{V}
+\end{equation}
+
+dans lesquelles $\mathbf{a}_i$ est un vecteur du réseau direct et $\mathbf{b}_i$ du réseau réciproque. le volume de la maille $V$ peut être écrit avec le produit mixte $\mathbf{a}_1 \cdot (\mathbf{a}_2 \times \mathbf{a}_3)$.
+
+On utilise également une formulation équivalente, basée sur le produit scalaire :
+
+\begin{equation}
+\mathbf{b}_i \cdot \mathbf{a}_j = 2\pi \delta_i^j
+\label{eq:reseaureciproque}
+\end{equation}
+
+Cette équation est absolument fondamentale et nous permet, dans la plupart des cas, de calculer le réseau de Bravais sans avoir à faire le calcul fastidieux du volume puis du produit tensoriel.
+
+Puisque l'espace de Bravais de départ est l'espace des longueurs réelles, l'espace réciproque est de dimension 1/L. En outre, si $v$ est le volume d'une maille primitive dans le réseau direct, alors la maille primitive du réseau réciproque aura un volume égal à $\frac{(2\pi)^3}{v}$.
+
+\begin{figure}
+    \includegraphics{./images/part1/cullity45}
+    \caption{Illustration de réseaux cristallins (gauche) et des réseaux
+        réciproques correspondants (droite), pour un système cubique (en haut) et
+    un système hexagonal (en bas)}
+    \label{fig:reciprocal}
+\end{figure}
+
+\subsection{Réseau de Bravais}
+
+Dans cette partie, nous allons montrer que le réseau réciproque d'un réseau de Bravais est également un réseau de Bravais. Pour cela, considérons $\mathbf{a}_1$, $\mathbf{a}_2$ et $\mathbf{a}_3$ un ensemble de vecteurs primitifs du réseau direct.
+
+Soit $\mathbf{k}$ un vecteur quelcoque du réseau réciproque. Écrivons le comme une combinaison linéaire des $\mathbf{b}_i$, et de la même manière, $\mathbf{R}$ comme la combinaison linéaire des $\mathbf{a}_j$ :
+
+\begin{eqnarray}
+    \mathbf{k} & = & k_1 \mathbf{b}_1 + k_2 \mathbf{b}_2 + k_3 \mathbf{b}_3\\
+    \mathbf{R} & = & n_1 \mathbf{a}_1 + n_2 \mathbf{a}_2 + n_3 \mathbf{a}_3
+\end{eqnarray}
+
+En effectuant le produit scalaire, on trouve :
+
+\begin{equation}
+    \mathbf{k}\cdot\mathbf{R} = 2\pi (k_1 n_1 + k_2n_2 + k_3n_3)
+\end{equation}
+
+Si on veut vérifier la définition (équation \ref{eq:defresreciproque}), il est nécessaire que $\mathbf{k}\cdot\mathbf{R}$ soit égal à $2\pi$ fois un entier, pour tout choix d'entiers $n_i$. Dès lors, il faut que les coefficients $k_i$ soient eux-même des entiers. Par conséquent, le réseau réciproque est un réseau de Bravais et les $\mathbf{b}_i$ peuvent être considérés comme des vecteurs
+primitifs du réseau réciproque.
+
+\section{Plans réticulaires}
+
+Les vecteurs du réseau réciproque et les plans passant par les nœuds du réseau direct sont reliés par la notion de plans réticulaires. Cela deviendra très important dans la théorie de la diffraction. Nous décrivons ici cette relation par la géométrie.
+
+\subsection{Définition}
+
+Considérons un réseau de Bravais. Un plan réticulaire est défini comme un plan qui contient au moins trois nœuds du réseau non alignés. Comme le réseau de Bravais est invariant par translation, n'importe quel plan qui correspond à cette définition contient lui même un infinité de nœuds. Ceux-ci forment un réseau de Bravais bi-dimensionnel dans ce plan. Ces plans sont définis pour n'importe quel réseau de Bravais, qu'il soit dans l'espace réel ou réciproque.
+
+On peut alors définir des familles de plans réticulaires, qui forment un ensemble de plans parallèles, équidistants, et qui contiennent à eux tous les points d'un réseau de Bravais. Chaque plan réticulaire est un élément de cette famille. Le réseau réciproque apporte un moyen facile de classifier toutes les familles possibles de plans réticulaires, qui sont inclus dans le théorème suivant :
+
+\begin{description}
+    \item[Théorème] Pour une famille donnée de plans réticulaires, séparés d'une distance $d$, il existe au moins un vecteur du réseau réciproque perpendiculaire à ce plan. Le plus court d'entre eux a une longueur de $2\pi/d$.
+    \item[Réciproque] Pour tout vecteur du réseau réciproque $\mathbf{K}$, il y a une famille de plans réticulaires normaux à $\mathbf{K}$ et séparés d'une distance $d$, où $2\pi/d$ est la longueur du plus petit vecteur du réseau réciproque parallèle à $\mathbf{K}$.
+\end{description}
+
+\begin{figure}
+    \includegraphics{./images/part1/reticulaire-01}
+    \caption{Plans réticulaires indexés par les indices de Miller correspondants. (a) $x_P = 1/h$, $y_p = 1/k$, $z_P = 1/l$. (b) $x_P = 1/4$, $y_P = 1/2$, $z_P = 1$}
+    \label{fig:retic}
+\end{figure}
+
+Un plan réticulaire P est défini par son intersection avec les axes du système de coordonnées, comme présenté sur la figure \ref{fig:retic}. Les coordonnées des points d'intersection sont $(x_P,0,0)$, $(0,y_P,0)$ et $(0,0,z_P)$. Comme le plan P contient des nœuds du réseau, les coordonnées $x_P$,$y_P$ et $z_P$ sont des nombres rationnels. Si un plan est parralèle à un axe du système de coordonnées, son intersection avec cet axe a lieu à l'infini : la coordonnée correspondante est notée $\infty$.
+
+Un plan réticulaire est indexé par les indices $h$,$k$ et $l$ entre parenthèses : $(hkl)$. Il ne s'agit pas directement des coordonnées $x_P$,$y_P$ et $z_P$ des points d'intersectin du plan avec les axes : $h$,$k$ et $l$ sont des nombres entiers que nous allons définir plus en détail. Comme pour les rangées réticulaires, si un indice est négatif, il est symbolisé avec un trait au dessus.
+
+\subsection{Indices de Miller}
+
+Pour assurer la correspondance entre les vecteurs du réseau réciproque et les familles de plans réticulaires, nous avons défini une indexation $h$,$k$,$l$. Ces indices sont appelés \emph{indices de Miller} et sont définis par la réciproque de l'intersection des plans avec les axes cristallographiques. Si les indices de Miller d'un plan sont $(hkl)$ (écrits entre parenthèses), alors le plan intersecte les axes en $1/h$, $1/k$ et $1/l$. Si la maille a des côtés de longueur $a$, $b$ et $c$, alors le plan intersecte celle-ci en $a/h$, $b/k$, $c/l$, comme présenté dans la figure \ref{fig:retic}. Comme il y a une infinité de plans réticulaires parallèles entre eux, on choisit générallement les indices de Miller les plus petits possibles, et ils définissent cette famille complète de plans réticulaires parallèles.
+
+Comme nous l'avons dit précédemment, pour un plan parallèle à un axe, la coordonnée de l'intersection est infinie. L'indice de Miller correspondant est $0$. Si un plan intersecte un axe en une coordonnée négative, on note cette coordonnée, encore une fois avec une barre au dessus.
+En plus de cela, les plans $(nh\,nk\,nl)$ sont parallèles aux plans $(hkl)$ et en sont séparés d'une distance $d = \frac{1}{n}$
+
+En outre, un plan réticulaire défini par les indices de Miller $h$,$k$ et $l$ est normal au vecteur du réseau réciproque $h\mathbf{b}_1 + k \mathbf{b}_2 + l\mathbf{b}_3$. 
+
+\begin{figure}
+    \includegraphics{./images/part1/cullity42-01}
+    \caption{Indices de Miller de plans du réseau. La distance $d_{hkl}$
+    correspond à l'espacement entre chacun de ces plans}
+    \label{fig:miller}
+\end{figure}
+
+Par définition, comme chaque vecteur du réseau réciproque est une combinaison linéaire des trois vecteurs primitifs avec des coefficients intégraux, les indices de Miller sont toujours des entiers.
+
+
+
+\section{Zones de Brillouin}
+
+\begin{marginfigure}
+\includegraphics{./images/part1/brillouin-01}
+\caption{Première zone de Brillouin pour un réseau cubique centré}
+\label{fig:brillouinbcc}
+\end{marginfigure}
+
+Nous avons introduit précedemment le concept de \emph{cellule de Wigner-Seitz}. Dans le réseau réciproque, on appelle \emph{première zone de Brillouin} la cellule de Wigner-Seitz.
+Même si la première zone de Brillouin et la cellule de Wigner-Seitz du réseau réciproque correspondent aux mêmes concepts, la première n'existe que dans le réseau réciproque.
+
+Les zones de Brillouin donnent une interprétation géométrique des conditions de la diffraction que l'on étudiera plus tard.
+
+La première zone de Brillouin pour un cristal cubique centré (figure \ref{fig:brillouinbcc}) a la même forme que la cellule de Wigner-Seitz d'un cristal cubique à faces centrées, car le réseau réciproque d'un cristal cubique centré est un cristal cubique à faces centrées. Sur la figure \ref{fig:brillouinbcc}, les points de symétrie élevée sont représentés par les lettres $K$,$L$,$\Gamma$, $X$, etc. L'espace réciproque du réseau cubique centré est défini par :
+
+\begin{eqnarray}
+    b_1 & = & \frac{4\pi}{a} \half (\hat{y} + \hat{z})\\
+    b_2 & = & \frac{4\pi}{a} \half (\hat{z} + \hat{x})\\
+    b_3 & = & \frac{4\pi}{a} \half (\hat{x} + \hat{y})
+\end{eqnarray}
+    
+\begin{marginfigure}
+\includegraphics{./images/part1/brillouin-02}
+\caption{Première zone de Brillouin pour un réseau cubique faces-centrées}
+\label{fig:brillouinfcc}
+\end{marginfigure}
+
+De la même façon, la première zone de Brillouin d'un réseau cubique à faces centrées (figure \ref{fig:brillouinfcc}) a la même forme que la cellule de Wigner-Seitz d'un cristal cubique centré. Le réseau réciproque est défini par :
+
+\begin{eqnarray}
+    b_1 & = & \frac{4\pi}{a} \half (-\hat{x} + \hat{y} + \hat{z})\\
+    b_2 & = & \frac{4\pi}{a} \half (\hat{x} - \hat{y} + \hat{z})\\
+    b_3 & = & \frac{4\pi}{a} \half (\hat{x} + \hat{y} - \hat{z})
+\end{eqnarray}
+
+On peut généraliser la notion de zone de Brillouin à $n$. Remarquons que la première zone de Brillouin délimite l'ensemble des points de l'espace réciproque qui peuvent être atteints depuis l'origine sans traverser de plan bissecteur (également appelés plans de Bragg).
+
+\begin{marginfigure}
+    \includegraphics{./images/part1/zonesbrillouin-02}
+    \caption{Illustration des 3 premières zones de Brillouin, contenues dans les plans de Bragg représentés pour un carré de côté $2b$ ($b=2\pi/a$ pour un réseau carré 2D).}
+    \label{fig:constructionbrillouin}
+\end{marginfigure}
+Le seconde zone de Brillouin correspond à l'ensemble des points qui peuvent être atteints à partir de l'origine en traversant un plan de Bragg. Ainsi, on peut généraliser cela :
+la n\ieme zone de Brillouin est l'ensemble des points qui peuvent être atteints en traversant (n-1) plans de Bragg.
+
+Une zone de Brillouin est une maille primitive du réseau réciproque. Par conséquent, le volume de la n\ieme zone de Brillouin est égal au volume de la première zone. Pour le voir, on peut représenter en schéma de zone réduite les zones de Brillouin. Il faut donc découper les parties de la n\ieme zone de Brillouin qui sortent de la maille primitive usuelle, et les replacer à l'intérieur, comme présenté sur la figure \ref{fig:brillouinreduite}.
+
+\begin{figure}
+    \includegraphics{./images/part1/zonesbrillouin-01}
+    \caption{Représentation des 3 premières zones de Brillouin dans un schéma de zone réduite (les parties sont translatées d'un vecteur $\mathbf{G}$ du réseau réciproque. Les surfaces des zones sont identiques.}
+    \label{fig:brillouinreduite}
+\end{figure}
+
+\section{Exemple : réseau réciproque à deux dimensions}
+
+L'exercice consiste à considérer un réseau oblique à deux dimensions, dont les vecteurs de base rapportés à un repère orthonormé $(\hat{x},\hat{y})$ sont :
+\begin{equation}
+\mathbf{a} = 2\mathbf{\hat{x}},\quad \mathbf{b} = \mathbf{\hat{x}}+2\mathbf{\hat{y}}
+\end{equation}.
+
+Soient $A$ et $B$ les vecteurs de base du réseau réciproque.
+
+On peut écrire, à partir de la relation \ref{eq:reseaureciproque} :
+
+\begin{equation}
+\mathbf{a}_i \cdot \mathbf{A}_j = 2\pi \delta_i^j
+\end{equation}
+
+Ce qui, en réécrivant les vecteurs, se traduit par :
+
+\begin{equation*}
+\mathbf{a} \cdot \mathbf{A} = 2\pi = \begin{pmatrix} 2 \\0 \end{pmatrix}\cdot\begin{pmatrix} A_x \\ A_y \end{pmatrix} = 2A_x
+\end{equation*}
+
+\begin{equation*}
+\mathbf{b} \cdot \mathbf{A} = 0 = \begin{pmatrix} 1 \\2 \end{pmatrix}\cdot\begin{pmatrix} A_x \\ A_y \end{pmatrix} = A_x + 2A_y
+\end{equation*}
+
+Soit
+
+\begin{equation*}
+A_y = -\frac{A_x}{2} = -\frac{\pi}{2}
+\end{equation*}
+
+et
+
+\begin{equation*}
+\mathbf{a} \cdot \mathbf{B} = 0 = \begin{pmatrix} 2 \\0 \end{pmatrix}\cdot\begin{pmatrix} B_x \\ B_y \end{pmatrix} = 2B_x
+\end{equation*}
+
+\begin{equation*}
+\mathbf{b} \cdot \mathbf{B} = 2\pi = \begin{pmatrix} 1 \\2 \end{pmatrix}\cdot\begin{pmatrix} B_x \\ B_y \end{pmatrix} = B_x + 2B_y
+\end{equation*}
+
+
+Soit
+
+\begin{equation*}
+B_y = \pi
+\end{equation*}
+
+On obtient alors les vecteurs primitifs $\mathbf{A}$ et $\mathbf{B}$ du réseau réciproque :
+
+\begin{equation}
+\mathbf{A} = \pi\mathbf{\hat{x}}-\frac{\pi}{2}\mathbf{\hat{y}},\quad \mathbf{B} = \pi \mathbf{\hat{y}}
+\end{equation}.
+
+On peut donc tracer :
+
+\begin{figure}
+\TODO
+\caption{Exemple : réseau réciproque, zones de Brillouin}
+\label{fig:exemplebrillouin}
+\end{figure}

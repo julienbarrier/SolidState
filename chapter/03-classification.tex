@@ -1,0 +1,610 @@
+\chapter{Classification des réseaux cristallins}
+\label{ch:classification}
+
+Mon but ici n'est pas de rentrer en détails dans les détails de la classification
+mais d'en donner un apperçu pratique et utile. On trouvera plus de détails à ce
+sujet dans les ouvrages suivants :
+\begin{description}
+    \item[Diffraction from Materials] L.H. Schwartz et J.B: Cohen,
+        Springer-Verlag.
+    \item[Essentials of Crystallography] D. et C. Mc Kie, Blackwell Scientific
+        Publications, 1986.
+    \item[The Basics of Crystallography and Diffraction] C. Hammond,
+        International Union of Crystallography Text on Crystallography, Oxford
+        University Press, 1997.
+\end{description}
+
+Le polycopié de N. Lequeux de \pc est largement plus complet que ce document de ce
+point de vue. En particulier, j'ai choisi de ne pas détailler les aspects
+mathématiques liées aux symétrie et de me concentrer sur la géométrie. Je ne fais ni
+mention des 32 groupes ponctuels, ni de la notation de Schonflies ou des 230 groupes
+d'espace.
+
+\section{Opérations de symétrie}
+
+La périodicité d'un réseau est due aux translations de réseau. Celles-ci sont
+définies par le postulat de Bravais, complété par celui de Schönflies-Fedorov.
+
+L'ensemble des points d'un réseau, appelés \emph{nœuds du réseau}, constitue un
+réseau spatial périodique. On construit celui-ci en appliquant à chaque nœud
+l'ensemble des translations :
+\begin{equation}
+\mathbf{t}_n = u \mathbf{t}_1 + v \mathbf{t}_2 + w \mathbf{t}_3
+\end{equation}
+où $u$, $v$ et $w$ sont des entiers et $\mathbf{t}_1$, $\mathbf{t}_2$, $\mathbf{t}_3$
+forment une base primitive.
+
+La périodicité du réseau est une contrainte forte qui limite le nombre et la nature des opérations de symétrie assurant l'invariance du réseau.
+
+Avant de considérer comment les symétries sont incorporées dans les réseau, il
+est nécessaire de comprendre comment les éléments de symétrie opèrent sur leur
+environnement. Si un certain objet est à une position donnée d'un élément de
+symétrie, le type d'élément de symétrie impose l'emplacement et l'orientation
+d'un objet identique. Alternativement, un corps ou une structure est dite
+symétrique lorsque ses composants sont arrangés de sorte à ce que certaines
+opérations de symétries peuvent être effectuées en son sein, en le recouvrant
+totalement.
+Par exemple, si un corps est symétrique par rapport à un plan passant à son
+travers, alors la réflexion de chaque moitié de ce corps par le miroir plan
+produira un corps qui coincidera avec l'autre moitié. Par conséquent, un cube a
+plusieurs plans de symétrie, dont l'un d'entre eux est représenté sur la figure
+\ref{cullity8}. Les ponits $A_1$ et $A_2$ sur cette figure doivent être
+identiques en raison du miroir plan passant par le centre du cube ; ils sont
+reliés par une réflexion.
+
+\begin{figure}
+    \includegraphics{./images/part1/cullity46.eps}
+    \caption{Certains éléments de symétrie sur un cube. (a) réflexion plane :
+    $A_1$ devient $A_2$. (b): rotation d'ordre 4: $A_1$ devient $A_2$ ; rotation
+    d'ordre 3 : $A_1$ devient $A_3$ ; rotation d'ordre 2 : $A_1$ devient $A_4$.
+    (c) centre d'inversion. (d) rotation d'ordre 4 suvie d'une inversion : $A_1$
+    devient $A'_1$ par la rotation d'ordre 4 puis $A_2$ par
+l'inversion.}
+    \label{cullity8}
+\end{figure}
+
+Il y a quatre opérations de symétrie macroscopiques : rélfexion, rotation,
+inversion et roto-inversion. Un corps a une symmétrie de rotation d'ordre n selon
+un axe si une rotation de 360°/n coincide avec le cristal. Par conséquenct, un
+cube a un axe de rotation d'ordre 4 normal à chaque face, un axe de rotation
+d'ordre 3 le long de chaque grande diagonale, et un axe d'ordre 2 liant le centre
+de chaque côté opposé. Certains de ceux-ci sont représentés sur la figure
+\ref{cullity8}. En général, les axes de rotation peuvent être d'ordre 1, 2, 3, 4
+ou 6. Les axes de multiplicité 1 sont présents dans tous les ojbets, et ne sont
+normalement pas représenté. En revanche, les axes de rotation d'orde 5 ou d'ordre
+supérieur à 6 sont impossibles, parce qu'une maille primitive qui aurait une
+telle symétrie ne pourrait pas paver tout l'espace sans laisser de lacunes.
+
+Un corps a un centre d'inversion si les points correspondants de son corps sont
+situés à des distances égales du centre d'une ligne tracée à travers le centre.
+Un corps possédant un centre d'inversion se superposera parfaitement avec lui
+même en chaque point du corps s'il est inversé, ou réfléchi par le centre
+d'inversion. Un cube a un centre d'inversion à l'intersection de ses grandes
+diagonales.
+Finalement, un corps peut avoir un axe de rotation-inevrsion, d'ordre 1, 2, 3, 4
+ou 6. S'il a un axe de rotation-inversion d'ordre n, alors il peut être ramené à
+lui-même par une rotation de 360°/n par l'axe, suivie d'une inversion par le
+centre, qui est situé sur l'axe.
+
+Considérons a présent toutes lesp ositions et orientations qu'un objet ou un
+motif peut prendre suite aux opérations de symétrie de différent types (figure
+\ref{cullity9}). Le motif doit apparaître encore plus fréquemment que si, par
+exemple, deux opérations de symétrie passent par le même point. L'opération
+combinée d'un axe d'ordre 2 situé sur un miroir plan produit un second miroir
+plan, perpendiculaire au premier, et contenant également un axe d'ordre 2.
+Lorsqu'un axe d'ordre 4 est situé sur un miroir plan, la symétrie requiert qu'un
+total de 8 motifs identiques (dans des orientations diverses) et 4 miroirs plans
+soient présents.
+
+\begin{figure}
+    \includegraphics{./images/part1/cullity48.eps}
+    \caption{Opérations de symétrie et symboles associées pour des rotations
+        d'ordre 1 (a), d'ordre 2 (b), d'ordre 3 (c), d'ordre 4 (d), d'ordre 6
+        (e). (f) représente un miroir plan, (g) un miroir plan et un axe d'ordre
+    2 et (h) un miroir plan et un axe d'ordre 4.}
+    \label{cullity9}
+\end{figure}
+
+Les différentes opérations de symétrie agissant sur un point sont appelées
+\emph{groupe ponctuel}. À deux dimensions, il y a dix groupe ponctuels qui
+peuvent être inclus dans des réseaux. À trois dimensions, le nombre de groupes
+ponctuels est de trente-deux : contrairement aux réseaux bi-dimensionnels, les
+centres d'inversions ne sont plus équivalents à un axe de rotation d'ordre 2, et
+les combinaisons comme celles des miroirs perpendiculaires à des axes de rotation
+sont possibles.
+Il est important d'insister sur le fait que les éléments de symétries agissent
+sur l'ensemble de l'espace. La discusison jusqu'à présent s'est concentrée sur
+l'espace réel, mais tous les principes ici présents s'appliquent également dans
+l'espace réciproque.
+
+\section{Systèmes cristallins}
+
+Lorsque l'on définit un réseau avec trois vecteurs de réseau non coplanaires, les
+mailles primitives de diverses formes peuvent résulter, selon la longueur et
+l'orientation des vecteurs. Par exemple, si les vecteurs
+$\mathbf{a}$,$\mathbf{b}$,$\mathbf{c}$ sont de longueur égale et à des angles
+droits les uns des autres, \ie $\mathbf{a = b = c}$ et $\alpha = \beta = \gamma
+= \SI{90}{\degree}$, alors la maille primitive est cubique. Donner des valeurs
+différentes aux longueurs axiales et aux angles produira des cellules de
+différentes formes, et par conséquent de différent types de points du réseau, car
+les points du réseau sont situés sur les coins de la maille primitive. Il vient
+alors qu'il n'y a que sept sorte de mailles qui sont nécessairement inclues dans
+tous les points du réseau possibles. Celles-ci correspondent aux sept
+\emph{systèmes cristallins} parmi lesquels les cristaux peuvent être classifiés.
+Ces systèmes sont listés sur le tableau \ref{tab:syscrist}. \footnote{Le système
+trigonal est parfois appelé rhomboédrique.}
+
+\begin{table}
+    \resizebox{\textwidth}{!}{
+    \begin{tabular}{lclr}
+    \toprule
+    Système & axes et angles & réseaux de Bravais & Symbole\\
+    \midrule
+    \multirow{3}{*}{Cubique} & \multirow{3}{*}{ $a=b=c$, $\alpha = \beta = \gamma
+    = \SI{90}{\degree}$} & Simple & P \\
+    & & Centré & I \\
+    & & Faces-centrées & F \\
+    & & & \\
+    \multirow{2}{*}{Tétragonal} & \multirow{2}{*}{$a=b\neq c$, $\alpha = \beta =
+    \gamma = \SI{90}{\degree}$} & Simple & P \\
+    & & Centré & I \\
+    & & & \\
+    \multirow{4}{*}{Orthorhombique} & \multirow{4}{*}{$a \neq b \neq c$, $\alpha
+    = \beta = \gamma = \SI{90}{\degree}$} & Simple & P \\
+    & & Centré & I \\
+    & & Base-centré & C \\
+    & & Faces-centrées & F \\
+    & & & \\
+    Trigonal & $a = b = c$,
+    $\alpha = \beta = \gamma \neq \SI{90}{\degree}$ & Simple & R \\
+    & & & \\
+    Hexagonal & $a = b \neq c$, $\alpha = \beta = \SI{90}{\degree}$, $\gamma =
+    \SI{120}{\degree}$ & Simple & P \\
+    & & & \\
+    \multirow{2}{*}{Monoclinique} & \multirow{2}{*}{$a \neq b \neq c$, $\alpha =
+    \gamma = \SI{90}{\degree} \neq \beta$} & Simple & P\\
+    & & Base-centré & C\\
+    & & & \\
+    Triclinique & $a \neq b \neq c$, $\alpha \neq \beta \neq \gamma \neq
+    \SI{90}{\degree}$ & Simple & P\\
+    \bottomrule
+\end{tabular}}
+\caption{Systèmes cristallins et résaux de Bravais}
+\label{tab:syscrist}
+\end{table}
+    
+\TODO attention réseau ponctuel parfois mal traduit avant en point du réseau !
+
+Sept réseaux ponctuels différents peuvent être obtenus simplement en plaçant les
+points aux côtés des mailles primitives des sept systèmes cristallins. Cependant,
+il y a d'autres arrangements de points qui peuvent respecter les conditions d'un
+réseau ponctuel, à savoir que chaque point du réseau a un environnement
+identique. Le cristallographe français Bravais a travaillé sur ce problème et a
+démontré en 1848 qu'il y a 14 réseaux ponctuels possibles, et pas plus. Ce
+résultat est très important ; en hommage, le terme de \emph{réseau de Bravais}
+est devenu synonyme de \emph{réseau ponctuel}. Par exemple, si un point est placé
+au centre de chaque maille d'un réseau ponctuel cubique, le nouvel arrangement de
+points forme également un réseau de Bravais. De façon similaier, un autre réseau
+ponctuel peut être basé sur une maille cubique n'ayant des nœuds du réseau qu'à
+chaque sommet, et au centre de chaque face.
+
+Les 14 réseaux de Bravais sont décrits dans la table \ref{tab:syscrist}.
+Certaines mailles sont simples (ou primitives) (symbole P ou R), et certaines
+sont non-primitives (les autres symboles). Les mailles primitives n'ont qu'un
+nœud du réseau par maille, alors que les non primitives en ont plus qu'une. Un
+nœud du réseau à l'intérieur d'une maille appartient à cette maille, alors qu'un
+point sur une face ou sur un sommet ne sera pas à compter plusieurs fois.
+
+\begin{figure}
+    \includegraphics{./images/part1/cullity50.eps}
+    \caption{les 14 réseaux de Bravais}
+    \label{fig:bravaisschema}
+\end{figure}
+
+Chaque maille contenant des points du réseau sur ses sommets est primitive, alors
+qu'une maille contenant des points en son centre ou sur ses faces est
+non-primitive. Les symboles $F$ et $I$ se réfèrent respectivement aux mailles à
+faces centrées et centrées, alors que $A$, $B$ et $C$ se réfèrent aux mailles
+base-centrée, avec un atome au centre de deux faces $A$, $B$ ou $C$
+opposées\footnote{la face $A$ est définie par les axes $b$ et $c$, la face $B$
+par les axes $a$ et $c$ et la face $C$ par les axes $a$ et $b$}. Le symbole $R$
+est utilisé principalement pour le système trigonal (ou rhomboédrique). Sur la
+figure \ref{fig:bravaisschema}, les axes de longueur égale dans un système
+particulier ont le même symbole, par exemple les axes du système cubique sont
+tous marqués $a$, dans le système tétragonal (dans lequel $a = b \neq c$), deux
+axes sont marqués $a$ et un $c$.
+
+À première vue, la liste des réseaux de Bravais dans le tableau
+\ref{tab:syscrist} est incomplète : pourquoi, par exemple, on n'a pas de réseau
+tétragonal à base centrée ? En fait, si l'on trace un réseau tétragonal C de
+paramètre de maille $a$, on se rend compte que celui-ci peut se réduire à un
+réseau tétragonal P de paramètre de maille $\frac{a}{\sqrt{2}}$.
+
+Les ponits du réseau d'une maille non primitive peuvent être étendus dans tous
+l'espace par des translations des vecteurs unitaires $\mathbf{a}$, $\mathbf{b}$
+et $\mathbf{c}$. Les points du réseau associés à ces mailles unitaires peuvent
+être translatés un a un comme un groupe. Dans chacun des cas, les points
+équivalents du réseau dans les mailles unitaires sont séparés par un des vecteurs
+primitifs, peu importe où ces points sont localisés dans la maille.
+
+À présent, les systèmes cristallins sont définis par la possession d'un certain
+nombre d'éléments de symétrie. Chaque système se différencie d'un autre à partir
+du nombre d'opérations de symétrie dont il dispose et par les valeurs des
+longueurs axiales et des angles. En fait, ceux-ci sont interdépendants. Par
+exemple, l'existence d'un axe de rotation d'ordre 4, normal aux faces d'une
+maille cubique requiert que les bords de la cellule soient de même longueur et à
+\SI{90}{\degree} les uns des autres. D'un autre côté, une maille tétragonale n'a
+qu'un axe de rotation d'ordre 4, et cette symmétrie requiert qu'il n'y a que deux
+bords de maille qui doivent être égau, \ie les deux qui sont normaux à l'axe.
+
+Le nombre minimal d'opération de symétrie que possède chaque système cristallin
+est listé dans le tableau \ref{tab:minsym}. Certains cristaux peuvent posséder
+plus de symmétrie que ce nombre minimal requis par le système cristallin auquel
+ils appartiennent, mais aucun n'en a moins. L'existence d'une certaine opération
+de symétrie implique généralement l'existence d'autres. Par exemple, un cristal
+qui possèdent trois axes de rotation d'ordre 4 a nécessairement, quatre axes de
+rotation d'ordre 3 et appartient aux système cubique. La réciproque n'est pas
+forcément vraie : il y a des systèmes cubques qui n'ont pas forcément trois axes
+de rotation d'ordre 4.
+
+\begin{table}
+    \begin{tabularx}{\textwidth}{lX}
+        \toprule
+        Système & Nombre minimal d'éléments de symétrie \\
+        \midrule
+        Cubique & 4 axes de rotation d'ordre 4 \\
+        Tétragonal & Un axe de rotation (ou rotation-inversion) d'ordre 4\\
+        Orthorhombique & Trois axes de rotation (ou rotation-inversion) d'ordre
+        2, orthogonaux \\
+        Trigonal & Un axe de rotation (ou rotation-inversion) d'ordre 3 \\
+        Hexagonal & Un axe de rotation (ou rotation-inversion) d'ordre 6 \\
+        Monoclinique & Un axe de rotation (ou rotation-inversion) d'ordre 2 \\
+        Triclinique & Aucun\\
+        \bottomrule
+    \end{tabularx}
+    \label{tab:minsym}
+    \caption{Éléments de symétrie minimums retrouvés dans chacun des systèmes
+    cristallins}
+\end{table}
+
+\section{Mailles primitives et non-primitives}
+
+Dans chacun des réseau ponctuels, une maille unitaire peut être choisie d'une
+infinité de façons différentes et peut contenir un ou plusieurs nœuds du réseau.
+Il est important de remarquer qu'une maille primitive n'\emph{existe} pas
+forcément dans un réseau : il s'agit d'une construction mentale et est choisie
+pour son utilité. Les mailles conventionnelles présentées en figure
+\ref{fig:bravaisschema} sont pratiques et conformes avec les éléments de symétrie
+du réseau. Dans certains cas, on pourra en choisir d'autres.
+
+Chacun des 14 réseaux de Bravais peut être réduit à une maille primitive. Par
+exemple, le réceau cubique faces-centrées, présenté en figure \ref{fig:fcc} peut
+être considéré dans le système trigonal (figure \ref{fig:fcctrigonal}). Chaque
+maille cubique a 4 nœuds qui y sont associés; une maille trigonale n'en a qu'un :
+le réseau cubique faces-centrées (avec une maille cubique) a donc un
+volume quatre fois supérieur à la maille primitive (dans le système trigonal).
+Cependant, il est souvent plus pratique de considérer une maille cubique plutôt
+que trigonale parce que sa forme suggère immédiatement la symétrie cubique que le
+réseau possède. De façon similaire, les autres mailles non-primitives listées
+dans le tableau \ref{tab:syscrist} sont souvent préférées aux mailles primitives.
+
+\begin{marginfigure}
+    \includegraphics{./images/part1/cullity53.eps}
+    \caption{Le réseau cubique faces-centrées appartient au système trigonal : la
+    maille en pointillés est la maille primitive}
+    \label{fig:fcctrigonal}
+\end{marginfigure}
+
+Dès lors, pourquoi les réseaux centrais apparraissent dans la liste des 14
+réseaux de Bravais ? Si deux mailles peuvent décrire le même ensemble de nœuds du
+réseau, alors, pourquoi ne pas éliminer la maille cubique et n'utiliser que la
+maille trigonale ? La réponse est que cette maille est une maille particulière du
+réseau trigonale, avec un angle $\alpha = \SI{60}{\degree}$. Dans le réseau
+trigonal classique, aucune restriction n'est faite sur l'angle $\alpha$ ; le
+résultat est un réseau de points avec un axe de symétrie d'orde 3. Lorsque
+$\alpha = \SI{60}{\degree}$, alors le réseau a 4 axes de rotation d'ordre 3, et
+cette symétrie le place dans le système cubique.
+
+Si des mailles non primitives sont utilisées, le vecteur de l'origine de
+n'importe quel nœud du réseau aura des composentes qui seront des multiples non
+entiers des  vecteurs du réseau $\mathbf{a}$, $\mathbf{b}$ et $\mathbf{c}$. La
+position de n'importe quel point du réseau dans la maille sera donnée en terme de
+ses coordonnées ; si le vecteur de l'origine de la maille unitaire à un nœud
+donné a des composantes $x\mathbf{a}, y\mathbf{b}, z\mathbf{c}$ où $x,y,z$ sont
+des nombres rationels, alors les coordonnées des points sont $x\,y\,z$. Par
+conséquent, le point $A$ sur la figure \ref{fig:fcctrigonal}, pris comme
+l'origine, a comme coordonnées $0\,0\,0$, alors que les points $B, C$ et $D$,
+dans le système cubique, ont des coordonnées respectives $0\,\half\,\half$,
+$\half\,0\,\half$ et $\half\,\half\,0$. Le point $E$ a pour coordonnées
+$\half\,\half\,1$ et est équivalent au point $D$, sépéré du vecteur $\mathbf{c}$.
+Les coordonnées des points équivalents dans différentes mailles peuvent être
+rendues identiques par l'addition ou la soustraction par un ensemble de
+coordonnées entières : dans ce cas, la soustraction de $\half\,\half\,1$ par
+$0\,0\,1$ (la coordonnée de $E$) donne $\half\,\half\,0$ (la coordonnée de D).
+
+Notons que la coordonnée d'un nœud d'un réseau centré ($I$), par exemple, est
+toujours $\half\,\half\,\half$, peu importe que la maille unitaire soit cubique,
+tétragonale, orthorhombique ou peu importe sa taille. La coordonnée d'une
+position ponctuelle, comme $\half\,\half\,\half$, peut également être vue comme
+un opérateur qui, lorsqu'il est appliqué à un point à l'origine, le translatera à
+la position $\half\,\half\,\half$, la position finale obtenue par simple addition
+de l'opérateur $\half\half\half$ et la position originale $0\,0\,0$. Dans ce cas,
+le veucteur entre $0\,0\,0$ et toutes les positions du centre dans la maille
+cubique centrée, \ie $<\half\half\half>$ sont appelées \emph{translation de
+réseau I}, car elles produisent les deux nœuds ponctuels caractéristiques
+du réseau en étant appliquées à un point à l'origine. De façon similaire, les
+quatre positions ponctuelles caractéristiques du système cubique faces-centrées
+($F$), \ie $0\,0\,0$, $0\,\half\,\half$, $\half\,0\,\half$ et $\half\,\half\,0$,
+sont reliées par la \emph{translation de réseau F} $<\half\half 0>$. Les
+translations de réseau $A$, $B$ ou $C$  dépendent de la paire de faces opposées
+sur laquelle elles s'appliquent. Si la maille est centrée sur la face $C$ par
+exemple, alors les positions équivalentes sont $0\,0\,0$, $\half\,\half\,0$ et
+les translations sont donc $[\half\half 0]$. Ainsi, on peut résumer ainsi :
+
+\begin{itemize}
+    \item translation de réseau $I$ : $<\half\half\half>$
+    \item translation de réseau $F$ : $<\half \half 0>$
+    \item translation de réseau $A$ : $[0 \half \half]$
+    \item translation de réseau $B$ : $[\half 0 \half]$
+    \item translation de réseau $C$ : $[\half \half 0]$
+\end{itemize}
+
+Pour les cristaux qui ne possèdent qu'un atome par nœud (\ie Nb, Ni, Cu, etc.),
+on peut généralement écrire les positions comme \emph{$0\,0\,0$ + translation de
+réseau $I$} par exemple. Si les mailles primitives ont plus d'un atome par nœud,
+comme le silicium par exemple (qui a un réseau de Bravais cubique à
+faces-centrées en $0\,0\,0$ et $\frac{1}{4}\,\frac{1}{4}\,\frac{1}{4}$ en plus
+des translations de réseau $F$), ce qui fait un total de 8 atomes par maille. Des
+cristaux moléculaires plus complexes, comme ceux trouvés dans les systèmes
+biologiques, peuvent avoir un plus grand nombre d'atomes de différents types à
+chaque nœud du réseau.
+
+Il est important de noter que les incides d'un plan ou d'une direction n'ont
+aucun sens si on ne définit pas préalablement l'orientation de la maille. Cela
+signifie que les indices d'un plan réticulaire dépendent le la maille choisie.
+
+Dans chaque système cristallin, il y a des ensembles de plans du réseau
+équivalents, reliés par des symétries. Ceux-ci sont appelés \emph{famille de
+plans}, et les indices de chacun de ces plans sont notés entre accolades
+($\{hkl\}$) pour signifier la famille complète. En général, les plans d'une même
+famille ont le même espacement mais des indices de Miller différents. Par
+exemple, les faces d'un cube ($100$),($010$),($001$), ($\bar{1}00$),
+($0\bar{1}0$) et ($00\bar{1}$) sont des plans de la famille $\{100\}$, car chacun
+d'entre eux peut être généré par les autres, par l'opération de l'axe de rotation
+d'ordre 4 perpendiculaire à la face du cube. Dans le système tétragonal,
+cependant, seuls les plans ($100$),($010$), ($\bar{1}00$) et ($0\bar{1}0$) sont
+équivalents (appartiennent à la même famille $\{100\}$), car l'axe $c$ a une
+longueu différente. Les deux autres plans ($001$) et ($00\bar{1}$) appartiennent
+à la famille $\{001\}$. Il est facile de voir que les quatre premiers sont reliés
+entre eux par un axe de rotation d'ordre 4, et le troisième par un axe d'ordre 2.
+
+Les plans d'une famille sont \emph{en zone} (ou aussi \emph{tautozonaux}) s'ils
+sont tous parallèles à une même rangée, dite \emph{axe de zone}. L'ensemble des
+plans est spécifié en donnant les indices de la rangée. De tels plans peuvent
+avoir des indices et des espacements différents, la seule contrainte est qu'ils
+soient parallèles à l'axe de zone.
+
+\begin{marginfigure}
+    \includegraphics{./images/part1/cullity56}
+    \caption{Les plans grisésdu réseau cubique sont les plans en zone $\{001\}$}
+    \label{fig:tautozonaux}
+\end{marginfigure}
+
+Prenons par exemple un axe de zone $[uvw]$. Alors chaque plan $(hkl)$ qui
+appartient à cette zone vérifie la relation :
+
+\begin{equation}
+    hu + kv + lw = 0
+\end{equation}
+
+Chaque couple de plans non parallèles sont des plans de zone car ils sont
+parallèles à la droite définie par leur intersection. Soient leurs indices :
+$(h_1k_1l_1)$ et $(h_2k_2l_2)$, alors les indices de leur axe de zone $[uvw]$
+sont définis par le produit tensoriel $[h_1k_1l_1] \times [h_2k_2l_2]$ :
+\begin{eqnarray}
+    u & = & k_1 l_2 - k_2 l_1\\
+    v & = & l_1 h_2 - l_2 h_1\\
+    w & = & h_1 k_2 - h_2 k_1
+\end{eqnarray}
+
+\subsection{distance interréticulaire}
+
+La distance interréticulaire $d_{hkl}$ de la famille de plans $\{hkl\}$ dépend du
+système cristallin dans lequel on se place. Le système cubique a la forme la plus
+simple :
+
+\begin{equation}
+    \text{(cubique)}\quad d_{hkl} = \frac{a}{\sqrt{h^2 + k^2 + l^2}}
+\end{equation}
+
+Dans le système tétragonal, l'équation fait intervenir à la fois a et c, qui ne
+sont généralement pas égaux :
+
+\begin{equation}
+    \text{(tétragonal)}\quad d_{hkl} = \frac{a}{\sqrt{h^2 + k^2 + l^2
+    \left(\frac{a^2}{c^2}\right) }}
+\end{equation}
+
+Dans le système cubique, il est important de se rappeler que $[hkl]$ est
+orthogonal à $(hkl)$. Pour tous les autres systèmes cristallins, cela est
+généralement faux.
+
+%    \section{autres}
+%
+%
+%    \TODO parler des opérations de symétrie microscopiques, au niveau de
+%    l'arrangement des atomes, pas seulement visibles sur les cristaux.
+%
+%
+%
+%    \subsection{Opérations de symétrie compatibles avec la nature du réseau
+%    cristallin}
+%
+%    La démonstration des propriétés évoquées ici est fournie dans le poly de N.
+%    Lequeux. Pour cette raison, cela n'est pas présenté dans ce document.
+%
+%    \begin{enumerate}
+%    \item Seuls les ordres de rotation 1 (identité), 2, 3, 4 et 6 sont permis. Les
+%        ordres 5 et >6 sont interdits ;
+%    \item tout axe de rotation est parallèle à une translation de réseau ;
+%    \item tout axe de rotation est perpendiculaire à un plan réticulaire ;
+%    \item une opération de symétrie directe est toujours une opération hélicoïdale.
+%    \end{enumerate}
+%
+%\begin{table}[ht]
+%\begin{tabularx}{\textwidth}{lRRR}
+%\toprule
+%ordre de rotation & translation $\omega_{//}$ & notation & symbole graphique \\
+%\midrule
+%1 & 0 & 1 & \\
+%2 & 0 & $2$ & \cry{2}\\
+%& $\frac{1}{2}\mathbf{a}$ & $2_1$ & \cry{21}\\
+%3 & 0 & $3$ & \cry{3} \\
+%& $\frac{1}{3}\mathbf{a}$ & $3_1$ & \cry{31} \\
+%& $\frac{2}{3}\mathbf{a}$ & $3_2$ & \cry{32} \\
+%4 & 0 & $4$ & \cry{4} \\
+%& $\frac{1}{4}\mathbf{a}$ & $4_1$ & \cry{41} \\
+%& $\frac{2}{4}\mathbf{a}$ & $4_2$ & \cry{42} \\
+%& $\frac{3}{4}\mathbf{a}$ & $4_3$ & \cry{43} \\
+%6 & 0 & $6$ & \cry{6} \\
+%& $\frac{1}{6}\mathbf{a}$ & $6_1$ & \cry{61} \\
+%& $\frac{2}{6}\mathbf{a}$ & $6_2$ & \cry{62} \\
+%& $\frac{3}{6}\mathbf{a}$ & $6_3$ & \cry{63} \\
+%& $\frac{4}{6}\mathbf{a}$ & $6_4$ & \cry{64} \\
+%& $\frac{5}{6}\mathbf{a}$ & $6_5$ & \cry{65} \\
+%\bottomrule
+%\end{tabularx}
+%\label{}
+%\caption{Liste des symétries directes et symboles associés}
+%\end{table}
+
+%    \subsection{opérations de symétries inverses}
+%    les miroirs purs se notent m
+%
+%    on note $\mathbf{a}$,$\mathbf{b}$,$\mathbf{c}$ les miroirs de glissement de
+%    translation $\frac{\mathbf{a}}{2}$, $\frac{\mathbf{b}}{2}$,
+%    $\frac{\mathbf{c}}{2}$.
+%
+%    les miroirs de translation $\frac{\mathbf{a\pm b}}{2}$, $\frac{\mathbf{a\pm
+%    c}}{2}$ et $\frac{\mathbf{b \pm c}}{2}$ se notent $\mathbf{n}$.
+%
+%    il existe des miroirs de glissement \emph{diamant} notés $\mathbf{d}$ de
+%    translations $\frac{\mathbf{a\pm b}}{4}$ et $\frac{\mathbf{a\pm b \pm c}}{4}$
+%    autorisés dans certains réseaux de Bravais F et I, qui sont décrits par des
+%    mailles non primitives et qui présentent des translations non entières.
+%
+%    \begin{table}[ht]
+%        \begin{tabularx}{\textwidth}{lRR}
+%            \toprule
+%            ordre de rotation & notation & symbole graphique \\
+%            \midrule
+%            1 & $\bar{1}$ ou $I$ & \cry{10} \\
+%            3 & $\bar{3}$ & \cry{30} \\
+%            4 & $\bar{4}$ & \cry{24} \\
+%            5 & $\bar{5}$ & \cry{60} \\
+%            \bottomrule
+%        \end{tabularx}
+%        \label{}
+%        \caption{Liste des symétries inverses et symboles associés}
+%    \end{table}
+%
+%    Donc :
+%    dans un cristal, les opérations de symétrie sont du type $(W,\mathbf{\omega})$ où
+%    $W$ est une rotation ou une rotation-inversion d'ordre 1,2,3,4 ou 6.
+%
+%    $(E,\mathbf{t}_n)$ sont les translatinos de réseau, notées $\mathbf{t}_n$.
+%
+%    Toute opération directe d'ordre n supérieur à 1 est équivalente à une opération
+%    hélicoïdale par rapport à un axe $(W, \omega_{//})$, où $\omega_{//}$ est une
+%    translation de (m/n) fois la plus petite translation parallèle à l'axe de
+%    rotation. On les note $\mathbf{n}$ pour les opérations pures, et $\mathbf{n}_m$
+%    pour les opérations avec glissement.
+%
+%    Toute opération inverse d'ordre $n\neq 2$ est une opération inverse pure par
+%    rapport à un point. On les note $\mathbf{\bar{n}} = \bar{1}, \bar{3}, \bar{4},
+%    \bar{6}$
+%
+%    Les opérations inverses d'ordre $n=2$ sont des miroirs avec glissement $(\bar{2},
+%    \omega_{\perp})$ où $\omega_\perp$ est soit nul (opération miroir pur), soit égal
+%    à \half fois le plus petit vecteur de translation dans une rangée parallèle au
+%    plan miroir. On les note $\mathbf{m}$ pour des miroirs purs et
+%    $\mathbf{a}$,$\mathbf{b}$,$\mathbf{c}$,$\mathbf{n}$ et $\mathbf{d}$ pour des
+%    miroirs avec glissement.
+%
+%    Lors du dénombrement des groupes ponctuels cristallographique, on peut alors
+%    trouver :
+%    \begin{itemize}
+%    \item 11 groupes propres ;
+%    \item 11 groupes impropres contenant l'inversion ;
+%    \item 10 groupes impropres ne contenant pas l'inversion.
+%    \end{itemize}
+%    Sout au total 32 groupes ponctuels.
+%
+%
+%    \section{32 groupes de symétrie}
+%    On pourait redémontrer qu'il existe 32 groupes de symétrie d'orientation
+%    cristalline à 3D qui résultent des combinaisons des rotations directes ou
+%    inverses ponctuelles W d'ordre 1,2, 3, 4 et 6.
+%
+%    Chacun des 32 groupes ponctuels forme ce qu'on peut appeler une \emph{classe
+%    cristalline}.
+%
+%
+%    \section{Notations de Schonflies}
+%
+%    \section{7 systèmes cristallins}
+%    Les 32 groupes de symétrie d'orientation sont regroupés en 7 systèmes
+%    cristallins :
+%    \begin{itemize}
+%        \item triclinique
+%        \item monoclinique
+%        \item orthorhombique
+%        \item quadratique
+%        \item trigonal
+%        \item hexagonal
+%        \item cubique
+%    \end{itemize}
+%
+%    Le système cubique est associé nécessairement à la présence dans un cristal de 4
+%    axes ternaires orientés suivant les 4 diagonales du cube (angle de 
+%    \SI{70.53}{\degree}).
+%
+%    Le système hexagonal est associé à la présence d'un axe sénaire (ordre 6).
+%
+%    Le système trigonal est associé à la présence d'un seul axe ternaire.
+%
+%    Le système quadratique est associé à la présence d'un axe quaternaire mais pas
+%    d'axes ternaires.
+%    \section{14 réseaux de bravais}
+%    \section{230 groupes d'espace}
+%    notation de Hermann-Mauguin
+
+\section{Récapitulatif des notations utilisées}
+
+\begin{table}[ht]
+\begin{tabularx}{.8\textwidth}{ll}
+\toprule
+notation & signification \\
+\midrule
+$\mathbf{R}$ & points du réseau de Bravais \\
+$\mathbf{a}_i$ & vecteurs du réseau de Bravais \\
+$\mathbf{K}$ & points du résau réciproque (vecteur d'onde) \\
+$\mathbf{b}_i$ & vecteurs du réseau réciproque \\
+$[u v w]$ & rangée du réseau direct\\
+$(hkl)$ & plan du réseau direct \\
+$[hkl]^*$ & rangée du réseau réciproque \\
+$(uvw)^*$ & plan du réseau réciproque \\
+$<hkl>$ & famille de rangées directes \\
+$\{hkl\}$ & hamille de plans équivalents\\
+\bottomrule
+\end{tabularx}
+\caption[Notations utilisées en cristallographie]{Rappel des notations utilisées en cristallographie}
+\label{tab:rappel}
+\end{table}
+
+
+\section{Exemples de structures ioniques simples}
+\subsection{NaCl}
+\subsection{CsCl}
+\subsection{Carbone diamant}
+\subsection{Zinc blende}

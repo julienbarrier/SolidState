@@ -1,0 +1,392 @@
+\chapter{Réseau cristallin}
+\label{ch:reseaucrist}
+
+En cristallographie, les cristaux sont définis par l'organisation des ions, qui
+est périodique au niveau microscopique. Longtemps dans l'histoire des sciences,
+l'idée selon laquelle l'organisation microscopique d'un matériau est similaire à
+l'organisation macroscopique est réstée un postulat. Ce n'est qu'au début du
+20\ieme~ siècle que sir William Henry Brag et son fils sir William Lawrence
+Bragg utilisent des rayons X pour observer l'organisation des atomes dans les
+solides.
+
+Avant de pouvoir étudier les différentes structures par diffraction des rayons X
+, il nous faut commencer par comprendre comment ceux-ci sont construits et les
+différentes notions qui y sont associées. Cette partie a pour objet de
+comprendre ces concepts et d'établir les différentes symétries.
+
+\section{Postulat de la cristallographie}
+
+En 1866, Bravais formule la loi des indices rationnels sous la forme suivante :
+\begin{description}
+    \item[Postulat de Bravais]
+État donné un point P, quelconque dans un cristal, il existe dans le milieu, une
+infinité discrète, illimitée dans les trois directions de l'espace, de points 
+autour desquels l'arrangement des atomes est le même qu'autour du point P, et ce
+avec la même orientation.
+\end{description}
+
+Ce postulat a été complété à la fin du XIX\ieme siècle, simultanément et de
+manière indépendante par Schönflies et Fedorov :
+\begin{description}
+ \item[Postulat de Schönflies-Fedorov]
+Étant donné un point quelconque P dans un cristal, il existe dans le milieu une
+infinité discrète, illimitée dans les trois directions de l'espace, de points
+autour desquels l'arrangement des atomes est le même qu'autour du point P, ou
+est une image de cet arrangement.
+\end{description}
+
+La différence par rapport au postulat de Bravais est que dans cette définition,
+il n'y a plus aucune exigence d'identité d'orientation autour des points 
+équivalents. En outre, la notion d'image (symétrie par rapport à un point) y est
+introduite.
+
+\section{Systèmes de coordonnées}
+
+Puisque l'on étudie les réseaux cristallins, il est nécessaire de définir des
+vecteurs de base. Soient $\mathbf{a}$, $\mathbf{b}$ et $\mathbf{c}$ des vecteurs
+formant une base. Celle-ci n'est pas nécesairement orthogonale, ni même normée.
+En revanche, on les choisit de sorte à former un trièdre direct.
+
+Dans ce réseau, on peut définir la position d'un point $A$ par son vecteur 
+position $\mathbf{r}_A$ :
+
+\begin{equation}
+    \mathbf{r}_A = x_A \mathbf{a} + y_A \mathbf{b} + z_A \mathbf{c}
+\end{equation}
+
+
+\subsection{Vecteur primitif et rangées réticulaires}
+
+Dans un réseau, on appelle rangée réticulaire (ou direction d'un réseau), 
+l'ensemble des doites parallèles qui passent par au moins deux nœuds du réseau.
+
+Ces rangées réticulaires sont définies par un vecteur primitif $\mathbf{t}$ tel que :
+
+\begin{equation}
+    \mathbf{t} = u \mathbf{a} + v \mathbf{b} + w \mathbf{c}
+\end{equation}
+
+Dans cette équation, les indices de la rangée $u$, $v$ et $w$ sont des entiers
+premiers entre eux. Comme une rangée contient toujours au moins deux nœuds, le
+vecteur primitif $t$ de cette rangée est toujours un vecteur du réseau. Ce
+vecteur ne définit pas qu'une seule droite, mais une infinité de droites, toutes
+parallèles et équivalentes par translation du réseau.
+
+\begin{figure}
+    \includegraphics{./images/part1/cullity43.eps}
+    \caption{Différentes rangées réticullaires possibles dans un réseau 2D}
+    \label{fig:rangees2D}
+\end{figure}
+
+On peut écrire une rangée réticulaire avec ses indices entre crochets :
+$[uvw]$. Si une des composantes est négative, elle est notée avec "$\bar{\cdot}$",
+comme par exemple $[1\bar{2}0]$.
+
+\begin{marginfigure}
+    \includegraphics{./images/part1/reticulaire-02}
+    \caption{Représentation de différentes rangées réticulaires dans une maille 3D}
+    \label{fig:rangees3D}
+\end{marginfigure}
+
+Il vient alors, de façon évidente que les propriétés des vecteurs peuvent 
+s'appliquer sur les vecteurs primitifs associés aux rangées réticulaires. Par
+exemple, si $[u_1v_1w_1]$ et $[u_2v_2w_2]$ sont orthogonales, le produit 
+scalaire de leurs vecteurs primitifs est nul :
+$\mathbf{t}_1 \cdot \mathbf{t}_2 = 0$. De plus, $[uvw]$ et 
+$[\bar{u}\bar{v}\bar{w}]$ désignent la même rangée.
+
+\section{Réseau de Bravais}
+
+La notion de \emph{réseau de Bravais} est un concept assez fondamental dans la
+description d'un solide cristallin. Il définit une structure cristalline, dans
+laquelle les unités répétées du cristal s'arrangent. Les unités en elles-mêmes
+peuvent être de simples atomes, mais aussi des groupes d'atomes, des molécules,
+des ions ou des patates.
+
+Le réseau de Bravais ne définit que la géométrie de la structure périodique,
+peu importe l'échelle d'observation, et peu importe la taille de la structure.
+
+On peut en trouver deux définitions équivalentes :
+\begin{enumerate}
+    \item \label{bravaisa} c'est l'ensemble des points R tels que
+    $R = m_1 a_1 + m_2 a_2 + m_3 a_3$ (en 3D) où $a_1$, $a_2$, $a_3$ sont les
+    vecteurs élémentaires du cristal ;
+\item c'est un réseau infini de points discrets avec un arrangement et une
+    orientation qui sont exactement les mêmes, peu importe le point duquel elles
+     sont vues.
+\end{enumerate}
+
+Par conséquent, tout nœud que l'on translate d'un certain vecteur 
+$\mathbf{R}$, se retrouve être aussi un nœud.
+
+\begin{marginfigure}
+    \includegraphics{./images/part1/bravaiswigner-01}
+    \caption{Réseau 2D en structure alvéolaire : il ne forme pas un réseau de Bravais}
+    \label{fig:alveolaire}
+\end{marginfigure}
+
+Les vecteurs $a_i$ qui apparaissent dans la définition \ref{bravaisa} d'un
+réseau de Bravais sont appelés des vecteurs primitifs. On dit qu'ils sont 
+générateurs du réseau.
+
+Attention, dans un réseau de Bravais, il ne doit pas y avoir que l'arrangement
+des atomes qui doit être conservé, mais aussi l'orientation qui doit rester, en
+chaque point du réseau de Bravais, identique. Par exemple le motif alvéolaire 2D
+(figure \ref{fig:alveolaire}) ne forme pas un réseau de Bravais. En effet,
+l'orientation n'est pas la même si on se place en un point et en un autre.
+
+Par définition, comme tous les points sont équivalents, un résau de Bravais est
+infini. Les vrais cristaux sont, bien entendu, finis, mais on les considère 
+suffisemment grands pour dire que tous les points sont tellement loins de la
+surface qu'ils ne sont pas affectés par l'existence de bords.
+
+\section{Exemples de réseaux simples, assemblage de sphères dures}
+
+\begin{marginfigure}
+    \includegraphics{./images/part1/bravais}
+    \caption{plusieurs choix possibles de vecteurs primitifs pour un réseau de Bravais 2D}
+    \label{fig:choixbravais2D}
+\end{marginfigure}
+
+Des deux définitions d'un réseau de Bravais, la première (\ref{bravaisa}) est 
+mathématiquement plus précise et est le point de départ évident pour tout
+travail analytique. Cependant, elle implique plusieurs propriétés. En
+particulier, pour tout réseau de Bravais, le choix de vecteurs primitifs n'est
+jamais unique ; il y a en fait une infinité de vecteurs de Bravais qui ne sont
+pas équivalents. Cette section donne quelques exemples simples de réseaux, basés
+sur le modèle dit des \emph{sphères dures}, qui consiste à considérer chacun des
+atomes comme s'il s'agissait de boules de billard : pas d'interaction 
+électrostatique entre eux, un potentiel nul à une distance supérieure au rayon
+d'une boule, infini pour les distances inférieures aux rayon.
+
+\begin{marginfigure}
+    \includegraphics{./images/part1/cullity60-03}
+    \caption{empilement de sphères dures : réseau hexagonal compact}
+    \label{fig:spheresdures}
+\end{marginfigure}
+
+\subsection{Réseau hexagonal compact}
+
+%\begin{table}[ht]
+%\begin{tabularx}{\textwidth}{lRRRlRRR}
+%\toprule
+%Élément & a(\angstrom) & c & c/a & Élément & a(\angstrom) & c & c/a\\
+%\midrule
+%Be & 2.29 & 3.58 & 1.56 & Os & 2.74 & 4.32 & 1.58 \\
+%Cd & 2.98 & 5.62 & 1.89 & Pr & 3.67 & 5.29 & 1.61 \\
+%Ce & 3.65 & 5.96 & 1.63 & Re & 2.76 & 4.46 & 1.62\\
+%$\alpha$-Co & 2.51 & 4.07 & 1.52 & Ru & 2.70 & 4.28 & 1.59\\
+%Dy  & 3.59 & 5.65 & 1.57 & Sc & 3.31 & 5.27 & 1.59\\
+%Er & 3.56 & 5.59 & 1.57 & Tb & 3.60 & 5.69 & 1.58\\
+%Gd & 3.64 & 5.78 & 1.59 & Ti & 2.95 & 4.69 & 1.59\\
+%He(2K) & 3.57 & 5.83 & 1.63 & Tl & 3.46 & 5.53 & 1.60\\
+%Hf & 3.20 & 5.06 & 1.58 & Tm & 3.54 & 5.55 & 1.57\\
+%Ho & 3.58 & 5.62 & 1.57 & Y & 3.65 & 5.73 & 1.57\\
+%La & 3.75 & 6.07 & 1.62 & Zn & 2.66 & 4.95 & 1.86\\
+%Lu & 3.50 & 5.55 & 1.59 & Zr & 3.23 & 5.15 & 1.59\\
+%Mg & 3.21 & 5.21 & 1.62 &  &  &  & \\
+%Nd & 3.66 & 5.90 & 1.61 & \emph{idéal} &  &  & 1.63\\
+%\bottomrule
+%\end{tabularx}
+%\caption[Éléments formant une structure hexagonale compacte]{Éléments formant une structure hexagonale compacte\cite{wyckoff1960crystal}(lorsque ce n'est pas précisé, les valeurs sont données dans les conditionsnormales de températures et de pression)(lorsque ce n'est pas précisé, les valeurs sont données dans les conditionsnormales de températures et de pression)}
+%\label{hcp}
+%\end{table}
+
+
+Si elle ne forme pas un réseau de Bravais, la structure hexagonale compacte
+est une des plus importantes. Une  trentaine d'éléments %(tableau \ref{tab:hcp})
+cristallisent dans cette structure parce qu'elle minimise l'énergie en étant
+la plus compacte possible.
+
+ \begin{figure}
+     \subfloat[Représentation du réseau hexagonal compact
+     (hcp)]{\includegraphics[width=0.45\textwidth]{./images/part1/cullity60-02}}
+     \hfill
+     \subfloat[Maille primitive du réseau
+     hcp]{\includegraphics[width=.45\textwidth]{./images/part1/cullity60-01}}
+    \caption{Construction d'un réseau hexagonal compact}
+    \label{fig:hcp}
+\end{figure}
+
+Le réseau de Bravais de cette structure est hexagonal simple, qui est donné en
+superposant deux réseaux de triangles l'un au dessus de l'autre. L'empilement est
+réalisé suivant la direction$\mathbf{c}$. Les trois vecteurs primitifs sont :
+
+\begin{equation}
+    \mathbf{a}_1 = a \mathbf{\hat{x}},\quad \mathbf{a}_2 = \frac{a}{2}\mathbf{\hat{x}}+\frac{\sqrt{3}a}{2}\mathbf{\hat{y}},\quad \mathbf{c}= c\mathbf{\hat{z}}
+\end{equation}
+
+Les deux premiers vecteurs génèrent un réseau triangulaire dans le plan $(x,y)$. Le troisième vecteur créé l'empilement de ces deux réseaux l'un au dessus de l'autre.
+
+Cette structure hexagonale compacte est la plus compacte dans la considération de sphères dures. Par exemple, si on empile des boules de billard, on va former spontanément une structure hexagonale compacte, dont le paramètre $c$ sera égal à :
+
+\begin{equation}
+    c = \sqrt{\frac{8}{3}}a = 1.63299 a
+\end{equation}
+
+La densité est alors :
+\begin{equation}
+d = \frac{\sqrt{2}\pi}{6} = 0.74
+\end{equation}
+
+Dans certains cas, la structure électronique des molécules ne permet pas de se placer dans le modèle des sphères dures. Dans ce cas, l'arrangement peut prendre différentes formes.
+
+\subsection{Réseau cubique simple}
+
+\begin{marginfigure}
+    \includegraphics{./images/part1/cubic}
+    \caption{Réseau cubique simple le système de vecteurs primitifs}
+    \label{fig:sc}
+\end{marginfigure}
+
+Le réseau cubique simple (on verra plus tard qu'il s'agit du système cubique primitif $P$) se forme en fait assez rarement : parmi les 118 éléments, seule la phase $\alpha$ du polonium est connue pour cristalliser en réseau cubique simple dans des conditions normales de température et de pression. Ce réseau est pourtant assez simple à comprendre et permet de générer les autres réseaux cubiques.
+
+Dans le système cubique, le réseau est généré par des vecteurs $a\mathbf{\hat{x}}$,$a\mathbf{\hat{y}}$ et $a\mathbf{\hat{z}}$. C'est la forme la plus simple d'un réseau de Bravais.
+ 
+\subsection{Réseau cubique centré}
+
+%\begin{table}[ht]
+%    \begin{tabularx}{\textwidth}{lRlRlR}
+%        \toprule
+%        Élément & a(\angstrom) & Élément & a(\angstrom) & Élément & a(\angstrom) \\
+%        \midrule
+%        Ba & 5.02 & Li(78K) & 3.49 & Ta & 3.31 \\
+%        Cr & 2.88 & Mo & 3.15 & Tl & 3.88\\
+%        Cs(78K) & 6.05 & Na(5K) & 4.23 & V & 3.02 \\
+%        Fe & 2.87 & Nb & 3.30 & W & 3.16 \\
+%        K(5K) & 5.23 & Rb(5K) & 5.59 & & \\
+%        \bottomrule
+%    \end{tabularx}
+%    \caption[Éléments formant une structure cubique centrée monoatomique]{Éléments formant une structure cubique centrée monoatomique \cite{wyckoff1960crystal}}
+%\end{table}
+
+\begin{marginfigure}
+    \includegraphics{./images/part1/cullity59-01}
+    \caption{Réseau cubique centré avec le système de vecteurs primitifs}
+    \label{fig:bcc}
+\end{marginfigure}
+
+
+Ajoutons maintenant un point supplémentaire au centre de ce réseau cubique simple. Ce point peut être vu à la fois comme le centre d'une maille cubique, ou comme le sommet d'une autre maille cubique, dans lequel les sommets de la première maille deviennent des centres. On vient de former un réseau cubique centré.
+
+L'ensemble des vecteurs primitifs devient ici :
+\begin{equation}
+\mathbf{a}_1 = a\mathbf{\hat{x}},\quad\mathbf{a}_2 = a\mathbf{\hat{y}},\quad \mathbf{a}_3 = \frac{a}{2}(\mathbf{\hat{x}}+\mathbf{\hat{y}}+\mathbf{\hat{z}})
+\end{equation}
+
+On considère généralement un ensemble de vecteurs primitifs moins intuitifs, mais plus utiles de façon analytique :
+
+\begin{equation}
+    \mathbf{a}_1 = \frac{a}{2}(-\mathbf{\hat{x}}+\mathbf{\hat{y}}+\mathbf{\hat{z}}),
+    \quad
+    \mathbf{a}_2 = \frac{a}{2}(\mathbf{\hat{x}}-\mathbf{\hat{y}}+\mathbf{\hat{z}}),
+    \quad
+    \mathbf{a}_3 = \frac{a}{2}(\mathbf{\hat{x}}+\mathbf{\hat{y}}-\mathbf{\hat{z}})
+\end{equation}
+
+Ce système est très important parce qu'un très grand nombre d'éléments crystallisent dans cette forme.
+
+La densité d'un réseau cubique centré est :
+
+\begin{equation}
+d = \frac{\sqrt{3}\pi}{8} = 0.68
+\end{equation}
+
+\subsection{Réseau cubique faces-centrées} 
+
+%\begin{table}[ht]
+%    \begin{tabularx}{\textwidth}{lRlRlR}
+%        \toprule
+%        Élément & a(\angstrom) & Élément & a(\angstrom) & Élément & a(\angstrom) \\
+%        \midrule
+%        Ar(4.2 K) & 5.26 & Ir & 3.84 & Pt & 3.92 \\
+%        Ag & 4.09 & Kr(58K) & 5.72 & $\delta-Pu$ & 4.64\\
+%        Al & 4.05 & La & 5.30 & Rh & 3.80\\
+%        Au & 4.08 & Ne(4.2K) & 4.43 & Sc & 4.54\\
+%        Ca & 5.58 & Ni & 3.52 & Sr & 6.08 \\
+%        Ce & 5.16 & Pb & 4.95 & Th & 5.08 \\
+%        $\beta-Co$ & 3.55 & Pd & 3.89 & Xe(58K) & 6.20 \\
+%        Cu & 3.61 & Pr & 5.16 & Yb & 5.49 \\
+%        \bottomrule
+%        \caption[Éléments formant une structure cubique face-centrée monoatomique]{Éléments formant une structure cubique face-centrée monoatomique \cite{wyckoff1960crystal}}
+%    \end{tabularx}
+%\end{table}
+
+\begin{marginfigure}
+    \includegraphics{./images/part1/cullity59-02}
+    \caption{Réseau cubique faces-centrées avec le système de vecteurs primitifs commun}
+    \label{fig:fcc}
+\end{marginfigure}
+
+Considérons maintenant l'ajout, au centre de chaque chaque face du réseau cubique, d'un nouveau point. On peut penser ici que l'ajout de ces six nouveaux points par maille cubique les rendent tous non équivalents. En fait, si on se place dans le cube formé par chacun des points aux centres des faces, on retrouve encore une fois la même structure : le réseau cubique faces-centrées est un exemple de réseau de Bravais. Il s'agit du réseau cubique faces-centrées.
+
+Un exemple de vecteurs primitifs d'un réseau cubique faces-centrées peut-être défini par :
+
+\begin{equation}
+\mathbf{a}_1 = \frac{a}{2}(\mathbf{\hat{y}}+\mathbf{\hat{z}}),
+\quad
+\mathbf{a}_2 = \frac{a}{2}(\mathbf{\hat{x}}+\mathbf{\hat{z}}),
+\quad
+\mathbf{a}_3 = \frac{a}{2}(\mathbf{\hat{x}}+\mathbf{\hat{y}})
+\end{equation}
+
+La densité d'un réseau cubique faces-centrées est :
+
+\begin{equation}
+d = \frac{\sqrt{2}\pi}{6} = 0.74
+\end{equation}
+
+Cette densité est la même que pour l'hexagonal compact. Pour cette raison, on appelle parfois le cubique faces-centrées \emph{cubic compact}. Une trentaine d'éléments cristallisent naturellement en structure cubique à faces centrées.
+
+\section{Mailles usuelles}
+\subsection{Coordinence}
+
+Dans un réseau de Bravais, on appelle les plus proches voisins les points qui sont les plus proches d'un point donné. Comme, par définition, un réseau de Bravais est périodique, chaque point du réseau a le même nombre de plus proches voisins. Ce nombre devient alors une propriété du réseau, appelé \emph{nombre de coordination} ou \emph{coordinence}.
+
+Par exemple, un réseau cubique simple a une coordinence de 6, un cubique centré, de 8 et un cubique faces-centrés de 12. Cette notion de coordinence peut également être étendue à tout réseau qui n'est pas un réseau de Bravais, à condition que les points du réseau aient tous le même nombre de plus proches voisins.
+
+\subsection{Maille primitive}
+
+\begin{figure}
+    \includegraphics{./images/part1/cullity39-02}
+    \caption{Dans ce réseau, la maille primitive peut être délimitée par 8
+    sphères noires. Elle peut également être translatée; on a toujours une maille
+    primitive.}
+    \label{fig:choixmaillespriv}
+\end{figure}
+
+Prenons un volume d'espace du réseau. S'il peut être translaté par chacun des vecteurs du réseau de Bravais et compléter l'espace tout entier sans se superposer avec lui-même ni laisser de vide, alors on appelle ce volume une \emph{maille primitive}.
+L'espace cristallin peut alors être considéré comme un ensemble de mailles primitives analogues qui pavent l'espace sans créer de lacune.
+
+Il est intéressant de remarquer qu'une maille primitive n'est jamais unique : il y a toujours plusieurs façon de la choisir, comme présenté sur la figure \ref{fig:choixmaillespriv}.
+
+Une maille primitive doit contenir exactement un nœud du réseau. En conséquence, si $n$ est la densité de points dans le réseau et $v$ le volume de la maille primitve, il vient que $nv = 1$, soit $v = \frac{1}{n}$. On vient de montrer que peu importe le choix de maille primitive que l'on fait, celle-ci aura toujours le même volume.
+
+
+\subsection{Cellule de Wigner-Seitz}
+
+\begin{marginfigure}
+    \includegraphics{./images/part1/bravaiswigner-02}
+    \caption{Construction de la cellule de Wigner-Seitz pour un réseau quelconque 2D}
+    \label{fig:ws2d}
+\end{marginfigure}
+
+Dans un réseau de Bravais, on peut toujours trouver une maille unitaire qui possède la symétrie totale du réseau. Un de ces choix a été \emph{normalisé} ; il s'agit de la \emph{cellule de Wigner-Seitz}.
+
+La cellule de Wigner-Seitz sur un nœud du réseau est la région de l'espace qui est plus proche de ce nœud que de n'importe quel autre nœud du réseau. La figure \ref{fig:ws2d} montre la construction d'une cellule de Wigner-Seitz. La figure \ref{fig:ws} présente deux exemples de cellules de Wigner-Seitz pour un réseau cubique centré et un cubique-faces-centrées.
+
+\begin{figure}
+\includegraphics{./images/part1/wignerseitz}
+\caption{Cellules de Wigner-Seitz pour un cubique centré (a) et un cubique faces-centrées (b). Pour le réseau cubique faces-centrées, la maille représentée n'est pas la maille conventionnelle.}
+\label{fig:ws}
+\end{figure}
+
+Certaines propriétés découlent de cette définition. En particulier, la cellule de Wigner-Seitz a toujours les mêmes symétries que le réseau de Bravais.
+
+On note que pour la construire, on peut retracer les lignes qui relient les points entre eux, et les bisectrices forment les limites de la cellule de Wigner-Seitz.
+
+\subsection{Maille conventionnelle}
+
+Dans certain cas, utiliser des mailles primitives n'est pas toujours pertinent. Par exemple, dans le cas du réseau cubique faces-centrées que l'on verra plus tard (figure \ref{fig:fcctrigonal}), le cube est une maille conventionnnelle qui n'est pas primitive.
+
+Une maille conventionnelle est une région qui, translatée des sous-vecteurs du réseau de Bravais, peut remplir l'espace sans se recouvrir avec elle-même. Celle-ci est généralement choisie plus grande que la maille primitive, ce qui permet de retrouver visuellement les bonnes symétries.

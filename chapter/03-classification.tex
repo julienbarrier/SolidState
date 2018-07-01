@@ -36,21 +36,23 @@ forment une base primitive.
 
 La périodicité du réseau est une contrainte forte qui limite le nombre et la nature des opérations de symétrie assurant l'invariance du réseau.
 
-Avant de considérer comment les symétries sont incorporées dans les réseau, il
-est nécessaire de comprendre comment les éléments de symétrie opèrent sur leur
-environnement. Si un certain objet est à une position donnée d'un élément de
-symétrie, le type d'élément de symétrie impose l'emplacement et l'orientation
-d'un objet identique. Alternativement, un corps ou une structure est dite
-symétrique lorsque ses composants sont arrangés de sorte à ce que certaines
-opérations de symétries peuvent être effectuées en son sein, en le recouvrant
-totalement.
-Par exemple, si un corps est symétrique par rapport à un plan passant à son
-travers, alors la réflexion de chaque moitié de ce corps par le miroir plan
-produira un corps qui coincidera avec l'autre moitié. Par conséquent, un cube a
+Avant de comprendre comment les opérateurs de symétrie sont inclues dans le
+réseau, il est nécessaire de compredre comment les éléments de symétrie
+agissent sur leur environnement. Cette partie considèrera des objets quelconques (que j'appelle corps) avant d'étudier les réseaux plus en détail.
+
+Notons en premier lieu que pour un objet à une
+position donnée d'un élément de symétrie, le type d'élément de symétrie
+impose l'emplacement et l'orientation d'un objet identique.
+De la même façon, un corps est dit symétrique lorsque ses composants sont
+arrangés de sorte à ce que certaines opérations de symétries peuvent être
+effectuées en son sein, pour le reconstruire en superposant ses éléments.
+Par exemple, si un corps est symétrique par rapport à un plan qui le traverse,
+alors la réflexion de chaque moitié de ce corps par le miroir plan
+produira un corps qui coincidera avec l'autre moitié. On en déduit qu'un cube a
 plusieurs plans de symétrie, dont l'un d'entre eux est représenté sur la figure
-\ref{cullity8}. Les ponits $A_1$ et $A_2$ sur cette figure doivent être
-identiques en raison du miroir plan passant par le centre du cube ; ils sont
-reliés par une réflexion.
+\ref{cullity8} (a). Les points $A_1$ et $A_2$ sur cette figure doivent être
+identiques à cause de ce miroir plan coupant $A_1A_2$ perpendiculairement.
+$A_1$ et $A_2$ sont reliés par une réflexion.
 
 \begin{figure}
     \includegraphics{./images/part1/cullity46.eps}
@@ -63,32 +65,32 @@ l'inversion.}
     \label{cullity8}
 \end{figure}
 
-Il y a quatre opérations de symétrie macroscopiques : rélfexion, rotation,
-inversion et roto-inversion. Un corps a une symmétrie de rotation d'ordre n selon
-un axe si une rotation de 360°/n coincide avec le cristal. Par conséquenct, un
-cube a un axe de rotation d'ordre 4 normal à chaque face, un axe de rotation
-d'ordre 3 le long de chaque grande diagonale, et un axe d'ordre 2 liant le centre
+Il y a quatre opérations de symétrie macroscopiques\sidenote{on peut également définir des opérations microscopiques, dont font partie par exemple les miroirs de glissement. Ces opérations n'ont pas d'influence dans les cristaux à l'échelle macroscopique} : réflexion (miroir), rotation,
+inversion et rotation-inversion. Un corps a une symmétrie de rotation d'ordre $n$ selon
+un axe si une rotation de $\SI{360}{\degree}/n$ coincide avec le cristal. Par conséquenct, un
+cube a un axe de rotation d'ordre 4 (quaternaire) normal à chaque face, un axe de rotation
+d'ordre 3 (ternaire) le long de chaque grande diagonale, et un axe d'ordre 2 (binaire) liant le centre
 de chaque côté opposé. Certains de ceux-ci sont représentés sur la figure
 \ref{cullity8}. En général, les axes de rotation peuvent être d'ordre 1, 2, 3, 4
-ou 6. Les axes de multiplicité 1 sont présents dans tous les ojbets, et ne sont
-normalement pas représenté. En revanche, les axes de rotation d'orde 5 ou d'ordre
-supérieur à 6 sont impossibles, parce qu'une maille primitive qui aurait une
-telle symétrie ne pourrait pas paver tout l'espace sans laisser de lacunes.
+donc pas représenté. En revanche, les axes de rotation d'orde 5 ou d'ordre
+supérieur à 6 sont impossibles, parce qu'une maille primitive qui possèderait de une
+telles symétries ne pourrait pas paver tout l'espace sans laisser de lacunes.
 
-Un corps a un centre d'inversion si les points correspondants de son corps sont
-situés à des distances égales du centre d'une ligne tracée à travers le centre.
+Un corps possède un centre d'inversion s'il possède des points qui sont symétriques
+par rapport à un centre unique. C'est à dire qu'une ligne passant par ce centre d'inversion
+peut relier les points à distance égale du centre.
 Un corps possédant un centre d'inversion se superposera parfaitement avec lui
 même en chaque point du corps s'il est inversé, ou réfléchi par le centre
-d'inversion. Un cube a un centre d'inversion à l'intersection de ses grandes
+d'inversion. Par exemple, un cube possède un centre d'inversion à l'intersection de ses grandes
 diagonales.
-Finalement, un corps peut avoir un axe de rotation-inevrsion, d'ordre 1, 2, 3, 4
-ou 6. S'il a un axe de rotation-inversion d'ordre n, alors il peut être ramené à
-lui-même par une rotation de 360°/n par l'axe, suivie d'une inversion par le
-centre, qui est situé sur l'axe.
+Finalement, un corps peut avoir un axe de rotation-ineversion, d'ordre 1, 2, 3, 4
+ou 6. S'il a un axe de rotation-inversion d'ordre $n$, alors il peut être ramené à
+lui-même par une rotation de $\SI{360}{\degree}/n$ par l'axe, suivie d'une inversion par le
+centre, qui est lui-même situé sur l'axe.
 
-Considérons a présent toutes lesp ositions et orientations qu'un objet ou un
+Considérons a présent toutes les positions et orientations qu'un objet ou un
 motif peut prendre suite aux opérations de symétrie de différent types (figure
-\ref{cullity9}). Le motif doit apparaître encore plus fréquemment que si, par
+\ref{cullity9}). Le motif doit apparaître encore plus fréquemment si, par
 exemple, deux opérations de symétrie passent par le même point. L'opération
 combinée d'un axe d'ordre 2 situé sur un miroir plan produit un second miroir
 plan, perpendiculaire au premier, et contenant également un axe d'ordre 2.
@@ -105,7 +107,7 @@ soient présents.
     \label{cullity9}
 \end{figure}
 
-Les différentes opérations de symétrie agissant sur un point sont appelées
+Les différentes opérations de symétrie agissant sur un point forment ce que l'on appelle un
 \emph{groupe ponctuel}. À deux dimensions, il y a dix groupe ponctuels qui
 peuvent être inclus dans des réseaux. À trois dimensions, le nombre de groupes
 ponctuels est de trente-deux : contrairement aux réseaux bi-dimensionnels, les
@@ -119,18 +121,19 @@ l'espace réciproque.
 
 \section{Systèmes cristallins}
 
-Lorsque l'on définit un réseau avec trois vecteurs de réseau non coplanaires, les
-mailles primitives de diverses formes peuvent résulter, selon la longueur et
-l'orientation des vecteurs. Par exemple, si les vecteurs
-$\mathbf{a}$,$\mathbf{b}$,$\mathbf{c}$ sont de longueur égale et à des angles
-droits les uns des autres, \ie $\mathbf{a = b = c}$ et $\alpha = \beta = \gamma
-= \SI{90}{\degree}$, alors la maille primitive est cubique. Donner des valeurs
-différentes aux longueurs axiales et aux angles produira des cellules de
-différentes formes, et par conséquent de différent types de points du réseau, car
-les points du réseau sont situés sur les coins de la maille primitive. Il vient
-alors qu'il n'y a que sept sorte de mailles qui sont nécessairement inclues dans
-tous les points du réseau possibles. Celles-ci correspondent aux sept
-\emph{systèmes cristallins} parmi lesquels les cristaux peuvent être classifiés.
+Un réseau (3D) peut être défini par trois vecteurs non coplanaires. On peut alors
+définir des mailles primitives de diverses formes, selon la longueur et l'orientation
+des vecteurs générateurs du réseau.
+Par exemple, si les vecteurs $\mathbf{a}$,$\mathbf{b}$,$\mathbf{c}$ sont de
+longueur égale et à des angles droits les uns des autres, \ie $\mathbf{a = b = c}$
+et $\alpha = \beta = \gamma = \SI{90}{\degree}$, alors la maille primitive est
+cubique. En imposant des valeurs différentes pour les longueurs axiales et les angles,
+on pourra définir des mailles de différentes formes, et par conséquent de différent
+groupe ponctuel, car les points du réseau sont situés aux sommets de la
+maille primitive. Il vient alors qu'il n'y a que sept sortes de mailles, et elles
+sont nécessairement inclues dans tous les réseaux ponctuels possibles.
+Celles-ci correspondent aux sept \emph{systèmes cristallins} parmi lesquels
+les cristaux peuvent être classifiés.
 Ces systèmes sont listés sur le tableau \ref{tab:syscrist}. \footnote{Le système
 trigonal est parfois appelé rhomboédrique.}
 
@@ -172,10 +175,8 @@ trigonal est parfois appelé rhomboédrique.}
 \caption{Systèmes cristallins et résaux de Bravais}
 \label{tab:syscrist}
 \end{table}
-    
-\TODO attention réseau ponctuel parfois mal traduit avant en point du réseau !
 
-Sept réseaux ponctuels différents peuvent être obtenus simplement en plaçant les
+Sept réseaux ponctuels différents peuvent être obtenus en plaçant les
 points aux côtés des mailles primitives des sept systèmes cristallins. Cependant,
 il y a d'autres arrangements de points qui peuvent respecter les conditions d'un
 réseau ponctuel, à savoir que chaque point du réseau a un environnement
@@ -452,7 +453,6 @@ où les éléments de matrice $S$ sont donnés par :
 \end{eqnarray*}
 
 Les volumes des mailles sont donnés par :
-
 \begin{flalign}
     \text{\emph{cubique}} && V & = a^3&\\
     \text{\emph{tétragonal}}l && V & = a^2 c&\\
@@ -616,8 +616,10 @@ Les volumes des mailles sont donnés par :
 
 \section{Récapitulatif des notations utilisées}
 
+Le tableau \ref{tab:rappel} récapitule l'ensemble des notations associées aux concepts que nous avons introduits dans ces trois premières sections.
+
 \begin{table}[ht]
-\begin{tabularx}{.8\textwidth}{ll}
+\begin{tabularx}{\textwidth}{Xl}
 \toprule
 notation & signification \\
 \midrule
@@ -630,7 +632,7 @@ $(hkl)$ & plan du réseau direct \\
 $[hkl]^*$ & rangée du réseau réciproque \\
 $(uvw)^*$ & plan du réseau réciproque \\
 $<hkl>$ & famille de rangées directes \\
-$\{hkl\}$ & hamille de plans équivalents\\
+$\{hkl\}$ & famille de plans équivalents\\
 \bottomrule
 \end{tabularx}
 \caption[Notations utilisées en cristallographie]{Rappel des notations utilisées en cristallographie}
@@ -639,7 +641,41 @@ $\{hkl\}$ & hamille de plans équivalents\\
 
 
 \section{Exemples de structures ioniques simples}
+
+Considérons des structures assez communes qui possèdent des mailles cubiques. Nous allons essayer de déterminer leurs réseau de Bravais, qui est sûrement la chose la plus utile pour comprendre comment se diffractent les rayons X sur ces structures.
+
 \subsection{NaCl}
+La structure \ch{NaCl} possède 8 ions, situés de la façon suivante :
+\begin{itemize}
+    \item 4 ions \ch{Na+} en positions $0\,0\,0$, $\half\,\half\,0$,$\half\,0\,\half$ et $0\,\half\,\half$ ;
+    \item 4 ions \ch{Cl-} en positions $\half\,\half\,\half$, $0\,0\,\half$, $0\,\half\,0$ et $\half\,0\,0$.
+\end{itemize}
+
+\begin{marginfigure}
+    \includegraphics{./images/part1/cullity63-02}
+    \caption{La structure NaCl (qui est la même que pour KCl, CaSe, PbTe, etc.)}
+    \label{fig:nacl}
+\end{marginfigure}
+
+Les ions sodium sont arrangés dans une maille cubique faces-centrées. Les translations de réseau $[000]$ et $<\half\half\half>$, lorsqu'elles sont appliquées à l'atome de chlore en $\half\,\half\,\half$,reproduisent toutes les positions des atomes de chlore. Par conséquent, le réseau de Bravais de \ch{NaCl} est cubique faces-centrées. Les positions ioniques peuvent être écrites comme :
+
+\begin{itemize}
+    \item 4\ch{Na+} en positions $0\,0\,0$ + translation de réseau F ;
+    \item 4\ch{Cl-} en positions $\half\,\half\,\half$ + translations de réseau F.
+\end{itemize}
+
+Remarquons ici que les opérations de symétrie du réseau de Bravais cubique F doivent superposer les ions similaires entre eux : une rotation de \SI{90}{\degree} autour de l'axe $[010]$ amène l'ion \ch{Cl-} de $0\,1\,\half$ en $\half\,1\,1$, ce qui coïncide avec un autre ion \ch{Cl-}, l'ion \ch{Na+} en $0\,1\,1$ vient coincider avec l'ion \ch{Na+} en $1\,1\,1$, etc.
+
 \subsection{CsCl}
+
+\begin{marginfigure}
+    \includegraphics{./images/part1/cullity63-01}
+    \caption{Structure de CsCl (identique à CsBr, NiAl, CuPd ordonné, etc.)}
+    \label{fig:cscl}
+\end{marginfigure}
+
+On peut constater sur la figure \ref{fig:cscl} que la maille primitive de \ch{CsCl} contient deux ions : un ion \ch{Cs+} en position $0\,0\,0$ et un ion \ch{Cl-} en position $\half\,\half\,\half$. On peut penser que la maille est cubique centrée, mais la translation de réseau $I$ vient superposer un ion césium avec un ion chlorure. Cette structure est donc cubique simble.
+
 \subsection{Carbone diamant}
+%cullity 64
 \subsection{Zinc blende}

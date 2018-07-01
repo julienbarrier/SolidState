@@ -137,9 +137,9 @@ les cristaux peuvent être classifiés.
 Ces systèmes sont listés sur le tableau \ref{tab:syscrist}. \footnote{Le système
 trigonal est parfois appelé rhomboédrique.}
 
-\begin{table}
-    \resizebox{\textwidth}{!}{
-    \begin{tabular}{lclr}
+\begin{table*}[t]
+    %\resizebox{\textwidth}{!}{
+    \begin{tabularx}{\textwidth}{lClr}
     \toprule
     Système & axes et angles & réseaux de Bravais & Symbole\\
     \midrule
@@ -171,10 +171,10 @@ trigonal est parfois appelé rhomboédrique.}
     Triclinique & $a \neq b \neq c$, $\alpha \neq \beta \neq \gamma \neq
     \SI{90}{\degree}$ & Simple & P\\
     \bottomrule
-\end{tabular}}
+\end{tabularx}%}
 \caption{Systèmes cristallins et résaux de Bravais}
 \label{tab:syscrist}
-\end{table}
+\end{table*}
 
 Sept réseaux ponctuels différents peuvent être obtenus en plaçant les
 points aux côtés des mailles primitives des sept systèmes cristallins. Cependant,

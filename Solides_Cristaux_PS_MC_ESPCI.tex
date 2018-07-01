@@ -8,13 +8,13 @@
 
 %%
 % Book metadata
-\title{Solides et cristaux}
+\title{Physique du solide et des cristaux}
 \author[Julien Barrier]{Julien Barrier}
 \publisher{ESPCI Paris}
-\newcommand{\thetitle}{Solides et cristaux}
+\newcommand{\thetitle}{Physique du solide et des cristaux}
 \newcommand{\theauthor}{Julien Barrier --- 133\ieme promotion}
 \newcommand{\thepublisher}{ESPCI Paris}
-\newcommand{\thesubtitle}{Physico-chimie de la matière condensée}
+\newcommand{\thesubtitle}{Propagation d'ondes dans la matière condensée}
 
 
 %%
@@ -35,6 +35,7 @@
 \usepackage{booktabs}
 \usepackage{tabularx}
 \newcolumntype{R}{>{\raggedleft\arraybackslash}X}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
 
 %%
 % For graphics / images
@@ -107,7 +108,7 @@
 \newcommand{\hangleft}[1]{\makebox[0pt][r]{#1}}
 \newcommand{\hairsp}{\hspace{1pt}}% hair space
 \newcommand{\hquad}{\hskip0.5em\relax}% half quad space
-\newcommand{\TODO}{\textcolor{red}{\bf TODO!}\xspace}
+\newcommand{\TODO}{\textcolor{red}{\bf À FAIRE !}\xspace}
 \newcommand{\ie}{\textit{i.\hairsp{}e.}\xspace}
 \newcommand{\eg}{\textit{e.\hairsp{}g.}\xspace}
 \newcommand{\na}{\quad--}% used in tables for N/A cells
@@ -198,7 +199,7 @@
 \begin{center}\fontsize{24}{24}\selectfont\textit{\includegraphics*[width=2.6in]{ESPCI_baseline_couleur}}
 \end{center}
 
-\vspace{3in}\fontsize{36}{54}\selectfont\thetitle
+\vspace{3in}\fontsize{32.1}{54}\selectfont\thetitle
 
 \vspace{0.125in}\fontsize{18}{18}\selectfont\thesubtitle
 
@@ -210,80 +211,89 @@
 
 \cleardoublepage
 \chapter*{Introduction}
-En deuxième année à \pc, les solides sont abordés dans trois matières 
-différentes : \emph{Matériaux Cristallisés} au premier semestre, 
-\emph{Chimie et Matériaux Inorganiques} et \emph{Physique du Solide} au 
-deuxième. Je ne pense pas qu'il faille distinguer les trois disciplines de cette
-façon : beaucoup d'articles scientifiques traitent de problèmes de matière 
-condensée présentent d'abord les structures cristallines que les auteurs ont 
-synthétisé avant d'en étudier les propriétés physiques. Je me suis donc efforcé,
-dans ce document, de relier les notions et de créer des passerelles entre 
-chacune d'entre elles.
+%    En deuxième année à \pc, les solides sont abordés dans trois matières 
+%    différentes : \emph{Matériaux Cristallisés} au premier semestre, 
+%    \emph{Chimie et Matériaux Inorganiques} et \emph{Physique du Solide} au 
+%    deuxième. Je ne pense pas qu'il faille distinguer les trois disciplines de cette
+%    façon : beaucoup d'articles scientifiques traitent de problèmes de matière 
+%    condensée présentent d'abord les structures cristallines que les auteurs ont 
+%    synthétisé avant d'en étudier les propriétés physiques. Je me suis donc efforcé,
+%    dans ce document, de relier les notions et de créer des passerelles entre 
+%    chacune d'entre elles.
 
-Attention, il a fallu faire un choix éditorial. J'ai choisi de me concentrer
-sur les liens entre les cristaux et les propriétés physiques que l'on pouvait
-mesurer. Ainsi, il y a de nombreuses parties du cours de matériaux cristallisés
-sur lesquels j'ai choisi de faire l'impasse, en particulier toute la
-cristallochimie, les propriétés de symétrie des cristaux (projection
-stéréographique, canevas de Wulff, goniométrie, indexation des faces), la 
-diffusion diffuse, les cristaux apériodiques et les solutions solides. Je n'ai
-pas non plus détaillé les symboles car je considère que le poly et le cours 
-proposés par N. Lequeux sont suffisants de ce point de vue. J'ai également choisi
-de ne pas évoquer le formalisme mathématique lié aux opérations de symétrie.
-Les calculs fait dans le poly de N. Lequeux permettent une assez bonne compréhension
-des algèbres utilisées.
+%    Attention, il a fallu faire un choix éditorial. J'ai choisi de me concentrer
+%    sur les liens entre les cristaux et les propriétés physiques que l'on pouvait
+%    mesurer. Ainsi, il y a de nombreuses parties du cours de matériaux cristallisés
+%    sur lesquels j'ai choisi de faire l'impasse, en particulier toute la
+%    cristallochimie, les propriétés de symétrie des cristaux (projection
+%    stéréographique, canevas de Wulff, goniométrie, indexation des faces), la 
+%    diffusion diffuse, les cristaux apériodiques et les solutions solides. Je n'ai
+%    pas non plus détaillé les symboles car je considère que le poly et le cours 
+%    proposés par N. Lequeux sont suffisants de ce point de vue. J'ai également choisi
+%    de ne pas évoquer le formalisme mathématique lié aux opérations de symétrie.
+%    Les calculs fait dans le poly de N. Lequeux permettent une assez bonne compréhension
+%    des algèbres utilisées.
 
-Je n'ai pas souhaité faire un poly qui ne sert qu'à réviser le cours d'une 
-matière ou d'une autre. Je l'ai fait car j'ai senti au cours de mes stages que
-certains points du cours étaient difficiles à appréhender. J'ai essayé non pas de
-faire une liste d'exemples qui permettent de réussir un examen, mais de
-détailler ce qui me semblait intéressant pour aborder une carrière 
-scientifique dans ce domaine.
+%    Je n'ai pas souhaité faire un poly qui ne sert qu'à réviser le cours d'une 
+%    matière ou d'une autre. Je l'ai fait car j'ai senti au cours de mes stages que
+%    certains points du cours étaient difficiles à appréhender. J'ai essayé non pas de
+%    faire une liste d'exemples qui permettent de réussir un examen, mais de
+%    détailler ce qui me semblait intéressant pour aborder une carrière 
+%    scientifique dans ce domaine.
 
-J'espère que ce document vous sera utile pour mieux appréhender chacune des 
-matières, pour que cela vous serve dans vos futures réflexions scientifiques.
-En particulier, j'ai essayé, dans la mesure du possible, d'inclure des exemples à 
-chaque fois que je le pouvais. Cela n'a pas pour objectif d'être exhaustif, mais 
-plutôt de fournir un ordre d'idée sur une gamme de sujets que j'ai voulu la plus 
-vaste possible.
+%    J'espère que ce document vous sera utile pour mieux appréhender chacune des 
+%    matières, pour que cela vous serve dans vos futures réflexions scientifiques.
+%    En particulier, j'ai essayé, dans la mesure du possible, d'inclure des exemples à 
+%    chaque fois que je le pouvais. Cela n'a pas pour objectif d'être exhaustif, mais 
+%    plutôt de fournir un ordre d'idée sur une gamme de sujets que j'ai voulu la plus 
+%    vaste possible.
 
-Ce document est composé de trois parties. La première présente les bases de
-cristallographie et les propriétés de diffraction liées à la nature cristalline
-de la matière.
-La seconde partie présente les vibrations dans les réseaux et la quantification 
-possible.
-La troisième traite du sujet des différents modèles de conduction électronique.
-Enfin, à partir des modèles, on peut étudier différents types de solides : 
-métaux, semi-conducteurs et isolants. C'est l'objet des parties en construction.
-%la quatrième partie.
-%toute la première partie me permet de définir les cristaux, les liaisons, la
-%façon dont on peut les aborder. essentiel pour mieux comprendre les modèles 
-%électroniques, qui sont basés sur une définition propre des réseaux.
+%    Ce document est composé de trois parties. La première présente les bases de
+%    cristallographie et les propriétés de diffraction liées à la nature cristalline
+%    de la matière.
+%    La seconde partie présente les vibrations dans les réseaux et la quantification 
+%    possible.
+%    La troisième traite du sujet des différents modèles de conduction électronique.
+%    Enfin, à partir des modèles, on peut étudier différents types de solides : 
+%    métaux, semi-conducteurs et isolants. C'est l'objet des parties en construction.
+    %la quatrième partie.
+    %toute la première partie me permet de définir les cristaux, les liaisons, la
+    %façon dont on peut les aborder. essentiel pour mieux comprendre les modèles 
+    %électroniques, qui sont basés sur une définition propre des réseaux.
 
-Les sources qui m'ont permis de rédiger ce document ne sont pas détaillées au fur
-et à mesure. En revanche, j'ai été inspiré par les ouvrages suivants, dont je
-recommande la lecture à ceux qui souhaitent en apprendre plus sur ce sujet 
-passionnant :
+%    Les sources qui m'ont permis de rédiger ce document ne sont pas détaillées au fur
+%    et à mesure. En revanche, j'ai été inspiré par les ouvrages suivants, dont je
+%    recommande la lecture à ceux qui souhaitent en apprendre plus sur ce sujet 
+%    passionnant :
+Sources :
+    \begin{itemize}
+        \item \emph{Elements of X-Ray Diffraction}, B. Cullity ;
+        \item \emph{Solid State Physics}, N. Ashcroft, B. Meermin ;
+        %\item \emph{Electronic Structures of Strongly correlated Materials}, V.
+            Anisimov, Y. Izyumov ;
+        \item \emph{Introduction to Solid State Physics}, C. Kittel ;
+        \item \emph{Electrons and Phonons}, J.M. Ziman. 
+    \end{itemize}
 
-\begin{itemize}
-    \item \emph{Elements of X-Ray Diffraction}, B. Cullity ;
-    \item \emph{Solid State Physics}, N. Ashcroft, B. Meermin ;
-    %\item \emph{Electronic Structures of Strongly correlated Materials}, V.
-        Anisimov, Y. Izyumov ;
-    \item \emph{Introduction to Solid State Physics}, C. Kittel ;
-    \item \emph{Electrons and Phonons}, J.M. Ziman. 
-\end{itemize}
+    \vspace{2cm}
+    
+En construction pour l'instant :
+\begin{description}
+    \item[Partie 1 (Cristallographie + RX)] 90\%
+    \item[Partie 2 (Vibrations, phonons)] 60\%
+    \item[Partie 3 (Modèles électroniques)] 30\%
+    \item[Partie 4 (Défauts)] 10\%
+    \item[Partie 5 (Propriétés électroniques)] 40\%
+\end{description}
 
-\vspace{2cm}
-
-La cristallographie est une science un peu trop souvent négligée. Pourtant,
-elle est la base de toute la physique et la chimie de la matière condensée, qui
-est un domaine scientifique en plein essort.
-Les métaux et les semiconducteurs sont très souvents des solides cristallins.
-Si cela n'est pas évident au premier coup d'œil sur des matériaux façonnés,
-nous allons explorer la matière pour en découvrir la structure périodique.
-La comprendre nous permettra d'appréhender les propriétés physiques qui en
-découlent. J'espère que ce document saura être suffisamment clair.
+%    La cristallographie est une science un peu trop souvent négligée. Pourtant,
+%    elle est la base de toute la physique et la chimie de la matière condensée, qui
+%    est un domaine scientifique en plein essort.
+%    Les métaux et les semiconducteurs sont très souvents des solides cristallins.
+%    Si cela n'est pas évident au premier coup d'œil sur des matériaux façonnés,
+%    nous allons explorer la matière pour en découvrir la structure périodique.
+%    La comprendre nous permettra d'appréhender les propriétés physiques qui en
+%    découlent. J'espère que ce document saura être suffisamment clair.
 
 
 
@@ -296,15 +306,17 @@ découlent. J'espère que ce document saura être suffisamment clair.
 \cleardoublepage
 ~\vfill
 \begin{doublespace}
-\noindent\fontsize{18}{22}\selectfont\itshape
+\noindent\fontsize{18
+}{22}\selectfont\itshape
 \nohyphenation
-« Personnellement, si j'en étais resté aux impressions éprouvées à la suite des 
-premières leçons de sciences de mes professeurs \[...\] si je n'avais pris un
+«~Personnellement, si j'en étais resté aux impressions éprouvées à la suite des 
+premières leçons de sciences de mes professeurs [...] si je n'avais pris un
 contact ultérieur ou différent avec la réalité, j'aurais pu penser que la 
 science était faite, qu'il ne restait plus rien à découvrir, alors que nous en 
 sommes à peine aux premiers balbutiements dans la connaissance du monde 
-extérieur. »\\
-\mbox{Paul Langevin, 7\ieme promotion}
+extérieur.~»\\
+
+\flushright{Paul Langevin, 7\ieme promotion}
 \end{doublespace}
 \vfill
 \vfill
@@ -320,6 +332,7 @@ extérieur. »\\
 %\include{chapter/05-energie-reticulaire} % en fait il s'agit des cristaux moléculaires
 %\include{chapter/07-liaisons-atomiques}
 \include{chapter/06-resolution}
+\include{chapter/07-methodes-exp}
 % note ser ce qu'il va plutôt falloir faire :
 % mettre d'abord cristaux moléculaires, ensuite
 % cristaux ioniques puis liasons covalentes, etc.

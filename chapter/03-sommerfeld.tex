@@ -1,0 +1,330 @@
+\chapter{Modèle des électrons libres}
+
+Le modèle des électrons libres a été proposé par Arnold Sommerfeld en 1920, pour
+décrire le comportement des électrons dans un solide comme un gaz.
+
+On peut comprendre beaucoup des propritétés physiques des métaux, et pas
+seulement des métaux simples, avec un modèle d'électrons libres. En suivant ce
+modèle, les électrons de valence des atomes constituant le métal deviennent des
+électrons de conduction est bougent librement dans le volume du métal. Même dans
+les métaux pour lesquels le modèle des électrons libre marcherait le mieux, la
+distribution de charge des électrons de conduction reflète le potentiel 
+électrostatique important des cœurs ioniques. L'utilité d'un modèle d'électrons
+libres est importante pour comprendre les propriétés qui dépendent
+essentiellement des propriétés cinétiques des électrons de conduction.
+L'interaction des électrons de conduction avec les ions du réseau est traitée
+dans le chapitre suivant sur le modèle des électrons presque libres.
+
+Les métaux les plus siples sont les métaux alcalins : le lithium, sodium, 
+potassium, césium et rubidium. Dans un atome libre de sodium, l'électron de 
+valence est dans un état 3s ; dans un métal, cet électron devient un électron de
+conduction dans la bande de conduction 3s.
+
+Un cristal monovalent qui contient N atomes aura N électrons de conduction et N
+cœurs ioniques positifs. Le cœur ionique \ch{Na+} contient 10 électrons qui
+occupent les couches 1s, 2s et 2p de l'ion libre, avec une distribution spatialle
+qui est essentielleement la même qu'il soit métallique ou sous forme d'ion libre.
+Les cœurs ioniques remplissent à peu près 15\% du volume dans un cristal de
+sodium. Le rayon de l'ion libre \ch{Na+} est de \SI{0.98}{\angstrom}, alors que
+la moitié de la distance aux plus proches voisins dans le métal est de
+\SI{1.83}{\angstrom}.
+
+L'interprétation des propriétés métalliques en terme de mouvement des électrons
+libres a été développée bien avant l'invention de la mécanique quantique. La 
+théorie classique a eu quelques succès, notamment en démontrant une forme de la
+loi d'Ohm et la relation entre la conductivité électrique et thermique, que nous
+aborderons plus tard avec le modèle de Drude pour la conduction électronique.
+En revanche, la théorie classique a échoué à  expliquer la capacité calorifique
+et la susceptibilité magnétique des élecrtons de conduction. En fait, ce ne sont
+pas des problèmes sur le modèle de l'électron libre, mais des modèles sur la
+distribution classique de Maxwell-Boltzman qui y est utilisée.
+
+Il y a une difficulté supplémentaire avec le modèle classique. Plusieurs
+expériences de plusieurs types donnent le résultat suivant : il est clair que les
+électrons de conduction dans un métal peuvent se déplacer avec un chemin direct 
+sur plusieurs distances atomiques, sans être défvés par des collisions avec
+d'autres électrons de conduction ou par les collisions avec les noyaux atomiques.
+Dans un échantillon très pur à basse température, le libre parcours moyen est
+aussi long que \SI{e8}{} distances inter-atomiques (plus d'un centimètre !).
+
+Pourquoi est la matière condensée si transparente à la conduction des électrons ?
+La réponse à cette question peut être scindée en deux parties : premièrement, un
+électron de conduction n'est pas dévié par les cœurs ioniques arrangés sur un
+réseau \emph{périodique} parce que les ondes mécaniques peuvent se propager 
+librement sur une structure périodique, comme conséquence des mathématiques 
+traités dans ce chapitre. Deuxièmement, un électron de conduction est diffusé
+seulement rarement par d'autres électrons de conduction. Cette proriété est une
+conséquence du principe d'exclusion de Pauli. Quand on parle de gaz d'électrons
+libres de Fermi, on doit plutôt vouloir dire un gaz d'électrons libres sujets au
+principe de Pauli.
+
+
+\section{Effets du principe de Pauli}
+
+Considérons un électron libre dans un gaz 1D, en prenant en compte la théorie 
+quantique et le principe de Pauli. Un électron qui a une masse m est confiné dans
+un puit de largeur L. La fonction d'onde $\psi_n(x)$ de l'électron est une
+solution de l'équation de Schrödinger $\mathcal{H}\psi = \epsilon \psi$, ce qui,
+en négligeant l'énergie potentielle, donne $\mathcal{H} = p^2/2m$, où $p$ est la
+quantité de mouvement. Dans la théorie quantique, $p$ peut représenter 
+l'opérateur $-i\hbar d/dx$, de telle sorte que :
+\begin{equation}
+    \mathcal{H}\psi_n = -\frac{\hbar^2}{2m} \frac{d^2\psi_n}{dx^2}
+    = \epsilon_n\psi_n
+\end{equation}
+où $\epsilon_n$ est l'énergie de l'électron sur son orbitale.
+
+On utilise le terme orbitale pour dire une solution de l'équation d'onde pour un
+système d'un seul électron. Le terme permet de distinguer entre un état quantique
+exact de l'équation d'onde d'un système de N électrons interagissant et un état
+quantique approximé que l'on construit en associant aux N électrons N
+déffirentes orbitales, chacune d'entre elles étant une solution de l'équation
+d'onde pour un électron. Le modèle orbitalaire est exact s'il n'y a aucune
+interaction entre chacun des électrons.
+
+Les conditions aux limites sont : $\psi_n (0) = 0$, $\psi_n(L)=0$, comme imposé 
+par le puit de potentiel infini. Ces conditions sont satisfaites si la fonction
+d'onde est sinusoidale, avec un nombre entier de demi-longeurs d'ondes entre 0
+et L :
+\begin{equation}
+    \psi_n = A \sin\left( \frac{2\pi}{\lambda_n} \right) ; \hfill
+    \frac{1}{2}n\lambda_n = L
+\end{equation}
+où A est constante.
+On voit que c'est une solution de l'équation de Schrödinger, parce que :
+\begin{equation}
+    \frac{d\psi_n}{dx} = A \left( \frac{n\pi}{L} \right)
+    \cos\left( \frac{n\pi}{L}x \right) ; \hfill \frac{d^2\psi_n}{dx^2} 
+    = - A \left( \frac{n\pi}{L} \right)^2\sin\left( \frac{n\pi}{L}x \right)
+\end{equation}
+
+où l'énergie $\epsilon_n$ est donnée par :
+\begin{equation}
+    \epsilon_n = \frac{\hbar^2}{2m} \left( \frac{n\pi}{L}\right)^2
+\label{en}
+\end{equation}
+
+On veut pouvoir loger N électrons sur la ligne. Comme prévu par le principe
+d'exclusion de Pauli, deux électrons ne peuvent pas avoir le même nombre
+quantique. Ansi, chaque orbitale ne peut être occupée que par deux électrons au
+maximum. Ceci s'applique aux électrons dans les atomes, molécules, et solides.
+
+Dans un solide linéaire, les nombres quantiques d'une orbitale d'un électron de
+conduction sont $n$ et $m_s$, où $n$ est un nombre entier positif, et le nombre
+quantique magnétique $m_s = \pm \frac{1}{2}$, suivant l'orientation de spin. Une
+paire d'orbitales marquée par un nombre quantique $n$ peut recevoir deux
+électrons, un avec un spin vers le haut et un avec un spin vers le bas. S'il y a
+six électrons, alors l'état fondamental du système est rempli d'orbitales données
+par le tableau suivant :
+
+\begin{table}[ht]
+    \begin{center}
+        \begin{tabular}{rrr}
+            \toprule
+            n & $m_s$ & occupation par les électrons\\
+            \midrule
+            1 & $\uparrow$ & 1\\
+            1 & $\downarrow$ & 1\\
+            2 & $\uparrow$ & 1\\
+            2 & $\downarrow$ & 1\\
+            3 & $\uparrow$ & 1\\
+            3 & $\downarrow$ & 1\\
+            4 & $\uparrow$ & 0\\
+            4 & $\downarrow$ & 0\\
+            \bottomrule
+        \end{tabular}
+    \end{center}
+    \label{}
+    \caption{remplissage des orbitales pour un système à 6 électrons}
+\end{table}
+
+Plus d'une orbitale peut voir la même énergie. Le nombre d'orbitales avec la même
+énergie est appelée \emph{dégénérescence}.
+
+Soit $n_F$ le niveau d'énergie rempli le plus élevé, où on commence à remplir les
+niveaux depuis le bas (n=1), et on continue à remplir les niveaux d'énergie 
+supérieure, jusqu'à ce que tous les N électrons soient placés. Il est pratique de
+supposer que N est un nombre pair. la condition $2n_F = N$ détermine $n_F$, la
+valeur de n pour laquelle le niveau le plus élevé est rempli.
+
+L'énergie de Fermi $\epsilon_F$ est définie comme l'énergie du plus haut niveau
+rempli à l'état fondamental d'un système à N électrons. En utilisant la relation
+\ref{en}, avec $n=n_F$, on a, à une dimension :
+\begin{equation}
+    \epsilon_F = \frac{\hbar^2}{2m}\left(\frac{n_F\pi}{L}\right)^2 = 
+    \frac{\hbar^2}{2m}\left( \frac{N\pi}{2L} \right)^2
+\end{equation}
+
+
+\section{Statistique de Fermi-Dirac}
+
+L'état fondamental est l'état d'un système de N électrons au zéro absolu. Ce qui
+arrive quand on augmente la température ? C'est un problème standard dans la
+mécanique statistique élémentaire, et la solution es donnée par la distribution
+de Fermi-Dirac.
+
+\begin{figure}
+    \TODO
+    \caption{La distribution de Fermi Dirac}
+    \label{fermidir}
+\end{figure}
+
+
+L'énergie cinétique du gas d'électrons augmente quand la température augmente :
+certains niveaux d'énergie sont occupés, d'autres restent vacants au zéro absolu,
+et certains niveuax sont vides alors qu'ils sont occupés au zéro absolu. La
+distribution de Fermi-Dirac donne la probabilité qu'une orbitale d'énergie
+$\epsilon$ soit occupée par un gas d'électrons idéal à l'équilibre thermique.
+
+\begin{equation}
+    f(\epsilon) = \frac{1}{\exp\left( \frac{\epsilon - \mu}{k_BT} \right) + 1}
+\end{equation}
+
+La quantité $\mu$ est une fonction de la température. $\mu$ doit être choisie
+pour un problème particulier d'une telle façon que le nombre total de
+particules dans e système en dérive correctement, c'est à dire qu'on retrouve
+bien N à la fin. Au zéro absolu, $\mu = \epsilon_F$, parce que la limite
+$T\rightarrow 0$, la fonction $f(\epsilon)$ change de façon discontinue de la
+valeur 1 (rempli) à la valeur zéro (vide), à $\epsilon = \epsilon_F = \mu$. Pour
+toute température, $f(\epsilon)$ est égal à 1/2 lorsque $\epsilon = \mu$.
+
+$\mu$ est le potentiel chimique, et on doit voir qu'au zéro absolu, le potentiel
+chimique est égal à l'énergie de Fermi, définie comme l'énergie de la plus haute
+orbitale remplie au zéro absolu.
+
+La partie en queue de distribution, est cette parie pour laquelle $\epsilon - \mu
+\ll k_BT$. Ici, le terme exponentiel est dominant dans le dénominateur, et ainsi
+$f(\epsilon) \cong \exp(\frac{\mu - \epsilon}{k_BT})$. Cette limite est appelée
+la distribution de Maxwell-Boltzmann.
+
+\section{Généralisation à trois dimensions}
+
+Les électrons sont des particules quantiques. Ils peuvent donc être décrits par
+une fonction d'onde $\psi(\mathbf{r},t)$, qui est la solution de l'équation de
+Schödinger suivante :
+
+
+\section{conditions de Born von Karman}
+
+\section{Sphère de Fermi et espace des états}
+
+Dans l'état fondamental d'un système à N électrons libres, les orbitales occupées
+peuvent représenter des points dans une sphère de l'espace réciproque. L'énergie
+à la surface de la sphère est l'énergie de Fermi. Les vecteurs d'onde à la
+surface de Fermi ont une intensité $k_F$ telle que :
+\begin{equation}
+    \epsilon_F = \frac{\hbar^2}{2m}k_F^2
+    \label{eef}
+\end{equation}
+
+On peut alors voir qu'il n'y a qu'un seul vecteur d'onde permis, qui est distinct
+du triplet de nombre quantiques $k_x, k_y, k_z$, pour l'élément de volume
+$(2\pi/L)^3$ de l'espace réciproque. Ainsi, dans la sphère de volume $\frac{4\pi
+k_F^3}{3}$, le nombre total d'orbitales est :
+
+\begin{equation}
+    2\cdot \frac{\frac{4\pi k_F^3}{3}}{\left( \frac{2\pi}{L}\right)^3} 
+    = \frac{V}{3\pi^2} k_F^3 = N
+\end{equation}
+
+où le facteur 2 à gauche vient des deux valeurs permises par le nombre quantique
+de spin pour chaque valeur de $\mathbf{k}$. Ainsi, on obtient :
+\begin{equation}
+    k_F = \left( \frac{3\pi^2N}{V}\right)^{1/3}
+    \label{kkf}
+\end{equation}
+
+qui ne dépend que de la concentration en particules.
+
+\begin{marginfigure}
+    \TODO
+    \caption{Sphère de Fermi}
+    \label{spherefermi}
+\end{marginfigure}
+
+En combinant \ref{eef} et \ref{kkf}, on obtient :
+\begin{equation}
+    \epsilon_F = \frac{\hbar^2}{2m} \left(\frac{3\pi^2N}{V}\right)^{2/3}
+    \label{ef}
+\end{equation}
+
+Ceci se rapporte à l'énergie de Fermi pour la concentation en électrons N/V. La
+vitesse des électrons $v_F$ sur la surface de Fermi est :
+\begin{equation}
+    v_F = \left( \frac{\hbar k_F}{m}\right)
+    = \left( \frac{\hbar}{m} \right)\left(\frac{3\pi^2 N}{V} \right)^{1/3}
+\end{equation}
+
+Les valeurs calculées de $k_F$, $v_F$ et $\epsilon_F$ sont données dans le
+tableau suivant pour certains métaux. Le paramètre de rayon est un nombre sans
+dimension $r_n = r_0/a_H$ où $a_H$ est le rayon de Bohr et $r_0$ le rayon de la
+sphère qui contient un électron.
+
+\begin{table*}[ht]
+\footnotesize
+\begin{center}
+\begin{tabularx}{\textwidth}{rlRRRRRR}
+\toprule
+Valence & Métal & concentration en électrons ($10^{22} cm^{-3}$) & Paramètre de rayon $r_n$ & vecteur d'onde de Fermi ($10^8 cm^{-1}$) & vitesse de Fermi ($10^8 cm\cdot s^{-1}$) & énergie de Fermi (eV) & température de Fermi ($T_F =\epsilon_F / k_B$) ($10^4$ K)\\
+\midrule
+1 & Li & 4.70 & 3.25 & 1.11 & 1.29 & 4.72 & 5.48 \\
+  & Na (78K) & 2.65 & 3.93 & 0.92 & 1.07 & 3.23 & 3.75\\
+  & K (78K) & 1.40 & 4.86 & 0.75 & 0.86 & 2.12 & 2.46\\
+  & Rb (78K) & 1.15 & 5.20 & 0.70 & 0.81 & 1.85 & 2.15\\
+  & Cs (78K) & 0.91 & 5.63 & 0.64 & 0.75 & 1.58 & 1.83\\
+  & Cu & 8.45 & 2.67 & 1.36 & 1.57 & 7.00 & 8.12\\
+  & Ag & 5.85 & 3.02 & 1.20 & 1.39 & 5.48 & 6.36\\
+  & Au & 5.90 & 3.01 & 1.20 & 1.39 & 5.51 & 6.39\\
+2 & Be & 24.02 & 1.88 & 1.93 & 2.23 & 14.14 & 16.41\\
+  & Mg & 8.60 & 2.65 & 1.37 & 1.58 & 7.13 & 8.27\\
+  & Ca & 4.60 & 3.27 & 1.11 & 1.28 & 4.68 & 5.43\\
+  & Sr & 3.56 & 3.56 & 1.02 & 1.18 & 3.95 & 4.58\\
+  & Ba & 3.20 & 3.69 & 0.98 & 1.13 & 3.65 & 4.24\\
+  & Zn & 13.10 & 2.31 & 1.57 & 1.82 & 9.39 & 10.90\\
+  & Cd & 9.28 & 2.52 & 1.40 & 1.62 & 7.46 & 8.66\\
+3 & Al & 18.06 & 2.07 & 1.75 & 2.02 & 11.63 & 13.49\\
+  & Ga & 15.30 & 2.19 & 1.65 & 1.91 & 10.35 & 12.01\\
+  & In & 22.49 & 2.41 & 1.50 & 1.74 & 8.60 & 9.98\\
+4 & Pb & 13.20 & 2.30 & 1.57 & 1.82 & 9.37 & 10.87\\
+  & Sn(w) & 14.48 & 2.23 & 1.62 & 1.88 & 10.03 & 11.64\\
+\bottomrule
+\end{tabularx}
+\end{center}
+\caption{Paramètres de la surface de Fermi pour le modèle de l'élecrton libre
+pour quelques métaux à température ambiante}
+\label{}
+\end{table*}
+
+Maintenant, on trouve une expression du nombre d'orbitales par gamme d'énergie
+unitaire., $D(\epsilon)$, appelée densité d'états\footnote{si on est rigoureux,
+$D(\epsilon)$ représente plutôt la densité d'états à une particules, ou la
+densité des orbitales}. On utilise \ref{ef} pour obtenir le nombre total
+d'orbitales d'énergie inférieure ou égale à $\epsilon$ :
+\begin{equation}
+    N = \frac{V}{3\pi^2} \left(\frac{2m\epsilon}{\hbar^2}\right)^{3/2}
+\end{equation}
+
+Ainsi, la densité d'états est :
+\begin{equation}
+    D(\epsilon) \equiv \frac{dN}{d\epsilon} = 
+    \frac{V}{2\pi^2} \cdot 
+    \left(\frac{2m}{\hbar^2}\right)^{3/2}\cdot\epsilon^{1/2}
+\end{equation}
+Ce résultat peut être exprimé plus simplement en comparant les deux formules,
+pour obtenir, à $\epsilon$ :
+\begin{equation}
+    D(\epsilon) \equiv \frac{dN}{d\epsilon} = \frac{3N}{2\epsilon}
+\end{equation}
+Avec un facteur de l'ordre de l'unité, le nombre d'orbitales par unité d'énergie
+à l'energie de Fermi est le nombre total d'électrons de conduction divisé par
+l'énergie de Fermi, exactement ce qu'on espérait.
+
+\section{Énergie et chaleur spécifique du gaz d'électrons libres}
+
+\section{Densité d'états électroniques}
+
+\section{conductivité thermique}
+
+Constante de Wiedemann-Franz
+
+\section{Effet Pelletier}

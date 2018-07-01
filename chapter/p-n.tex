@@ -1,0 +1,170 @@
+\chapter{La jonction p-n}
+
+une jonction p-n est faite d'un monocrystal modifié dans deux régions séparées.
+Des impuretés accepteuses sont ajoutées dans une partie, pour produire une région
+p dans laquelle la majorité des porteurs sont des trous. Des impuretés donneuses
+sont ajoutées dans l'autre partie, pour produire une région n, dans laquelle les
+porteurs majoritaires sont des électrons. La région à l'interface est moins
+épaisse que $10^-4 cm$. Loin de l'interface, du côté p, il y a des impuretés
+accepteuses ionisées (-) et une concentration égale en trous libres. Du côté n,
+il y a des atomes donneurs ionisés (+), et une concentration égale en électrons
+libres. Par conséquent, les porteurs majoritaires sont les trous du côté p et les
+électrons du côté n.
+
+Les trous sont concentrés du côté p voudront diffuser pour remplir le cristal de
+façon uniforme. Les électrons voudront diffuser depuis le côté n. Mais la
+diffusion va contrarier la neutralité électrique locale du système.
+
+Un léger transfert de charge par diffusion laisse derrière, du côté p, un excès
+d'accepteurs ionisés (-), et du côté n, un excès de donneurs ionisés (+). Cette
+double couche de charges créé un champ électrique dirigé de la région n à p, qui
+empêche la diffusion et ainsi maintient la séparation des deux types de porteurs.
+À cause de cette double couche, le potentiel électrostatique dans le cristal fait
+un saut en passant d'un côté à l'autre de la jonction.
+
+À l'équilibre thermique, le potentiel chimique de chaque porteur est partout
+constant dans le cristal, même à la jonction. Pour les trous :
+\begin{equation}
+    k_BT \ln p(\mathbf{r}) + e\phi(\mathbf{r}) = cste
+\end{equation}
+à travers le cristal, où $p$ est la concentration en trous et $\phi$ le potentiel
+électrostatique. Par conséquent, $p$ est faible et $\phi$ est important. Pour les
+électrons :
+\begin{equation}
+    k_BT \ln n(\mathbf{r}) - e\phi(\mathbf{r}) = cste
+\end{equation}
+et $n$ sera faible quand $\phi$ petit.
+
+Le potentiel chimique total est constant partout dans le cristal. L'effet du
+gradient de concentration annule parfaitement le potentiel électrostatique, et le
+lux net de particules de chaque porteur est nul. Cependant, même à l'équilibre
+thermique, il y a un léger flux d'électrons de $n$ vers $p$ où les électrons
+finissent leur vie en se combinant avec des trous. Le courrant de recombination
+$J_{nr}$ est contrebalancé par un courant $J_{ng}$ d'électrons qui sont générés
+thermiquement dans la région $p$ et qui sont poussés par le champ auto-alimenté
+dans la région $n$. Par conséquent, en l'absence de champ élecrtique appliqué :
+\begin{equation}
+    J_{nr}(0) + J_{ng}(0) = 0
+\end{equation}
+
+pour que sinon les électrons s'accumulent indéfiniment d'un côté de la barrière.
+
+\section{Rectification}
+
+Une jonction p-n peut agir comme un rectifieur. Un courant important apparaîtra
+si on applique une tension le long de la jonction dans une direction, mais si la
+tension est dans la direction opposée, juste un courrant faible découlera. Si une
+tension alternative est appliquée le long de la jonction, le courrant s'écoulera
+principalement dans une direction -- la jonction a rectifié le courrant.
+
+\begin{marginfigure}
+    \TODO
+    \caption{caractéristique de la rectification d'une jonction p-n dans du
+    germanium}
+    \label{caracpn}
+\end{marginfigure}
+
+Pour des biais de tension inverse, une tension négative est appliquée dans la
+région p et une tension positive dans la région n. Par conséquent, augmenter la
+différence de potentiel entre les deux régions. Maintenant, pratiquement aucun
+électron ne peut grimper la barrière d'énergie potentielle du côté bas en énergie
+jusqu'en haut. Le courrant de recombinaison est réduit d'un facteur de Boltzmann
+:
+\begin{equation}
+    J_{nr}(V back) = J_{nr}(0) \exp (-e|V|/k_BT)
+\end{equation}
+
+Le facteur de Boltzmann contrôle le nombre d'électrons avec suffisemment
+d'énergie pour traverser la barrière.
+
+La génération thermique d'un courant d'électrons n'est pas particulièrement
+affectée par le courant inverse parce que la génération d'électron descend la
+barrière (de p vers n). Par conséquent :
+\begin{equation}
+    J_{ng}(V back)=J_{ng}(0)
+\end{equation}
+On a vu précédemment que $J_{nr}(0) = -J_{ng}(0)$. Par conséquent, la génération
+de courrant domine les courrants de recombinaison pour les biais inverses.
+
+Lorsqu'une tension inverse est appliquée ,le courrant de recombinaison augmente
+car la barrière d'énergie potentielle est abaissée, et par conséquent permet à
+plus d'électrons de passer du côté n au côté p :
+\begin{equation}
+    J_{nr}(V forward) = J_{nr}(0) \exp (e|V|/k_BT)
+\end{equation}
+Encore une fois, le courrang de génération est inchangé :
+\begin{equation}
+    J_{ng}(V forward) = J_{ng}(0)
+\end{equation}
+Le courrant de trous traversant la jonction se comporte de façon similaire au
+courant d'électrons. La tension appliquée, qui diminue la hauteur de la barrière
+pour les électrons le fait également pour les trous, de sorte à ce qu'un grand
+nombre d'électrons traverse de la région n àsous les mêmes conditions de tension
+qui produisent un grand courrant de trous dans la direction opposée.
+
+Les courrants électriques de trous et d'électrons sont additifs, et ainsi le
+courrant total est :
+\begin{equation}
+    I = I_s [\exp(eV/k_BT)-1]
+\end{equation}
+où $I_s$ est la somm edes deux courrants générés. Cette équation est bien
+satisfaite pour des jonctions p-n dans le germanium, mais pas trop pour d'autres
+semiconducteurs.
+
+\section{Cellules solaires et détecteurs photovoltaiques}
+
+Si l'on illumine une jonction p-n, sans tension extérieure qui biaise le truc,
+chaque photon absorbé créé un électron et un trou. Lorsque ces porteurs diffusent
+dans la jonction, le champ électrique auto-alimenté de la jonction sépare les
+charges à la barrière d'énergie. La séparation des poruteurs produit une tension
+directe le long de la barrière. Directe, parce que le champ électrique des
+porteurs photoexcités est opposé au champ intégré de la jonction.
+
+L'apparition d'une tension inverse le long de la jonction illimunée est appelée
+l'\emph{effet photovoltaique}. Une jonction illimunée peut délivrer de la
+puissance à un circuit externe. Les jonctions p-n à grande surface en silicium
+sont majoritairement utilisés dans les panneaux solaires, pour convertir des
+photons d'origine solaire en énergie électrique.
+
+\section{Barrière de Schottky}
+
+Lorsqu'un semiconducteur est mis en contact avec un métal, on observe la
+formation dans le semiconducteur d'une couche barrière à partir de laquelle les
+porteurs de charge diminuent drastiquement. La couche barrière est aussi appelée
+couche de déplétion (depletive layer ou exhaustion layer).
+
+\begin{marginfigure}
+    \TODO
+    \caption{semiconducteur en contact avec un métal}
+    \label{semicondmetal}
+\end{marginfigure}
+
+Sur la figure \ref{semicondnmetal}, un semiconducteur de type n est mis en
+contact avec un métal. Les niveaux de Fermi sont coincident après le transfert
+d'électrons à la bande de conduction du métal. Les donneurs chargés positivement
+sont écartés de cette région qui est partiquement uniquement composée
+d'électrons. Ici, l'équation de Poisson  donne :
+\begin{equation}
+    \div \mathbf{D} = ne/\epsilon_0
+\end{equation}
+où n est la concentration en donneur. Le potentiel électrostatique est déterminé
+par :
+\begin{equation}
+    \frac{d^2\phi}{dx^2} = \frac{ne}{\epsilon \epsilon_0}
+\end{equation}
+Qui admet une solution de la forme :
+\begin{equation}
+    \phi = -(\frac{-ne}{2\epsilon \epsilon_0})x^2
+\end{equation}
+
+L'originedes x est prise, pour des raisons pratiques, au bord droit de la
+barrirère. Le contact est à $-x_b$, et ici l'énergie potentielle relative au côté
+droit est $-e\phi_0$, d'où une épaisseur de la barrière qui peut s'écrire sous la
+forme :
+\begin{equation}
+    x_b = \left(\frac{2\epsilon \epsilon_0 |\phi_0|}{ne}\right)^{1/2}
+\end{equation}
+
+Avec $\epsilon = 16$, $e\phi_0 =$ \SI{0.5}{\electronvolt},
+n=\SI{e16}{\per\cubic\centi\metre}, on trouve $x_b = $\SI{0.3}{\micro\metre}.
+C'est une vision plutôt simplifiée.

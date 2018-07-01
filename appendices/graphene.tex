@@ -1,0 +1,172 @@
+\chapter{Structure du graphene}
+
+Le graphite est constitué d'un empilement de feuillets faiblement connectés
+(liaisons de van der Waals). Les propriétés d'un seul feuillet (graphène) sont
+très différentes de celles du graphite.
+
+Il existe plusieurs techniques pour la synthèse du graphène : le dépot sur
+membrane, la suspension, etc.
+Du point de vue thermique, il semble très difficile d'imaginer un matériau
+purement 2D. Lorsqu'il est suspendu, c'est la modulation vibrationnelle qui le
+stabilise.
+
+Du point de vue électronique, on pourra montrer que c'est un conducteur et
+calculer sa structure de bande. On montrera que les électrons ont des propriétés
+particulières dans ce type de matériau 2D. Les électrons relativistes -> vitesse
+de fermi.
+relation de dispersion linéaire. énergie proportionnelle à k et non plus à $k^2$
+(fermion de dirac)
+
+effet Hall quantique à température ambiante dans le graphène.
+protection des états quantiques.
+
+il s'agit d'un matériau topologique, on peut faire des isolants topologiques,
+c'est à dire isolants dans le bulk, conducteurs en surface. exemple : fermion de
+majorana : particule prédite qui est sa propre antiparticule. il est observé dans
+des isolants topologiques, couplé à des semi-conducteurs.
+Approche des électrons fortement liés. On part d'orbitales en considérant le
+recouvrement, structure de bande.
+
+Orbitales $sp^2$, forme triangulaire à 120\textdegree.
+
+\begin{figure}
+    \TODO
+    \caption{figure des $sp^2$ et $2p_z$}
+    \label{fig:orbitales}
+\end{figure}
+
+La maille élémentaire du graphène contient deux sites différents. Le carbone
+possède 4 électrons de valence. Trois de ces électrons sont engagés dans des
+liaisons $sp^2$ à 120\textdegree les unes des autres, et qui pointent vers les
+plus proches voisins. Ces liaisons étant très fortes (bandes profondes et
+étroites) ; cela nous permet de négliger ces électrons. Il reste ainsi un
+électron qui occupe une orbitale $2p_z$ qui se trouve dans les parages, sans
+vraiment savoir quoi faire.
+
+La maille élémentaire est définie par les vecteurs $\mathbf{a}_i$ et
+$\mathbf{a}_2$, et on définit $a$ tel que $a=a_1=a_2 = \sqrt{3}a_0$ est la
+distance entre deux atomes dans le plan. On définit le vecteur $\mathbf{b}$ comme
+celui qui relie deux atomes de carbone les plus proces entre eux. Les angles
+$\alpha$ et $\gamma$ valent respectivement 30\textdegree et 120\textdegree.
+
+
+\begin{figure}
+    \TODO
+    \caption{Mailles du graphène dans l'espace direct et l'espace réciproque}
+    \label{fig:maillegraphene}
+\end{figure}
+
+Les vecteurs du réseau direct sont :
+
+\begin{equation}
+    \mathbf{a}_1 =
+    (\frac{1}{2}\mathbf{\hat{x}}+\frac{\sqrt{3}}{2}\hat{\mathbf{y}}),\quad
+    \mathbf{a}_2 = a \mathbf{\hat{x}},\quad
+    \mathbf{b} = a_0
+    (\frac{\sqrt{3}}{2}\hat{\mathbf{x}}+\frac{1}{2}\hat{\mathbf{y}}) =
+    \frac{1}{3}(\mathbf{a}_1 + \mathbf{a}_2)
+\end{equation}
+
+Ceux du réseau réciproque peuvent s'écrire :
+
+\begin{equation}
+    \mathbf{a}_1^* = \frac{2\pi}{a_0} \cdot \frac{2}{3} \mathbf{\hat{y}} =
+    \frac{4\pi}{3a_0}\mathbf{\hat{y}},\quad
+    \mathbf{a}_2^* = \frac{2\pi}{3a_0}(\sqrt{3}\mathbf{\hat{x}}+\mathbf{\hat{y}})
+\end{equation}
+
+Posons $V(\mathbf{r}-\mathbf{R})$ le potentiel d'un site atomique arbitraire.
+Nous pouvons écrire l'hamiltonien d'un élecron dans le feuillet de graphène comme
+:
+
+\begin{equation}
+    \mathcal{H} = \frac{p^2}{2m} + V(\mathbf{r}-\mathbf{R}) + (V(\mathbf{r-R-b}))
+\end{equation}
+
+Nous allons déterminer les énergies $\mathcal{E}(\mathbf{k})$ à partir d'une
+approche variationnelle.
+
+Prenons la fonction d'onde :
+
+\begin{equation}
+    |\psi_k> = \frac{1}{\sqrt{N}} \sum_{\mathbf{R}} \exp (i
+    \mathbf{k}\cdot\mathbf{R}) \left( \mathbf{a}_k |\phi_{R_0}> + \mathbf{b}_k
+    |\phi_{R_b}> \right)
+\end{equation}
+
+Ici, $<r|\psi_{R_0}> = \phi(\mathbf{r}-\mathbf{R})$ et représente l'orbitale
+$2p_z$ sur le site 0.
+
+$<r|\psi_{R_b}> = \phi(\mathbf{r}-\mathbf{R}-\mathbf{b})$ erprésente l'orbitale
+$2p_z$ au site 1.
+
+L'énergie peut s'écrire comme :
+\begin{equation}
+    \mathcal{E}(\mathbf{k}) = \frac{<\psi_k|\mathcal{H}|\psi_k>}{<\psi_k|\psi_k>}
+\label{eq:grapheneenergie}
+\end{equation}
+
+On veut minimiser $\mathcal{E}(\mathbf{k})$. Par conséquent, il faut trouver
+$\mathbf{a}_k$ et $\mathbf{b}_k$.
+
+On peut alors réécrire l'équation \ref{eq:grapheneenergie}
+\begin{equation}
+    <\psi_k|\mathcal{H}|\psi_k> = \mathcal{E}(\mathbf{k}) <\psi_k|\psi_k>
+\end{equation}
+
+En dérivant, on obtient :
+\begin{eqnarray}
+    \frac{\partial}{\partial \mathbf{a}_k} <\psi_k|\mathcal{H}|\psi_k> & = &
+    \frac{\partial \mathcal{E}_k}{\partial \mathbf{a}_k} <\psi_k|\psi_k> +
+    \mathcal{E}_k \frac{\partial}{\partial\mathbf{a}_k} <\psi_k | \psi_k>\\
+    \frac{\partial}{\partial \mathbf{b}_k} <\psi_k|\mathcal{H}|\psi_k> & = &
+    \frac{\partial \mathcal{E}_k}{\partial \mathbf{b}_k} <\psi_k|\psi_k> +
+    \mathcal{E}_k \frac{\partial}{\partial\mathbf{b}_k} <\psi_k | \psi_k>
+\end{eqnarray}
+
+Dans cette formulation, les énergies $\mathcal{E}_k$ des électrons sont
+indépendantes de leurs positions, donc des $\mathbf{a}_k$ et des $\mathbf{b}_k$.
+Par conséquent, les dérivées sont nulles, et on peut réécrire :
+
+\begin{eqnarray}
+    \frac{\partial}{\partial \mathbf{a}_k} <\psi_k|\mathcal{H}|\psi_k> & = &
+    \mathcal{E}_k \frac{\partial}{\partial\mathbf{a}_k} <\psi_k | \psi_k>\\
+    \frac{\partial}{\partial \mathbf{b}_k} <\psi_k|\mathcal{H}|\psi_k> & = &
+    \mathcal{E}_k \frac{\partial}{\partial\mathbf{b}_k} <\psi_k | \psi_k>
+\end{eqnarray}
+
+\begin{equation}
+    <\psi_k|\psi_k> = \int dk (...)
+\end{equation}
+
+Soit finalement,
+
+\begin{eqnarray*}
+    <\psi_k | \psi_k> & = & \frac{1}{N} \sum_{\mathbf{R}'}
+    e^{i\mathbf{k}\cdot\mathbf{R}'} (\mathbf{a}_k^* <\psi_{\mathbf{R}_0'}| +
+    \mathbf{b}_k^* <\psi_{\mathbf{R}_b'}|) \cdot \sum_\mathbf{R}
+    e^{i\mathbf{k}\cdot \mathbf{R}} (\mathbf{a}_k |\psi_{R_0}> + \mathbf{b}_k |
+    \psi_{\mathbf{R}_b}>) \\
+    . & = & \frac{1}{N} \sum_{\mathbf{R,R}'}
+    e^{i(\mathbf{k}\cdot\mathbf{R}-\mathbf{k}'\cdot\mathbf{R}')}
+    (\mathbf{a}_k^*\cdot\mathbf{a}_k <\psi_{\mathbf{R}_0'}|\psi_{\mathbf{R}_0}> +
+    \mathbf{b}_k^* \cdot\mathbf{b}_k <\psi_{\mathbf{R}_b'}|\psi_{\mathbf{R}_b}>)
+\end{eqnarray*}
+
+D'où on tire :
+
+\begin{align}
+    <\psi_k|\psi_k> & = &\frac{1}{N} \sum_R (a_k^2 <\phi_{\mathbf{R}_0'} |
+    \phi_{\mathbf{R}_0}> + b_k^2 <\phi_{R_b'}|\phi_{R_b}>)\\
+    & = & a_k^2 + b_k^2
+    & = & \mathbf{a}_k\cdot\mathbf{a}_k^* + \mathbf{b}_k\cdot\mathbf{b}_k^*
+\end{align}
+
+On peut donc retrouver :
+
+\begin{eqnarray}
+    \frac{\partial}{\partial \mathbf{a}_k} <\psi_k|\psi_k> & = & \mathbf{a}_k^* \\
+    \frac{\partial}{\partial \mathbf{b}_k} <\psi_k|\psi_k> & = & \mathbf{b}_k^*
+\end{eqnarray}
+
+\TODO

@@ -1,0 +1,283 @@
+\chapter{Conductivité due aux impuretés}
+
+Certaines impuretés et imperfections affectent dramatiqument les propriétés des
+semiconducteurs. L'addition de bore dans le silicium dans des proportions de 1
+atomes de bore pour $10^5$ de silicium augmente la conductivité du silicium pur à
+température ambiante d'un facteur $10^3$. Dans un composé semiconducteur, une
+déficience stoechiométrique en un constituent peut agir comme une impureté ; de
+tels semiconducteurs sont appelés \emph{semiconducteurs déficitaires}. L'addition
+délibérée d'impuretés à un semiconducteur est appelé \emph{dopage}.
+
+On considère l'effet des impuretés dans le silicium et le germanium. Ces éléments
+cristallisent dans la structure diamant. Chaque atome forme quatre liaisons
+covalentes, une avec chacun de ses plus proches voisins, correspondant à la
+valence de l'élément qui est de 4. Si une impureté, par exemple un atome de
+valence 5 comm ele phosphore, l'arsenic au l'antimoine, est substituée dans le
+réseau à la place d'un atome normal, il y aura un électron de valence de l'atome
+de l'impureté laissé vide après que les 4 laisons covalentes se soient faites
+avec les plus proches voisins.. C'est, après que l'atome d'impureté a été
+accomodé dans la structure avec une légèe perturbation, possible. Les atomes
+d'impureté qui peuvent donner des électrons sont appelés \emph{donneurs}.
+
+\section{État donneur}
+La structure présentée sur la figure suivante a une charge positive portée par
+l'impureté (qui a perdu un électron). L'étude du réseau a vérifié que les
+impuretés pentavalentes entrent dans le réseau par substitution d'atomes normaux,
+et non pas aux positions interstitielles. Le cristal dans son ensemble demeure
+neutre car les électrons restent dans le cristal.
+
+\begin{marginfigure}
+    \TODO
+    \caption{charges associées avec une impureté d'arsenic dans le silicium. avec
+    niveau d'énergie de la perturbation}
+\end{marginfigure}
+
+L'électron supplémentaire se déplace dans el potentiel de Coulomb $e/\epsilon r$
+de l'impureté ionique, où $\epsilon$ est la constante diélectrique statique du
+milieu dans un cristal covalent. Le facteur $1/\epsilon$ prend en compte la
+réduction des forces de Coulomb enntre les charges causées par la polarisation
+électronique du milieu. Ce traitement est valide pour les orbites larges en
+comparaison avec la distance entr eles atomes, et pour des mouvements lents des
+électrons, de telle sorte à ce que la fréquence d'orbite soit faible en
+comparaison avec la fréquence $\omega_g$ correspondant au gap d'énergie. Ces
+conditions sont vérifiées, et plutôt bien, dans le germanium et le silicium, pour
+des électrons donneurs de P, As ou Sb.
+
+On peut estimer l'énergie d'ionisation de l'impureté donneuse. La théorie de Bohr
+de l'atome d'hydrogène peut être modifiée pour prendre en compte la constante
+diélectrique du milieu et la masse effective d'un électron dans le potentiel
+périodique du cristal. L'énergie d'ionisation d'hydrogène atomique est
+$-e^4m/2(4\pi\epsilon_0\hbar)^2$.
+
+Dans les semiconducteurs avec une constante diélectrique $\epsilon$, on remplace
+$e^2$ par $e^2/\epsilon$ et $m$ par la masse effective $m_e$, et on obtient
+l'énergie d'ionisation du doneur dans le semiconducteur :
+\begin{equation}
+    E_d = \frac{e^4 m_e}{2(4\pi\epsilon\epsilon_0 \hbar)^2}
+\end{equation}
+
+Le rayon de Bohr du bas de la bande de l'hydrogène est $4 \pi \epsilon_0\hbar^2 /
+me^2$. Ainsi, le rayon de Bohr du donneur est :
+\begin{equation}
+    a_d = \frac{4 \pi \epsilon \epsilon_0 \hbar^2}{m_ee^2}
+\end{equation}
+
+L'ajout d'un état d'impureté au germanium et au silicium est compliquée par la
+masse effective anisotropique des électrons de conduction. En revanche, la
+constante diélectrique a un effet plus important sur l'énergie du donneur parce
+qu'elle est au carré, alors que la masse effective apparaît directement sans
+puissance.
+
+Pour obtenir une impression générale des niveaux d'impureté, on doit utiliser
+$m_e \approx 0.1m$ pour les électrons du germanium et $m_e \approx 0.2m$ dans le
+silicium. Les constantes diélectriques statiques sont données dans le tableau
+suivant L'énergie d'ionisation d'un atome d'hydrogène libre est 13.6eV. Pour l
+germanium, l'énergie d'ionisation du donneur $E_d$ dans ce modèle est de $5meV$,
+réduite avec l'hydrogène d'un facteur $m_e/m \epsilon^2 = 4\cdot 10^{-4}$. Le
+résultat correspondant pour le silicium est de $20meV$. Les calculs utilisant le
+tenseur de masse anisotropique approprié prédisent $9.05meV$ pour le germanium et
+$29.8meV$ pour le silicum. Les valeurs observées des énergies d'ionisations des
+doneurs dans le silicium et le germanium sot données dans la table suivante. Pour
+l'arsenure de gallium, on a $E_d\approx \SI{6}{\milli\electronvolt}$.
+
+\begin{table}[ht]
+    \begin{tabularx}{\textwidth}{lRlRlR}
+        \toprule
+        cristal & $\epsilon$ & cristal & $\epsilon$ & cristal & $\epsilon$ \\
+        \midrule
+        Diamant & 5.5 & InAs & 14.55 & AlAs & 10.1 \\
+        Si & 11.7 & InP & 12.37 & AlSb & 10.3 \\
+        Ge & 15.8 & GaSb & 15.69 & SiC & 10.2 \\
+        InSb & 17.88 & GaAs & 13.13 & $Cu_2O$ & 7.1\\
+        \bottomrule
+    \end{tabularx}
+    \label{}
+    \caption{constantes diélectriques statiques relatives des semiconducteurs}
+\end{table}
+
+\begin{table}[ht]
+    \begin{tabularx}{\textwidth}{XRRR}
+        \toprule
+        & P & As & Sb \\
+        \midrule
+        Si & 45.0 & 49.0 & 39.0 \\
+        Ge & 12.0 & 12.7 & 9.6\\
+        \bottomrule
+    \end{tabularx}
+    \label{}
+    \caption{Énergies d'ionisation de donneurs $E_d$ pour des impretés
+    pentavalentes (\si{\milli\electronvolt})}
+\end{table}
+ Le rayon de la première orbite de Bohr est augmentée de $\epsilon m/m_e$ de
+ \SI{0.53}{\angstrom} pour l'atome d'hydrogène libre. La rayon correspondant est
+ $(160)(0.53) \simeq \SI{80}{\angstrom}$ pour le germanium et $(60)(0.53) \simeq
+ \SI{30}{\angstrom}$ pour le silicium. Ce ssont de grands rayons, et par conséquent
+ l'orbite du donneur se recouvre à des concentrations en donneurs relativements
+ basses, comparés au nombre d'atome hôtes. Avec un recouvrement orbitaluire
+ suffisnant, une \emph{bande d'impuretés} est formée à partir d'état donneur.
+ 
+ Le semiconducteur peut conduire dans la bande d'impuretés grâce au
+ \emph{hopping} des électrons de donneurs en donneurs. Le processus de conduction
+ de bande d'impureté établit à une concentration en donneur faible un niveau s'il
+ y a assez d'atomes acepteurs présents, de telle sorte à ce que les donneurs sont
+ toujours ionisés. Il est plus facile pour un électrodonneur de sauter sur un
+ doneur ionisé (inoccupé) que  sur un atome d'oneur occupé, pour que deux
+ électrons n'occupent pas le même site pendant le transport de charge.
+ 
+ \section{États accepteurs}
+ 
+ Un trou peut être lié à une impureté trivalente dans le germunium ou le
+ silicium, de la même façon qu'un électron est lié à une impureté pentavalente.
+ Les impuretés trivalentes, comme B, Al, Ga ou In sont appelées des
+ \emph{accepteurs} car ils acceptent des électros de la bande de valence pour
+ compléter des liaisons covalentes avec les atomes voisins, laissant des trous
+ dans la bande.
+ 
+ 
+\begin{table}[ht]
+    \begin{tabularx}{\textwidth}{XRRRR}
+        \toprule
+        & B & Al & Ga & In \\
+        \midrule
+        Si & 45.0 & 57.0 & 65.0 & 157.0 \\
+        Ge & 10.4 & 10.2 & 10.8 & 11.2 \\
+        \bottomrule
+    \end{tabularx}
+    \label{}
+    \caption{Énergies d'ionisation d'accepteurs $E_a$ pour des impretés
+    trivalentes (\si{\milli\electronvolt})}
+\end{table}
+
+Quand un accepteur est ionisé, un trou est libéré, ce qui requière une source
+d'énergie. Dans le diagramme de bande usuel, un électron monte lorsqu'il gagne de
+l'énergie, alors qu'un trou descend s'il en gagne.
+
+L'ionisation expérimentale des énergies d'accepteurs dans le germanium et le
+sicilium sont données sur la table ci-dessus. Le modèle de Bohr s'applique
+qualitativement pour les trous de la même façon que poru les électrons, mais la
+dégénerescence en haut de la bande de valence complique le problème de la masse
+effective.
+
+Les tables montrent que les énergies d'ionisation des doneurs et accepteurs dans
+le silicium sont comparables avec $k_BT$ à température ambiante (26meV), de telle
+sorte à ce que l'ionisation thermique des doneurs et accepteurs est importante
+dans la conductivité électrique du silicium à température ambiante. Si les atomes
+doneurs sont présents en nombre considérablement supérieur que les accepteurs,
+l'ionisation thermique des doneurs libérera des électrons dans la bande de
+conduction. La conductivité des espèces sera contrôlée par les électrons (charges
+négatives) , et le matériau sera dit de type $n$.
+
+Si les accepteurs sont dominants, les trous seront relachés dans la bande de
+valence en même temps que la conductivité sera contrôlée par les trous (charges
+positives) : le matériau est de typee $p$. Une autre technique pratique est le
+signe du potentiel thermoélectrique, dont nous ne traiteront pas ici. peut être
+trouvé chez Kittel, chap 8.
+
+Le nombre de trous e t d'électrons est égal dans le régime intrinsèque. La
+concentration intrinsèque en électrons $n_i$ à 300K est
+\SI{1.7e13}{\per\cubic\centi\metre} dans le germanium et
+\SI{4.6e9}{\per\cubic\centi\metre} dans le silicium. La résistivité électrique de
+matériaux intrinsèques est \SI{43}{\ohm\centi\metre} pour le germanium et
+\SI{2.6e5}{\ohm\centi\metre} pour le silicium.
+
+Le germanium a \SI{4.42e22}{} atomes par centimètre cube. La purification du
+germanium a été réalisée plus loin que pour d'autres éléments. La concentration
+en impuretés communément électriquement actives - les impuretés donneuses ou
+accepteuses superficielles - ont été réduites en dessous de une impureté pour
+$10^11$ atomes de germanium. Par exemple, la concentration en potassium dans le
+germanium peut être réduite sous \SI{4e10}{\per\cubic\centi\metre}. Il y a des
+impuretés (H,O,Si,C) dont les concentrations dans le germanium ne peuvent
+généralement pas être réduite sous \SI{e12}{} - \SI{e14}{\per\cubic\centi\metre},
+mais cela n'affecte pas les mesures électriques et par conséquent est difficile à
+détecter.
+
+\section{Ionisation thermique des donneurs et accepteurs}
+
+Le calcul des concentration d'équilibre des électrons de conduction depuis des
+donneurs ionisés est identique avec le calcul standard de la mécanique
+statistique de l'ionisation thermique des atomes d'hydrogène. S'il n'y a pas
+d'accepteurs présents, le résultat à la limite basse température $k_BT \ll E_d$
+donne :
+\begin{equation}
+    n \cong (n_0N_d)^{1/2} \exp (-E_d / 2k_BT)
+\end{equation}
+avec $n_0 \equiv 2(m_ek_BT/2\pi\hbar^2)^{3/2}$. Ici, $N_d$ est la concentration
+en donneurs. Pour obtenir l'équation ci-dessus, on applique les lois de
+l'équilibre chimique au ratio $[e][N_d^+]/[N_d]$ et on établit $[N_d^+]=[e]=n$.
+Des résultats identiques sont valables pour les accepeteurs, avec les
+considération des atomes non donneurs.
+
+Si les conctentrations en donneurs et accepteurs sont comparables, les choses se
+compliquent et les équations peuvent être résolues avec des méthodes numériques.
+Ainsi, la loi d'action de masse requière que le produit $np$ doit être constant à
+une température donnée. Un excès de donneurs augmentera la concentration en
+électrons et une diminution de la concentration en trous. La somme $n+p$
+augmentera. La conductivité augmente en $n+p$ si les mobilités sont égales.
+%\ref{trucmuche}
+
+\begin{marginfigure}
+    \TODO
+    \caption{à propos du dernier paragraphe}
+    \label{trucmuche}
+\end{marginfigure}
+
+\section{Effets thermoélectriques}
+
+Considérons un semiconducteur maintenu à une température constante, parcouru par
+un champ électrique de densité de courrant $j_q$. Si le courrant est porté
+uniquement par les électrons, le flux de charge est :
+\begin{equation}
+    j_q = n(-e)(-\mu_e)E = ne\mu_e E
+\end{equation}
+où $\mu_e$ est la mobilité électronique.. L'énergie moyenne transportée par un
+électron dépend du niveau de Fermi $\mu$ :
+\begin{equation*}
+    (E_c - \mu) + \frac{3}{2}k_BT
+\end{equation*}
+où $E_c$ est l'énergie du bord de la bande de conduction. On se rapporte à
+l'énergie du niveau de Fermi parce que différents conducteurs en contact ont un
+même niveau de Fermi, comme nous allons le voir dans le chapitre suivant. Le flux
+d'énergie qui accompagne le flux de charge est :
+\begin{equation}
+    j_U = n(E_c - \mu +\frac{3}{2}k_BT)(-\mu_e)E
+\end{equation}
+Le \emph{coefficient de Peltier} $\Pi$ est défini par $j_U = \Pi j_q$ ou
+l'énergie transportée par charge unitaire. Pour des électrons,
+\begin{equation}
+    \Pi_e = -(E_c - \mu + \frac{3}{2}k_BT)/e
+\end{equation}
+qui est négatif car le flux d'énergie est opposé au flux de charge. Pour des
+trous,
+\begin{equation}
+    j_q = pe\mu_hE; \hfill j_U = p(\mu - E_v + \frac{3}{2}k_BT)\mu_h E
+\end{equation}
+où $E_v$ est l'énergie au bord de la bande de valence. Par conséquent,
+\begin{equation}
+    \Pi_h = (\mu - E_v + \frac{3}{2}k_BT)/e
+\end{equation}
+et est positif. Ces deux équations sont le résultat de notre simple théorie de la
+vitesse de dérive. Un traitement par l'équation du transport de Bortzmann donne
+des valeurs numériques différentes.
+
+Le \emph{pouvoir thermoélectrique absolu Q} est défini comme le champ électrique
+en circuit ouvert, créé par un gradient de température :
+\begin{equation}
+    E = Q \grad T
+\end{equation}
+Le coefficient de Peltier $\Pi$ est relié au pouvoir thermoélectrique Q par la
+relation :
+\begin{equation}
+    \Pi = QT
+\end{equation}
+
+C'est la fameuse relation de Kelvin de l'irréversibilité thermodynamique. Une
+mesure du signe du voltage le long d'un échantillon semiconducteur, à une
+extrémité chauffée, est un moyen efficace et brut de dire si l'échantillon est
+dopé n ou p.
+
+\begin{marginfigure}
+    \TODO
+    \caption{coefficient s de peltier pour du silicium n et p en fonction de la
+    température}
+    \label{peltier}
+\end{marginfigure}

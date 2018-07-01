@@ -1,0 +1,204 @@
+\chapter{Concentration en porteurs intrinsèques}
+
+Nous souhaitons la concentration en porteurs intrinsèques comme une fonction de
+la température, en fonction du bandgap. Nous calculons cela pour un bord de bande
+simple parabolique. D'abord, on calcule en terme du potentiel chimique $\mu$, le
+nombre d'électrons excités dans la bande de conduction à la température T. Dans
+la physique des semiconducteurs. $\mu$ est appeeelé le niveau de Fermi. À la
+température d'intérêt, on peut supposer que pour la bande de conduction d'un
+semiconducteur, $\epsilon - \mu \gg k_B T$, et par conséquent la distribution de
+Fermi-Dirac se réduit à :
+\begin{equation}
+    f_e \simeq \exp[(\mu - \epsilon)/k_B T]
+\end{equation}
+
+C'est  la probabilité que l'orbitale d'un électron de conduction est occupée,
+dans une approximation valide lorsque $f_e \ll 1$.
+
+L'énergie d'un électro dans la bande de conduction est :
+\begin{equation}
+    \epsilon_k * E_c + \hbar^2k^2/2m_e
+\end{equation}
+
+où $E_c$ est l'énergie au bord de la bande de conduction. Ici, $m_e$ est la masse
+effective d'un électron. Par conéquent, la densité d'état à $\epsilon$ est :
+\begin{equation}
+    D_e(\epsilon) = \frac{1}{2\pi^2}
+    \left( \frac{2m_e}{\hbar^2}\right)^{3/2}(\epsilon - E_c)^{1/2}
+\end{equation}
+La concentration des électrons dans la bande de conduction est :
+\begin{equation}
+    n = \int_{E_c}^\infty D_e(\epsilon)f_e(\epsilon) d\epsilon = \frac{1}{2\pi^2}
+    \left( \frac{2m_e}{\hbar^2}\right)^{3/2} \exp(\frac{\mu}{k_BT})\times
+    \int_{E_c}^\infty (\epsilon - E_c)^{1/2} \exp(-\frac{\epsilon}{k_B
+    T})d\epsilon
+    \label{integn}
+\end{equation}
+
+Soit en intégrant, on obtient :
+\begin{equation}
+    n = 2 \left(\frac{m_e k_B T}{2 \pi \hbar^2}\right)^{3/2} \exp\left[\frac{(\mu
+    - E_c)}{k_BT}\right]
+    \label{n}
+\end{equation}
+
+Le problème est résolu pour n lorsque $\mu$ est connu. C'est pratique de calculer
+la concentration des trous p à l'équilibre. La distribution $f_h$ pour les trous
+est reliée à la distribution des électrons $f_e$ par $f_h + f_e = 1$, parce qu'un
+trou est l'absence d'un électron. On a alors, dans le cas où $(\mu - \epsilon)
+\gg k_BT$ :
+\begin{align}
+    f_h & = & 1 - \frac{1}{\exp\left[\frac{\epsilon - \mu}{k_BT}\right] + 1} =
+    \frac{1}{\exp\left[\frac{\mu-\epsilon}{k_BT}\right] + 1}\\
+    & \cong & \exp\left[\frac{\epsilon - \mu}{k_BT}\right]
+    \label{fh}
+\end{align}
+
+Si les trous près du haut de la bande de valence se comportent comme des
+particules avec une masse effective $m_h$, la densité des trous est donnée par :
+\begin{equation}
+    D_h(\epsilon) = \frac{1}{2\pi^2}\left( \frac{2m_h}{\hbar^2} \right)^{3/2}
+    (E_v - \epsilon)^{1/2}
+\end{equation}
+
+Où $E_v$ est l'énergie au bord de la bande de valence. Si on fait de la même
+façon que pour \ref{integn}, on obtient alors :
+
+\begin{equation}
+    p =r \int_{-\infty}^{E_c}D_h(\epsilon) f_h(\epsilon) d\epsilon = 2 \left(
+    \frac{m_hk_BT}{2\pi\hbar^2} \right)^{3/2} \exp\left[ \frac{E_c - \mu}{k_BT}
+    \right]
+\end{equation}
+
+pour la concentration $p$ en trous dans la bande de valence.
+
+On peut multiplier ces expressions ensemble pour $n$ et $p$ et ainsi obtenir la
+relation d'équilibre, avec l'énergie du gap $E_g = E_c - E_v$ :
+\begin{equation}
+    np = 4 \left( \frac{k_BT}{2\pi\hbar^2} \right)^3 (m_c m_h)^{3/2}
+    \exp(-E_g/k_BT)
+    \label{np}
+\end{equation}
+
+Ce résultat utile ne fait pas intervenir le niveau de Fermi $\mu$. À 300K, la
+valeur de $np$ est \SI{2.10e19}{\centi\metre\tothe{-6}} pour le silicium,
+\SI{2.89e26}{\centi\metre\tothe{-6}} pour le germanium et
+\SI{6.55e12}{\centi\metre\tothe{-6}} pour l'arsenure de gallium.
+
+Nous n'avons jamais, dans cette démonstration, supposé que la matériau est
+intrisèque : le résultat tient pour l'ionisation d'impuretés aussi bien. La seul
+hypothèse faite, est que la distance du niveau de Fermi depuis les bords des
+bandes est grande devant $k_BT$.
+
+Un simple argument cinétique montre en quoi le produit $np$ est constant à une
+température donnée. Supposons que la population d'équilibre d'électrons et de
+trous est maintenue par les photons de radiation du corps noir à une température
+\begin{equation}
+    \frac{dn}{dt} = A(T) - B(T)np = \frac{dp}{dt}
+\end{equation}
+À l'équilibre, $\frac{dn}{dt} = 0$,$\frac{dp}{dt} = 0$, d'où $np =
+\frac{A(T)}{B(T)}$.
+
+Comme le produit des concentrations en électrons et en trous est une constante
+indépendante de la concentration en impuretés à une température donnée,
+l'introduction d'une petite proportion d'une impureté convenable, pour augmenter
+$n$(par exemple), devrait réduire $p$.
+Ce résultat est important dans la pratique : on peut réduire la concentration
+totale en porteurs $n+p$ dans un cristal impur, parfois énormément, en
+controllant l'introduction d'impuretés. Une telle réduction est appelée
+\emph{compensation}.
+
+Dans un semiconducteur intrinsèque, le nombre d'électrons est égal au nombre de
+trous parce que l'excitation thermique d'un électron laisse derrière un trou dans
+la bande de valence. Ainsi, d'après \ref{np}, on peut obtenir la relation
+suivante, où $i$ représente $n$ ou $p$ et $E_g = E_c - E_v$ :
+\begin{equation}
+    n_i = p_i = 2 \left( \frac{k_BT}{2\pi\hbar^2} \right)^{3/2} (m_em_h)^{3/4}
+    \exp(-E_g / 2k_BT)
+\end{equation}
+
+La concentration en porteurs intrinsèques dépend de façon exponentielle de
+$E_g/2k_BT$, où $E_g$ est l'énergie du gap. On peut réunir les équations \ref{n}
+et \ref{fh} pour obtenir, pour le niveau de Fermi mesuré du bord supérieur de la
+bande de valence :
+\begin{equation}
+    \exp(2\mu/k_BT) = (m_h/m_e)^{3/2}\exp(E_g/k_BT)
+\end{equation}
+Ce qui donne le niveau de Fermi :
+\begin{equation}
+    \mu = \frac{1}{2}E_g + \frac{3}{4} k_BT \ln(m_h/m_e)
+\end{equation}
+
+Si $m_h = m_e$, alors $\mu = \frac{1}{2}E_g$, et le niveau de Fermi est au milieu
+de la bande interdite.
+
+\section{Mobilité intrisèque}
+
+La mobilité est l'intensité de la vitesse de dérive d'un porteur de charge par
+unité de champ électrique :
+\begin{equation}
+    \mu = \frac{|v|}{E}
+\end{equation}
+La mobilité est définie comme étant positive à la fois pour les électrons et les
+trous, même si leurs vitesses de dérives sont opposées pour un champ électrique
+donné. En écrivant $\mu_e$ ou $\mu_h$, les mobilités des électrons ou des trous,
+on peut éviter toute confusion avec $\mu$ le potentiel chimique.
+
+La conductivité électrique est la somme des contributions des électrons et des
+trous :
+\begin{equation}
+    \sigma = (ne\mu_e + pe\mu_h)
+\end{equation}
+où $n$ et $p$ sont les concentrations en électrons et en trous. Dans le chapitre
+..., la vitesse de dérive d'une charge q a été établie comme $v = q\tau E/m$ avec
+:
+\begin{equation}
+    \mu_e = e \tau_e / m_e ; \hfill \mu_h = e \tau_h / m_h
+\end{equation}
+avec $\tau$ le temps de collision.
+
+Les mobilités dépendent de la température, avec une loi de puissance faible. La
+dépendance en température de la conductivité dans la région intrinsèque sera
+dominée par la dépendance exponentielle $\exp(-E_g/2k_BT)$ de la concentration en
+pourteurs.
+
+Le tableau suivant donne les valeurs expérimentales des mobilitésà température
+ambiante pour certains semiconducteurs classiques. Pour la plupart des matériaux,
+les valeurs données sont limitées par la diffusion de charge par les phonons
+thermiques. Les mobilités des trous sont générallement plus petites que les
+mobilités électroniques, parce que l'apparition d'une dégénérescence au bord de
+la bande de valence au centre de la zone de Brillouin rend possible une diffusion
+interbande qui réduit considérablement la mobilité.
+
+%\begin{table}[ht]
+%\begin{tabular}{lrrlrr}
+%\toprule
+%Cristal & électrons & trous & cristal & électrons & trous \\
+%\midrule
+%Diamant & 0.18 & 0.12 & GaAs & 0.8 & 0.03 \\
+%Si & 0.135 & 0.048 & GaSb & 0.5 & 0.1 \\
+%Ge & 0.36 & 0.18 & PbS & 0.055 & 0.06 \\
+%InSb & 0.08 & 0.045 & PbSe & 0.102 & 0.093 \\
+%InAs & 3 & 0.045 & PbTe & 0.25 & 0.1 \\
+%InP & 0.45 & 0.01 & AgCl & 0.005 & -- \\
+%AlAs & 0.028 & -- & KBr(100K) & 0.01 & -- \\
+%AlSb & 0.09 & 0.04 & SiC & 0.01 & 0.001-0.002\\
+%\bottomrule
+%\end{tabular}
+%\label{}
+%\caption{Mobilités des porteurs de charge à température ambiante ($m^2/V-s$)}
+%\end{table}
+
+Dans certains cristaux, particulièrement les cristaux ioniques, les trous sont
+essentielleent immobiles et ne se déplacent que par \emph{hopping} (saut) d'un
+ion à un autre, activé thermiquement. La principale cause de cet
+\emph{auto-piégeage} est la distortion du réseau, associée à un effet Jahn-Teller
+des états dégénérés. La dégénérescence des orbitales nécessaire pour un
+\emph{auto-piégeage} est plus fréquente pour les trous que pour les électrons.
+
+Il y a une tendance remarquable pour les critsaux avec de petits gaps et des
+bords directs : ils ont de grandes valeurs de mobilité électronqiue. Les petits
+gaps donnent une masse effective petite, qui favorise les hautes mobilités. La
+plus grande mobilité observée dans le bulk d'un semiconducteur est
+\SI{5e2}{\square\metre\per\volt\per\second} dans le PbTe à 4K, pour lequel le gap
+est de \SI{0.19}{\electronvolt}.

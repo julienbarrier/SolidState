@@ -1,0 +1,35 @@
+\chapter{Transport}
+
+Dans les solides cristallins, les atomes en vibration échangent de l'énergie et occasionnelelement on peut avoir pour un atome une énergie bien plus élevée que la moyenne, permettant à cet atome de se déplacer vers un site adjacent inoccupé. Dans ce nouveau site il est piégé à nouveau jusqu'à un prochain saut. Les sauts atomiques sont donc des processus activés et ont pu être analysés à l'aide de la théorie absolue des vitesses de réaction. La probabilité pour qu'un saut atomique se produise par unité de temps dépend exponentiellement d'une enthalpie libre d'activation $G_m$ :
+
+\begin{equation}
+\mu = \mu_0 \exp (-G_m / kT)
+\end{equation}
+
+$\mu_0$ est généralement assimilé à la fréquence de vibration dans la direction du saut ($\approx 10^{13}$Hz). Les énergies d'activation sont typiquement de l'ordre de 2-3 eV mais nous verrons que pour certains matériaux à structure très ouverte elles tombent à 0.1 eV.
+
+Plusieurs mécanismes ont été proposés pour rendre compte de la succession de sauts élémentaires. Le plus simple est probablement le mécanisme lacunaire ou diffusion de Schottky. Un certain nombre de sites sont vacants dans le réseau. Ils échangent leur position avec des sites voisins de même nature. Les atomes interstitiels peuvent se dépalcer directement par un saut vers un site interstitiel voisin. Ils peuvent aussi provoquer le déplacemnent direct ou indirect d'un autre atome.
+
+\begin{figure}
+\TODO
+\caption{mécanismes de diffusion lacunaire, interstitiel direct, collinéaire, non-collinéaire}
+\label{mecanismestransport}
+\end{figure}
+
+La relation la plus caractéristique des cristaux inoniques est la relation de Nernst-Einstein\footnote{c'est aussi une relation fondamentale dans les semi-conducteurs où ell es'applique au mouvement des électrons} qui relie le coefficient de diffusion à la conductivité ionique.
+
+\section{Expression du coefficient de diffusion}
+
+Le calcul du coefficient de diffusion se fait à l'aide de la théorie du mouvement Brownien : mouvement aléatoir ed particules sous l'effet de chocs. On définit le parcours quadratique moyen : $<R^2(t)>$.
+
+On appelle coefficient de diffusion la quantité :
+\begin{equation}
+D = \frac{<R^2>}{6t}
+\end{equation}
+
+Dans le cas d'une maille cubique où la diffusion est isotrope pour N sauts, $R_N$ est un vecteur somme de N déplacements $r_i$ d'un atome :
+\begin{equation}
+R_N = \sum_{i=1}^N r_i
+\end{equation}
+
+%cf photo 05/10/2017, page 134-142

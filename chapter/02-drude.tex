@@ -1,0 +1,167 @@
+\chapter{Transport d'électrons : le modèle de Drude}
+phénomènes de conduction des électrons
+hypothèses du modèle
+vitesse entre deux collisions
+libre parcours moyen
+chaleur spécifique - capacité calorifique
+
+réponse d'un gaz de drude en hautes fréquences
+effet hall
+statistique de maxwell boltzman
+
+La théorie de Drude fournit des éléments de compréhensio des solides. C'est une
+théorie classique, et c'est la première qui décrit les métaux. Elle comporte de
+nombreux défauts, que nous expliquerons par les modèles qui suivent.
+
+\section{phénomènes de conduction des électrons}
+
+je sais plus ce que je voulais mettre ici.
+\TODO
+
+\section{Hypothèses du modèle}
+
+Dans la théorie de Drude, on fait les hypothèses suivante :
+
+- Les porteurs de charge sont les électrons qui constituent un gaz auquel on peut appliquer la théorie cinétique.
+
+- Les porteurs de charge positive, beaucoup plus lourds, sont considérés comme immoobiles.
+
+Seuls les électrons de valence des atomes participent à la conduction et les charges positives correspondent aux ions (noyau + électrons de cœur). Par conséquent, on obtient les informations suivantes :
+
+- Entre les collisions, l'interaction d'un électron avec les autres électrons et avec les ions est nulle. Ainsi, en l'absence de champ extérieur, les électrons ont un mouvement rectiligne, uniforme et isotrope. En présence d'un champ extérieur, le mouvement des électrons entre les collisions est déterminé par les équations de Newton de la dynamique.
+
+- les collisions sont des événements instantanés, qui modifient brusquement la vitesse des électrons. Cela revient à dire que l'on néglige totalement les forces à longue portée et on ne tient compte que des forces à courte portée.
+
+- la probabilité qu'un électron subisse une collision durant l'intervalle de temps compris entre $t_0$ et $t_0 + dt$ est égale à $dt/\tau$. Elle est indépendante de $t_0$, de la position et de la vitesse de l'électron. On peut montrer que le temps moyen entre deux collisions successives d'un électron est égal à $\tau$. On note $\tau$ le temps de collision, temps de vol moyen et plus généralement \emph{temps de relaxation}.
+
+- le gaz électronique atteint son équilibre themique par les collisions instantanées avec les ions. On admet que, arpès chaque collision, la vitesse d'un électron est l'orientation quelconque (distribution isotrope des vitesses juste après une collision) et que sa vitesse est reliée à la température locale (de la région de l'espace où a eu lieu la collision).
+
+On fait donc deux hypothèses majeures :
+\begin{description}
+\item[approximation des électrons indépendants] on néglige l'interaction électron-électron, ce qui est valable dans de nombreux cas ;
+\item[approximation des électrons libres] on néglige l'interaction entre électrons et ions. Ce modèle ne peut pas du tout définir les comportements différents des métaux et des semi-conducteurs.
+\end{description}
+
+\TODO
+
+\section{vitesse entre deux collisions}
+
+Si l'on impose un champ de \SI{1}{\volt\per\milli\metre} et un temps de relaxation $\tau$ de \SI{e-4}{\second}, alors $v = \SI{10}{\metre\per\second}$. Il s'agit de la vitesse de dérive des électrons.
+
+Si on compare cette vitesse à $v_{th}$, alors
+
+\begin{equation}
+\sqrt{<v^2>} = \sqrt{\frac{3k_BT}{m}}
+\end{equation}
+
+Ce qui vaut, à 300K, $<v> \sim \SI{e5}{\metre\per\second}$.
+
+Dans un métal, avec le modèle de Drude, l'ajout d'un champ est négligeable. On ne peut pas décrire les électrons comme dans un gaz :
+deux atomes sont séparés d'environ \SI{2}{\angstrom}.
+
+Ainsi, la densité d'électrons dans un métal est très grande devant la densité dans un gaz. Par exemple $n_e = 10^3 n_{air}$
+
+\section{Statistique de Maxwell-Boltzman}
+
+La distribution des charges dans un gaz est celle de Maxwell-Boltzmann, représentée sur la figure \ref{fig:maxwell-boltzmann}
+
+\begin{marginfigure}
+\TODO
+\caption{Distribution de Maxwell-Boltzmann}
+\label{fig:maxwell-boltzmann}
+\end{marginfigure}
+
+Cependant, Drude introduit les chocs entre particules : la formule $\sigma = \frac{ne^2\tau}{m}$ est valable et adaptable à la physique quantique.
+
+\section{libre parcours moyen}
+
+\begin{equation}
+l = \sqrt{<v_{th}^2>} \tau
+\end{equation}
+
+Il s'agit du temps de parcours moyen d'une particule pendant un temps $\tau$, soit la distance typique entre deux chocs.
+problème : il y a beaucoup plus de chocs par rapport au modèle de Drude. On est loin du gaz idéal (déviation représentée sur la figure \ref{fig:libreparcoursdrude})
+
+\begin{marginfigure}
+\TODO
+\caption{Libre parcours moyen en fonction de la température ; déviation expérimentale par rapport à la prévision du modèle de Drude}
+\label{fig:libreparcoursdrude}
+\end{marginfigure}
+
+$l$ dépend de la section efficace de l'ion.
+
+Lorsque la température décroit, la section efficace diminue. de fait, la distance de choc diminue également.
+
+\begin{equation}
+S \sim T\quad \rightarrow l=\sqrt{T}
+\end{equation}
+
+Par conséquent,
+\begin{equation}
+\tau(T) \sim \frac{1/\sqrt{T}}{\sqrt{T}} \sim \frac{1}{T}
+\end{equation}
+
+Soit :
+\begin{equation}
+\rho = \frac{1}{\sigma} = \frac{m}{q^2nE} \sim \tau
+\end{equation}
+
+Finalement, le modèle de Drude permet de modéliser de façon plutôt fidèle l'évolution linéaire.
+En revanche, on perd en performance dans le creux. Cela est dû aux impuretés.
+
+\section{chaleur spécifique - capacité calorifique}
+
+Soit $\mathcal{E}$ l'énergie totale du système. On peut écrire la chaleur spécifique $C$ comme :
+
+\begin{equation}
+C = n \frac{d\mathcal{E}}{dT}
+\end{equation}
+
+Cette capacité calorifique sert à repérer les transitions de phase. Si $C$ n'est pas lisse, alors il y a une transition de phase ou une transition chimique qui se produit. Cela est facile à mesurer lorsque l'énergie augmente. (à \SI{100}{\celsius} pour l'eau, $dI = 0$, ce qui divege ?????\TODO
+
+Pour un gaz thermo, $\mathcal{E} = \frac{3}{2}k_BT$ donc
+
+\begin{equation}
+C = \frac{3}{2} n k_B
+\end{equation}
+
+
+
+\section{réponse d'un gaz de Drude à hautes fréquences}
+
+\subsection{conduction de Drude, AC}
+
+\TODO : d'où sort cette formule
+
+\begin{equation}
+\frac{d\mathbf{p}}{dt} = q\mathbf{E} - \frac{1}{\tau} \mathbf{p}
+\label{eq:drudechampelec}
+\end{equation}
+
+On peut poser $\mathbf{E}(t) = \mathbf{E}(\omega) e^{-i\omega t}$, et chercher de cette façon $\mathbf{p}(t) = \mathbf{p}(\omega) e^{-i\omega t}$.
+
+En injectant cela dans l'équation \ref{eq:drudechampelec}, on trouve :
+
+\begin{equation}
+-i\omega \mathbf{p}(\omega) = q\mathbf{E}(\omega) - \frac{1}{\tau} \mathbf{p}(\omega) 
+\end{equation}
+
+Soit :
+
+\begin{equation}
+\mathbf{p}(\omega) = \frac{\mathbf{p}(\omega)}{\frac{1}{\tau}-i\omega}
+\end{equation}
+
+On peut écrire la densité de courant en fonction de la fréquence. Comme $j(t) = j(\omega) e^{-i\omega t}$.
+
+De plus, $j(t) = nqv = \frac{nq}{m}\mathbf{p}(t)$.
+
+On obtient alors :
+\begin{equation}
+j(\omega) = \frac{nq}{m}\mathbf{p}(\omega) = \frac{nq^2/m}{\frac{1}{\tau}-i\omega} \mathbf{E}(\omega)
+\end{equation}
+
+\TODO
+
+
+\section{Effet Hall}

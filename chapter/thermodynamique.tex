@@ -1,0 +1,224 @@
+\chapter{Thermodynamique}
+
+La description des structures cristallines et l'étude du modèle ionique ont été
+réalisées dans le cadre du cristal parfait. Dans la réalité, le solide présente
+des défauts dont les principaux sont : les phonons (vibration thermiques), les
+défauts atomiques (lacunes, interstitiels, impuretés), les défauts électroniques
+(électrons, trous, excitons), les imperfections dans l'arrangement atomique
+(dislocations, fautes d'empilement) et la surface où sont localisésdes atomes
+particuliers du point de vue énorgétique et structurale.
+
+Dans le cristal réel, de nombreuses propriétés physiques et chimiques proviennent
+directement de l'existence de ces défauts. Nous nous limitons ici à l'étude des
+défauts atomiques qui sont à l'origine de la conduction ionique. Dans quelques
+cas particuliers, la conductivité dans les solides ioniques est voisine de celle
+d'un électrolyte liquide. Le matériau est alors potentiellement utilisable comme
+électrolyte solide dans un système électrochimique.
+
+On peut montrer aisément que la présence de défauts, jusqu'à une certaine
+concentration conduit à une réduction d'enthalpie libre, donc à une stabilisation
+du réseau. L'introduction d'un défaut ponctuel (impureté, lacune, interstitiel)
+dans un cristal supposé parfait nécessite une augmentation d'enthalpie
+assimilable à une quantité d'énergie
+\footnote{$H_f = E_f + p\delta v$ où $\delta v$ est approximativement le volume
+    atomique (\SI{20}{\cubic\angstrom}). Pour p = 1atm, on a
+    $p \delta v = \SI{e-5}{\electronvolt}$ négligeable devant
+$E_f \approx \SI{1}{\electronvolt}$ }
+$E_f$, énergie de formation du défaut. Mais elle produit aussi une augmentation
+importante d'entropie de configuration $\Delta S_c$, car ce défaut peut occuper
+un grand nombre de positions. Dans le cas le plus simple où le défaut occupe un
+site anionique et possède la symétrie de l'atome qu'il remplace,
+l'entropie\footnote{Le terme entropique $\Delta S_v$ dû aux variations des modes
+de vibrations automiques est généralement négligé.} calculée pour n défauts
+disposés sur N sites atomiques est\footnote{On écrit $S_c = k \log(P)$ où le
+nombre de complexions P dans le cristal est le nombre d'arrangements possibles de
+n défauts edes N-n atomes dans les N positions du réseau : $P =
+\frac{N!}{(N-n)!n!}$. On utilise l'approximation de stirling : $\log N! = N \log
+N - N$} :
+
+\begin{equation}
+    \Delta S_c = - N k (x \log x + (1-x) \log (1-x))
+\end{equation}
+
+où l'on a posé $x = n/N$ la concentration en défauts. Ce terme est toujours
+positif et inférieur à 1. Il varie très brutalement pour x petit : $dS/dx
+\rightarrow \infty$ pour $x\rightarrow 0$. L'énergie, elle, ne varie que comme
+$NxE_f$. En conséquence, l'introduction de défauts dans le solide parfait
+provoque une diminution de l'enthalppie libre.
+
+\begin{marginfigure}
+    \TODO
+    \caption{variation d'énergie par introduction de défauts dans un cristal
+    parfait}
+    \label{varenergcristparf}
+\end{marginfigure}
+
+L'enthalpie libre, $G = NxE_f + NkT (x \log x + (1-x)\log(1-x))$, est minimale
+lorsque x vérifie la relation :
+\begin{equation}
+    \frac{x}{1-x} = \exp - \left( \frac{E_f}{kT} \right)
+\end{equation}
+
+Soit encore, pour x petit, c'est à dire $E_f$ assez grand devant kT :
+\begin{equation}
+    x \approx \exp - (E_f / kT)
+\end{equation}
+
+À une température donnée, il existe donc une certaine concentration de défauts
+qui minimise G. Le défaut prédominant est évidemment celui associé à la plus
+petite valeur de $E_f$ et il est très largement fonction de la structure
+cristalline.
+
+\begin{table*}[ht]
+    \begin{tabularx}{\textwidth}{lXX}
+        \toprule
+        Cristal & Structure & Défaut prédominant \\
+        \midrule
+        Halogénures alcalins & NaCl & Schottky \\
+        Oxydes alcalino-terreux & NaCl & Schottky \\
+        AgCl, AgBr & NaCl & Frenkel cationique \\
+        Halogénures de césium, TlCl & CsCl & Schottky \\
+        BeO & Wurtzite, ZnS & Schottky \\
+        Fluorures d'alcalino-terreux, $CeO_2$,$ThO_2$ & Fluorine, $CaF_2$ &
+        Frenkel anionique\\
+        \bottomrule
+    \end{tabularx}
+    \label{}
+    \caption{défaut ponctuel prédominant dans différents cristaux}
+\end{table*}
+
+\begin{figure}
+    \TODO
+    \caption{Défauts de Schottky et de Frenkel}
+    \label{schottkyfrenkel}
+\end{figure}
+
+Dans des structures compactes, le défaut prédominant est le défauts de Schottky
+avec même nombre de lacunes cationiques et anioniques pour assurer
+l'électroneutralité. L'énergie de formation $E_s$ de la paire de Schottky
+correspond à l'extraction d'un cation (énergie $E_{fc}$) et d'un anion (énergie
+$E_{fa}$) qui se localisent à la surface du cristal.
+
+Calculons les concentrations en volume des lacunes cationiques et anioniques pour
+une température donnée, en fixant la contrainte $x_c = x_a$.
+
+Le passage d'un ion à la surface du cristal revient à faire passer sa constate de
+Madelung de M à M/2. Les énergies de formation des lacunes cationiques et
+anioniques devraient donc être égales à la moitié de la contribution coulombienne
+à l'énergie réticulaire. Mais, à cette énergie, il faut soustraire l'énergie de
+polarisation érsultant du processus de relaxation ionique (une lacune anionique,
+par exemple, porte une charge positive qui attire les anions). Les contributions
+dues à la relaxation ionique n'ont aucune raison d'être identiques pour les deux
+types d'ions. En conséquence, $E_{fc} \neq E_{fa}$ et $x_c \neq x_a$.
+
+La condition de neutralité électrique n'est plus respectée dans le cristal.
+Celui-ci réagit en disposant l'exès de lacunes chargées sous la surface de façon
+à créer une couche dipolaire (couche de Debye) qui restitue la neutralité
+électrique en volume et diminue considérablement la portée du champ électrique dû
+à la surface.
+
+Avec la cotnraine $x_c = x_a$, la minimisation de l'enthalpie libre, avec $dx_c =
+dx_a$, conduit à la loi d'action de masse pour l'équilibre cristal-lacunes :
+\begin{equation}
+    x_c \cdot x_a = \exp(-E_s/kT)
+\end{equation}
+avec $E_s = E_{fc} + E_{fa}$, soit, avec nos hypothèses : 
+$x_c = x_a = exp(-E_s/2kT)$.
+(Dans le cas de NaCl : $E_s \approx 2.3 eV$, $x_c = x_a = 3\cdot 10^{-17}$ à
+300K\footnote{cette valeur est sous-estimée d'au moins un à deux ordres de
+grandeur. Les termes correctifs proviennent d'une part de la modification des
+virbations ioniques ($\Delta S_v$) et d'autre part de la variation de $E_S$ avec
+la température que l'on corrèle à la dilatation du cristal}, ce qui correspond à
+$5\cdot10^5$ défauts par \si{\cubic\centi\metre}).
+
+Le défaut de Frenkel est prédominant dans des structures ouvertes (faible nombre
+de coordination) et concerne principalement les cations (taille inférieure à
+celle des anions). Il existe deux exceptions importantes à cette règle :
+
+\begin{itemize}
+    \item le cas de la structure fluorine dans laquelle l'anion a un faible
+        nombre de coordination (4 au lieu de 8 pour le cation), ce qui lui permet
+        d'aller elativement facilement en position interstitielle (cas des ions
+        $F^-$ dans $CaF_2$ et $O^{2-}$ dans $ZrO_2$). On parle dans ce cas de
+        défauts anti-Frenkel.
+    \item le cas des halogénures d'argent qui possèdent une structure type NaCl
+        (donc relativement compacte) et dans laquelle des proportions importantes
+        d'ions $Ag^+$ peuvent occuper une position interstitielle. Dans cette
+        position, un ion $Ag^+$ est entouré tétraédriquement par 4 ions $Cl^-$ et
+        également à la même distance par 4 ions $Ag^+$. La stabilisation du
+        défaut est due à une interaction covalente maruée entre les atomes
+        d'argent et de chlore.
+\end{itemize}
+
+La concentration en défauts de Frenkel à l'équilibre est donnée par :
+
+\begin{equation}
+    x_i \cdot x_v = \exp (-E_F / kT)
+\end{equation}
+où $x_v$ et $x_i$ sont respectivement les concentrations en lacunes et en
+insterstitiels. $E_F$ l'énergie de formation du défaut de Frenkel ($E_F$ =
+\SI{1.35}{\electronvolt} pour AgCl).
+ 
+Dans le cristal pur, on considère en général que $x_i = x_v = \exp -E_F/2kT$.
+ 
+Pour les deux types de défauts (Frenkel et Schottky), on peut observer des
+associations de défauts atomiques par interaction électrostatique, par exemple
+entre une lacune anionique de charge nette +e et une lacune anionique de charge
+nette -e. Ces associations se comportent comme des dipôles.
+ 
+Les défauts atomiques ont également la possibilité de piéger des défauts
+électroniques. Ainsi, la charge positive de la lacune anionique lui permet de
+piéger un électron. Le défaut constitue un obget hydrogénoïde donnant lieu,
+comme un atome d'hydrogène, à des niveaux d'énergie et des absorptions optiques
+caractéristiques. L'absorption sélective a souvent lieu dans le visible, d'où le
+nom de centre F\footnote{de Farbzentrum, centre colloré en allemand} donné à
+l'ensemble lacune-électron.
+ 
+Le centre F peut être considéré, pour simplifier, comme une cage cubique où se
+trouve localisé l'électron, l'arête de la cage est peu différente de l'arête a
+de la maille cristalline. Si le potentiel est pris nul dans la cage et infini à
+l'extérieur, les avelurs propres de l'énergie de l'électron sont :
+ 
+\begin{equation}
+    E = \frac{\hbar^2}{2m}\frac{\pi^2}{a^2} (n_x^2 + n_y^2 + n_z^2)
+\end{equation}
+
+où $n_i$ sont des entiers non nuls.
+ 
+L'énergie correspondant au passage de l'état fondamental au premier état excité
+est :
+ 
+\begin{equation}
+    \Delta E = 3 \frac{\hbar^2}{2m} \frac{\pi^2}{a^2}
+\end{equation}
+ 
+La variation de l'énergie en $a^{-2}$ est observée pour les halogénures alcalins.
+La taille des lacunes est un peu supérieure à la taille de la maille du fait des
+interactions attractives de l'électron du défaut par les actions voisins.
+ 
+\begin{marginfigure}
+    \TODO
+    \caption{absorption lumineuse pour les halogénures alcalins contenant des
+    centres F. l'énergie deltaE de la première transition est reportée en
+coordonnées logarithmiques en fonction de l'arête a de la maille cristalline}
+    \label{abslumhalogalcal}
+\end{marginfigure}
+ 
+Un cristal de NaCl contenant des centres F est obtenu par chauffage du cristal
+en présence de vapeur de sodium (ou de potassium). Il se créé un excès de
+cations par rapport à la stoechiométrie et des lacunes anioniques que les
+électrons provenant de l'ionisation du sodium transforment en centre F. La
+transition vers le premier état excité est responsable d'une couleur jaune pour
+NaCl.
+ 
+D'autres exemples d'associations de défauts atomiques et électroniques sont
+monrtés dans la figure suivante. Les centres colorés sont aussi formés par
+irradiation (rayonnement X ou $\gamma$) et sont à l'origine de la couleur de
+nombreuses pierres précieuses : topaze bleu, améthyste, etc.
+ 
+\begin{marginfigure}
+    \TODO
+    \caption{représentation chématique de centres colorés dans des cristaux
+    ioniques}
+    \label{centrescolor}
+\end{marginfigure}

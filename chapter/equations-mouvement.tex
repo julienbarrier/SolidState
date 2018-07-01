@@ -1,0 +1,401 @@
+\chapter{Équations du mouvement}
+
+Nous démontrons les équations du mouvement d'un électron dans une bande
+d'énergie. Nous regardons le mouvement d'un paquet d'ondes dans un champ
+électrique donné. Supposons que le paquet d'ondes est fait de fonctions d'ondes
+assemblées au voisinage d'un vecteur d'onde $k$. La vitesse de groupe, est par
+définition $v_g = \frac{d\omega}{dk}$. La fréquence associée à cette fonction
+d'onde d'énergie $\epsilon$, dans la théorie quantique est $\omega =
+\frac{\epsilon}{\hbar}$, et ainsi :
+
+\begin{equation}
+    v_g = \frac{1}{\hbar} \frac{d\epsilon}{dk}
+\end{equation}
+
+Les effets du cristal dues au mouvement d'électrons sont contenus dans la
+relation de dispersion $\epsilon(k)$.
+
+Le travail $\delta \epsilon$ fourin par le champ électrique E sur l'électron en
+un temps $\delta t$ est :
+\begin{equation}
+    \delta \epsilon = - e E v_g \delta t
+\end{equation}
+On peut observer que :
+\begin{equation}
+    \delta \epsilon = (\frac{d\epsilon}{dk})\delta k = \hbar v_g \delta k
+\end{equation}
+
+En combinant ces trois  équations, on obtient :
+\begin{equation}
+    \delta k = -(eE/\hbar)\delta t
+\end{equation}
+d'où $\hbar \frac{dk}{dt} = -eE$
+On peut réécrire cette équation en faisant intervenir la force $\mathbf{F}$ : 
+\begin{equation}
+    \hbar \frac{d\mathbf{k}}{dt} = \mathbf{F}
+\end{equation}
+
+C'est une relation importante : dans un cristal, $\hbar d\mathbf{k}/dt$ est égal
+à la force subie par l'électron. Dans l'espace libre, $d(m\mathbf{v})/dt$ est
+égal à la force. Mais attention, on n'est pas en contradiction avec la seconde
+loi de Newton : l'électron dans le cristal est sujet à des forces du réseau
+cristallin autant que de sources externes.
+
+Le terme de force dans cette équation inclut aussi un champ électrique et une
+force de Lorentz sur un élecrton dans un champ magnétique, sous certaines
+conditions, où le champ magnétique est assez faible pour ne pas casser la
+structure de bandes. Ainsi, l'équiation du mouvement d'un élecrton, d'une vitesse
+de groupe $\mathbf{v}$ dans un champ magnétique constant est :
+\begin{equation}
+    \hbar \frac{d\mathbf{k}}{dt} = -e\mathbf{v}\times{B}
+\end{equation}
+
+où le terme de droite est la force de Lorentw sur l'électron. Avec la vitesse de
+groupe $\mathbf{v} = \frac{1}{\hbar} \grad_\mathbf{k}\mathbf{\epsilon}$, le taux
+de variation du vecteur d'onde est
+\begin{equation}
+    \frac{d\mathbf{k}}{dt} = -\frac{e}{\hbar} \Delta_\mathbf{k}\mathbf{\epsilon}
+    \times \mathbf{B}
+\end{equation}
+où chaque côté de l'équation se réfère aux coordonnées de l'espace réciproque.
+
+Nous voyons que le produit vectoriel dans cette dernière équation, que dans un
+champ magnétique, un électron se déplace dans l'espace réciproque dans la
+direction normale à la direction du gradient d'énergie $\epsilon$, de telle sorte
+à ce qu'\emph{un électron se déplace sur les surfaces isoénergétiques}. La valeur
+de la profection $k_\mathbf{B}$ de $\mathbf{k}$ sur $\mathbf{B}$ est constante
+durant le mouvement. Le mouvement dans l'espace réciproque est sur un plan normal
+à la direction de $\mathbf{B}$, et l'orbite est définie par l'intersection de ce
+plan avec la surface isoénergétique.
+
+\section{démonstration physique de $\hbar \mathbf{k} = \mathbf{F}$}
+Considérons la fonction propre de Bloch $\psi_k$, associée à l'énergie propre
+$\mathbf{\epsilon_k}$ et au vecteur d'onde $\mathbf{k}$ :
+\begin{equation}
+    \psi_\mathbf{k} = \sum_\mathbf{G} C(\mathbf{k+G})\exp [i(\mathbf{k+G})\cdot
+    \mathbf{r}]
+\end{equation}
+La valeur attendue du moment d'un électron dans l'état $\mathbf{k}$ de Bloch est
+:
+\begin{equation}
+    \mathbf{P_el} = <\mathbf{k}|-i\hbar\Delta|\mathbf{k}> = \sum_\mathbf{G} \hbar
+    (\mathbf{k+G}) |C(\mathbf{k+G})|^2 = \hbar (\mathbf{k} + \sum_\mathbf{G}
+    \mathbf{G}|C(\mathbf{k+G})|^2)
+\end{equation}
+en utilisant l'égalité $\sum |C(\mathbf{k+G})|^2 = 1$
+
+Nousévaluons le transfert de moments entre l'électron et le réseau, lorsque
+l'électron pass de $\mathbf{k}$ à $\mathbf{k}+\Delta\mathbf{k}$, à cause d'une
+force extérieure. Nous imaginons un cristal isolant, neutre électrostatiquement,
+excepté pour un seul électron dans l'espace réciproque d'une autre bnade vide.
+Supposons qu'une force externe faible soit appliquée pour un intervalle de temps
+tel que l'implusion totale donnée au système cristallin entier soit $\mathbf{J} =
+\int \mathbf{F} dt$. Si l'électron de conduction est libre ($m*=m$), alors le
+moment total transim au système cristallin par l'impulsion apparaîtrait comme la
+différentiell edu moment de l'électron de conduction :
+\begin{equation}
+    \mathbf{J} = \Delta\mathbf{p_{tot}} = \Delta\mathbf{p_{el}} = \hbar \Delta
+    \mathbf{k}
+\end{equation}
+Le cristal neutre ne subut aucune interaction avec le champ électrique, que ce
+soit directement ou indirectement à travers les électrons libres.
+Si l'électron de conduction interagit avec le potentiel périodique du réseau
+cristallin, nous devons alors avoir :
+\begin{equation}
+    \mathbf{J} = \Delta{p_{tot}} = \Delta \mathbf{p_{rés}} +
+    \Delta\mathbf{p_{el}}
+\end{equation}
+Ce qui donne :
+\begin{equation}
+    \Delta \mathbf{p_{el}} = \hbar \Delta \mathbf{k} + \sum_\mathbf{G}
+    \hbar\mathbf{G}[(\nabla_k|C(\mathbf{k+G})|^2)\cdot\Delta\mathbf{k}]
+\end{equation}
+La variation $\Delta \mathbf{p_{rés}}$ dans le moment du réseau résultant de la
+variation de l'état de l'électron peut être démontrée par des considérations
+physiques élémentaires. Un élecrton, réfléchi par le réseau, transfeère un moment
+au réseau. Si un électron indicdent avec une composante du moment sous forme
+d'onde plane $\hbar \mathbf{k}$ est réfléchi avec un moment
+$\hbar(\mathbf{k+G})$, le réseau acquierre un moment $-\hbar \mathbf{G}$, c'est
+la conservation du moment. Le transfert de moments au réseau lorsque l'état varie
+de $\psi_\mathbf{k}$ à $\psi_{\mathbf{k+\Delta k}}$ est :
+\begin{equation}
+    \Delta \mathbf{p_{rés}} = -\hbar \sum_\mathbf{G}
+    \mathbf{G}[(\nabla_k|C(\mathbf{k+G})|^2)\cdot\Delta\mathbf{k}]
+\end{equation}
+car la partie $(\nabla_k|C(\mathbf{k+G})|^2)\cdot\Delta\mathbf{k}$ de chaque
+composante individuelle de l'état initial est réfléchie pendat le chamgement
+d'état $\Delta \mathbf{k}$. La différentielle du moment devient alors :
+\begin{equation}
+    \Delta \mathbf{p_{el}} + \Delta \mathbf{p_{rés}} = \mathbf{J} = \hbar \Delta
+    \mathbf{k}
+\end{equation}
+ce qui est exactement la forme pour des électrons libres. Par conséquent, à
+partir de la définition de $\mathbf{J}$, on obtient :
+\begin{equation}
+    \hbar \frac{d\mathbf{k}}{dt} = \mathbf{F}
+\end{equation}
+démontré plus tôt par une méthode différente. Une démonstration riguoureuse est
+page 655 de Kittel. à regarder. peut-être à ajouter. à voir.
+
+\section{Trous}
+
+Les propriétés des orbitales vacantes dans une bande remplie sont importantes
+dans la physique des semiconductors et dans l'électronique de l'état solide. Les
+orbitales vacantes dans une bande sont communément appelés trous, et sans trous,
+il n'y aurait pas de transistors. Un trou agit dans un champ électrique et
+magnétique, comme s'il avait une charge positive $+e$. Cela peut être démontré de
+la façon suivante :
+
+page 194 à 196 kittel.
+
+\section{Masse effective}
+Lorsque l'on regarde à la relation d'onde en énergie $\epsilon =
+(\frac{\hbar^2}{2m})k^2$ pour des électrons libres, on voit que le coefficient de
+$k^2$ détermine la courbure de $\epsilon$ en fonction de $k$. Ainsi, on peut dire
+que $1/m$, la masse réciproque, détermine la courbure. Pour des électrons dans
+une bande, il y a des réguions de courbure anormalement hautes, près de la bande
+interdite, et aux frontières, comme on a pu le voir précédemment, à partir des
+solutions de l'équation d'onde aux limites de zone de Brillouin. Si l'énergie du
+gap est petite devant l'anérgie $\lambda$ de l'électron libre à la limite de la
+zone, la courbure est augmentée d'un facteur $\lambda/E_g$.
+
+Dans les semiconducteurs, la largeur de bande, qui est telle que l'énergie de
+l'électron libre est de l'ordre de 20eV, tandis que le bandgap est de l'ordre de
+0.2 à 2eV. Ainsi, la masse réciproque est augmentée d'un facteur 10 ou 100, et la
+masse effective est réduite au dixième ou au centième de la masse de l'électron
+libre. Ces valeurs s'appliquent près du bandgap, lorque l'on s'en éloigne, la
+courbure et les masses se rapprochent de celles de l'électron libre.
+
+Pour résumer les solutions que nous avons vu précedemment pour U positif, un
+électron proche de la partie la plus basse de la seconde bande a une énergie qui
+peut être écrite comme :
+\begin{equation}
+    \epsilon(K) = \epsilon_c + (\hbar^2/2m_e)K^2 ; \hfill m_e/m =
+    1/[(2\lambda/U)-1]
+\end{equation}
+Ici, K est le vecteur d'onde mesuré de la bordure de zone, et $m_e$ représente la
+masse effective d e l'électon proche de la frontière de la seconde bande. Un
+électron proche du haut de la première bande a l'énergie :
+\begin{equation}
+    \epsilon(K) = \epsilon_v - (\hbar^2/2m_h)K^2 ; \hfill m_h/m =
+    1/[(2\lambda/U)+1]
+\end{equation}
+cf tut pour ajout d'informations.
+
+La courbure et par conséquent la masse seront négatives proches du haut de la
+première bande, mais nous avons introduit un signe moins dans la dernière
+équation, de sorte à ce que le symbole $m_h$ pour la masse du trou ait une valeur
+positive.
+
+Le cristal ne pèse pas moins si la masse effective d'un porteur est mois que la
+masse d'un électron libre, et de même, la seconde loi de Newton est respecté pour
+le cristal \emph{pris dans son ensemble}, avec les ions plus les porteurs. Le
+point important est qu'un électron dans un potentiel périodique est accéléré
+relativement au résaeu dans un champ électrique ou magéntique, comme si la masse
+de l'électron était égale à la masse éffective que nous venons de définir.
+
+On dérive le résultat pour la vitess ede groupe et on obtient alors :
+
+\begin{equation}
+    \frac{dv_g}{dt} = \frac{1}{hbar} \frac{d^2\epsilon}{dk dt} = \frac{1}{\hbar}
+    \left( \frac{d^2e}{dk^2} \frac{dk}{dt}\right)
+\end{equation}
+On sait depuis la section précédete que $dk/dt = F/\hbar$, d'où on tire :
+
+\begin{equation}
+    \frac{dv_g}{dt} = \left( \frac{1}{\hbar^2} \frac{d^2\epsilon}{dk^2} \right) F
+    ; \text{ soit } F = \frac{\hbar^2}{d^2 \epsilon/dk^2} \frac{dv_g}{dt}
+\end{equation}
+En identifiant $\hbar^2/(d^2\epsilon/dk^2)$ comme une masse, alors la précédente
+équation peut se voir comme une formulation de la seconde loi de Newton. On
+définit la masse effective $m*$ par :
+
+\begin{equation}
+    \frac{1}{m*} = \frac{1}{\hbar^2} \frac{d^2\epsilon}{dk^2}
+\end{equation}
+Il devient facile de gééraliser ceci pour prendre en compte la surface d'énergie
+d'un électron anisotropique, comme pour les électrons du silicium ou du
+germanium. On introduit alors les composantes du tenseur de masse éffective
+réciproque :
+
+\begin{equation}
+    \left( \frac{1}{m*} \right)_{\mu \nu} = \frac{1}{\hbar}
+    \frac{d^2\epsilon_k}{dk_\mu dk_\nu} ; \hfill \frac{dv_\mu}{dt} =
+    \left(\frac{1}{m*}\right)_{\mu \nu} F_\nu
+\end{equation}
+où $\mu, \nu$ sont les coordonnées cartésiennes
+
+\section{interprétation physique de la masse effective}
+Comment un électron de masse $m$ mis dans un crital répond-il à un champ appliqué
+comme si sa masse était $m*$ ? Il est utile de penser au processus de réflection
+de Bragg d'ondes délectrons dans un réseau. Considérons l'approximation de
+l'interaction faible, traitée précédemment. Près du bas de la bande faible,
+l'orbitale est représentée de façon plutôt juste par une onde plane $\exp(ikx)$
+avec un moment $\hbar k$. La composant ede l'onde $\exp(i(k-G)x)$ avec le moment
+$\hbar(k-G)$ est petite est augmente faiblement avec k, et dans cette région
+$m*\simeq$. Une augemntation de la composante réfléchie $\exp(i(k-G)x)$ avec k
+représente un transfert du moment du réseau sur l'électron.
+
+Près des limites de zone, la composante réfléchie est importante ; à la limite,
+elle devient égale en amplitude avec la composante directe, et en ce point les
+fonctions propres sont des ondes stationnaires, plutôt que propagatives. Ici, la
+composante du moment $\hbar(-1/2 G)$ annule la composante du moment $\hbar(1/2
+G)$.
+
+Un électron seul dans une bande d'énergie peut avoir une masse effective positive
+ou négative : les états de masse effective positive apparaissent près du bas de
+la bande, à cause du fait que la masse effective positive implique que la bande a
+une courbure vers le haut ($d^2\epsilon/dk^2$ positif). Les états de masse
+effective négative apparaissent près du haut de la bnade. Une masse effective
+négative signifique qu'en passant d'un état $k$ à un état $k+\Delta k$, le
+transfert de moment de l'électron au réseau est plus grand que le transfer de
+moment de la force appliquée à l'électron. Même si $k$ est augmenté de $\Delta k
+$ par le champ électrique appliqué, l'approche de la réflexion de Bragg peut
+donner une décroissance globale du moment direct des électrons, quand cela
+arrive, la masse effective est négative.
+
+Lorsque nous travaillons sur la seconde bande, loin des bords de zone,
+l'amplitude de $\exp[i(k-G)x]$ décroit rapidement et $m*$ a une valeur positive
+faible. Ici, l'augmentation de la vitesse des électrons, résultant d'un stimulus
+extérieur donné est plus grande que celle qu'aurait donné l'expérience d'un
+électro libre. Le réseau construit une différence à travers le léger recul qu'il
+subit lorsque l'amplitude de $\exp[i(k-G)x]$ diminue.
+
+Si l'énergie dans une bande dépend seulement faiblement de $k$, alors la masse
+effective sera très importante. Cela étant, $m*/m \gg 1$ lorsque $d^2\epsilon /
+dk^2 \ll 1$. Le modèle des liaisons fortes, discuté précedemment, donne un aperçu
+de la formation de bandes étroites. Si les fonctions d'onde centrées aux
+voisinages d'atomes se superposent un peu, alors l'intégrale de recouvrement sera
+petite ; la largeur de bande étroite, et la masse effective importantee. La
+superposition des fonctions d'ode centrée sur un atome voisin est petite pour les
+électrons internes ou de cœur. Les électrons 4f des métaux rares, par exemple, se
+superposent faiblement.
+
+\section{Masses effectives dans les semiconducteurs}
+
+Dans beaucoup de semiconducteurs, il a été possible de déterminer, par résonnance
+cyclotron, la masse effective des porteurs des bandes de valence et de conduction
+près des bords de bandes. La détermination de la surface d'énergie est
+équivalente à la détermination du tenser deu masse effective. La résonnance
+cyclotron dans un semiconducteur est effectuée avec des ondes d'une longueur
+d'onde du milli ou du centimètre, à de faibles concentrations en porteurs.
+
+Les porteurs de courrant sont accélérés sur des horbites hélicoïdales sur l'axe
+d'un champ magnétique statique. La fréquence de rotation angulaire $\omega_c$ est
+donnée par :
+\begin{equation}
+\omega_c = \frac{eB}{m*}
+\end{equation}
+où $m*$ est la masse effective du cyclotron approprié. L'absorption de résonnance
+de l'énergie pour un champ électrique rf perpendiculaire au champ magnétiqu
+statique apparaît lorsque la fréquence rf est égale à la fréquence cyclotron. Les
+trous et les électrons tournent dans des sens opposés dans un champ magnétique.
+
+On considère l'expérience pour $m*/m=0.1$. À $f_c=24GHz$ ou $\omega_c = 1.5
+\times 10^{11} s^{-1}$, nous avons $ B = 860 G$ à la résonnance. La largeur de
+ligne est déterminée par le temps de relaxation de collision $\tau$, et pour
+obtenir une résonnance distinctive, il est nécessaire que $\omega_c \tau \geq 1$.
+Le libre parcours moyen doit être suffisemmet long pour permettre aux porteurs
+moyens de parcourir un radian autour d'un cercle avant d'entrer en collision. Il
+est nécessaire d'utiliser une fréquence importante et un champ magnétique
+importante, avec des cristaux purs dans l'hélium liquide.
+
+Dans des semiconducteurs à gap direct, avec des bords de bandes aux centre de la
+zone de Brillouin, les bandes ont la structure donnée par la figure suivante
+\TODO figure 13kittel. Le bord de la bande de coduction est sphérique avec la
+masse effective $m_0$ :
+\begin{equation}
+    \epsilon_c = E_g + \hbar^2 k^2 / 2m_e
+\end{equation}
+
+La bande de valence est généralement repliée près du bord, avec les bandes des
+trous lourds hh et des trous légers lh dégénérées au centre, et une bande soh
+splittée par le couplage spin-orbite $\Delta$ :
+\begin{eqnarray}
+    \epsilon_v(hh) \simeq -\hbar^2 k^2/2m_{hh}\\
+    \epsilon_v(lh) \simeq -\hbar^2 k^2/2m_{lh}\\
+    \epsilon_v(soh) \simeq - \Delta - \hbar^2 k^2/2m_{soh}
+\end{eqnarray}
+
+Les valeurs des paramètres de masse sont données dans le tableau suivant
+\TODO tableau (page 201 kittel)
+
+Les formes données ici ne sont que des approximations, parce que même proche de
+$k = 0$, les bandes des trous lourds et légers ne sont pas sphériques, comme nous
+allons le montrer dans le cas du Silicium et du Gemanium.
+
+La théorie des perturbations aux bords des bandes usggère que la masse effective
+de l'électron doit être proportionelle au bandgap, approximativement, pour un
+cristal à gap direct. Les deux tables précédentent montrent que ces valeurs sont
+cnastantes pour la série InSb, InAs et InP, conformément à cette hypothèse
+
+\section{Silicium et Germanium}
+
+Les bandes de conduction et de valence du germanium sont montrées sur la figure
+suivante, basés sur une combinaisons de résultats théoriques et expérimentaux. Le
+bord de la bande de valence, à la fois pour le silicium et le germanium, est à
+$\mathbf{k}=0$ et cela peut être démontré à partir des états $p_{3/2}$ et
+$p_{1/2}$ des atomes libres, clairement dans le modèle des liaisons fortes pour
+les fonctions d'onde.
+
+Le niveau $p_{3/2}$ est quadruplement dégénéré comme pour l'atome ; les quatre
+états correspondent à des valeurs de $m_J$ de $\pm \frac{3}{2}$ et $\pm
+\frac{1}{2}$. Le niveau $p_{1/2}$ est doublement dégénéré, avec $m_J = \pm
+\frac{1}{2}$. Les niveau $p_{3/2}$ sont plus haut en énergie que les niveaux
+$p_{1/2}$ ; la différence d'énergie $\Delta$ est une mesure de l'interaction
+spin-orbite.
+
+Les bords de la bande de valence ne sont pas simples. Les trous près du bord de
+la bande sont caractérisés par deux masses effectives, légère et lourde.
+Celles-ci proviennent de deux bandes formées des niveaux $p_{3/2}$ des atomes. Il
+y a également une bande formée depuis le niveau $p_{1/2}$, séparé du niveau
+$p_{3/2}$ par le couplage spin-orbite. Les surfaces d'énergie ne sont pas
+sphériques, mais déformées :
+\begin{equation}
+    \epsilon(\mathbf{k}) = Ak^2 \pm [B^2 k^4 + C^2(k_x^2k_y^2 + k_y^2k_z^2 +
+    k_z^2k_x^2)]^{1/2}
+\end{equation}
+Le choix du signe distingue les deux masses. La bande séparée correspond à
+l'équation $\epsilon(k) = -\Delta + Ak^2$. L'expérience donne, en unités
+$\hbar^2/2m$ :
+
+\begin{tabular}{lllll}
+Si : & A = -4.29 ; & |B| = 0.68 ; & |C|=4.87 ; & $\Delta$=0.044eV \\
+Ge : & A = -13.38; & |B| = 8.48; & |C| = 13.15 ; & $\Delta$=0.29eV
+\end{tabular}
+
+Grosso modo, les trous légiers et lourds du germanium ont une masse de 0.043m et
+0.34m. Dans le silicium, 0.16m et 0.52m. Dans le diamant, 0.7m et 2.12m.
+
+Les bords de la bande de conduction dans Ge sont à des points équivalents L de la
+zone de Brillouin. Chaque bord de bande a une surface d'énergie d'orientation
+sphéroïdale, suivant l'axe <111>, avec une masse longitudinale $m_l = 1.59m$ et
+une masse transverse $m_t = 0.082m$. Pour un champ magnétique statique à un angle
+$\theta$ avec l'axe longitudinal d'une sphéroide, la masse effective
+cyclotronique $m_c$ est :
+\begin{equation}
+    \frac{1}{m_c} = \frac{\cos^2\theta}{m_t^2} + \frac{\sin^2 \theta}{m_t m_l}
+\end{equation}
+
+Les résultas pour le germanium sont motrées sur la figure ... (masse effective
+cyclotronique)
+Dans le silicium, las bords de la bnade de conduction sont des sphéroides
+orietées selon les directions équivalentes <100> dans la zone de Brillouin, avec
+des paramètres de masse $m_l = 0.92m$ et $m_t = 0.19m$, motnré sur la figure ...
+Les bords de bande se placent selon les lignes marqées $\Delta$ dans la zone, un
+peu déplacées des bords X.
+
+Dans GaAs, on a A = -6.98, B = -4.5, |C| = 6.2, $\Delta$= 0.341eV. la structure
+de bande est montrée ... il y a un gap direct avec une masse des électron de
+conduction isotropique de 0.067m.
+
+\TODO : points classiques pour réseaux bcc, fcc, etc. gamma, delta, sigma, G, N,
+P, etc. et rajouter les autres en annexes
+
+
+
+\begin{marginfigure}
+\TODO
+\caption{bande du germanium}
+\label{bandeGe}
+\end{marginfigure}

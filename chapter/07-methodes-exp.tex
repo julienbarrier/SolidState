@@ -128,6 +128,7 @@ POur mieux comprendre la diffraction expérimentale par la méthode des poudres,
         |F|^2 \ 
         \prod_{j=1}^3 \left(
             \frac{ \sin \frac{N_j \mathbf{q \cdot a}_j}{2} }{ \sin \frac{\mathbf{q\cdot a}_j}{2} } \right)^2
+    \label{eq:facteurintensite}
 \end{equation}
 
 où $\mathbf{q}$ est le vecteur de diffusion, $\mathbf{a}_j$ le vecteur du réseau direct, $N_j$ le nombre de maille dans la direction $j$, $r_e$ le rayon d'un électron classique, $R$ la distance échantillon-détecteur et $I_0 = c\epsilon_0 E_0^2/2$ est l'intensité incidente, où $E_0$ est l'intensité du champ électrique incident, $c$ la célérité de la lumière, $\epsilon_0$ la permittivité du vide. Cette expression néglige cependant des facteurs importants. Discutons de ces facteurs, parfois d'une façon qualitative, pour déduire une expression de l'intensité diffractée par la méthode des poudres.
@@ -152,19 +153,189 @@ où $x'_n, y'_n, z'_n$ sont les coordonnées du n\ieme atome dans la maille (nom
 
 \paragraph{Facteur de polarization}
 
+En écrivant l'équation \ref{eq:facteurintensite}, on a considéré la diffusion d'une onde polrisée perpendiculairement à la fois au vecteur d'onde incidente $\mathbf{k}$ et diffusé $\mathbf{k}'$. Cependant, en règle générale, la polarisation peut avoir un angle arbitraire par rapport à ce plan. Ce paragraphe a pour objet de montrer que les composantes dans le plan, du champ incident $E_y$ produisent l'accélération des électrons dans le solide, qui se traduit en des composantes le long de la direction $x'$ du champ diffusé. Ces composantes ne peuvent pas contribuer à l'intensité diffusée, parce qu'elles produiraient un champ le long de sa direction de propagation.
+Rappelons que la champ diffusé d'un élecrton simple s'écrit :
+
+\begin{equation}
+    \epsilon = \frac{E_0 r_e}{R} \cos \alpha
+\end{equation}
+
+où $\alpha$ est le complémentaire de l'angle entre la direction du champ incident et la direction de propagation du champ diffusé. Ainsi, l'expression de l'intensité implique que l'onde nicidente est polarisée selon la direction $z$, de telle sorte que $\alpha = 0$. Dans le cas général, il faut pourtant considérer la composante selon $y$ du champ incident, pour laquelle $\alpha = 2 \theta$. Dès lors, il faut remplacer $E_0^2$ dans l'équation \ref{eq:facteurintensite} par :
+
+\begin{equation}
+    E_{0z}^2 + E_{0y}^2 \cos^2 2\theta
+    \label{eq:champincid}
+\end{equation}
+
+Dans le cas particulier où la polarisation est aléatoire, la moyenne temporelle des composantes du champ incident est la même pour chacune des composantes. Ainsi :
+
+\begin{equation}
+    <E>^2 = <E_y>^2 + <E_z>^2
+\end{equation}
+On peut voir que :
+
+\begin{equation}
+    <Ey>^2 = <E_z>^2 = \frac{<E>^2}{2}
+\end{equation}
+
+En plaçant cela dans l'expression \label{eq:champincid}, on se retrouve avec unecontribution de la polarisation sur l'intensité, comme un facteur de :
+
+\begin{equation}
+    \left( \frac{1+\cos^2 2\theta}{2} \right)
+\end{equation}
+
+Cette expression est le facteur de polarisation, et est valable pour une polarisation du faisceau incident aléatoire.
+
 \paragraph{Facteur de Lorentz}
+
+Le facteur de Lorentz est le produit de facteurs qui tient compte de différents effets. Décrivons cela en détail en dessous.
 
 \paragraph{Intégration des pics}
 
-\paragraph{Fraction orientée}
+L'intensité de pics est une quantité difficile à observer expérimentalement. De petites variatinos dans la résolution de l'instrument et de l'alignement peuvent avoir de grandes répercussions sur l'intensité mesurée. Cela fait la comparaison de rapports d'intensité difficiles. Une quantité plus robuste est l'aire d'un pic, également appelée intensité intégrée. En fait, certaines intégrations sont faites de base, car l'aire du détecteur est finie. L'expression de l'intensité sur le détecteur plan et suivant le profil du pic correspond à une intégration le long de l'espace réciproque. En convertissant la variation de volume des coordonnées angulaires de l'espace réciproque, on peut introduire un facteur de :
 
-\paragraph{Segment de cône orienté}
+\begin{equation}
+    \left(\frac{\lambda}{2\pi} \right)^3 \left( \frac{R^2}{V_c \sin 2\theta} \right)
+    \label{eq:integ1}
+\end{equation}
+
+où $V_c$ est le volume de la maille. En intégrant le produit de l'équation \ref{eq:facteurintensite}, on se retrouve avec :
+
+\begin{equation}
+    (2\pi)^3 N_1N_2N_3 = (2\pi)^3 \frac{V}{V_c}
+    \label{eq:integration}
+\end{equation}
+
+où $V$ est le volume de l'échantillon
+
+\paragraph{Orientation}
+
+\begin{marginfigure}
+    \TODO
+    \caption{Schéma montrant la sphère, uniformément garine des plans normaux de poudres orientés aléatoirements, faites de cristaux qui ont une distance inter-réticulaire $d$. La fraction de ces cristux orientés pour rdiffracter est simplement l'aire de la bande représentant ces cristaux, divisée par l'aire de la sphère entière.}
+    \label{fig:}
+\end{marginfigure}
+
+Si un échantillon de méthode des poudres, composé de cristaux orientés aléatoirements, avec une distance inter-réticulaire $d$, est exposé à un faisceau de rayons X de longueur d'onde $\lambda$, alors une fraction de ces cristaux sera orienté de telle sorte à ce que les rayons X le frappent à un angle $\theta$ qui satisfait la loi de Bragg : $\lambda = 2d \sin \theta$. L'intensité des pics de Bragg correspondant sera proportionnelle à cette fraction. Dans l'objectif de trouver cette fraction de cristaux orientés, il faut d'abord remarquer que, pour une poudre orienté aléatoirement, la normale aux plans de distance inter-réticulaire $d$ sera uniformément placée à la surface d'une sphère qui sera centrée sur l'échantillon. Par conséquent, la fraction de cristaux orientés à un angle $\theta$, relatif au faisceau incident, sera simplement l'aire des bandes, divisée par l'aire de la sphère. Cette fraction peut s'écrire :
+
+\begin{eqnarray}
+    \text{fraction orientée à} \theta & = & \frac{\text{aire de la bande}}{\text{aire de la sphère}} \\
+    & = & \frac{R\Delta \theta 2 \pi R \sin \left(\frac{pi}{2} - \theta \right)}{2\pi R^2}\\
+    & = & \frac{\cos\theta \Delta \theta}{2}
+    \label{eq:orientation}
+\end{eqnarray}
+où $R$ est la distance entre l'échantillon et le détecteur.
+
+\paragraph{Segment du cône diffracté}
+
+\begin{marginfigure}
+    \TODO
+    \caption{}
+    \label{fig:diffconeseg}
+\end{marginfigure}
+
+Les cristaux qui sont orientés pour diffracter le font en suivant un cône qui a un demi-angle de $2\theta$, comme montré sur la figure \ref{fig:diffconeseg}. L'intensité diffractée est étalée sur un cercle à l'extrémité de ce cône. Cependant, le détecteur n'accepte que des petites longueurs de ce cercle, et pour chaque réflexion donnée, la fraction de l'intensité sur le cône total, acceptée par le détecteur, est inversement proportionnelle à la longueur du cercle à l'extrémité de ce cône. Cela introduit le facteur suivant dans l'expression de l'intensité :
+
+\begin{equation}
+    \frac{1}{\text{longueur du cercle}} = \frac{1}{2\pi R \sin 2\theta}
+    \label{eq:diffconeseg}
+\end{equation}
+
+Si l'on combine les expressions \ref{eq:integ1}, \ref{eq:integration}, \ref{eq:orientation} et \ref{eq:diffconeseg}, on obtient :
+
+\begin{flalign}
+    \left( \frac{R^2\lambda^3}{V_c \sin 2 \theta} \right)
+    \left( \frac{V}{V_c} \right)
+    \left( \frac{\cos \theta}{2} \right)
+    \left( \frac{1}{2 \pi R \sin 2 \theta} \right)
+    & = \frac{R\lambda^3 V}{4\pi V_c^2} \left( \frac{\cos \theta}{\sin^2 2\theta} \right) &\\
+    & = \frac{R\lambda^3 V}{8\pi V_c^2} \left[ \frac{1}{\sin 2\theta \sin \theta} \right] &
+\end{flalign}
+
+Le terme entre crochets est appelé facteur de Lorentz.
+
 
 \paragraph{Multiplicité}
 
+La multipliticé $m_{hkl}$ est le nombre de plans cristallographiques équivalents qui apparaissent dans un cristal. Par exemple, les plans $(00l)$ dans un cristal cubique sont équivalents aux plans $(0l0)$, $(l00)$, $(\bar{l}00)$, $(0\bar{l}0)$ et $(00\bar{l})$. La multiplicité de ce plan dans un cristal cubique est donc $m_{00l} = 6$. Pour les cristaux tétragonaux, $(00l)$ et $(00\bar{l})$ sont équivalents, donc dans ce cas, $m_{00l} = 2$. Le tableau \ref{tab:multiplicites} propose une liste des multiplicités. Le nombre de plans cristallins orientés pour diffracter une sertaine réflexion est proportionnel à $m_{hkl}$. Anisi, la multiplicité entre directement en compte dans l'expression de l'intensité.
+
+\begin{table*}
+    \begin{tabularx}{\textwidth}{lCCCCCCC}
+        \toprule
+        Cubique & $\frac{hkl}{48*}$ & $\frac{hhl}{24}$ & $\frac{0kl}{24*}$ & $\frac{0kk}{12}$ & $\frac{hhh}{8}$ & $\frac{00l}{6}$ & \\
+         &  &  &  &  &  & & \\
+        Tetragonal & $\frac{hkl}{16*}$ & $\frac{hhl}{8}$ & $\frac{0kl}{8}$ & $\frac{hk0}{8*}$ & $\frac{hh0}{4}$ & $\frac{0k0}{4}$& $\frac{00l}{2}$\\
+         &  &  &  &  &  & & \\
+        Orthorhombique & $\frac{hkl}{8}$ & $\frac{0kl}{4}$ & $\frac{h0l}{4}$ & $\frac{hk0}{4}$ & $\frac{h00}{2}$ & $\frac{0k0}{2}$& $\frac{00l}{2}$\\
+         &  &  &  &  &  & & \\
+        Hexagonal/trigonal & $\frac{hk\cdot l}{24*}$ & $\frac{hh \cdot l}{12*}$ & $\frac{0k\cdot l}{12*}$ & $\frac{hk\cdot 0}{12*}$ & $\frac{hh\cdot 0}{6}$ & $\frac{0k \cdot 0}{6}$& $\frac{00\cdot l}{2}$\\
+         &  &  &  &  &  & & \\
+        Monoclinique & $\frac{hkl}{4}$ & $\frac{h0l}{2}$ & $\frac{0k0}{2}$ &  &  & & \\
+         &  &  &  &  &  & & \\
+        Triclinique & $\frac{hkl}{2}$ &  &  &  &  & & \\
+        \bottomrule
+    \end{tabularx}
+    \label{tab:multiplicites}
+    \caption{Multiplicités pour la méthode des poudres.
+    \footnotesize{* Les valeurs données ici sont les multiplicités usuelles. Dans certains cristaux, les plans qui ont ces indices peuvent avoir deux formes avec la même distance inter-réticulaire mais deux facteurs de structure différents, et la multiplicité pour chaque forme est la moitié de la valeur donnée ici. Dans le système cubique, par exemple, il y a certains cristaux dans lesquels des permutations des indices $(hkl)$ produit des plans qui ne sont pas structurellement équivalents. Dans de tels cristaux (AuBe par exemple), le plan $(123)$ par exemple, appartient à une forme et a un certain facteur de structure, alors que le plan $(321)$ appartient à une autre forme et a un facteur de structure différent. Il y a donc 48/2 = 24 plans dans la première forme, et 24 dans la seconde.}}
+\end{table*}
+
 \paragraph{Facteur d'absorption}
 
-\paragraph{Facteur de température}
+L'absorption des rayons X par un échantillon peut avoir des effets sur l'intensité observée. Considérons la variation d'intensité produite par un élément de volume d'épaisseur $dz$ à une profondeur $z$ d'un échantillon illuminé par un faisceau de rayons X sur une aire $A_0$. L'absorption des rayons X aura lieu avant et après que le faisceau soit diffracté par l'élément de volume.
+Soit $\mathcal{L}$ la longeur totale du chemin parcourue par le faisceau. Alors la variation d'intensité produite par cet élément de volume infinitésimal peut s'écrire :
+
+\begin{equation}
+    dI = kI_0 A e^{-mu \mathcal{L}}\,dz
+\end{equation}
+
+où $I_0$ est l'intensité incidente, $k$ lest une constante proportionnelle représentant la force de difraction, $\mu$ est le coefficient d'absorption linéaire, et $A$ est l'aire de la section du volume donnée par :
+
+\begin{equation}
+    A = \frac{A_0}{\sin \theta}
+\end{equation}
+
+Pour le cas d'une réflexion symétrique, la longueur $\mathcal{L}$ est donnée par :
+
+\begin{equation}
+    \mathcal{L} = \frac{2z}{\sin \theta}
+\end{equation}
+
+Et alors on trouve :
+
+\begin{equation}
+    dI = k I_0 \frac{A_0}{\sin \theta} e^{\frac{-2\mu z}{\sin \theta}}\, dz
+\end{equation}
+
+En intégrant sur l'épaisseur de l'échantillon que l'on considère grande devant l'inverse du coefficinet d'absorption linéaire, on trouve :
+
+\begin{eqnarray}
+    I & = & \int_0^\infty dI\\
+    & = & \frac{k I_0A_0}{2 \mu}
+\end{eqnarray}
+
+Par conséquent, dans une symétrie géométrique, l'absorption n'introduit pas de dépendance angulaire, mais introduit un volume d'échantillon effectif de la forme $V = A_0 / 2\mu$.
+
+\paragraph{Dépendance en température}
+
+Les vibrations thermiques des atomes dans les solides résultent en une intensité diffractée réduite et une augmentation de l'intensité diffuse, qui se traduit par un fond large (broad background). La réduction de l'intensité des pics est représentée par un facteur de la forme :
+\begin{equation}
+    e^{-2M}
+\end{equation}
+
+où $M$ est donné par :
+
+\begin{equation}
+    M = 2 \pi^2 \frac{<u^2>}{d^2}
+\end{equation}
+
+où $<u^2>$ est le carré du déplacement thermique moyen des atomes dans une direction perpendiculaire aux plans diffractés, et $d$ la distance inter-réticulaire. Le facteur $M$ dépend à la fois ed la température et de l'angle de diffusion ; il est parfois écrit comme :
+
+\begin{equation}
+    M = B(T) \left( \frac{\sin \theta}{\lambda} \right)^2
+\end{equation}
+
+où $B(T)$ est la partie dépendante de la température, qui dépend également de la rugosité du matériau. Le facteur $B(T)$ est parfois tabulé pour certains matériaux.
 
 \paragraph{Bilan}
 

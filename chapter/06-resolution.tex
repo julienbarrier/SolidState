@@ -211,7 +211,7 @@ obtient alors :
 \end{equation}
 
 \begin{marginfigure}
-    \TODO
+    \includegraphics{./images/part1/factdiffr}
     \caption{Tracé du facteur \ref{eq:facdiff}}
     \label{fig:facdiff}
 \end{marginfigure}
@@ -351,125 +351,69 @@ Sur les représentations dans l'espace réciproque, les expériences de diffract
 sont des observations de l'intensité diffractée en fonction de l'orientation
 ou de la longueur du vecteur de diffusion $\v{q}$. Si l'expérience est faite
 à une énergie constante (faisceau monochromatique), alors le diamètre de la
-sphère d'Ewald est onstant, et son orientation est changée pendant l'expérience,
-ce qui apporte un autre set de points du réseau réciporque en contact avec la
-sphère d'Ewald.
+sphère d'Ewald est constant, et c'est son orientation est varie pendant l'expérience. On fait donc varier l'ensemble de points qui sera en contact avec la sphère d'Ewald au cours de l'étude.
 
-La technique de la diffraction des électrons dans un microscope électronique à
-transmission (TEM) utilise la nature ondulatoir edes électrons pour faire de la
-diffraction à partir de cristaux. La longueur d'onde des électrons à hautes
-énergies (\SI{100}{\kilo\volt} à \SI{1}{\mega\electronvolt}) utilisés est bien
-plus courte que celle des rayons X typiques, ramenant la sphère d'Ewald à un
-rayon très large, de telle sorte à ce que sa surface soit quasi planne.
-En outre, l'échantillon cristallin est fin (nécessaire pour assurer la
-transparence électronique), ce qui résulte en une élongation de la région de
-diffraction dans la direction parallèle à $\v{k}$.
-Par conséquent, même s'il y a quelques courbures de la sphère d'Ewald, les nœuds
+Si la sphère d'Ewald est très utile en diffraction des rayons X, elle est aussi utilisée dans d'autres techniques, en particulier la microscopie électronique à transmission (TEM). De par la nature ondulatoire des électrons, on peut imager des cristaux en en construisant un cliché de diffraction. La longueur d'onde des électrons à haute énergie (\SI{100}{\kilo\volt} à \SI{1}{\mega\electronvolt}) utilisés dans cette technique est plus courte que celles des rayons X, ce qui fait que la sphère d'Ewald a un rayon bien plus large, et on peut considérer sa surface comme quasi plane. En plus de ça, on utilise en TEM des échantillons très fins (nécessaire pour assurer la transparence électronique), ce qui résulte en un étalement de la région de diffraction dans la direction parallèle à $\v{k}$, d'une quantité $\Delta \v{q} = \frac{2\pi}{t}$ où $t$ est l'épaisseur de l'échantillon. Ainsi, les nœuds
 du réseau réciproque intersectent toujours la sphère d'Ewald. Cela signifie que
 l'alignement d'une zone de l'axe avec le vecteur d'onde de l'électron
-incident donnera des spots de diffraction pour quasiment tous les plans dans la
-zone. Cela est présenté schématiquement sur la figure \TODO.
+incident donnera des tâches de diffraction pour quasiment tous les plans dans la
+zone. Cela est présenté schématiquement sur la figure \ref{fig:tem}.
+
+\begin{marginfigure}
+    \includegraphics{./images/part1/tem-01}
+    \caption{Schéma de la sphère d'Ewald pour la diffraction des électrons en TEM. Le cristal est dans la direction du faisceau incident, dont le rayon est important. Combiné avec la faible épaisseur de l'échantillon, la sphère d'Ewald atteint tous les point de l'espace réciproque.}
+    \label{fig:tem}
+\end{marginfigure}
 
 
 
 \section{Zones de Brillouin et condition de diffraction}
 
-Les zones de Brillouin forment l'énoncé de la condition de diffraction la plus
-utilisée en physique du solide : elle permet de retrouver la théorie des bandes
-d'énergie électronique.
+Dès lors que l'on étudie la physique de la matière condensée, les zones de Brillouin constituent le point de ralliement de nombreux domaines différents. Elles permettent en particulier de retrouver la théorie des bandes d'énergie électronique, mais jouent également un rôle dans la diffraction.
 
-Nous avons vu précédement que la 1\iere zone de Brillouin comme la cellule de
-Wigner-Seitz dans le réseau réciproque. Cela permet de former une interprétation
-géométrique de la condition de la diffraction :
-\begin{equation}
-    2\v{k} \cdot \v{G} = G^2
-\end{equation}
-Que l'on peut aussi écrire :
-\begin{equation}
-    \v{k} \cdot \left( \frac{1}{2} \v{G} \right) = \left( \frac{1}{2} G \right)^2
-\end{equation}
+Plus tôt, nous avons vu la 1\iere zone de Brillouin comme une cellule de
+Wigner-Seitz dans le réseau réciproque. Cela va nous permettre maintenant de former une interprétation géométrique de la condition de la diffraction. Réécrivons là :
 
-En travaillant dans l'espace réciproque, $\v{k},\v{G})$, on choisit un
-vecteur $\v{G}$ à l'origine d'un point du réseau réciproque. Le plan normal
-à ce vecteur $\v{G}$, au milieu du vecteur. Ce plan forme une partie de la
-frontière de la zone de Brillouin.
-
-Si une onde, de vecteur d'onde $\v{k}$, est diffractée sur le réseau, le
-faisceau diffracté aura la direction $\v{k}-\v{G}$, soit $\Delta\v{k} = \Delta\v{k} = -\v{G}$.
-La construction de Brillouin présente tous les vecteurs d'onde $\v{k}$
-réfléchis par le cristal en suivant la loi de Bragg.
-
-Les plans qui sont les bissectrices des vecteurs du réseau réciproque sont d'une
-grande importance en ce qui'il s'agit de la propagation d'ondes dans les
-cristaux : une onde dont le vecteur d'onde tracé de l'origine termine sur un
-de ces plans respectera la condition de diffraction. Ces plans divisent l'espace
-de Fourier du cristal en fragments. Le fragment central est la cellule de
-Wigner-Seitz du réseau réciproque.
-
-On peut former une définition plus précise des zones de Brillouin : \emph{
-    La première zone de Brillouin est le plus petit volume entièrement entouré
-    par les plans qui sont les bissectrices des vecteurs du réseau réciproque
-tracés depuis l'origine.}
-
-
-
-
-L'étude de réseau dans l'espace réel (K), généralement il est pratique et
-intéressant de considérer un polyhèdre connu sous le nom de cellule de
-Wigner-Seitz, décrite précedement.
-
-L'analogie entre la construction dans l'espace réciproque résulte en ce qui est
-connu en tant que zore de Brillouin. Rappelons que la première zone de Brillouin
-est la cellule de Wigner-Seitz du réseau réciproque.
-
-Généralement ,la construction de la zone de Brillouin est utiisée poru décrire
-les électrons dans un solide périodique ; les plans bisecteurs et les
-zones ont une signification pour la diffraction. Cela peut être remarqué en
-(ré)écrivant les conditions e la diffraction :
-\begin{equation}
-    \v{q}_B = (\v{k'-k})_B = 2\pi\v{G} \rightarrow \v{k} + 2\pi \v{G} = \v{k'}
-\end{equation}
+\begin{eqnarray}
+    \v{q}_B =(\v{k'-k})_B & =&  2\pi\v{G}\\
+    \ie\quad \v{k} + 2\pi \v{G} &=& \v{k'}
+\end{eqnarray}
 
 Lorsque $k=k'$, on peut écrire :
 \begin{equation}
     (\v{k} + 2\pi \v{G})^2 = k^2
 \end{equation}
 
-mais :
+or on a :
 \begin{equation}
     2 \v{k\cdot G} = 2\pi G^2
 \end{equation}
 
-Soit le résultat :
+Ce qui nous donne :
 \begin{equation}
     \v{k}\cdot\frac{\v{G}}{G} = 2\pi \left( \frac{G}{2} \right)
 \end{equation}
 
-où on a utiisé le fait que $-\v{G}$ esta ussi un vecteur du réseau
-réciproque.
+On a utiisé le fait que $-\v{G}$ est aussi un vecteur du réseau réciproque.
 
-Cette dernière équation pose le fait que l acondition de la diffraction est
-satisfaite lorsque la composante de $\v{k}$ selon $\v{G}$ est égale à
-$2\pi$ fois la demin longueur de $\v{G}$. En fait, cette condition est
-vérifiée pour tous les vecteurs $\frac{\v{k}}{2\pi}$ qui ont leur origine
-en un nœud du réseau réciproque, et terminent sur les plans bissecteurs
-perpendiculaires au vecteur entre l'origine et un autre nœud du réseau réciproque. \TODO figure.
+\begin{marginfigure}
+    \includegraphics{./images/part1/brillouindiff-01}
+    \caption{Schéma montrant la zone de Brillouin pour la condition de diffraction. Les réseaux du vecteurs réciproque $\v{G}_C$ et $\v{G}_D$ relient les points $C$ et $D$ du réseau réciproque à l'origine $O$. Le vecteur $\v{k}_1/2\pi$ a $O$ comme origine, et termine sur le plan bisecteur de $\v{G}_C$. Il en est de même pour $\v{k}_2/2\pi$. Ici, $\v{k}_1$ et $\v{k}_2$ vérifient tous deux la condition de la diffraction.}
+    \label{fig:brillouindiff-01}
+\end{marginfigure}
 
+Cette dernière équation pose le fait que la condition de la diffraction est satisfaite lorsque la composante de $\v{k}$ selon $\v{G}$ est égale à $2\pi$ fois la demi-longueur de $\v{G}$. En fait, cette condition est
+vérifiée pour tous les vecteurs $\frac{\v{k}}{2\pi}$ qui ont leur origine en un nœud du réseau réciproque, et terminent sur les plans bissecteurs au vecteur entre l'origine et un autre nœud du réseau réciproque.
+
+La construction de Brillouin présente donc tous les vecteurs d'onde $\v{k}$ réfléchis par le cristal en suivant la loi de Bragg. On voit donc que les plans bissecteurs aux vecteurs du réseau réciproque jouent une grande importance en ce qu'il s'agit de la propagation d'onde dans les cristaux : une onde, dont le vecteur d'onde est tracé depuis l'origine du réseau réciproque, traverse le cristal pour terminer sur un de ces plans respectera la condition de diffraction. On peut également voir que ces plans de propagation des ondes divisent l'espace de Fourier du cristal en fragments, dont le fragment central est la cellule de Wigner-Seitz
 
 
 \subsection{Conclusions sur les conditions de la diffraction}
 
-Les conditions de Laue, la realtion de Bragg et la construction d'Ewald sont des
-représentations équivalentes du même phénomène : les directions de diffraction
-d'un réseau sont déterminées par son réseau réciproque.
+Les conditions de la diffraction (que l'on nomme également condition de \emph{Laue}, la realtion de Bragg, la construction d'Ewald et la zone de Brillouin sont des représentations équivalentes du même phénomène : les directions de diffraction d'un réseau sont déterminées par son réseau réciproque.
 
-La nature du motif influe uniquement sur l'intensité diffractée et pas sur les
-directions de diffraction. La mesure des angles de diffraction des rayons X par
-un cristal donne seulement des informations sur le réseau translatoire du cristal
-. Pour obtenir la position des atomes dans la maille, il faut aussi utiliser les
-intensités des figures de diffraction. Suivant la nature du problème étudié et
-les techniques de diffraction employées, on utilisera poru déterminer les
-directions de diffraction, l'une de ces trois méthodes.
+La nature du motif influe uniquement sur l'intensité diffractée et non pas sur les directions de diffraction. La mesure des angles de diffraction des rayons X par
+un cristal donne seulement des informations sur les translations de réseau du cristal. Pour obtenir la position des atomes dans la maille, il faudra aussi utiliser les intensités des figures de diffraction. Suivant la nature du problème étudié et les techniques de diffraction employées, on utilisera, au choix, l'une des quatre méthodes pour déterminer les directions de diffraction.
 
 \section{Exemples}
 

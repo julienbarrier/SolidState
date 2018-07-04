@@ -16,11 +16,11 @@ monocristal mobile, rayons X monochromatiques
     \label{fig:cristalmobile}
 \end{marginfigure}
 
-Dans un diffractomètre à rayons X, un faisceau de rayons X monochromatiques est dirigé sur un échantillon, monté sur un goniomètre qui permet des rotations suivant plusieurs axes (figure \ref{fig:cristalmobile}. Le détecteur est monté sur un bras rotatif du goniomètre. Cet arrangement permet de contrôler la norme et l'orientation du vecteur de diffusion $\mathbf{q}$. L'expérience consiste en l'observation de l'intensité comme fonction de $\mathbf{q}$ (norme, orientation, ou les deux). Certains des chemins possibles dans le réseau réciproque sont présentés sur la figure \ref{fig:cristalmobilerecip}. Les diffractomètres modernes, avec contrôle numérique, permettent de contrôler des chemins très généraux le long de l'espace réciproque.
-Un réseau réciproque peut être sélectionné, et l'intensité diffractée peut être observée comme fonction de la position dans le réseau réciproque. C'est souvent très pratique de balayer en $\mathbf{q}$ comme une fonction des variables $h,k,l$ :
+Dans un diffractomètre à rayons X, un faisceau de rayons X monochromatiques est dirigé sur un échantillon, monté sur un goniomètre qui permet des rotations suivant plusieurs axes (figure \ref{fig:cristalmobile}. Le détecteur est monté sur un bras rotatif du goniomètre. Cet arrangement permet de contrôler la norme et l'orientation du vecteur de diffusion $\v{q}$. L'expérience consiste en l'observation de l'intensité comme fonction de $\v{q}$ (norme, orientation, ou les deux). Certains des chemins possibles dans le réseau réciproque sont présentés sur la figure \ref{fig:cristalmobilerecip}. Les diffractomètres modernes, avec contrôle numérique, permettent de contrôler des chemins très généraux le long de l'espace réciproque.
+Un réseau réciproque peut être sélectionné, et l'intensité diffractée peut être observée comme fonction de la position dans le réseau réciproque. C'est souvent très pratique de balayer en $\v{q}$ comme une fonction des variables $h,k,l$ :
 
 \begin{equation}
-    \mathbf{q} = 2\pi (h\mathbf{b}_1 + k\mathbf{b}_2 + l\mathbf{b}_3)
+    \v{q} = 2\pi (h\v{b}_1 + k\v{b}_2 + l\v{b}_3)
 \end{equation}
 
 \begin{figure}
@@ -29,7 +29,7 @@ Un réseau réciproque peut être sélectionné, et l'intensité diffractée peu
     \label{fig:cristalmobilerecip}
 \end{figure}
 
-Ainsi, par exemple, un balayage en $h$ peut diriger le vecteur de diffusion le long d'un chemin gardant constant $k$ et $l$. Ce type de balayage sera fait dans la direction $\mathbf{b}_1$. En observant l'intensité, la forme et la position de ces pics, l'information sur la structure atomique, la densité en défauts et la contrainte peut être obtenue.
+Ainsi, par exemple, un balayage en $h$ peut diriger le vecteur de diffusion le long d'un chemin gardant constant $k$ et $l$. Ce type de balayage sera fait dans la direction $\v{b}_1$. En observant l'intensité, la forme et la position de ces pics, l'information sur la structure atomique, la densité en défauts et la contrainte peut être obtenue.
 
 \begin{figure}
     \TODO
@@ -53,48 +53,48 @@ On peut résumer cela ainsi : les plans d'une même zone sont diffractés selon 
 La condition de diffraction :
 
 \begin{equation}
-    \mathbf{q}_B = (\mathbf{k'-k})_B = 2 \pi \mathbf{G}_{hkl}
+    \v{q}_B = (\v{k'-k})_B = 2 \pi \v{G}_{hkl}
 \end{equation}
 
 peut s'écrire comme :
 
 \begin{equation}
     \label{eq:lauerecip}
-    \mathbf{\hat{s}' - \hat{s}} = \lambda \mathbf{G}_{hkl}
+    \uv{s}' - \uv{s} = \lambda \v{G}_{hkl}
 \end{equation}
 
 avec
 \begin{equation}
-    \mathbf{\hat{s}} = \frac{\mathbf{k}}{k} = \frac{\lambda}{2\pi}\mathbf{k}\quad\text{et}\quad
-    \mathbf{\hat{s}'} = \frac{\mathbf{k'}}{k} = \frac{\lambda}{2\pi}\mathbf{k'}
+    \uv{s} = \frac{\v{k}}{k} = \frac{\lambda}{2\pi}\v{k}\quad\text{et}\quad
+    \uv{s'} = \frac{\v{k'}}{k} = \frac{\lambda}{2\pi}\v{k'}
 \end{equation}
-ce sont les vecteurs unitaires correspondants aux directions de $\mathbf{k}$ et $\mathbf{k'}$.
+ce sont les vecteurs unitaires correspondants aux directions de $\v{k}$ et $\v{k'}$.
 
-Construisont maintenant l'espace réciproque basé sur l'équation \ref{eq:lauerecip}, o\ la distance entre chaque point de l'espace réciproque dépend de la longueur d'onde $\lambda$. Par conséquent, chaque point de l'espace réciproque est étalé sur une ligne connectant les points $\lambda_1\mathbf{G}_{khl}$ et $\lambda_2\mathbf{G}_{hkl}$. La longueur de cette ligne dans l'espace réciproque augmente avec la distance depuis l'origine. Cela est montré schématiquement sur la figure \ref{fig:lauerecip}. Si maintenant nous traçons une sphère de rayon unitaire, centrée sur le centre du vecteur $\mathbf{\hat{s}}$, qui termine à l'origine du réseau réciproque, la condition de diffraction de l'équation \ref{eq:lauerecip} sera atetinte pour toute ligne du réseau réciproque qui s'intersecte avec cette sphère.
+Construisont maintenant l'espace réciproque basé sur l'équation \ref{eq:lauerecip}, o\ la distance entre chaque point de l'espace réciproque dépend de la longueur d'onde $\lambda$. Par conséquent, chaque point de l'espace réciproque est étalé sur une ligne connectant les points $\lambda_1\v{G}_{khl}$ et $\lambda_2\v{G}_{hkl}$. La longueur de cette ligne dans l'espace réciproque augmente avec la distance depuis l'origine. Cela est montré schématiquement sur la figure \ref{fig:lauerecip}. Si maintenant nous traçons une sphère de rayon unitaire, centrée sur le centre du vecteur $\uv{s}$, qui termine à l'origine du réseau réciproque, la condition de diffraction de l'équation \ref{eq:lauerecip} sera atetinte pour toute ligne du réseau réciproque qui s'intersecte avec cette sphère.
 
 \begin{figure}
     \TODO
-    \caption{Schéma de l'espace réciproque construit pour la méthode de von Laue. Les points de l'espace réciproque sont représentés come des lignes pour prendre en compte l'étalement en longueur d'onde du faisceau incidents. La condition de diffraction est satisfaite si la sphère de réflection intersecte ces lignes, comme montré dans plusieurs cas ici. Le vecteur $\mathbf{\hat{s}'}$ et l'angle de diffusion $2\theta$ sont représentés pour les réflexions (310) et (220)}
+    \caption{Schéma de l'espace réciproque construit pour la méthode de von Laue. Les points de l'espace réciproque sont représentés come des lignes pour prendre en compte l'étalement en longueur d'onde du faisceau incidents. La condition de diffraction est satisfaite si la sphère de réflection intersecte ces lignes, comme montré dans plusieurs cas ici. Le vecteur $\uv{s'}$ et l'angle de diffusion $2\theta$ sont représentés pour les réflexions (310) et (220)}
     \label{fig:lauerecip}
 \end{figure}
 
-Tous les plans d'une même zone sont représentés par des lignes sur un plan perpendiculaire à l'axe de zone. Ce plan intersecte la sphère de réflexion en un cercle, et le vecteur $\mathbf{\hat{s}'}$ pour tous les faisceaux incidents qui terminent sur ce cercle. Il lformera un cône correspondant à l'axe de zone.
+Tous les plans d'une même zone sont représentés par des lignes sur un plan perpendiculaire à l'axe de zone. Ce plan intersecte la sphère de réflexion en un cercle, et le vecteur $\uv{s'}$ pour tous les faisceaux incidents qui terminent sur ce cercle. Il lformera un cône correspondant à l'axe de zone.
 
-Dans l'exemple de la figure \ref{fig:lauerecip}, le centre de la pshère de réflexion, qui est l'origine du vecteur $\mathbf{\hat{s}}$, est placé dans le plan de zone, de telle sorte à ce que tous les vecteurs $\mathbf{\hat{s}'}$ d'une même zone (la zone $[001]$) sont coplanaires avec le plan de zone. En outre, le cône est applati en un cercle, et sa trace sur le film sera une ligne. Cependant, si l'origine de la sphère de réflexion n'est pas dans le plan, alors les vecteurs $\mathbf{\hat{s}}$ et $\mathbf{\hat{s}'}$  forment un cône, comme montré sur la figure \ref{fig:lauecone}.
+Dans l'exemple de la figure \ref{fig:lauerecip}, le centre de la pshère de réflexion, qui est l'origine du vecteur $\uv{s}$, est placé dans le plan de zone, de telle sorte à ce que tous les vecteurs $\uv{s'}$ d'une même zone (la zone $[001]$) sont coplanaires avec le plan de zone. En outre, le cône est applati en un cercle, et sa trace sur le film sera une ligne. Cependant, si l'origine de la sphère de réflexion n'est pas dans le plan, alors les vecteurs $\uv{s}$ et $\uv{s'}$  forment un cône, comme montré sur la figure \ref{fig:lauecone}.
 
 \begin{figure}
     \TODO
-    \caption{Schéma des plans en zone formant un cône. Le plan de zone intersecte la sphère de réflexion en un cercle. Le vecteur direction de diffraciton $\mathbf{\hat{s}'}$ est situé sur ce cercle et forme un cône dont l'axe correspond à l'axe de zone.}
+    \caption{Schéma des plans en zone formant un cône. Le plan de zone intersecte la sphère de réflexion en un cercle. Le vecteur direction de diffraciton $\uv{s'}$ est situé sur ce cercle et forme un cône dont l'axe correspond à l'axe de zone.}
     \label{fig:lauecone}
 \end{figure}
 
-La direction du vecteur $\mathbf{\hat{s}}$ est dans le cône de diffraction, et l'axe de zone est l'axe du cône. Lorsque l'angle entre l'axe de zone et $\mathbf{\hat{s}}$ est inférieur à \SI{45}{\degree}, alors le cône intersecte le film avec un motif elliptique. Cela n'est posisble qu'en géométrie en transmission. Lorsque cet angle est supérieur à \SI{45}{\degree}, alors le cône intersecte le film avec un motif hyperbolique. Cela peut se produire soit en transmission, soit en réflexion. La symétrie du motif produit par la méthode de von Laue comporte des similitudes avec la symétrie du cristal, et la détermination des zones responsables d'ue certains motifs de diffraction est possible. Cette technique est largement utilisée pour orienter les échantillons en méthode du cristal mobile pour l'étude de certaines surfaces caractéristiques.
+La direction du vecteur $\uv{s}$ est dans le cône de diffraction, et l'axe de zone est l'axe du cône. Lorsque l'angle entre l'axe de zone et $\uv{s}$ est inférieur à \SI{45}{\degree}, alors le cône intersecte le film avec un motif elliptique. Cela n'est posisble qu'en géométrie en transmission. Lorsque cet angle est supérieur à \SI{45}{\degree}, alors le cône intersecte le film avec un motif hyperbolique. Cela peut se produire soit en transmission, soit en réflexion. La symétrie du motif produit par la méthode de von Laue comporte des similitudes avec la symétrie du cristal, et la détermination des zones responsables d'ue certains motifs de diffraction est possible. Cette technique est largement utilisée pour orienter les échantillons en méthode du cristal mobile pour l'étude de certaines surfaces caractéristiques.
 
 
 \section{Méthode des poudres}
 polycristaux, rayons X monochromatiques
 
-La méthode des poudres est la technique d'analyse structurelle la plus utilisée. Un échantillon réduit sous forme d'une fine poudre est exposé à un faisceau collimaté de rayons X monochromatiques. Idéallement, la poudre est faite de cristaux qui ont une orientation aléatoire en fonction de $\mathbf{k}$, la direction du faisceau incident. Cela est équivalent à la rotation d'un monocristal selon toutes les orientations possibles, en même temps. Cela signifie que haque vecteur du réseau réciproque peut prendre toutes les orientations possibles, en balayant une sphère de rayon $G_{hkl} = \frac{1}{d_{hkl}}$, centrée à l'origine du réseau réciproque. L'espace réciproque constiste alors en un ensemble de sphères concentriques de rayons $G_{hkl} = 1/ d_{hkl}$. L'intersection d'un de ces sphères du réseau réciproque avec la sphère d'Ewald forme un cercle. La condition de diffraction est alors satisfaite pour un faisceau diffracté $\mathbf{k'}/2\pi$ dont l'origine est à $\mathbf{k}/2\pi$ et termine à son intersection. Ce vecteur d'onde balaye un cône, comme présenté sur la figure \ref{fig:poudres}.
+La méthode des poudres est la technique d'analyse structurelle la plus utilisée. Un échantillon réduit sous forme d'une fine poudre est exposé à un faisceau collimaté de rayons X monochromatiques. Idéallement, la poudre est faite de cristaux qui ont une orientation aléatoire en fonction de $\v{k}$, la direction du faisceau incident. Cela est équivalent à la rotation d'un monocristal selon toutes les orientations possibles, en même temps. Cela signifie que haque vecteur du réseau réciproque peut prendre toutes les orientations possibles, en balayant une sphère de rayon $G_{hkl} = \frac{1}{d_{hkl}}$, centrée à l'origine du réseau réciproque. L'espace réciproque constiste alors en un ensemble de sphères concentriques de rayons $G_{hkl} = 1/ d_{hkl}$. L'intersection d'un de ces sphères du réseau réciproque avec la sphère d'Ewald forme un cercle. La condition de diffraction est alors satisfaite pour un faisceau diffracté $\v{k'}/2\pi$ dont l'origine est à $\v{k}/2\pi$ et termine à son intersection. Ce vecteur d'onde balaye un cône, comme présenté sur la figure \ref{fig:poudres}.
 
 \begin{marginfigure}
     \TODO
@@ -102,7 +102,7 @@ La méthode des poudres est la technique d'analyse structurelle la plus utilisé
     \label{fig:poudres}
 \end{marginfigure}
 
-Les diffractomètres pour la méthode des poudres utilisent férquemment la symétrie de réflexion, dans laquelle l'angle d'incidence et l'angle réfléchi sont égaux. Cela est accompagné par une rotation du détecteur de deux fois l'angle de l'échantillon, de telle sorte à ce que l'angle d'incidence et l'angle réfléchi soient toujours égaux. Le vecteur de diffusion $\mathbf{q}$ est maintenu perpendiculaire à l'échantillon, et le balayage consiste à suivre l'intensité au fur et à mesure que $\mathbf{q}$ varie. Dans l'espace réciproque, on peut voir que les pics apparaissent au fur et à mesure que $\mathbf{q}$ balaye les sphères concentriques successives de l'espace réciproque.
+Les diffractomètres pour la méthode des poudres utilisent férquemment la symétrie de réflexion, dans laquelle l'angle d'incidence et l'angle réfléchi sont égaux. Cela est accompagné par une rotation du détecteur de deux fois l'angle de l'échantillon, de telle sorte à ce que l'angle d'incidence et l'angle réfléchi soient toujours égaux. Le vecteur de diffusion $\v{q}$ est maintenu perpendiculaire à l'échantillon, et le balayage consiste à suivre l'intensité au fur et à mesure que $\v{q}$ varie. Dans l'espace réciproque, on peut voir que les pics apparaissent au fur et à mesure que $\v{q}$ balaye les sphères concentriques successives de l'espace réciproque.
 Générallement, les diffractomètres à rayons X utilisent une focale pour augmenter l'intensité diffractée.
 
 Un exemple de motif de diffraciton, où l'intensité diffractée est tracée en fonction de l'angle de diffusion $2\theta$, est représenté sur la figure \ref{fig:poudrepic}. Généralement, une série de pics sera observée, et on donne généralement la liste des intensités et des positions angulaires. Comme la distance inter-réticulaire est donnée par :
@@ -127,25 +127,25 @@ POur mieux comprendre la diffraction expérimentale par la méthode des poudres,
         \left( \frac{r_e}{R} \right)^2 \ 
         |F|^2 \ 
         \prod_{j=1}^3 \left(
-            \frac{ \sin \frac{N_j \mathbf{q \cdot a}_j}{2} }{ \sin \frac{\mathbf{q\cdot a}_j}{2} } \right)^2
+            \frac{ \sin \frac{N_j \v{q \cdot a}_j}{2} }{ \sin \frac{\v{q\cdot a}_j}{2} } \right)^2
     \label{eq:facteurintensite}
 \end{equation}
 
-où $\mathbf{q}$ est le vecteur de diffusion, $\mathbf{a}_j$ le vecteur du réseau direct, $N_j$ le nombre de maille dans la direction $j$, $r_e$ le rayon d'un électron classique, $R$ la distance échantillon-détecteur et $I_0 = c\epsilon_0 E_0^2/2$ est l'intensité incidente, où $E_0$ est l'intensité du champ électrique incident, $c$ la célérité de la lumière, $\epsilon_0$ la permittivité du vide. Cette expression néglige cependant des facteurs importants. Discutons de ces facteurs, parfois d'une façon qualitative, pour déduire une expression de l'intensité diffractée par la méthode des poudres.
+où $\v{q}$ est le vecteur de diffusion, $\v{a}_j$ le vecteur du réseau direct, $N_j$ le nombre de maille dans la direction $j$, $r_e$ le rayon d'un électron classique, $R$ la distance échantillon-détecteur et $I_0 = c\epsilon_0 E_0^2/2$ est l'intensité incidente, où $E_0$ est l'intensité du champ électrique incident, $c$ la célérité de la lumière, $\epsilon_0$ la permittivité du vide. Cette expression néglige cependant des facteurs importants. Discutons de ces facteurs, parfois d'une façon qualitative, pour déduire une expression de l'intensité diffractée par la méthode des poudres.
 
 \paragraph{Facteur de structure}
 
 Le facteur de structure $F$ est donné par la somme sur les atomes de la maille primitive :
 \begin{equation}
-    F = \sum_n^{N_b} f_n e^{i\mathbf{q\cdot r}_n}
+    F = \sum_n^{N_b} f_n e^{i\v{q\cdot r}_n}
 \end{equation}
 
-où $f_n$ et $\mathbf{r}_n$ sont respectivement les facteurs de diffusion atomique et la position dans la maille du n\ieme atome. Si nous écrivons :
+où $f_n$ et $\v{r}_n$ sont respectivement les facteurs de diffusion atomique et la position dans la maille du n\ieme atome. Si nous écrivons :
 \begin{equation}
-    \mathbf{r}_n = x'_n \mathbf{a}_1 + y'_n \mathbf{a}_2 + z'_n \mathbf{a}_3
+    \v{r}_n = x'_n \v{a}_1 + y'_n \v{a}_2 + z'_n \v{a}_3
 \end{equation}
 
-où $x'_n, y'_n, z'_n$ sont les coordonnées du n\ieme atome dans la maille (nombre rationnels), alors le facteur de structure à la condition de Bragg ($\mathbf{q} = 2\pi \mathbf{G}$) devient :
+où $x'_n, y'_n, z'_n$ sont les coordonnées du n\ieme atome dans la maille (nombre rationnels), alors le facteur de structure à la condition de Bragg ($\v{q} = 2\pi \v{G}$) devient :
 
 \begin{equation}
     F_{hkl} = \sum_n^{N_b} f_n e^{2\pi i (h x'_n + k y'_n + l z'_n)}
@@ -153,7 +153,7 @@ où $x'_n, y'_n, z'_n$ sont les coordonnées du n\ieme atome dans la maille (nom
 
 \paragraph{Facteur de polarization}
 
-En écrivant l'équation \ref{eq:facteurintensite}, on a considéré la diffusion d'une onde polrisée perpendiculairement à la fois au vecteur d'onde incidente $\mathbf{k}$ et diffusé $\mathbf{k}'$. Cependant, en règle générale, la polarisation peut avoir un angle arbitraire par rapport à ce plan. Ce paragraphe a pour objet de montrer que les composantes dans le plan, du champ incident $E_y$ produisent l'accélération des électrons dans le solide, qui se traduit en des composantes le long de la direction $x'$ du champ diffusé. Ces composantes ne peuvent pas contribuer à l'intensité diffusée, parce qu'elles produiraient un champ le long de sa direction de propagation.
+En écrivant l'équation \ref{eq:facteurintensite}, on a considéré la diffusion d'une onde polrisée perpendiculairement à la fois au vecteur d'onde incidente $\v{k}$ et diffusé $\v{k}'$. Cependant, en règle générale, la polarisation peut avoir un angle arbitraire par rapport à ce plan. Ce paragraphe a pour objet de montrer que les composantes dans le plan, du champ incident $E_y$ produisent l'accélération des électrons dans le solide, qui se traduit en des composantes le long de la direction $x'$ du champ diffusé. Ces composantes ne peuvent pas contribuer à l'intensité diffusée, parce qu'elles produiraient un champ le long de sa direction de propagation.
 Rappelons que la champ diffusé d'un élecrton simple s'écrit :
 
 \begin{equation}

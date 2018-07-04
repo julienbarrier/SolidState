@@ -43,15 +43,15 @@ introduite.
 \section{Systèmes de coordonnées}
 
 Puisque l'on étudie les réseaux cristallins, il est nécessaire de définir des
-vecteurs de base. Soient $\mathbf{a}$, $\mathbf{b}$ et $\mathbf{c}$ des vecteurs
+vecteurs de base. Soient $\v{a}$, $\v{b}$ et $\v{c}$ des vecteurs
 formant une base. Celle-ci n'est pas nécesairement orthogonale, ni même normée.
 En revanche, on les choisit de sorte à former un trièdre direct.
 
 Dans ce réseau, on peut définir la position d'un point $A$ par son vecteur 
-position $\mathbf{r}_A$ :
+position $\v{r}_A$ :
 
 \begin{equation}
-    \mathbf{r}_A = x_A \mathbf{a} + y_A \mathbf{b} + z_A \mathbf{c}
+    \v{r}_A = x_A \v{a} + y_A \v{b} + z_A \v{c}
 \end{equation}
 
 
@@ -60,10 +60,10 @@ position $\mathbf{r}_A$ :
 Dans un réseau, on appelle rangée réticulaire (ou direction d'un réseau), 
 l'ensemble des doites parallèles qui passent par au moins deux nœuds du réseau.
 
-Ces rangées réticulaires sont définies par un vecteur primitif $\mathbf{t}$ tel que :
+Ces rangées réticulaires sont définies par un vecteur primitif $\v{t}$ tel que :
 
 \begin{equation}
-    \mathbf{t} = u \mathbf{a} + v \mathbf{b} + w \mathbf{c}
+    \v{t} = u \v{a} + v \v{b} + w \v{c}
 \end{equation}
 
 Dans cette équation, les indices de la rangée $u$, $v$ et $w$ sont des entiers
@@ -92,7 +92,7 @@ Il vient alors, de façon évidente que les propriétés des vecteurs peuvent
 s'appliquer sur les vecteurs primitifs associés aux rangées réticulaires. Par
 exemple, si $[u_1v_1w_1]$ et $[u_2v_2w_2]$ sont orthogonales, le produit 
 scalaire de leurs vecteurs primitifs est nul :
-$\mathbf{t}_1 \cdot \mathbf{t}_2 = 0$. De plus, $[uvw]$ et 
+$\v{t}_1 \cdot \v{t}_2 = 0$. De plus, $[uvw]$ et
 $[\bar{u}\bar{v}\bar{w}]$ désignent la même rangée.
 
 \section{Réseau de Bravais}
@@ -116,7 +116,7 @@ On peut en trouver deux définitions équivalentes :
 \end{enumerate}
 
 Par conséquent, tout nœud que l'on translate d'un certain vecteur 
-$\mathbf{R}$, se retrouve être aussi un nœud.
+$\v{R}$, se retrouve être aussi un nœud.
 
 \begin{marginfigure}
     \includegraphics{./images/part1/bravaiswigner-01}
@@ -209,10 +209,10 @@ la plus compacte possible.
 
 Le réseau de Bravais de cette structure est hexagonal simple, qui est donné en
 superposant deux réseaux de triangles l'un au dessus de l'autre. L'empilement est
-réalisé suivant la direction$\mathbf{c}$. Les trois vecteurs primitifs sont :
+réalisé suivant la direction$\v{c}$. Les trois vecteurs primitifs sont :
 
 \begin{equation}
-    \mathbf{a}_1 = a \mathbf{\hat{x}},\quad \mathbf{a}_2 = \frac{a}{2}\mathbf{\hat{x}}+\frac{\sqrt{3}a}{2}\mathbf{\hat{y}},\quad \mathbf{c}= c\mathbf{\hat{z}}
+    \v{a}_1 = a \uv{x},\quad \v{a}_2 = \frac{a}{2}\uv{x}+\frac{\sqrt{3}a}{2}\uv{},\quad \v{c}= c\uv{z}
 \end{equation}
 
 Les deux premiers vecteurs génèrent un réseau triangulaire dans le plan $(x,y)$. Le troisième vecteur créé l'empilement de ces deux réseaux l'un au dessus de l'autre.
@@ -240,7 +240,7 @@ Dans certains cas, la structure électronique des molécules ne permet pas de se
 
 Le réseau cubique simple (on verra plus tard qu'il s'agit du système cubique primitif $P$) se forme en fait assez rarement : parmi les 118 éléments, seule la phase $\alpha$ du polonium est connue pour cristalliser en réseau cubique simple dans des conditions normales de température et de pression. Ce réseau est pourtant assez simple à comprendre et permet de générer les autres réseaux cubiques.
 
-Dans le système cubique, le réseau est généré par des vecteurs $a\mathbf{\hat{x}}$,$a\mathbf{\hat{y}}$ et $a\mathbf{\hat{z}}$. C'est la forme la plus simple d'un réseau de Bravais.
+Dans le système cubique, le réseau est généré par des vecteurs $a\uv{x}$,$a\uv{y}$ et $a\uv{z}$. C'est la forme la plus simple d'un réseau de Bravais.
  
 \subsection{Réseau cubique centré}
 
@@ -270,17 +270,17 @@ Ajoutons maintenant un point supplémentaire au centre de ce réseau cubique sim
 
 L'ensemble des vecteurs primitifs devient ici :
 \begin{equation}
-\mathbf{a}_1 = a\mathbf{\hat{x}},\quad\mathbf{a}_2 = a\mathbf{\hat{y}},\quad \mathbf{a}_3 = \frac{a}{2}(\mathbf{\hat{x}}+\mathbf{\hat{y}}+\mathbf{\hat{z}})
+\v{a}_1 = a\uv{x},\quad\v{a}_2 = a\uv{y},\quad \v{a}_3 = \frac{a}{2}(\uv{x}+\uv{y}+\uv{z})
 \end{equation}
 
 On considère généralement un ensemble de vecteurs primitifs moins intuitifs, mais plus utiles de façon analytique :
 
 \begin{equation}
-    \mathbf{a}_1 = \frac{a}{2}(-\mathbf{\hat{x}}+\mathbf{\hat{y}}+\mathbf{\hat{z}}),
+    \v{a}_1 = \frac{a}{2}(-\uv{x}+\uv{y}+\uv{z}),
     \quad
-    \mathbf{a}_2 = \frac{a}{2}(\mathbf{\hat{x}}-\mathbf{\hat{y}}+\mathbf{\hat{z}}),
+    \v{a}_2 = \frac{a}{2}(\uv{x}-\uv{y}+\uv{z}),
     \quad
-    \mathbf{a}_3 = \frac{a}{2}(\mathbf{\hat{x}}+\mathbf{\hat{y}}-\mathbf{\hat{z}})
+    \v{a}_3 = \frac{a}{2}(\uv{x}+\uv{y}-\uv{z})
 \end{equation}
 
 Ce système est très important parce qu'un très grand nombre d'éléments crystallisent dans cette forme.
@@ -322,11 +322,11 @@ Considérons maintenant l'ajout, au centre de chaque chaque face du réseau cubi
 Un exemple de vecteurs primitifs d'un réseau cubique faces-centrées peut-être défini par :
 
 \begin{equation}
-\mathbf{a}_1 = \frac{a}{2}(\mathbf{\hat{y}}+\mathbf{\hat{z}}),
+\v{a}_1 = \frac{a}{2}(\uv{y}+\uv{z}),
 \quad
-\mathbf{a}_2 = \frac{a}{2}(\mathbf{\hat{x}}+\mathbf{\hat{z}}),
+\v{a}_2 = \frac{a}{2}(\uv{x}+\uv{z}),
 \quad
-\mathbf{a}_3 = \frac{a}{2}(\mathbf{\hat{x}}+\mathbf{\hat{y}})
+\v{a}_3 = \frac{a}{2}(\uv{x}+\uv{y})
 \end{equation}
 
 La densité d'un réseau cubique faces-centrées est :

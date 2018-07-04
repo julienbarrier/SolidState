@@ -10,25 +10,25 @@ L'objectif de cette section est donc de décrire la géométrie de l'espace réc
 
 \subsection{Définition}
 
-Soit un réseau de Bravais constitué d'un ensemble de points $\mathbf{R}$, et une
-onde plane $e^{i\mathbf{k}\cdot\mathbf{r}}$. Dans le cas général ($\mathbf{k}$ quelconque), l'onde plane que nous venons de définir n'a pas la périodicité du réseau de Bravais. Il existe cependant un choix de $\mathbf{k}$ qui aura cette périodicité : celui-ci définit le réseau réciproque :
+Soit un réseau de Bravais constitué d'un ensemble de points $\v{R}$, et une
+onde plane $e^{i\v{k}\cdot\v{r}}$. Dans le cas général ($\v{k}$ quelconque), l'onde plane que nous venons de définir n'a pas la périodicité du réseau de Bravais. Il existe cependant un choix de $\v{k}$ qui aura cette périodicité : celui-ci définit le réseau réciproque :
 
 \begin{description}
-\item[Définition] L'ensemble des vecteurs d'ondes $\mathbf{K}$ qui résultent en une onde plane avec la périodicité d'un réseau de Bravais donné est appelé réseau réciproque.
+\item[Définition] L'ensemble des vecteurs d'ondes $\v{K}$ qui résultent en une onde plane avec la périodicité d'un réseau de Bravais donné est appelé réseau réciproque.
 \end{description}
 
-Cette définition est équivalente à la propriété suivante : $\mathbf{K}$ appartient au réseau réciproque d'un réseau
-de Bravais de points $\mathbf{R}$ si et seulement si :
+Cette définition est équivalente à la propriété suivante : $\v{K}$ appartient au réseau réciproque d'un réseau
+de Bravais de points $\v{R}$ si et seulement si :
 
 \begin{equation}
-\exp(i \mathbf{K}\cdot \mathbf{R}) = 1
+\exp(i \v{K}\cdot \v{R}) = 1
 \label{eq:defresreciproque}
 \end{equation}
 
 Il vient alors que :
 
 \begin{equation}
-    \mathbf{K} \cdot \mathbf{R} = 2 \pi n
+    \v{K} \cdot \v{R} = 2 \pi n
     \label{eq:fondreseaurec}
 \end{equation}
 
@@ -36,17 +36,17 @@ Cette relation est fondamentale. On peut alors donner les descriptions suivantes
 maille :
 
 \begin{equation}
-\mathbf{b}_1 = 2\pi \frac{\mathbf{a}_2 \times \mathbf{a}_3}{V},\quad
-\mathbf{b}_2 = 2\pi \frac{\mathbf{a}_3 \times \mathbf{a}_1}{V},\quad
-\mathbf{b}_3 = 2\pi \frac{\mathbf{a}_1 \times \mathbf{a}_2}{V}
+\v{b}_1 = 2\pi \frac{\v{a}_2 \times \v{a}_3}{V},\quad
+\v{b}_2 = 2\pi \frac{\v{a}_3 \times \v{a}_1}{V},\quad
+\v{b}_3 = 2\pi \frac{\v{a}_1 \times \v{a}_2}{V}
 \end{equation}
 
-dans lesquelles $\mathbf{a}_i$ est un vecteur du réseau direct et $\mathbf{b}_i$ du réseau réciproque. le volume de la maille $V$ peut être écrit avec le produit mixte $\mathbf{a}_1 \cdot (\mathbf{a}_2 \times \mathbf{a}_3)$.
+dans lesquelles $\v{a}_i$ est un vecteur du réseau direct et $\v{b}_i$ du réseau réciproque. le volume de la maille $V$ peut être écrit avec le produit mixte $\v{a}_1 \cdot (\v{a}_2 \times \v{a}_3)$.
 
 On utilise également une formulation équivalente, basée sur le produit scalaire :
 
 \begin{equation}
-\mathbf{b}_i \cdot \mathbf{a}_j = 2\pi \delta_i^j
+\v{b}_i \cdot \v{a}_j = 2\pi \delta_i^j
 \label{eq:reseaureciproque}
 \end{equation}
 
@@ -64,22 +64,22 @@ Puisque l'espace de Bravais de départ est l'espace des longueurs réelles, l'es
 
 \subsection{Réseau de Bravais}
 
-Dans cette partie, nous allons montrer que le réseau réciproque d'un réseau de Bravais est également un réseau de Bravais. Pour cela, considérons $\mathbf{a}_1$, $\mathbf{a}_2$ et $\mathbf{a}_3$ un ensemble de vecteurs primitifs du réseau direct.
+Dans cette partie, nous allons montrer que le réseau réciproque d'un réseau de Bravais est également un réseau de Bravais. Pour cela, considérons $\v{a}_1$, $\v{a}_2$ et $\v{a}_3$ un ensemble de vecteurs primitifs du réseau direct.
 
-Soit $\mathbf{k}$ un vecteur quelcoque du réseau réciproque. Écrivons le comme une combinaison linéaire des $\mathbf{b}_i$, et de la même manière, $\mathbf{R}$ comme la combinaison linéaire des $\mathbf{a}_j$ :
+Soit $\v{k}$ un vecteur quelcoque du réseau réciproque. Écrivons le comme une combinaison linéaire des $\v{b}_i$, et de la même manière, $\v{R}$ comme la combinaison linéaire des $\v{a}_j$ :
 
 \begin{eqnarray}
-    \mathbf{k} & = & k_1 \mathbf{b}_1 + k_2 \mathbf{b}_2 + k_3 \mathbf{b}_3\\
-    \mathbf{R} & = & n_1 \mathbf{a}_1 + n_2 \mathbf{a}_2 + n_3 \mathbf{a}_3
+    \v{k} & = & k_1 \v{b}_1 + k_2 \v{b}_2 + k_3 \v{b}_3\\
+    \v{R} & = & n_1 \v{a}_1 + n_2 \v{a}_2 + n_3 \v{a}_3
 \end{eqnarray}
 
 En effectuant le produit scalaire, on trouve :
 
 \begin{equation}
-    \mathbf{k}\cdot\mathbf{R} = 2\pi (k_1 n_1 + k_2n_2 + k_3n_3)
+    \v{k}\cdot\v{R} = 2\pi (k_1 n_1 + k_2n_2 + k_3n_3)
 \end{equation}
 
-Si on veut vérifier la définition (équation \ref{eq:defresreciproque}), il est nécessaire que $\mathbf{k}\cdot\mathbf{R}$ soit égal à $2\pi$ fois un entier, pour tout choix d'entiers $n_i$. Dès lors, il faut que les coefficients $k_i$ soient eux-même des entiers. Par conséquent, le réseau réciproque est un réseau de Bravais et les $\mathbf{b}_i$ peuvent être considérés comme des vecteurs
+Si on veut vérifier la définition (équation \ref{eq:defresreciproque}), il est nécessaire que $\v{k}\cdot\v{R}$ soit égal à $2\pi$ fois un entier, pour tout choix d'entiers $n_i$. Dès lors, il faut que les coefficients $k_i$ soient eux-même des entiers. Par conséquent, le réseau réciproque est un réseau de Bravais et les $\v{b}_i$ peuvent être considérés comme des vecteurs
 primitifs du réseau réciproque.
 
 \section{Plans réticulaires}
@@ -94,7 +94,7 @@ On peut alors définir des familles de plans réticulaires, qui forment un ensem
 
 \begin{description}
     \item[Théorème] Pour une famille donnée de plans réticulaires, séparés d'une distance $d$, il existe au moins un vecteur du réseau réciproque perpendiculaire à ce plan. Le plus court d'entre eux a une longueur de $2\pi/d$.
-    \item[Réciproque] Pour tout vecteur du réseau réciproque $\mathbf{K}$, il y a une famille de plans réticulaires normaux à $\mathbf{K}$ et séparés d'une distance $d$, où $2\pi/d$ est la longueur du plus petit vecteur du réseau réciproque parallèle à $\mathbf{K}$.
+    \item[Réciproque] Pour tout vecteur du réseau réciproque $\v{K}$, il y a une famille de plans réticulaires normaux à $\v{K}$ et séparés d'une distance $d$, où $2\pi/d$ est la longueur du plus petit vecteur du réseau réciproque parallèle à $\v{K}$.
 \end{description}
 
 \begin{figure}
@@ -114,7 +114,7 @@ Pour assurer la correspondance entre les vecteurs du réseau réciproque et les 
 Comme nous l'avons dit précédemment, pour un plan parallèle à un axe, la coordonnée de l'intersection est infinie. L'indice de Miller correspondant est $0$. Si un plan intersecte un axe en une coordonnée négative, on note cette coordonnée, encore une fois avec une barre au dessus.
 En plus de cela, les plans $(nh\,nk\,nl)$ sont parallèles aux plans $(hkl)$ et en sont séparés d'une distance $d = \frac{1}{n}$
 
-En outre, un plan réticulaire défini par les indices de Miller $h$,$k$ et $l$ est normal au vecteur du réseau réciproque $h\mathbf{b}_1 + k \mathbf{b}_2 + l\mathbf{b}_3$. 
+En outre, un plan réticulaire défini par les indices de Miller $h$,$k$ et $l$ est normal au vecteur du réseau réciproque $h\v{b}_1 + k \v{b}_2 + l\v{b}_3$.
 
 \begin{figure}
     \includegraphics{./images/part1/cullity42-01}
@@ -176,7 +176,7 @@ Une zone de Brillouin est une maille primitive du réseau réciproque. Par cons�
 
 \begin{figure}
     \includegraphics{./images/part1/zonesbrillouin-01}
-    \caption{Représentation des 4 premières zones de Brillouin dans un schéma de zone réduite (les parties sont translatées d'un vecteur $\mathbf{G}$ du réseau réciproque. Les surfaces des zones sont identiques.}
+    \caption{Représentation des 4 premières zones de Brillouin dans un schéma de zone réduite (les parties sont translatées d'un vecteur $\v{G}$ du réseau réciproque. Les surfaces des zones sont identiques.}
     \label{fig:brillouinreduite}
 \end{figure}
 
@@ -184,7 +184,7 @@ Une zone de Brillouin est une maille primitive du réseau réciproque. Par cons�
 
 L'exercice consiste à considérer un réseau oblique à deux dimensions, dont les vecteurs de base rapportés à un repère orthonormé $(\hat{x},\hat{y})$ sont :
 \begin{equation}
-\mathbf{a} = 2\mathbf{\hat{x}},\quad \mathbf{b} = \mathbf{\hat{x}}+2\mathbf{\hat{y}}
+\v{a} = 2\uv{x},\quad \v{b} = \uv{x}+2\uv{y}
 \end{equation}.
 
 Soient $A$ et $B$ les vecteurs de base du réseau réciproque.
@@ -192,17 +192,17 @@ Soient $A$ et $B$ les vecteurs de base du réseau réciproque.
 On peut écrire, à partir de la relation \ref{eq:reseaureciproque} :
 
 \begin{equation}
-\mathbf{a}_i \cdot \mathbf{A}_j = 2\pi \delta_i^j
+\v{a}_i \cdot \v{A}_j = 2\pi \delta_i^j
 \end{equation}
 
 Ce qui, en réécrivant les vecteurs, se traduit par :
 
 \begin{equation*}
-\mathbf{a} \cdot \mathbf{A} = 2\pi = \begin{pmatrix} 2 \\0 \end{pmatrix}\cdot\begin{pmatrix} A_x \\ A_y \end{pmatrix} = 2A_x
+\v{a} \cdot \v{A} = 2\pi = \begin{pmatrix} 2 \\0 \end{pmatrix}\cdot\begin{pmatrix} A_x \\ A_y \end{pmatrix} = 2A_x
 \end{equation*}
 
 \begin{equation*}
-\mathbf{b} \cdot \mathbf{A} = 0 = \begin{pmatrix} 1 \\2 \end{pmatrix}\cdot\begin{pmatrix} A_x \\ A_y \end{pmatrix} = A_x + 2A_y
+\v{b} \cdot \v{A} = 0 = \begin{pmatrix} 1 \\2 \end{pmatrix}\cdot\begin{pmatrix} A_x \\ A_y \end{pmatrix} = A_x + 2A_y
 \end{equation*}
 
 Soit
@@ -214,11 +214,11 @@ A_y = -\frac{A_x}{2} = -\frac{\pi}{2}
 et
 
 \begin{equation*}
-\mathbf{a} \cdot \mathbf{B} = 0 = \begin{pmatrix} 2 \\0 \end{pmatrix}\cdot\begin{pmatrix} B_x \\ B_y \end{pmatrix} = 2B_x
+\v{a} \cdot \v{B} = 0 = \begin{pmatrix} 2 \\0 \end{pmatrix}\cdot\begin{pmatrix} B_x \\ B_y \end{pmatrix} = 2B_x
 \end{equation*}
 
 \begin{equation*}
-\mathbf{b} \cdot \mathbf{B} = 2\pi = \begin{pmatrix} 1 \\2 \end{pmatrix}\cdot\begin{pmatrix} B_x \\ B_y \end{pmatrix} = B_x + 2B_y
+\v{b} \cdot \v{B} = 2\pi = \begin{pmatrix} 1 \\2 \end{pmatrix}\cdot\begin{pmatrix} B_x \\ B_y \end{pmatrix} = B_x + 2B_y
 \end{equation*}
 
 
@@ -228,10 +228,10 @@ Soit
 B_y = \pi
 \end{equation*}
 
-On obtient alors les vecteurs primitifs $\mathbf{A}$ et $\mathbf{B}$ du réseau réciproque :
+On obtient alors les vecteurs primitifs $\v{A}$ et $\v{B}$ du réseau réciproque :
 
 \begin{equation}
-\mathbf{A} = \pi\mathbf{\hat{x}}-\frac{\pi}{2}\mathbf{\hat{y}},\quad \mathbf{B} = \pi \mathbf{\hat{y}}
+\v{A} = \pi\uv{x}-\frac{\pi}{2}\uv{y},\quad \v{B} = \pi \uv{y}
 \end{equation}.
 
 On peut donc tracer :

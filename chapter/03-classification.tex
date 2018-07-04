@@ -29,9 +29,9 @@ L'ensemble des points d'un réseau, appelés \emph{nœuds du réseau}, constitue
 réseau spatial périodique. On construit celui-ci en appliquant à chaque nœud
 l'ensemble des translations :
 \begin{equation}
-\mathbf{t}_n = u \mathbf{t}_1 + v \mathbf{t}_2 + w \mathbf{t}_3
+\v{t}_n = u \v{t}_1 + v \v{t}_2 + w \v{t}_3
 \end{equation}
-où $u$, $v$ et $w$ sont des entiers et $\mathbf{t}_1$, $\mathbf{t}_2$, $\mathbf{t}_3$
+où $u$, $v$ et $w$ sont des entiers et $\v{t}_1$, $\v{t}_2$, $\v{t}_3$
 forment une base primitive.
 
 La périodicité du réseau est une contrainte forte qui limite le nombre et la nature des opérations de symétrie assurant l'invariance du réseau.
@@ -124,8 +124,8 @@ l'espace réciproque.
 Un réseau (3D) peut être défini par trois vecteurs non coplanaires. On peut alors
 définir des mailles primitives de diverses formes, selon la longueur et l'orientation
 des vecteurs générateurs du réseau.
-Par exemple, si les vecteurs $\mathbf{a}$,$\mathbf{b}$,$\mathbf{c}$ sont de
-longueur égale et à des angles droits les uns des autres, \ie $\mathbf{a = b = c}$
+Par exemple, si les vecteurs $\v{a}$,$\v{b}$,$\v{c}$ sont de
+longueur égale et à des angles droits les uns des autres, \ie $\v{a = b = c}$
 et $\alpha = \beta = \gamma = \SI{90}{\degree}$, alors la maille primitive est
 cubique. En imposant des valeurs différentes pour les longueurs axiales et les angles,
 on pourra définir des mailles de différentes formes, et par conséquent de différent
@@ -222,8 +222,8 @@ paramètre de maille $a$, on se rend compte que celui-ci peut se réduire à un
 réseau tétragonal P de paramètre de maille $\frac{a}{\sqrt{2}}$.
 
 Les ponits du réseau d'une maille non primitive peuvent être étendus dans tous
-l'espace par des translations des vecteurs unitaires $\mathbf{a}$, $\mathbf{b}$
-et $\mathbf{c}$. Les points du réseau associés à ces mailles unitaires peuvent
+l'espace par des translations des vecteurs unitaires $\v{a}$, $\v{b}$
+et $\v{c}$. Les points du réseau associés à ces mailles unitaires peuvent
 être translatés un a un comme un groupe. Dans chacun des cas, les points
 équivalents du réseau dans les mailles unitaires sont séparés par un des vecteurs
 primitifs, peu importe où ces points sont localisés dans la maille.
@@ -313,16 +313,16 @@ cette symétrie le place dans le système cubique.
 
 Si des mailles non primitives sont utilisées, le vecteur de l'origine de
 n'importe quel nœud du réseau aura des composentes qui seront des multiples non
-entiers des  vecteurs du réseau $\mathbf{a}$, $\mathbf{b}$ et $\mathbf{c}$. La
+entiers des  vecteurs du réseau $\v{a}$, $\v{b}$ et $\v{c}$. La
 position de n'importe quel point du réseau dans la maille sera donnée en terme de
 ses coordonnées ; si le vecteur de l'origine de la maille unitaire à un nœud
-donné a des composantes $x\mathbf{a}, y\mathbf{b}, z\mathbf{c}$ où $x,y,z$ sont
+donné a des composantes $x\v{a}, y\v{b}, z\v{c}$ où $x,y,z$ sont
 des nombres rationels, alors les coordonnées des points sont $x\,y\,z$. Par
 conséquent, le point $A$ sur la figure \ref{fig:fcctrigonal}, pris comme
 l'origine, a comme coordonnées $0\,0\,0$, alors que les points $B, C$ et $D$,
 dans le système cubique, ont des coordonnées respectives $0\,\half\,\half$,
 $\half\,0\,\half$ et $\half\,\half\,0$. Le point $E$ a pour coordonnées
-$\half\,\half\,1$ et est équivalent au point $D$, sépéré du vecteur $\mathbf{c}$.
+$\half\,\half\,1$ et est équivalent au point $D$, sépéré du vecteur $\v{c}$.
 Les coordonnées des points équivalents dans différentes mailles peuvent être
 rendues identiques par l'addition ou la soustraction par un ensemble de
 coordonnées entières : dans ce cas, la soustraction de $\half\,\half\,1$ par
@@ -498,20 +498,20 @@ Les volumes des mailles sont donnés par :
 %\midrule
 %1 & 0 & 1 & \\
 %2 & 0 & $2$ & \cry{2}\\
-%& $\frac{1}{2}\mathbf{a}$ & $2_1$ & \cry{21}\\
+%& $\frac{1}{2}\v{a}$ & $2_1$ & \cry{21}\\
 %3 & 0 & $3$ & \cry{3} \\
-%& $\frac{1}{3}\mathbf{a}$ & $3_1$ & \cry{31} \\
-%& $\frac{2}{3}\mathbf{a}$ & $3_2$ & \cry{32} \\
+%& $\frac{1}{3}\v{a}$ & $3_1$ & \cry{31} \\
+%& $\frac{2}{3}\v{a}$ & $3_2$ & \cry{32} \\
 %4 & 0 & $4$ & \cry{4} \\
-%& $\frac{1}{4}\mathbf{a}$ & $4_1$ & \cry{41} \\
-%& $\frac{2}{4}\mathbf{a}$ & $4_2$ & \cry{42} \\
-%& $\frac{3}{4}\mathbf{a}$ & $4_3$ & \cry{43} \\
+%& $\frac{1}{4}\v{a}$ & $4_1$ & \cry{41} \\
+%& $\frac{2}{4}\v{a}$ & $4_2$ & \cry{42} \\
+%& $\frac{3}{4}\v{a}$ & $4_3$ & \cry{43} \\
 %6 & 0 & $6$ & \cry{6} \\
-%& $\frac{1}{6}\mathbf{a}$ & $6_1$ & \cry{61} \\
-%& $\frac{2}{6}\mathbf{a}$ & $6_2$ & \cry{62} \\
-%& $\frac{3}{6}\mathbf{a}$ & $6_3$ & \cry{63} \\
-%& $\frac{4}{6}\mathbf{a}$ & $6_4$ & \cry{64} \\
-%& $\frac{5}{6}\mathbf{a}$ & $6_5$ & \cry{65} \\
+%& $\frac{1}{6}\v{a}$ & $6_1$ & \cry{61} \\
+%& $\frac{2}{6}\v{a}$ & $6_2$ & \cry{62} \\
+%& $\frac{3}{6}\v{a}$ & $6_3$ & \cry{63} \\
+%& $\frac{4}{6}\v{a}$ & $6_4$ & \cry{64} \\
+%& $\frac{5}{6}\v{a}$ & $6_5$ & \cry{65} \\
 %\bottomrule
 %\end{tabularx}
 %\label{}
@@ -521,15 +521,15 @@ Les volumes des mailles sont donnés par :
 %    \subsection{opérations de symétries inverses}
 %    les miroirs purs se notent m
 %
-%    on note $\mathbf{a}$,$\mathbf{b}$,$\mathbf{c}$ les miroirs de glissement de
-%    translation $\frac{\mathbf{a}}{2}$, $\frac{\mathbf{b}}{2}$,
-%    $\frac{\mathbf{c}}{2}$.
+%    on note $\v{a}$,$\v{b}$,$\v{c}$ les miroirs de glissement de
+%    translation $\frac{\v{a}}{2}$, $\frac{\v{b}}{2}$,
+%    $\frac{\v{c}}{2}$.
 %
-%    les miroirs de translation $\frac{\mathbf{a\pm b}}{2}$, $\frac{\mathbf{a\pm
-%    c}}{2}$ et $\frac{\mathbf{b \pm c}}{2}$ se notent $\mathbf{n}$.
+%    les miroirs de translation $\frac{\v{a\pm b}}{2}$, $\frac{\v{a\pm
+%    c}}{2}$ et $\frac{\v{b \pm c}}{2}$ se notent $\v{n}$.
 %
-%    il existe des miroirs de glissement \emph{diamant} notés $\mathbf{d}$ de
-%    translations $\frac{\mathbf{a\pm b}}{4}$ et $\frac{\mathbf{a\pm b \pm c}}{4}$
+%    il existe des miroirs de glissement \emph{diamant} notés $\v{d}$ de
+%    translations $\frac{\v{a\pm b}}{4}$ et $\frac{\v{a\pm b \pm c}}{4}$
 %    autorisés dans certains réseaux de Bravais F et I, qui sont décrits par des
 %    mailles non primitives et qui présentent des translations non entières.
 %
@@ -549,26 +549,26 @@ Les volumes des mailles sont donnés par :
 %    \end{table}
 %
 %    Donc :
-%    dans un cristal, les opérations de symétrie sont du type $(W,\mathbf{\omega})$ où
+%    dans un cristal, les opérations de symétrie sont du type $(W,\v{\omega})$ où
 %    $W$ est une rotation ou une rotation-inversion d'ordre 1,2,3,4 ou 6.
 %
-%    $(E,\mathbf{t}_n)$ sont les translatinos de réseau, notées $\mathbf{t}_n$.
+%    $(E,\v{t}_n)$ sont les translatinos de réseau, notées $\v{t}_n$.
 %
 %    Toute opération directe d'ordre n supérieur à 1 est équivalente à une opération
 %    hélicoïdale par rapport à un axe $(W, \omega_{//})$, où $\omega_{//}$ est une
 %    translation de (m/n) fois la plus petite translation parallèle à l'axe de
-%    rotation. On les note $\mathbf{n}$ pour les opérations pures, et $\mathbf{n}_m$
+%    rotation. On les note $\v{n}$ pour les opérations pures, et $\v{n}_m$
 %    pour les opérations avec glissement.
 %
 %    Toute opération inverse d'ordre $n\neq 2$ est une opération inverse pure par
-%    rapport à un point. On les note $\mathbf{\bar{n}} = \bar{1}, \bar{3}, \bar{4},
+%    rapport à un point. On les note $\v{\bar{n}} = \bar{1}, \bar{3}, \bar{4},
 %    \bar{6}$
 %
 %    Les opérations inverses d'ordre $n=2$ sont des miroirs avec glissement $(\bar{2},
 %    \omega_{\perp})$ où $\omega_\perp$ est soit nul (opération miroir pur), soit égal
 %    à \half fois le plus petit vecteur de translation dans une rangée parallèle au
-%    plan miroir. On les note $\mathbf{m}$ pour des miroirs purs et
-%    $\mathbf{a}$,$\mathbf{b}$,$\mathbf{c}$,$\mathbf{n}$ et $\mathbf{d}$ pour des
+%    plan miroir. On les note $\v{m}$ pour des miroirs purs et
+%    $\v{a}$,$\v{b}$,$\v{c}$,$\v{n}$ et $\v{d}$ pour des
 %    miroirs avec glissement.
 %
 %    Lors du dénombrement des groupes ponctuels cristallographique, on peut alors
@@ -628,10 +628,10 @@ Le tableau \ref{tab:rappel} récapitule l'ensemble des notations associées aux 
 \toprule
 notation & signification \\
 \midrule
-$\mathbf{R}$ & points du réseau de Bravais \\
-$\mathbf{a}_i$ & vecteurs du réseau de Bravais \\
-$\mathbf{K}$ & points du résau réciproque (vecteur d'onde) \\
-$\mathbf{b}_i$ & vecteurs du réseau réciproque \\
+$\v{R}$ & points du réseau de Bravais \\
+$\v{a}_i$ & vecteurs du réseau de Bravais \\
+$\v{K}$ & points du résau réciproque (vecteur d'onde) \\
+$\v{b}_i$ & vecteurs du réseau réciproque \\
 $[u v w]$ & rangée du réseau direct\\
 $(hkl)$ & plan du réseau direct \\
 $[hkl]^*$ & rangée du réseau réciproque \\

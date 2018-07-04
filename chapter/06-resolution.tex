@@ -1,25 +1,19 @@
 \chapter{Diffusion des rayons X dans les cristaux}
 
-Dans les solides, les distances typiques entre atomes sont de l'ordre de 
-l'angstrom (\SI{e-10}{\metre}). Une sonde électromagnétique de la structure
-microscopique d'un solide doit par conséquent avoir une longueur d'onde au
-moins aussi petite, ce qui correspond à une énergie de l'ordre de :
+Dans les solides, les mailles cristallines ont une distance caractéristique de l'ordre de l'angstrom (\SI{e-10}{\metre}). Si l'on veut produire des interférences constructives avec une onde électromagnétique diffusant dans un cristal, il faut que sa longueur d'onde soit au moins aussi petite que la distance carcactéristique du cristal. Cela correspond à une énergie de l'ordre de :
 
 \begin{equation}
 \hbar \omega \sim \frac{hc}{\lambda} = \frac{\SI{e-34}{}\SI{e8}{}}{\SI{e-10}{}} = \SI{e-16}{\joule} = \SI{e3}{\electronvolt}
 \end{equation}
 
-Les énergies de cet ordre de grandeur sont caractéristiques des rayons X. Pour 
-cette raison, on va étudier l'influence des rayons X sur les structures
-cristallines, pour permettre de sonder la matière à l'échelle de l'atome.
-
+Les énergies de cet ordre de grandeur sont caractéristiques des rayons X. C'est pour cette raison que nous étudions la diffraction des rayons X pour sonder la matière à l'échelle de l'atome.
 
 \section{Diffusion des rayons X}
 
 Les rayons X ont été découverts par Röntgen en 1895. Leur nature ondulatoire a
-été mise en valeur en 1913 avec la réalisation des premières expériences de
+été comprise en 1913 avec la réalisation des premières expériences de
 diffraction suggérées par von Laue. Plus tard, Barkla a montré le caractère
-transversal de ces ondes, établissant ainsi qu'il s'agissait d'ondes
+transversal de ces ondes, ce qui a établit le fait qu'il s'agissait d'ondes
 électromagnétiques.
 
 Le domaine de longueur d'onde des rayons X va de 0.1 (limite des rayons
@@ -28,49 +22,32 @@ cela correspond à la gamme 0.1 à \SI{100}{\kilo\electronvolt}. En
 cristallographie, on utilise généralement des rayons X dont la longueur d'onde 
 varie entre 0.5 et \SI{2.5}{\angstrom}.
 
-Dans les solides, ce sont les électrons, plus que les particules du noyau, qui
-interagissent avec les radiations électromagnétique. L'amplitude de diffusion
-$\epsilon(\mathbf{q})$ d'une densité de charge distribuée $\rho(\mathbf{r})$ peut
-s'écrire :
+Dans les solides, ce sont les électrons qui interagissent avec les radiations électromagnétiques (contrairement aux particules du noyau), et qui seront donc la source de diffusion. Écrivons donc l'amplitude de diffusion
+$\epsilon(\mathbf{q})$ d'une densité de charge distribuée $\rho(\mathbf{r})$ :
 
 \begin{equation}
-    \epsilon(\mathbf{q}) = \frac{E_0 r_e}{R} \exp [i(\omega t - k R)] f(\mathbf{q})
+    \epsilon(\mathbf{q}) = \frac{E_0 r_e}{R}\, \exp [i(\omega t - k R)]  \, f(\mathbf{q})
 \end{equation}
-où $f$ est le facteurs de diffusion et représente l'intensité de la diffusion,
-relativement à un électron libre. Le facteur de diffusion d'un atome est défini
-par :
+Dans cette expression, $f$ est le facteur de diffusion ; il représente l'intensité de la diffusion, relativement à un électron libre. On peut écrire le facteur de diffusion atomique en sommant cette expression selon les électrons de l'atome :
 \begin{equation}
-    f(\mathbf{q}) = \int e^{i\mathbf{q}\cdot\mathbf{r}} \rho(\mathbf{r}) dV
+    f(\mathbf{q}) = \int e^{i\mathbf{q}\cdot\mathbf{r}}\, \rho(\mathbf{r}) \,dV
 \end{equation}
-où $\mathbf{q = k' - k}$ est le vecteur d'onde de l'espace réciproque entre
-l'onde diffusée et l'onde incidente. Il s'agit simplement de la transformée de
-Fourier de la densité de distribution électronique $\rho(\mathbf{r})$.
+où $\mathbf{q = k' - k}$ est le \emph{vecteur de diffusion}, qui correspond au vecteur d'onde de l'espace réciproque entre
+l'onde diffusée et l'onde incidente. On peut remarquer que cette expression du facteur de forme est simplement la transformée de Fourier de la densité de distribution électronique $\rho(\mathbf{r})$.
 
-\subsection{Diffusion d'un groupe d'atomes}
+\subsection{Diffusion par groupe d'atomes}
 
-\TODO f s'appelle le facteur de forme atomique. traduire mieux.
+Considérons à présent la diffusion par un arrangement périodique d'atomes. On montrera que cela provoque de la diffraction, qui est vue comme une somme des contributions cohérentes de diffusion par des atomes, en produisant des pics de diffraction de la radiation diffusée.
 
+Historiquement, la diffraction des rayons X par un réseau cristallin a été la première preuve de deux concepts importants en physique :
+\begin{enumerate}
+    \item la nature ondulatoire des rayons X ;
+    \item la nature cristalline des solides.
+\end{enumerate}
+Encore aujourd'hui, la diffraction des rayons X est encore très largement utilisée, et ce pour un très grand domaines d'applications, qui couvre l'identification de phase en physico-chimie, la mesure de contraintes, la détermination de la concentration en défauts, ou pour la détermination de paramètres structuraux des supers réseaux. Rappelons que récemment, la diffraction des rayons X  en incidence rasante (grazing incidence XRD) a été utilisée pour mesurer avec précision les constantes de réseaux de couches monoatomiques.
 
-On peut considérer à présent la diffusion à partir d'un arrangement périodique
-d'atomes. On montrera par là que cela mène à la diffraction, qui est, dans
-certaines conditions, de la diffusion d'atomes qui s'ajoutent de façon cohérente
-pour produire des pics indenses de la radiation diffusée.
-Historiquement, la diffarction des rayons X par les cristaux a été la première
-confiration de deux concepts importants en physique : le fait que les rayons X
-peuvent être décrits comme des ondes, et que beaucoup de solides sont constitués
-d'arrangements périodiques d'atomes. La diffraction des rayons X est encore
-aujourd'hui très largement utilisée dans de très larges domaines en
-physico-chimie, pour de l'identification de phase, de la détermination de
-structure, des mesures de contraintes, pour la détermination de la concentration
-en défauts, pour des transformations ordre-désordre et pour la détermination de
-paramètres structuraux de super-réseaux. Récemment, la diffraction des rayons X
-en incidence rasante (grazing incidence XRD) a été utilisée pour mesurer avec
-précision les constantes de réseaux de couches monoatomiques.
-
-À partir de ce point, il y a deux chemins équivalents que nous pouvons suivre
-pour dédiuire la diffusion d'un arrangement d'atomes. Le premier serait de
-représenter l'arangement des atomes par une distribution de densité électronique
-$\rho_c(\mathbf{r})$ pour l'arrangement complet. Par conséquent,
+Pour traiter ces problèmes, on peut suivre deux méthodes équivalentes pour étudier la diffusion par un arrangement d'atomes.
+D'une part, on peut représenter l'arrangement des atomes par une distribution de densité électronique de l'arrangement complet $\rho_c(\mathbf{r})$. Par conséquent,
 $\rho_c(\mathbf{r})$ représente la densité totale électronique de tous les
 électrons de tous les atomes du cristal. L'amplitude diffusée est simplement la
 transformée de Fourier de cette distribution de densité électronique :

@@ -32,6 +32,11 @@ varie entre 0.5 et \SI{2.5}{\angstrom}.
 Dans les solides, ce sont les électrons qui interagissent avec les radiations électromagnétiques (contrairement aux particules du noyau), et qui seront donc la source de diffusion. Écrivons donc l'amplitude de diffusion
 $\epsilon(\v{q})$ d'une densité de charge distribuée $\rho(\v{r})$ :
 
+\begin{marginfigure}
+    \includegraphics{./images/part1/cullity135}
+    \caption{Diffusion par les électrons d'un atome. L'onde diffusée par les électrons $A$ et $B$ sera en phase sur les plans d'onde $X$ et $Y$}
+\end{marginfigure}
+
 \begin{equation}
     \epsilon(\v{q}) = \frac{E_0 r_e}{R}\, \exp [i(\omega t - k R)]  \, f(\v{q})
 \end{equation}
@@ -111,7 +116,7 @@ et d'une position $\v{r}_n$ de l'atome dans la maille. Cela correspond à
 \end{equation}
 
 La sommation sur tous les atomes du solide se réduit ainsi à une somme sur tous
-les atomes de la maille primitive et à la somme sur toutes les mailles primitives
+les atomes de la maille primitive multipliée par la somme sur toutes les mailles primitives
 du cristal :
 
 \begin{eqnarray}
@@ -122,24 +127,23 @@ du cristal :
 \end{eqnarray}
 
 où $N_c$ est le nombre de mailles primitives dans le cristal et $N_b$ le nombre
-d'atomes ans la maille primitive.
+d'atomes dans la maille primitive.
 
-On définit le facteur de structure $F(\v{q})$ comme la somme sur tous les
-atomes de la maille :
+La deuxième somme, sur tous les atomes de la maille, est appelée \emph{facteur de structure} et notée $F(\v{q})$ :
 
 \begin{equation}
-    F(\v{q}) = \sum_n^{N_b} f_n e^{i \v{q \cdot r_n}}
+    F(\v{q}) = \sum_n^{N_b}\, f_n\, e^{i \v{q \cdot r_n}}
 \end{equation}
 
 Ce facteur de structure contient toute l'information sur les positions atomiques
 de la maille, et s'affranchit de toutes les complications liées à la distribution
-élecrtonique des atomes, cachée dans les facteurs de diffusions.
+électronique des atomes, cachée dans les facteurs de diffusions.
 
 En combinant toutes ces équations, on se ramène à l'amplitude diffractée par le
 cristal :
 
 \begin{equation}
-    \epsilon = \frac{E_0 r_e}{R} \exp[i(\omega t - k R)] F(\v{q}) \sum_m^{N_c} e^{i\v{q\cdot R_m}}
+    \epsilon = \frac{E_0 r_e}{R}\, \exp[i(\omega t - k R)]\, F(\v{q})\, \sum_m^{N_c}\, e^{i\v{q\cdot R_m}}
     \label{ampdiffract}
 \end{equation}
 
@@ -147,17 +151,13 @@ cristal :
 
 \subsection{Réseau réciproque}
 
-L'équation \ref{ampdiffract} donne le formalisme pour calculer l'amplitude de
-diffusion élastique pour un arrangement périodique d'atomes. Concentrons-nous,
-dans un premier temps, sur la somme sur une maille primitive:
+L'équation \ref{ampdiffract} formalise le calcul de l'amplitude de diffusion élastique pour un arrangement périodique d'atomes. Dans un premier temps, nous allons nous concentrer sur la somme sur la maille primitive :
 
 \begin{equation}
-    \sum_m^{N_c} e^{i\v{q\cdot R}_m}
+    \sum_m^{N_c}\, e^{i\v{q\cdot R}_m}
 \end{equation}
 
-On considère un cristal avec les vecterus de translation de réseau $\v{a}_1$
-, $\v{a}_2$ et $\v{a}_3$, de telle sorte que les positions atomiques
-dans la maille primitive soient données par :
+On considère un cristal avec les vecteurs de translation de réseau $\v{a}_1$, $\v{a}_2$ et $\v{a}_3$, de sorte que les positions atomiques dans la maille primitive sont données par :
 \begin{equation}
     \v{R}_m = m_1 \v{a}_1 + m_2 \v{a}_2 + m_3 \v{a}_3
 \end{equation}
@@ -165,23 +165,23 @@ où $m_1$, $m_2$ et $m_3$ sont des entiers. Le produit scalaire
 $\v{q\cdot R}_m$ devient alors :
 
 \begin{equation}
-    \v{q\cdot R}_m = m_1 \v{q \cdot a}_1 + m_2 \v{q \cdot a}_2 + m_3 \v{q \cdot a}_3
+    \v{q\cdot R}_m = m_1\, \v{q \cdot a}_1 + m_2\, \v{q \cdot a}_2 + m_3\, \v{q \cdot a}_3
 \end{equation}
 
-En outre, si l'on considère un cristal qui est un parallélépipède avec $N_1$
+En outre, si l'on considère un cristal parralélépipédique avec $N_1$
 mailles selon la direction $\v{a}_1$, $N_2$ selon la direction $\v{a}_2$
 et $N_3$ selon $\v{a}_3$, alors la somme sur toutes les mailles du cristal
 devient :
 
-\begin{eqnarray}
-    \sum_m^{N_c} e^{i \v{q\cdot R_m}} & = &
+\begin{flalign}
+    \sum_m^{N_c} e^{i \v{q\cdot R_m}} & =
         \sum_{m_1 = 0}^{N_1 - 1} \sum_{m_2 = 0}^{N_2 - 1} \sum_{m_3 = 0}^{N_3 - 1}
-        \exp [i(m_1 \v{q \cdot a}_1 + m_2 \v{q \cdot a}_2 + m_3 \v{q \cdot a}_3)]\\
-        & = & \left( \sum_{m_1 = 0}^{N_1 - 1} e^{i m_1 \v{q\cdot a}_1} \right)
+        \exp [i(m_1 \v{q \cdot a}_1 + m_2 \v{q \cdot a}_2 + m_3 \v{q \cdot a}_3)]&\\
+        & = \left( \sum_{m_1 = 0}^{N_1 - 1} e^{i m_1 \v{q\cdot a}_1} \right)
         \left( \sum_{m_2 = 0}^{N_2-1} e^{i m_2 \v{q\cdot a}_2} \right)
-        \left( \sum_{m_3 = 0}^{N_3-1} e^{i m_3 \v{q\cdot a}_3} \right)\\
-        & = & \prod_{j=1}^3 \left( \sum_{m_j = 0}^{N_j -1} e^{i m_j \v{q\cdot a}_j} \right)
-    \end{eqnarray}
+        \left( \sum_{m_3 = 0}^{N_3-1} e^{i m_3 \v{q\cdot a}_3} \right)&\\
+        & = \prod_{j=1}^3 \left( \sum_{m_j = 0}^{N_j -1} e^{i m_j \v{q\cdot a}_j} \right)&
+    \end{flalign}
 
 Il s'agit d'une série géométrique de raison $e^{i \v{q\cdot a}_j}$, d'où :
 \begin{eqnarray}
@@ -199,7 +199,7 @@ où le terme de phase $\phi_j$ est donné par : $\frac{\v{q\cdot a}_j}{2} (N_j
 \end{equation}
 
 Ce résultat peut être injecté dans l'équation \ref{ampdiffract}, pour trouver
-l'amplitude diffusée pur un cristal. Lorsque l'on effectue de la diffraction, on
+l'amplitude diffusée par un cristal. Lorsque l'on effectue de la diffraction, on
 mesure l'intensité, qui est en fait le carré du module de l'amplitude
 $\epsilon \cdot \epsilon^* = |\epsilon|^2$, multipliée par la constante
 $c\epsilon_0$. En prenant le carré complexe, le terme de phase disparaît et l'on
@@ -210,20 +210,25 @@ obtient alors :
     \prod_{j=1}^3 \left[ \frac{\sin \left(N_j \frac{\v{q\cdot a}_j}{2} \right)}{\sin \left( \frac{\v{q\cdot a}_j}{2}\right)} \right]^2
 \end{equation}
 
-L'intensité diffractée contient le facteur de diffraction de Lorentz:
+\begin{marginfigure}
+    \TODO
+    \caption{Tracé du facteur \ref{eq:facdiff}}
+    \label{fig:facdiff}
+\end{marginfigure}
+
+L'intensité diffractée est proportionnelle au facteur suivant, tracé sur la figure \ref{fig:facdiff} :
 
 \begin{equation}
     \left[ \frac{\sin \left(N_j \frac{\v{q\cdot a}_j}{2} \right)}{\sin \left( \frac{\v{q\cdot a}_j}{2}\right)} \right]^2
+    \label{eq:facdiff}
 \end{equation}
 
-\TODO: cf ouvrage diffraction.
-
-Ce facteur de Lorentz présente des pics lorsque :
+Ce facteur présente des pics lorsque :
 \begin{equation}
     \frac{\v{q \cdot a}_j}{2} = n \pi
 \end{equation}
 
-où n est un entier. Pour observer un pic d'intensité diffractée, il faut donc
+où $n$ est un entier. Pour observer un pic d'intensité diffractée, il faut donc
 que cela soit vrai dans chacune des trois directions, c'est à dire pour
 $j = 1,2,3$. Le vecteur de diffusion $\v{q}_B$ qui satisfait cette condition
 est défini par :
@@ -233,34 +238,31 @@ est défini par :
     \frac{\v{q}_B \cdot \v{a}_2}{2} & = & k \pi \\
     \frac{\v{q}_B \cdot \v{a}_3}{2} & = & l \pi
 \end{eqnarray}
-où $h,k,l$ sont des entiers ; ce sont les indices de Miller définis précedemment.
-Cette condition est appelée condition de Laue. Cela revient à écrire :
+où $h,k,l$ sont des entiers ; ce sont les indices de Miller que l'on a défini précedemment.
+Cette condition est appelée \emph{condition de von Laue}. Cela revient à écrire :
 
 \begin{eqnarray}
     \v{G}_{hkl} \cdot \v{a}_1 = h \\
     \v{G}_{hkl} \cdot \v{a}_2 = k \\
     \v{G}_{hkl} \cdot \v{a}_3 = l
 \end{eqnarray}
-De telle sorte que les conditions de Laue soient satisfaites si :
+De telle sorte que les conditions de von Laue soient satisfaites si :
 
 \begin{equation}
     \v{q}_B = 2\pi \v{G}_{hkl}
 \end{equation}
 
 Cette équation représente le fait que pour un pic du spectre de diffraction d'un
-cristal, le vecteur de diffusion est $2 \pi$ fois le vecteur du réseau réciproque
-. Cela est la relation la plus importante à retenir dans ce chapitre. On peut
-immédiatement voir que pour un pic, le vecteur de diffusion est perpendiculaire
-aux plans de diffraction. En comparant les amplitudes des vecteurs, on peut aussi
+cristal, le vecteur de diffusion est $2 \pi$ fois le vecteur du réseau réciproque. C'est la relation la plus importante à retenir dans ce chapitre. Dans cette équation, on voit immédiatement que pour un pic, le vecteur de diffusion est orthogonal aux plans de diffraction. En comparant les amplitudes des vecteurs, on peut aussi
 remarquer que :
 
 \begin{equation}
-    q_B = \frac{4\pi}{\lambda} \sin \theta_B = 2\pi |\v{G}_{hkl} | = \frac{2\pi}{d_{hkl}}
+    q_B = \frac{4\pi}{\lambda}\, \sin \theta_B = 2\pi\, \abs{\v{G}_{hkl}} = \frac{2\pi}{d_{hkl}}
 \end{equation}
 
 Ce qui nous amène à :
 \begin{equation}
-    \lambda = 2 d_{hkl} \sin \theta_B
+    \lambda = 2 d_{hkl}\, \sin \theta_B
 \end{equation}
 
 et
@@ -268,69 +270,55 @@ et
     q_B = \frac{2\pi}{d_{hkl}}
 \end{equation}
 Ces deux dernières équations sont des formulations équivalentes de ce qui est
-connu sous le nom de loi de Bragg.
-
-\TODO: on dit von laue, pas laue.
+connu sous le nom de \emph{loi de Bragg}, que nous allons étudier à présent.
 
 \subsection{Loi de Bragg}
 
-La diffraction est un concept très très important en physique du solide et en
-science des matériaux, non seulement poru les techniques d'analyses qui en sont
-rendues possibles, mais aussi pour la théorie des bandes d'énergie dans les
-cristaux. Le phénomène de diffraction apparaît dans de nombreuses situations dans
-les solides cristallins, et les chercheurs de différents domaines ont pu
-construire différents moyens de représenter la diffraction. Nous nous intéressons
-nous à certaines représentations graphiques de différents aspects de la
-condition de la diffraction.
+La diffraction joue un grand rôle dans la science de la matière condensée, car elle rend possible un très grand nombre de techniques d'analyses. Elle est en plus la base de la théorie des bandes d'énergie en physique du solide.
+Ces phénomènes de diffraction apparaissent très souvent dans les solides cristallins, et des chercheurs de domaines d'études très variés utilisent ces concepts. Leur représentation graphique la plus simple en est la loi de Bragg
 
-Nous avons vu précedemment qu'un moyen d'établir la condition de diffraction pour
+Nous avons vu précedemment qu'un moyen simple d'établir la condition de diffraction pour
 trouver un maximum de difraction d'un ensemble de plans espacés d'une distance
-$d$, illuminés par des rayons X de longueur d'onde $\lambda$ est :
+$d$, sous un faisceau de longueur d'onde $\lambda$ est la loi de Bragg :
 \begin{equation}
     n \lambda = 2d \sin \theta_B
 \end{equation}
 
-Cette expression a été formulée pour la première fois par Bragg et est connue
-sous le nom de loi de Bragg. Cette relation peut être déduite en considérent la
-différence de phase entre les rayons X diffusés et les plans adjacents. Comme
-présenté sur la figure \TODO, la différence de chemin entre les rayons X diffusés
-à partir d'un plan et ceux qui sont diffusés par le plan prédédent est
-$2d sin \theta$, ce qui nous ramène à une différence de phase de
+Cette relation peut être déduite en considérent la
+différence de phase entre les rayons X incidents (sur le schéma, $X$ est un plan de phase) et diffusés (plan de phase $Y$). Comme
+présenté sur la figure \ref{fig:bragg}, la différence de chemin entre les rayons X diffusés
+à partir d'un plan d'atomes (par exemple le plan $B$ sur le schéma) et ceux qui sont diffusés par le plan prédédent ($A$) est $2d sin \theta$, ce qui nous ramène à une différence de phase de
 $\frac{2\pi}{\lambda} 2d \sin \theta$. Si cette différence de phase est égale à
 un entier $n$ fois $2\pi$, alors les ondes diffusées à partir de plans succesifs
 seront en phase et interféreront de façon constructive.
 
+\begin{figure*}
+    \includegraphics{./images/part1/cullity99}
+    \caption{Diffraction des rayons X par un cristal. La loi de Bragg peut être retrouvée en écrivant que la différence de chemin optique entre $QK$ et $PR$ est nulle et celle entre $ML$ et $LN$ est égale à $2d'\sin\theta$}
+    \label{fig:bragg}
+\end{figure*}
+
 En appliquant cette condition, on voit :
 \begin{equation}
-    n 2 \pi = \frac{2 \pi}{\lambda} 2d\sin \theta_B \rightarrow
+    n 2 \pi = \frac{2 \pi}{\lambda}\, 2d\, \sin \theta_B \quad\text{soit}\quad
     n\lambda = 2d \sin \theta_B
 \end{equation}
 
-\TODO: construction de Bragg
+Cette construction peut être utilisée pour visualiser l'expérience de diffraction sur poudres (la plus commune), dans laquelle on fait varier l'angle $\theta$ en tournant le cristal sous un faiscaeu de rayons X monochromatiques, en déplaçant un détecteur d'un angle $2\theta$. Dans cette technique, on maintient la symétrie entre les rayons X incidents et diffusés, relativement aux plans cristallins. Lorsque $\theta$ varie, un pic d'intensité apparaît dès que la condition de Bragg est atteinte. Cette géométrie est représentée sur la figure \ref{fig:braggangle}.
 
-Cette construction peut être utilisée pour visualiser l'expérience de diffraction
-commune, où l'angle $\theta$ peut être varié en tournant le cristal sous un
-faisceau de rayons X monochromatiques. Un détecteur est tourné à une fréquence
-angulaire deux fois plus importante, suivant le meme axe, de sorte à maintenir la
-symmétrie entre les rayons X incidents et diffusés, relativement aux plans
-cristallins. En même temps que l'angle $\theta$ varie, dès que la condition de
-Bragg est atteinte, un pic d'intensité apparaît. Cela est montré schématiquement
-sur la figure \TODO.
+\begin{figure}
+    \includegraphics{./images/part1/cullity153}
+    \caption{Symétries dans l'expérience de diffraction. (a) l'intensité de $\v{q}$ augmente lorsque l'angle $2\theta$ augmente. (b) en faisant varier $\theta$ et $2\theta$, on observera un pic de diffraction à l'angle de Bragg}
+    \label{fig:braggangle}
+\end{figure}
 
-La géométrie symmétrique entre $\v{k}$ et $\v{k'}$ relativement aux
-plans de diffraction, maintient la condition que le vecteur de diffusion est
-perpendiculaire aux plans, à la condition de Bragg. Dans de nombreux cas, la
-géométrie symmétrique est également maintenue, relativement à la surface de
-l'échantillon, de telle sorte à ce que les plans étudiés soient parallèles à la
-surface de l'échantillon. Cependant, ce n'est pas toujours le cas ; nous verrons
-plusieurs géométries de diffraction plus tard.
+Cette géométrie présente une symétrie entre $\v{k}$ et $\v{k'}$ relativement aux
+plans de diffraction. Cela maintient la condition selon laquelle le vecteur de diffusion $\v{q}$ est perpendiculaire aux plans à la condition de Bragg. Cette géométrie symétrique relativement à la surface de l'échantillon est utilisée tant que l'on peut, mais dans certains cas, cela n'est pas possible. On verra plus tard comment prendre en compte les déformations.
 
 \subsection{Sphère d'Ewald}
 
-La loi de Bragg est un postulat de la condition de la diffraction correct, mais
-incomplet, du fait qu'il ne containet qu'une information scalaire, et ne
-représente pas les aspects plus généraux, directionnels ou vectoriels, que nous
-avons vu comme :
+La loi de Bragg forme un postulat de la condition de diffraction correct, mais
+incomplet parce qu'elle ne contient qu'une information scalaire, et ne représente pas les aspects directionnels de l'expression suivante :
 \begin{equation}
     (\v{k'-k})_B = \v{q}_B = 2\pi \v{G}_{hkl}
 \end{equation}
@@ -338,25 +326,26 @@ avons vu comme :
 où $\v{G}_{hk}$ est un vecteur de l'espace réciproque.
 
 Un moyen facile de voir cette relation est sa représentation dans l'espace
-réciproque, aussi connue sous le nom de sphère d'Ewald. On construit d'abord le
-réseau réciproque pour le cristal qui nous intéresse. Ensuite, on place
-l'extrémité du vecteur $\frac{\v{k}}{2\pi}$ sur un site du réseau réciproque
-. Ensuite, une sphère de rayon $\frac{k}{2\pi} = \frac{1}{\lambda}$ est tracé,
-ave son centre à l'origine de $\frac{\v{k}}{2\pi}$
-\footnote{On peut noter que l'origine du vecteur $\frac{\v{k}}{2\pi}$ n'est
+réciproque, aussi connue sous le nom de \emph{sphère d'Ewald}. Pour la symboliser, construisons d'abord le réseau réciproqu du cristal sur lequel on travaille. Plaçons ensuite l'extrémité du vecteur $\frac{\v{k}}{2\pi}$ sur un nœud du réseau réciproque. Traçons maintenant une sphère de rayon $\frac{k}{2\pi} = \frac{1}{\lambda}$ dont le centre est à l'origine de $\frac{\v{k}}{2\pi}$.
+\footnote{Remarquons que l'origine du vecteur $\frac{\v{k}}{2\pi}$ n'est
 pas nécessairement sur un nœud du réseau réciproque.}
 Comme deux nœuds du réseau réciproque peuvent être connectés entre eux par un
 vecteur du réseau réciproque $\v{G}_{hkl}$, tout nœud du réseau réciproque
-qui apparaît sur cette pshère (autre que celui tracé au début, qui termine à
+qui apparaît sur cette sphère (autre que celui tracé au début, qui termine à
 $\frac{\v{k}}{2\pi}$) sera à l'extrémité d'un vecteur
 $\frac{\v{k'}}{2\pi}$, qui satisfait la condition de la diffraction :
 
-\begin{equation}
-    \frac{1}{2\pi} (\v{k'-k})_B = \v{G}_{hkl} \rightarrow
-    (\v{k'-k})_B = \v{q}_B = 2 \pi \v{G}_{hkl}
-\end{equation}
+\begin{marginfigure}
+    \includegraphics{./images/part1/ewald}
+    \caption{Construction de la sphère d'Ewald. $(300)$ est ici orienté de telle sorte à ce qu'il satisfasse la condition de Bragg pour $\v{k}$ : le point $300$ de l'espace réciproque est placé sur la sphère d'Ewald}
+    \label{fig:ewaldsphere}
+\end{marginfigure}
+\begin{eqnarray}
+    \frac{1}{2\pi} (\v{k'-k})_B & = & \v{G}_{hkl}\\
+    \ie\quad(\v{k'-k})_B & = & \v{q}_B  =  2 \pi \v{G}_{hkl}
+\end{eqnarray}
 
-Ce qui peut être illustré sur la figure \TODO.
+Ce qui peut être illustré sur la figure \ref{fig:ewaldsphere}.
 
 Sur les représentations dans l'espace réciproque, les expériences de diffraction
 sont des observations de l'intensité diffractée en fonction de l'orientation

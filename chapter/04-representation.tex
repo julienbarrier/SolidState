@@ -1,3 +1,72 @@
 \chapter{Représentation des mailles}
 
-La projection stéréographique
+Le tracé de cristaux en perspective ou en coupe peuvent être utilisés, mais dès qu'on travaille avec autre chose que les cristaux de base, les choses se compliquent un peu. En particulier, ces représentations ne donnent pas forcément un bon apperçu des relations angulaires entre les plans du réseau et les directions. Ces relations angulaires sont généralement plus intéressants que les autres aspects du cristal, et un type de dessin est nécessaire pour les dessiner et les mesurer correctement. Cela permettra des solutions graphiques aux problèmes qui donnent accès à ça.
+La \emph{projection stéréographique} répond à ce besoin.
+Si l'on veut en savoir plus, je recommande la lecture de :
+\begin{itemize}
+    \item \emph{Essentials of Crystallography}, D. \& C. Mc Kie, Blackwell Scientific Publications, 1986 ;
+    \item \emph{Structure of Metals}, C.S. Barrett \& T. B. Massalski, McGraw-Hill, 1966.
+\end{itemize}
+
+L'orientation d'un plan quelconque dans un cristal peut être représenté tout aussi bien par l'inclinaison des plans normaux à un plan, relativement à un plan de référence, comme l'inclinaison du plan lui-même. Tous les plans d'un cristal peuvent donc être représentés par un ensemble de plans normaux rayonnants d'un point du cristal. Si une sphère de référence est décrite autour de ce point, les plans normaux intersecteront la surface de la pshère dans un ensemble de points appelés \emph{pôles}. Cette procédure est illustrée sur la figure \ref{fig:stereopoles}, qui est restreintes aux plans de la famille $\{100\}$ d'un cristal cubique. Le pôle d'un plan représente, de par sa position sur la sphère, l'orientation de ce plan.
+
+\begin{marginfigure}
+    \includegraphics{./images/part1/cullity76-01}
+    \caption{Pôles de la famille de plans $\{100\}$ d'un cristal cubique}
+    \label{fig:stereopoles}
+\end{marginfigure}
+
+Un plan peut également être représenté par la trace que le plan étendu fait à la surface de cette sphère, comme montré sur la figure \ref{fig:stereoangles}. Sur cette figure, la trace $ABCDA$ représente le plan associé au pôle $P_1$. Cette trace est un \emph{grand cercle}, c'est à dire un cercle de diamètre maximal, si le plan comporte le centre de la sphère. Un plan qui ne passe pas par ce centre intersectera la sphère en un cercle quelconque. Sur un globe réglé, par exemple, les méridiens( lignes longitudinales) sont des grands cercles, alors que les lattitudes, à l'exception de l'équateur, sont des cercles quelconques.
+
+\begin{marginfigure}
+    \includegraphics{./images/part1/cullity76-02}
+    \caption{Angle entre deux plans}
+    \label{fig:stereoangles}
+\end{marginfigure}
+
+L'angle $\alpha$ entre deux plans est évidemment égal à l'angle entre leurs grands cercles, ou à l'angle entre leurs normales. Mais cet angle, en degrée, peut aussi être mesuré à la surface de la sphère, le long du grand cercle $KLMNK$, connectant les pôles $P_1$ et $P_2$ des deux plans, si ce cercle a été divisé en 360 parts égales. La mesure d'un angle a donc été transformée, des la mesure entre les plans eux-mêmes à celle à la surface de la sphère de référence.
+
+Mesurer des angles sur une feuille de papier plate, plutôt qu'à la surface de la sphère requiert que le même type de transformation soit utilisée que celle utilisée par le géographe qui veut trénsférer une carte du monde d'un globe sur la page d'un atlas. Il y a un grand nombre de projections connues, mais un carcograhpe choisit générallement celle qui garde les projections des aires constantes, de telle sorte à ce que les pays soient représentés par des aires égales sur la carte. En cristallographie, c'est différent. Une projection stéréographique équi-angulaire est plus utile, parce qu'elle préserve les relations angulaires, même si elle modifie les aires. Elle est faite en plaçant un plan de projection, normal à l'extrémité d'un diamètre choisi de la sphère et en utilisant l'autre extrémité de ce diamètre comme un \emph{point de projection}. La figure \ref{fig:stereoprojection} présente cela : le plan de projection est normal au diamètre $AB$, et la projection est faite depuis le point $B$. Si un plan a un pôle en $P$, alors la projection stéréographique de $P$ est $P'$, obtenue en traçant la droite $BP$ et en l'étendant jusqu'à ce qu'elle rencontre le plan de projection. Une autre façon de le dire, est que la projection stéréographique du pôle $P  $ est le fantôme de $P$ sur le plan de projection lorsqu'une source lumineuse est placée en $B$. L'observateur, par conséquent, voit la projection du côté opposé à la source lumineuse.
+
+\begin{figure}
+    \includegraphics{./images/part1/cullity77}
+    \caption{Schéma de principe de la projection stéréographique}
+    \label{fig:stereoprojection}
+\end{figure}
+
+Le plan $NESW$ est normal à $AB$ est passe à travers le centre $C$. Par conséquent, il coupe la sphère en deux, et sa trace dans la sphère est un grand cercle. Ce grand cercle se projette pour former le \emph{cercle de base} $N'E'S'W'$ sur la projection, et chacun des pôles de l'hémisphère gauche sera projeté à l'intérieur de ce cercle de base. Les pôles sur l'hémisphère droit seront projetés à l'extérieur de ce cercle de base, et ceux près de $B$ seront projetés à des distances très grandes du centre. Dans le but de tracer de tels pôles, les points de projections doivent bouger de $A$ et le plan doit être en $B$. Les signes moins désignent le nouvel ensemble de points, alors que les signes + identifient le précédent (ou celui projeté depuis $B$).
+Notons que ces mouvements sur le plan de rpojection le log de $AB$ ou son extension altèrent le grossisement ; ce plan est généralement tangent à la sphère, comme montré, mais il peut aussi passer par le centre de la sphère, par exemple, et dans ce cas, le cercle de base devient identique au grand cercle $NESW$.
+
+Il faut quelques étapes pour passer d'un plan du cristal à sa projection stéréographique, et il peut être judicieu, à ce stade, de résumer :
+
+\begin{enumerate}
+    \item le plan $C$ est représenté par sa normale $CP$ ;
+    \item la normale $CP$ est représenté par son pôle, qui est à l'intersection avec la sphère de référence ;
+    \item le pôle $P$ est reprsenté par sa projection $P'$.
+\end{enumerate}
+
+Après avoir gagné un peu de familiarité avec la projection stéréographique, il faudra pouvoir, mentalement faire abstraction de ces étapes intermédiaire et se référer au point prejeté $P'$ du plan $C$, ou même plus directement, directement au plan $C$.
+
+Les \emph{grands cercles} sur la sphère de référence se projectent comme des arcs de cercle circulaires sur le plan de projection. Cependant, s'ilscontiennent les points $A$ et $B$ (figure \ref{fig:stereocercles}), comme des lignes droites à travers le centre de la projection. Les grands cercles projetés coupent toujours le cercle de base en des points diamétralement opposés. Par conséquent, le grand cercle $ANBS$ (figure \ref{fig:stereocercles}) se proecttera comme la ligne droite $N'S'$, et $AWBE$ comme $W'E'$ ; le grand cercle $NGSH$, qui est incliné par rapport au plan de projection se projettera comme l'arcde cercle $N'G'S'$. Si le demi grand cercle $WAE$ est divisé en18 parts égales et que ces opints de divisions sont projetés sur $W'AE'$, alors on peut faire une échelle graduée, à intervalle de \SI{10}{\degree}, de l'équateur jusqu'au cercle de base.
+
+\begin{figure*}[t]
+    \includegraphics{./images/part1/cullity79}
+    \caption{Projection stéréographique des grands cercles et cercles quelconques}
+    \label{fig:stereocercles}
+\end{figure*}
+
+Les \emph{cercles quelconques} de la sphère se projettent également en cercles, mais leur centre projeté ne coincide pas avec leur centre sur la projection. Par exemple, le cercle $AJEK$, dont le centre est en $P$ sur $AEBW$ se projette en $AJ'E'K'$. Son centre sur la projection est $C$, situé à égale distance de $A$ et $E'$, mais son centre projeté est en $P'$, situé à un nombre de degré égal (\SI{45}{\degree} ici) de $A$ et $E'$.
+
+L'outil le plus utile pour résoudre des problèmes utilisant la projection stéréographique est l'abaque de \emph{Wulff}, présentée sur la figure \ref{fig:wulff}. Il s'agit de la projection d'une sphère, coupée par des parallèles de latitude et de longitude sur un plan paralèle à l'axe nord-sud de la sphère. Les lignes de lattitude sur une abaque de Wulff sont de petits cercles s'étendant d'un bout à l'autre et les lignes longitudinales (méridiens) sont les grands cercles, connectant les pôles nord et sud de l'abaque.
+
+\begin{marginfigure}
+    \TODO
+    \caption{Abaque de Wulff graduée tous les \SI{10}{\degree}}
+    \label{fig:wulff}
+\end{marginfigure}
+
+Les abaques de Wulff sont utilisées en faisant la projection stéréographique sur du papier avec la base d'un cercle de même diamètre que celui de l'abaque. La projection est ensuite superposée à l'abaque de Wulff, avec le centre toujousr coïncidant.
+
+Tracer la projection stéréographique sur du papier à tracer est d'une part plus éconôme que de retracer l'abaque de Wulff, mais permet également de différencier entre les cadres de références du cristal (représentés par la projection stéréographique sur papier), et les cadres de référence du laboratoire \ie ceux de l'équipement sur lequel le cristal est positionné pour diverses mesures. Les cadres de références de l'échantillon et du laboratoire ne sont pas forcément identique, et on a besoin des edux. L'échantillon eut être monté dans un nombre d'orientations différentes sur l'équipement, et il est nécessaire de le réaligner, relativement à l'appareil. Par exemple, on voudra orienter $\avg{001}$ dans différentes orientations par rapport à la verticale et à la direction du faisceau incident $S_0$.
+
+\TODO pas fini

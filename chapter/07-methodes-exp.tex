@@ -11,8 +11,8 @@ Un cristal simple dans un faisceau de rayons X monochromatique sera rarement or
 monocristal mobile, rayons X monochromatiques
 
 \begin{marginfigure}
-    \TODO
-    \caption{Schéma montrant les axes d'études par la méthode du cristal mobile}
+    \includegraphics{./images/part1/cullity118}
+    \caption{Schéma de principe de la méthode du cristal mobile}
     \label{fig:cristalmobile}
 \end{marginfigure}
 
@@ -24,15 +24,17 @@ Un réseau réciproque peut être sélectionné, et l'intensité diffractée peu
 \end{equation}
 
 \begin{figure}
-    \TODO
+    \includegraphics{./images/part1/cullity119-01}
     \caption{Schéma du réseau réciproque et des paramètres étudiés par la méthode du cristal mobile}
     \label{fig:cristalmobilerecip}
 \end{figure}
 
 Ainsi, par exemple, un balayage en $h$ peut diriger le vecteur de diffusion le long d'un chemin gardant constant $k$ et $l$. Ce type de balayage sera fait dans la direction $\v{b}_1$. En observant l'intensité, la forme et la position de ces pics, l'information sur la structure atomique, la densité en défauts et la contrainte peut être obtenue.
 
+
+\TODO : la description correspond pas avec les figures.
 \begin{figure}
-    \TODO
+    \includegraphics{./images/part1/cullity119-02}
     \caption{Tracé de contours logarithmiques de l'intersité dans le plan $(h,k,0)$ de l'espace réciproque pour des 10 mailles cubiques alignés selon la direction $x$, et 8 mailles selon la direction $y$, avec un facteur de diffusion atomique $f$ égal à 1. (a) : réseau cubique simple : intensités pour des valeurs entières de $h$ et $k$. (b) réseau cubique faces-centrées : les valeurs pour $h$ et $k$ impaires ne produisent pas de pic de diffraciton.}
     \label{fig:cristalmobilecubic}
 \end{figure}
@@ -40,14 +42,13 @@ Ainsi, par exemple, un balayage en $h$ peut diriger le vecteur de diffusion le l
 \section{Méthode de von Laue}
 monocristal fixe, rayons X polychromatiques
 
-\begin{marginfigure}
-    \TODO
+La méthode de von Laue est effectuée sur un échantillon monocristallin, en utilisant un faisceau de rayons X collimaté, à large spectre. Celui-ci est générallement produit par un tube à rayons X classique. Un film photographique est placé soit avant, soit après l'échantillon, suivant que la géométrie soit en réflexion ou en transmission. Les points de diffraction s'arrengent en ensembles selon des courbes elliptiques ou hyperboliques (figure \ref{fig:laue}). Ces courbes résultent de l'intersection d'un cône avec le film plan. Les plans cristallographiques \emph{en zone} produiront des taches de diffraction qui formeront un cône. L'axe du cône correspond à l'\emph{axe de zone}.
+
+\begin{figure}
+    \includegraphics{./images/part1/cullity115}
     \caption{Schémas de cônes de diffractions formant des ellipses en transmission et des hyperboles en réflexion}
     \label{fig:laue}
-\end{marginfigure}
-
-
-La méthode de von Laue est effectuée sur un échantillon monocristallin, en utilisant un faisceau de rayons X collimaté, à large spectre. Celui-ci est générallement produit par un tube à rayons X classique. Un film photographique est placé soit avant, soit après l'échantillon, suivant que la géométrie soit en réflexion ou en transmission. Les points de diffraction s'arrengent en ensembles selon des courbes elliptiques ou hyperboliques (figure \ref{fig:laue}). Ces courbes résultent de l'intersection d'un cône avec le film plan. Les plans cristallographiques \emph{en zone} produiront des taches de diffraction qui formeront un cône. L'axe du cône correspond à l'\emph{axe de zone}.
+\end{figure}
 
 On peut résumer cela ainsi : les plans d'une même zone sont diffractés selon un cône. Cela est facilement visible dans l'espace réciproque. Pour cela, changons d'abord légèrement notre interprétation de l'espace réciproque, pour prendre en compte l'étalement en longueur d'ondes du réseau incident. Le réseau réciproque que nous étudions prend maintenant en compte l'étalement en longueur d'onde, qui est compris entr edeux longueur d'onde $\lambda_1$ et $\lambda_2$, où la plus petite des deux correspond à la longueur d'onde de coupure de la source à rayons X, et la plus grande est moins bien définie mais est généralement prise pour correspondre à la longueur d'absorption limite $K$ de l'argent( \SI{0.48}{\angstrom}).
 La condition de diffraction :
@@ -111,11 +112,11 @@ Un exemple de motif de diffraciton, où l'intensité diffractée est tracée en 
 \end{equation}
  alors la position des pics peut être convertie en distance inter-réticulaire, ce qui donne une liste d-I. Cette liste peut être utilisée pour l'analise de phase quantitative ou qualitative.
 
-\begin{figure}
-    \TODO
+\begin{marginfigure}
+    \includegraphics{./images/part1/nacl}
     \caption{Motif de diffraction pour une poudre de NaCl.}
     \label{fig:poudrepic}
-\end{figure}
+\end{marginfigure}
 
 
 \subsection{Facteur d'intensité par la méthode des poudres}
@@ -211,7 +212,7 @@ où $V$ est le volume de l'échantillon
 \paragraph{Orientation}
 
 \begin{marginfigure}
-    \TODO
+    \includegraphics{./images/part1/cullity155}
     \caption{Schéma montrant la sphère, uniformément garine des plans normaux de poudres orientés aléatoirements, faites de cristaux qui ont une distance inter-réticulaire $d$. La fraction de ces cristux orientés pour rdiffracter est simplement l'aire de la bande représentant ces cristaux, divisée par l'aire de la sphère entière.}
     \label{fig:}
 \end{marginfigure}
@@ -252,7 +253,13 @@ Si l'on combine les expressions \ref{eq:integ1}, \ref{eq:integration}, \ref{eq:o
     & = \frac{R\lambda^3 V}{8\pi V_c^2} \left[ \frac{1}{\sin 2\theta \sin \theta} \right] &
 \end{flalign}
 
-Le terme entre crochets est appelé facteur de Lorentz.
+Le terme entre crochets est appelé facteur de Lorentz. Il est tracé sur la figure \ref{fig:lorentzfactor}.
+
+\begin{marginfigure}
+    \includegraphics{./images/part1/cullity157-01}
+    \caption{tracé du facteur de Lorentz pour un angle de Bragg $\theta$ entre \SI{0}{} et \SI{90}{\degree}}
+    \label{fig:lorentzfactor}
+\end{marginfigure}
 
 
 \paragraph{Multiplicité}
@@ -306,6 +313,12 @@ Et alors on trouve :
 \begin{equation}
     dI = k I_0 \frac{A_0}{\sin \theta} e^{\frac{-2\mu z}{\sin \theta}}\, dz
 \end{equation}
+
+\begin{marginfigure}
+    \includegraphics{./images/part1/cullity159}
+    \caption{Schéma représentant la diffraction d'un écanillon plat, avec un faisceau ayant une largeur de \SI{1}{\centi\metre} dans la direction normale au plan du dessin}
+    \label{fig:facteurabs}
+\end{marginfigure}
 
 En intégrant sur l'épaisseur de l'échantillon que l'on considère grande devant l'inverse du coefficinet d'absorption linéaire, on trouve :
 

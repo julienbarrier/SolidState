@@ -1,5 +1,172 @@
 \chapter{Thermodynamique}
 
+\TODO revoir ça, page 616 aschcroft :
+Par défaut cristallin, on entend généralement une région où l'arrangement atomique des ions diffère drastiquement de celui du cristal parfait. Les défauts sont appelés défauts surfaciques, linéaires ou ponctuels, suivant que la région imparfaite se propage à l'échelle atomique sur une, deux ou trois dimensions.
+
+Dans cette partie, nous décrirons quelques unes des imperfections possibles et en quoi leur présence a de grandes implications sur les propriétés des solides.
+Deux grandes classes de défauts :
+
+\begin{enumerate}
+    \item les lacunes ou interstitiels : ce sont des défauts ponctuels, consistant en l'absence d'ions (ou la présence d'ions étrangers). De tels défauts sont entièrement responsables de la conductivité électrique observée dans les cristaux ioniques, et peuvent profondément altérer leurs propriétés optiques (en particulier, leur couleur). De plus, leur présence est un phénomène normal à l'équilibre thermique, donc ils sont une fonction intrinsèque des cristaux réels.
+    \item les dislocations. Ce sont des défauts linéaires qui, même si absents du cristal idéal à l'équilibre thermique, sont pratiquement toujours présents dans un échantillon réel. Les dislocations sont essentielles pour expliquer la force observée de cristaux réels, et les taux de croissance cristalline observés.
+\end{enumerate}
+
+\section{Défauts ponctuels, considération thermodynamiques}
+
+Les défauts ponctuels sont présents même dans les cristaux à l'équilibre thermodynamique. Nous pouvons l'illustrer en considérant le type le plus simple : une \emph{lacune}, ou \emph{défaut Schottky}, dans un réseau de bravais monoatomique. Une lacune apparaît à chaque fois que'un nœud du réseau de Bravais serait normalement occupé par un ion dans le cristal parfait, mais n'a pas d'ion associé. Si le nombre $n$ de telles lacunes à la température $T$ est une variable thermodynamique extensive (\ie s'il est proportionnel au nombre total d'ions $N$ lorsque $N$ est très grand), alors on peut estimer sa taille en minimisant le potentiel thermodynamique appropiré. Si le cristal est à une pression constante $P$, alors l'énergie libre de Gibbs s'écrira :
+
+\begin{equation}
+    G = U - TS + PV
+\end{equation}
+
+Pour comprendre comment $G$ dépend de $n$, il est facile de penser qu'un cristal de $N$ ions contenant $n$ sites de lacunes peut être vu comme un cristal parfait de $(N+n)$ ions, dans lequel $n$ ions ont été enlevés. Par conséquent, le volume $V(n)$ sera, en première approximation $(N+n)v_0$ où $v_0$ est le volume libre par ion dans le cristal parfait.
+
+Pour un choix particulier de $n$ sites privés de leurs ions, on peut, en principe, calculer $F_0(n) = U - TS$ pour un cristal imparfait particulier. Si $n$ est très petit devant $N$, alors on peut s'attendre à ce qu'il ne dépende que du nombre de lacunes, et non de l'arrangement spatial. On doit ajouter l'entropie $S$ pour une configuration fixée de lacunes, une contribution ultérieure $S^{config}$ rendant compte du désordre induit par les $\frac{(N+n)!}{N!n!}$ façons de choisir les $n$ sites de lacunes parmi $N+n$ :
+
+\begin{equation}
+    S^{config} = k_B \log \frac{(N+n)!}{N!n!}
+\end{equation}
+
+Par conséquent, l'énergie libre de Gibbs s'écrit
+
+\begin{equation}
+    G(n) = F_0 (n) - TS^{config}(n) + P(N+n)v_0
+\end{equation}
+En utilisant la formule de Stirling, valable ici pour $N/n >> 1$, on peut approximer :
+
+\begin{equation}
+    \pd{S^{config}}{n} = k_B \log \left( \frac{N+n}{n} \right) \approx k_B \log \left( \frac{N}{n} \right)
+\end{equation}
+
+Par conséquent,
+
+\begin{equation}
+    \pd{G}{n} = \pd{F_0}{n} + Pv_0 - k_B T \log \left( \frac{N}{n} \right)
+    \label{eq:gibbsthermo}
+\end{equation}
+
+Lorsque $n<<N$, on peut écrire :
+
+\begin{equation}
+    \pd{F_0}{n} \approx \pdc{F_0}{n}{n=0} = \epsilon
+\end{equation}
+
+où $\epsilon$ est indépendant de $n$. Par conséquent, l'équation \ref{eq:gibbsthermo} nous dit que $G$ est minimal pour
+
+\begin{equation}
+    n = N \exp - \frac{\epsilon + P v_0}{k_B T}
+    \label{eq:minimizgibbs}
+\end{equation}
+
+Pour calculer $\epsilon$, il faudrait écrire l'énergie potentielle totale d'un réseau de $N+n$ ions avec $n$ lacunes sous la forme de l'approximation harmonique :
+
+\begin{equation}
+    U = U^{eq} + U^{harm}
+\end{equation}
+
+De là, on peut calculer $F_0$ depuis la fonction de partition :
+
+\begin{eqnarray}
+    e^{-\beta F_0} & = & \sum_E e^{-\beta E}\\
+    & = & e^{-\beta U^{eq}} \sum_{E_{harm}} e^{-\beta E_{harm}}
+\end{eqnarray}
+ici, $\beta = \frac{1}{k_B T}$, et la somme sur $E_{harm}$ est une somme sur toutes les avleurs propres de la contribution harmonique de l'hamiltonien. Évidemment, cela donnera un $F_0$ qui sera l'énergie potentielle d'équilibre pour un réseau avec des lacunes plus l'énergie libre des phonons :
+
+\begin{equation}
+    F_0 = U^{eq} + F^{ph}
+    \label{eq:energieeq}
+\end{equation}
+
+Le second terme est générallement petit comparé au premier, de telle sorte à ce qu'en première approximation, $\epsilon$ soit :
+
+\begin{equation}
+    \epsilon_0 = \pdc{U^{eq}}{n}{n=0}
+\end{equation}
+
+Ceci est l'énergie potentielle indépendante de la température, nécessaire pour enlever un ion. À des pressions normales (atmosphériques), $P v_0$ est négligeable en comparaison, et donc :
+
+\begin{equation}
+    n = N e^{-\beta \epsilon_0}
+    \label{eq:phononcorrec}
+\end{equation}
+
+Comme $\epsilon_0$ peut être estimé de l'ordre de quelques électron volts\footnote{on peut l'estimer, grosso modo, à la taille de l'énergie de cohésion par particule}, $n/N$ sera en fait petit, mais pas nul.
+
+La correction de phonons de l'équation \ref{eq:phononcorrec} du second terme de \ref{eq:energieeq} augmentera en $n$. C'est à cause de l'introduction de lacunes, qui tendent à diminuer certaines fréquences de mode normaux (et donc les énergies de phonon associées). Par conséquent, on aura un terme $\pd{F^{ph}}{n}$ négatif.
+
+L'analyse ci-dessous n'est valable que pour un type de défauts ponctuels : les lacunes sur un nœud du réseau de Bravais. En général, évidemment, il peut y avoir plus d'un type de lacune (dans les réseaux polyatomiques). Il y a également la possibilité que des ions supplémentaires occupent des positions non occupées dans le cristal parfait, un type de défaut ponctuel nommé \emph{interstitiel}. Par conséquent, on peut généraliser cette analyse, pour permettre à $n_j$ défauts ponctuels du $j$\ieme type : si tous les $n_j$ sont petits devant $N$, alors chaque type de défaut ne se produira que dans des nombres donnés par la généralisation de l'équation \ref{eq:minimizgibbs} (en ignorant la correction $P v_0$) :
+
+\begin{equation}
+    n_j = N_j e^{-\beta \epsilon_j},\quad \epsilon_j = \pdc{F_0}{n_j}{n_j=0}
+\end{equation}
+
+où $N_j$ est le nombre de sites où un défaut du type $j$ peut se produire.
+
+Les $\epsilon_j$ sont généralement très grand devant $k_B T$, et si, en plus, la plus petite des deux valeurs de $\epsilon_j$ (disons $\epsilon_1$ et $\epsilon_2$) sont toutes deux loin devant $k_B T$, alors $n_j$ sera bien plus grand que tous les autres $n_j$, \ie le défaut avec le plus petit $\epsilon_j$ sera, en très grande proportion, le plus abondant.
+
+Cependant, cette dernière relation n'est valable que si le nombre de chaque type de défaut est indépendant, ce qui suit la minimisation de l'énergie libre, indépendamment de la relation avec les $n_j$. S'il y a des contraintes sur les $n_j$, alors il faut refaire le probèlme.
+La plus importante de ces contraintes est la neutralité de charge. On ne peut pas avoir un ensemble de défauts consistant entièrement en des lacunes d'ions positifs dans un cristal ionique, par exemple, sans contrebalancer avec une charge positive, qui aurait une énergie Coulombienne très importante. Cet excès de charge doit être balancé soit pas des interstices d'ions positifs, soit pas des lacunes d'ions négatifs, ou alors une combinaison de cela.
+
+Par conséquent, l'énergie libre doit être minimisée relativement à la contrainte :
+
+\begin{equation}
+    0 = \sum_j q_j n_j
+    \label{eq:minimisfreeenerg}
+\end{equation}
+
+où $q_j$ est lacharge du $j$\ieme type de défauts ($q_j = +e $pour une lacune d'ion négatif ou pour un site interstitiel positif, ou $q_j = -e$ pour une lacune positive ou un interstitiel négatif). Introduisons le multiplcateur de Lagrange $\lambda$, pour ensuite prendre la contrainte en compte pour minimiser non plus $G$, mais $G + (\lambda \sum_j q_j n_j)$. Cela nous ramène à :
+
+\begin{equation}
+    n_j = N_j e^{-\beta(\epsilon_j + \lambda q_j)}
+\end{equation}
+où l'inconnue $\lambda$ est déterminée par la conditition \ref{eq:minimisfreeenerg}.
+
+Généralement, les petits $\epsilon_j$ pour chaque type de harge sont séparés en énergie d'un nombre grand devant $k_B T$.\footnote{et si ce n'est pas le cas, le formalisme des défauts de Schottky et de Frenkel ne peut pas être construit.} Par conséquent, il y a un type de défauts dominants pour chaque charge, dont les nombres sont donnés par :
+
+\begin{eqnarray}
+    n_+ & = & N_+ e^{-\beta(\epsilon_+ + \lambda e)}\\
+    n_- & = & N_- e^{-\beta(\epsilon_- - \lambda e)}, \quad \epsilon_\pm = \min_{q_j = \pm e} (\epsilon_j)
+    \label{eq:condition}
+\end{eqnarray}
+
+Comme la densité de tous les autres défauts satisfait :
+
+\begin{eqnarray}
+    n_j & << & n_+, \quad q_j = +e\\
+    n_j & << & n_-, \quad q_j = -e
+\end{eqnarray}
+
+La neutralité de charge requiert à très haute précision que :
+\begin{equation}
+    n_+ = n_-
+\end{equation}
+
+Comme l'équation \ref{eq:condition} requiert :
+\begin{equation}
+    n_+ n_- = N_+ N_- e^{-\beta(\epsilon_+ + \epsilon_-)}
+\end{equation}
+
+On trouve alors :
+\begin{equation}
+    n_+ = n_- = \sqrt{N_+ N_-} e^{-\beta(\epsilon_+ + \epsilon_-)/2}
+\end{equation}
+
+Par conséquent, la contrainte de la neutralité de charge réduit la concentration des défauts du type le plus abondant et augmente la concentration du type de défaut le plus abondant de la charge opposée.
+
+Même dans les cristaux ioniques les plus simples (diatomiques), il y a plusieurs moyens parmi lesquels la neutralité de charge peut être mise en œuvre. Il peut y avoir essentiellement des nombres égaux de lacunes ioniques positives ou négatives, connues, dans ce contexte, comme des défauts de \emph{Schottky}. D'un autre côté, il peut y avoir essentiellement des nombres égaux de lacunes et d'interstices du même ion, ce qui est appelé \emph{défaut de Frenkel}. Les halogénures d'alcalins ont des défauts de type Schottky, les halogénures d'argent, de type Frenkel. (La troisième possibilité, des nombres égaux d'interstices ioniques positifs et négatifs, ne semble pas arriver, les interstices sont généralement plus coûteux en énergie que les lacunes du même ion).
+
+
+\section{Équilibre thermodynamique}
+
+Il est moins probable qu'un défaut linéaire ou surfacique peut, comme un défaut ponctuel, avoir des concentrtions qui ne s'annulent pas à l'équilibre thermodynamique. L'énergie de formation d'un de ces défauts étendus sera proportionnelle aux dimensions linéaires ($N^\frac{1}{3}$), ou à l'aire de la section ($N^\frac{2}{3}$) du cristal. Cependant, le nombre de chemins possible pour en introduire (suivant que les lignes ne soient pas trop zig-zag, ou les surfaces en vagues), le nombre n'apparaît pas plus logarithmique en $N$ que pour les défauts ponctuels. Par conséquent, même si le coût en énergie d'un défaut ponctuel (indépendant de $N$) est plus que compensé par le gain en entropie (de l'ordre de $\log N$), cela n'est probablement pas le cas pour un défaut linéaire ou surfacique.
+
+Les défauts linéaires ou surfacique sont, en toute vraissemblance, des configurations métastables de cristaux. Cependant, l'équilibre thermique peut les faire approcher lentement, de sorte que les buts pratiques des défauts soinet considérés comme gelés. Il est aussi facile d'arranger des concentrations en défauts ponctuels hors équilibre, qui peuvent avoir une persistance considérable (par exemple, en refroidissant très rapidement un cristal qui a été à l'équilibre). La concentration à l'équilibre des défauts ponctuels peut nous ramener à l aforme de Maxwell-Boltzmann, et ladensité des défauts linéaires et ponctuels réduit de fawon correspondante vers zéro, par le lent chauffage ou refroidissement. La restauration de la concentartion en défauts à l'équilibre est connu sous le nom de \emph{recuit}.
+
+\section{Croissance des cristaux}
+dislocations, etc.
+
+\section{autres :}
+
 La description des structures cristallines et l'étude du modèle ionique ont été
 réalisées dans le cadre du cristal parfait. Dans la réalité, le solide présente
 des défauts dont les principaux sont : les phonons (vibration thermiques), les

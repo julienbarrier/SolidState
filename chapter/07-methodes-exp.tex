@@ -363,4 +363,108 @@ En combinant les résultats des paragraphes précédens, on peut maintenant écr
         e^{-2M}
 \end{equation}
 
-\section{Production des rayons X}
+\section{Production des radiations}
+
+Nous avons discutté la diffusion des rayons X par les électrons, les atomes et les cristaux, mais ne nous sommes pas encore penché sur le problème de la production des rayons X. les expériences de diffraction utilisent deux types de sources de rayons X, qui sont les tubes à rayons X conventionnels et les synchrotrons. En plus, à la fois les électrons et les neutrons possèdent une nature ondulatoire, qui peut être utilisée pour les expériences de diffraction.
+
+\subsection{Production des rayons X}
+
+Dans un tube à rayons X conventionnel, les électrons sont produits dans un tube sous vide par un filament chaud (généralement du tungstène), et accélérés à travers un potentiel, de sorte à ce qu'ils frappent une anode (refroidie par un flux d'eau froide), à de très hautes énergies (généralement de l'ordre de \SI{30}{} à \SI{50}{\kilo\electronvolt}). Les rayons X produits par l'entercation des électrons haute-énergie avec le matériau de l'anode quittent le tube à travers une fenêtre en beryllium. Deux types de radiations sont produites : les radiations \emph{Bremsstrahlung} (ou radiations de freinage), et les radiations charactéristiques.
+
+\begin{figure}
+    \TODO
+    \caption{Schéma cross-section d'un tube à vide conventionnel à x-ray}
+    \label{fig:xraytube}
+\end{figure}
+
+\paragraph{Radiation Bremsstrahlung}
+
+Les électrons, qui voyagent à de très grandes vitessent, ralentissent imédiatement pour etrer en collision avec les électrons et les noyaux de l'anode. Les interactions avec les électrons produisent une déccélération graduelle des électrons, pendant que les interactions avec les noyau peuvent produire une réduction drastique de la vitesse, ou une accélération négative. C'est cette accélération qui produit la radiation Bremmsstrahlung.
+
+Comme on l'a vu dans le cas de la diffusion d'un champ électromagnétique par un électron, le champ produit par l'accélération d'une charge $q$ est donné par l'équation \ref{??}
+
+\begin{equation}
+    \epsilon = \frac{q\v{a}\cos\alpha}{4\pi \epsilon_0 c^2 R}
+\end{equation}
+
+où $\v{a}$ est l'accélération d'une charge, $\epsilon_0$ est la permittivité du vide, et $\alpha$ est le complémentaire de l'angle entre l'accélération et la direction d'observation. Cela produit un motif de radiation présenté sur la figure \ref{fig:motifradiation}.
+
+\begin{marginfigure}
+    \TODO
+    \caption{}
+    \label{fig:motifradiation}
+\end{marginfigure}
+
+\paragraph{Distribution spectrale d'une radiation Bremmsstrahlung}
+
+Dans toute la partie sur la diffraction des rayons X, on s'est concentré sur la nature ondulatoire d'une radiation électromagnétique. Cependant, les radiations électromagnétiques ont aussi une nature particulaire, et la lumière peut être vue comme un ensemble de particules quantifiées, ou comme un paquet d'ondes (photons). L'énergie d'un photon est reliée à sa fréquence par la relation :
+
+\begin{equation}
+    E = h \nu = \hbar \omega
+\end{equation}
+
+où $h = 2\pi \hbar = \SI{6.62e-34}{\joule\second}$ est la constante de Plack. Un électron avec une énergie cinétique $eV$, où $V$ est le potentiel d'accélération, peut produire des rayons X avec une énergie maximale de $h\nu_{max} = eV$. Par conséquent, il y a une longueur d'onde minimale pour les rayons X produit par des électrons avec une certaine tension, claquant sur une cible. Cette longueur d'onde est donnée par :
+
+\begin{equation}
+    \lambda_{min} = \frac{c}{\nu_{max}} = \frac{ch}{eV}
+\end{equation}
+
+ou alors :
+\begin{equation}
+    \lambda_{min} (\si{\angstrom}) = \frac{12400}{V(\si{\volt})}
+\end{equation}
+
+En fait, cette équation peut être utilisée pour convertir l'énergie de rayons X mesuré en volt, en sa longueur d'onde.
+
+Tous les électrons à une énergie donnée ne seront pas stoppés en une collision, pour produire des rayons X avec une longueur d'onde $\lambda = \lambda_{min}$. De nombreux électrons ne seront que ralentis par d'autres électrons avant de s'arrêter ou de perdre toute leur énergie dans des collisions plus nombreuses, et par conséquent, un spectre de rayons X de longueurs d'ondes $\lambda \geq \lambda_{min}$ sera produit. On l'appelle spectro continu ou radiation blanche, parce qu'il est fait de plusieurs longueurs d'onde de la lumière. C'est présenté schématiquement sur la figure \ref{fig:radiationblanche}.
+
+\begin{figure}
+    \TODO
+    \caption{Schéma de radiation continue pour deux potentiels d'accélération, $V_2$>$V_1$. Il est également présenté un spectre avec absorption sur une cible.}
+    \label{fig:radiationblanche}
+\end{figure}
+
+\paragraph{Radiation caractéristique}
+
+Si l'on veut observer le spectre des rayons X d'un tube conventionnel lorsque la tension est augmentée ,le spectre changera drastiquement à une certaine tension, qui dépendra du matériau utilisé pour l'anode. Une série de lignes fines, intenses apparaîtront sur le spectre. Ces lignes sont appelées radiations caractérisitques, et résultent des transitions électroniques dans les atomes de l'anode.
+
+Les électrons confinés sur un atome occupent des niveaux d'énergie discrets, (couches électroniques), de la même façon que les ondes d'une corde finie sont confinées à des fréquences caractéristiques. Ces couches sont désignées par un nombre : le nombre quantique principal $n$. Pour des raisons historiques, elles sont désignées par des lettres :
+
+\TODO : tableau avec couche K : n=1, L, n=2, M, n=3, N, n=4
+
+L'électron projeté peut interagir avec les électrons atomiques, et en enlever un hors du solide en ionisant l'atome. Lorsque cela arrive, les électrons des couches les plus éloignées de l'atome (qui ont des niveaux d'énergie plus élevés que celui qui est éjecté), va décroitre vers la position vacante, sur une couche d'énergie plus basse. Cette décroissance est accompagnée par l'émission d'un photon avec une énergie égale à la différence entre les niveaux initiaux et finaux de l'électron decaying.
+
+\begin{marginfigure}
+    \TODO
+    \caption{schéma d'un niveau d'électron et decay process correspondant à la production d'un photon de rayons X}
+    \label{fig:decay}
+\end{marginfigure}
+
+Les rayons X produits par ce decay sont désignés par le niveau auquel l'électron décroit (le niveau depuis lequel l'électro nest éjecté par l'électron projeté). En plus, un indice est ajouté pour identifier depuis combien de nieveaux l'électron arrive. Les électrons arrivant du niveau suivant seront identifiés par l'indice $\alpha$, ceux qui arrivent de deux niveaux par la lettre $\beta$, etc. En plus, les niveaux sont eux-même divisés en niveaux d'énergie, et il y a un deuxième indice, pour décrire de quel sous-niveau la décroissance de l'électron provient. Deux nombres quantiques supplémentaires sont utilisés pour désigner la sous-couche : $l$ qui détermine le moment angulaire de l'électron, et $m$, qui détermine la composante du moment angulaire le long d'un axe particulier.
+De fait, une désignation typique pour une raie sera $K_{\alpha_1}$, qui serait un rayon X produit par un électron décay du niveau $K$ depuis un niveau $1$ sur un couche $L$.
+
+Il est important de noter que toutes les transitions ne sont pas possibles. Les photons ont un moment angulaire $\pm \hbar$, de sorte à ce que pour assurer la conservation du moment, l'électron qui decay doit perdre ou gagner un équivalent de moment. Il vient que cela apparaît si la différence de nombre quantique $l$ entre deux niveaux est de $\pm 1$.
+
+\TODO: remplacer moment angulaire par moment
+
+La longueur d'onde des rayons X produits par ces transitinos est donnée par :
+
+\begin{equation}
+    \lambda (\si{\angstrom}) = \frac{12.4}{\Delta E (\si{\kilo\volt})}
+\end{equation}
+
+où $\Delta E $ est la différence d'énergie entre le niveau électronique mesuré à \SI{e3}{\volt}. Pour la raie $K_\alpha$ du cuivre, $\Delta E = \SI{8.95}{\kilo\volt}$, et donc $\lambda_{K_{\alpha}} = \SI{1.54}{\angstrom}$. Pour le molybdène, $\Delta E = \SI{17.48}{\electronvolt}$, et donc $\lambda_{K_\alpha} = \SI{.709}{\angstrom}$.
+
+\paragraph{Radiation Synchrotron}
+
+Depuis une bonne décénie en France (innauguration de SOLEIL à Saclay par J. Chirac en 2006), et quelques décénies aux États Unis, les synchrotrons sont les meilleures sources de rayons X, pour leur brillance incomparée. Ces équipements maintiennent des électrons à hautes énergies (de l'ordre du giga-électron volt) en orbite circulaire. Si la vitesse des électrons est maintenue constante, la vélocité (vecteur vitesse) change en permanence pour maintenir une trajectoire circulaire. À cause des vitesses relativisets des électrons, la radiation qui résulte de cette accélération est confinée dans un faisceau de lumière pointant dans la direction de la vélocité de l'électron, plutôt qu'étant étalée comme prédit par l'équation .... (au dessus). Ce fausceau de lumière est extrêmement brillant, et a une distribution spectrale relativement large. La polarisation est dans le plan de l'anneau. Pour des expériences de rayons X typique, la lumière blanche d'un synchrotron est diffractée sur un cristal monochromateur pour obtenir un faisceau monochromatique.
+
+\subsection{Expériences de diffraction de particules}
+
+\paragraph{Électrons dans une expérience de diffraction}
+
+\paragraph{Neutrons dans l'expérience de diffraction}
+
+\subsection{Absorption}
+
+\subsection{Spectroscopie}
